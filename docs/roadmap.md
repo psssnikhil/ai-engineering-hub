@@ -37,7 +37,7 @@ We improve the handbook continuously. Planned additions that benefit learners:
 | **Multimodal** | Vision + audio modules for image and document understanding |
 | **Community content** | More capstone examples, case studies, and real-world patterns from contributors |
 
-Timelines shift based on contributor capacity. Check [GitHub Issues](https://github.com/psssnikhil/learn-ai-engineering/issues) for active work.
+Timelines shift based on contributor capacity. Check [GitHub Issues](https://github.com/psssnikhil/ai-engineering-handbook/issues) for active work.
 
 ---
 
@@ -48,7 +48,7 @@ Timelines shift based on contributor capacity. Check [GitHub Issues](https://git
 | **v1.1** | Depth expansion for Multi-Agent, Vector DBs, Prompt Engineering, AI Safety, Fine-Tuning, and Capstone courses |
 | **v1.0** | Full 16-course Learn path, Start Here hub, FAQ, study plans, Agent Engineering track, GitHub Pages site |
 
-See the full history in [CHANGELOG](https://github.com/psssnikhil/learn-ai-engineering/blob/main/CHANGELOG.md).
+See the full history in [CHANGELOG](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/CHANGELOG.md).
 
 ---
 
@@ -56,7 +56,7 @@ See the full history in [CHANGELOG](https://github.com/psssnikhil/learn-ai-engin
 
 This is an open project. You can influence what we build next:
 
-1. **Open an issue** — request a topic, report a gap, or suggest an exercise ([issues](https://github.com/psssnikhil/learn-ai-engineering/issues))
+1. **Open an issue** — request a topic, report a gap, or suggest an exercise ([issues](https://github.com/psssnikhil/ai-engineering-handbook/issues))
 2. **Contribute a lesson** — typos, clearer explanations, or new exercises ([Contribute](contribute.md))
 3. **Pick a good first issue** — labeled tasks for new contributors on GitHub
 

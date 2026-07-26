@@ -10,7 +10,7 @@ body:
     id: url
     attributes:
       label: Page URL
-      placeholder: https://psssnikhil.github.io/learn-ai-engineering/...
+      placeholder: https://psssnikhil.github.io/ai-engineering-handbook/...
   - type: textarea
     id: expected
     attributes:

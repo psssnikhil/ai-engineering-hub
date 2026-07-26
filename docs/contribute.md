@@ -6,7 +6,7 @@ title: Contribute
 
 The AI Engineering Handbook is MIT-licensed and community-driven. **PRs welcome** — typos, clearer explanations, exercises, and new lessons.
 
-If this project helps you, **[star it on GitHub](https://github.com/psssnikhil/learn-ai-engineering)** so others can find it.
+If this project helps you, **[star it on GitHub](https://github.com/psssnikhil/ai-engineering-handbook)** so others can find it.
 
 ## Quick wins
 
@@ -15,7 +15,7 @@ If this project helps you, **[star it on GitHub](https://github.com/psssnikhil/l
 | **Fix a lesson** | Edit markdown in `docs/`, open a PR |
 | **Fix a broken link** | Use trailing-slash paths in HTML (`href="page/"`), not `.md` |
 | **Add an exercise** | `exercises/*-starter.py` + solution in a course folder |
-| **Report a gap** | [Open an issue](https://github.com/psssnikhil/learn-ai-engineering/issues/new/choose) |
+| **Report a gap** | [Open an issue](https://github.com/psssnikhil/ai-engineering-handbook/issues/new/choose) |
 
 ## Content standards
 
@@ -40,6 +40,6 @@ npm run build:docs    # full build + link fix (same as CI)
 2. Edit `curriculum.yml` in order
 3. Run `npm run sync-nav`
 
-See [MAINTAINING.md](https://github.com/psssnikhil/learn-ai-engineering/blob/main/MAINTAINING.md) for curriculum structure details.
+See [MAINTAINING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/MAINTAINING.md) for curriculum structure details.
 
-Full guide: [CONTRIBUTING.md](https://github.com/psssnikhil/learn-ai-engineering/blob/main/CONTRIBUTING.md)
+Full guide: [CONTRIBUTING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/CONTRIBUTING.md)

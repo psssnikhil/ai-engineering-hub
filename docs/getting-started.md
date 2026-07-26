@@ -67,8 +67,8 @@ Optional tracks at the bottom of **Learn**: [Agent Engineering](agent-engineerin
 ## Local setup
 
 ```bash
-git clone https://github.com/psssnikhil/learn-ai-engineering.git
-cd learn-ai-engineering
+git clone https://github.com/psssnikhil/ai-engineering-handbook.git
+cd ai-engineering-handbook
 pip install -r requirements.txt
 npm install
 mkdocs serve   # http://127.0.0.1:8000
@@ -120,6 +120,6 @@ Full list: [Open Source Hubs](resources/open-source-hubs.md)
 
 ## Contribute
 
-Found a gap? [Roadmap](roadmap.md) · [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/learn-ai-engineering/issues)
+Found a gap? [Roadmap](roadmap.md) · [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/ai-engineering-handbook/issues)
 
-If the handbook helps you — **[star the repo](https://github.com/psssnikhil/learn-ai-engineering)**.
+If the handbook helps you — **[star the repo](https://github.com/psssnikhil/ai-engineering-handbook)**.

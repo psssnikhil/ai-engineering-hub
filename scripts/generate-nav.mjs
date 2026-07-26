@@ -166,9 +166,9 @@ ${lines.join('\n')}`,
 function mkdocsBase() {
   return `site_name: AI Engineering Handbook
 site_description: The free, open-source path from transformers to production AI — RAG, agents, harnesses, evals, and LLMOps.
-site_url: https://psssnikhil.github.io/learn-ai-engineering/
-repo_url: https://github.com/psssnikhil/learn-ai-engineering
-repo_name: learn-ai-engineering
+site_url: https://psssnikhil.github.io/ai-engineering-handbook/
+repo_url: https://github.com/psssnikhil/ai-engineering-handbook
+repo_name: ai-engineering-handbook
 edit_uri: edit/main/docs/
 
 theme:
@@ -212,7 +212,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/psssnikhil/learn-ai-engineering
+      link: https://github.com/psssnikhil/ai-engineering-handbook
   announcement:
     text: "Free open-source curriculum — 16 courses from foundations to production AI."
     link: start-here/

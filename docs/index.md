@@ -11,7 +11,7 @@ description: The free, open-source path from transformers to production AI
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="start-here/">Start Here</a>
     <a class="hero__btn hero__btn--secondary" href="learn/">Browse all 16 courses</a>
-    <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/learn-ai-engineering">★ Star on GitHub</a>
+    <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-handbook">★ Star on GitHub</a>
   </div>
 </div>
 
@@ -107,8 +107,8 @@ Optional tracks: [Agent Engineering](agent-engineering/index.md) · [Modern AI (
 
 ## Contribute & star
 
-If this helps you learn or ship AI systems, **[star the repo on GitHub](https://github.com/psssnikhil/learn-ai-engineering)** — it helps others find it.
+If this helps you learn or ship AI systems, **[star the repo on GitHub](https://github.com/psssnikhil/ai-engineering-handbook)** — it helps others find it.
 
 Improve a lesson, fix a link, or add an exercise: [Contribute](contribute.md) · [Roadmap](roadmap.md)
 
-[GitHub →](https://github.com/psssnikhil/learn-ai-engineering){ .md-button }
+[GitHub →](https://github.com/psssnikhil/ai-engineering-handbook){ .md-button }
