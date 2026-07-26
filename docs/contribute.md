@@ -40,6 +40,6 @@ npm run build:docs    # full build + link fix (same as CI)
 2. Edit `curriculum.yml` in order
 3. Run `npm run sync-nav`
 
-See [MAINTAINING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/MAINTAINING.md) for curriculum structure details.
+See [MAINTAINING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/maintainers/MAINTAINING.md) for curriculum structure details.
 
-Full guide: [CONTRIBUTING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/CONTRIBUTING.md)
+Full guide: [CONTRIBUTING.md](https://github.com/psssnikhil/ai-engineering-handbook/blob/main/.github/CONTRIBUTING.md)

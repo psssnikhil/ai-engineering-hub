@@ -42,7 +42,7 @@ docs/
         01-solution.py
 ```
 
-Module IDs (`module-00`, `module-09`, etc.) match the AI Engineering Mastery platform on disk. **Site navigation** uses numbered course titles from `curriculum.yml` — run `npm run sync-nav` after changing order or adding courses. See [MAINTAINING.md](../MAINTAINING.md).
+Module IDs (`module-00`, `module-09`, etc.) match the AI Engineering Mastery platform on disk. **Site navigation** uses numbered course titles from `curriculum.yml` — run `npm run sync-nav` after changing order or adding courses. See [MAINTAINING.md](../maintainers/MAINTAINING.md).
 
 ## Site navigation
 

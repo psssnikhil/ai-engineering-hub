@@ -140,7 +140,25 @@ mkdocs serve
 # → http://127.0.0.1:8000
 ```
 
-Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](MAINTAINING.md)
+Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](maintainers/MAINTAINING.md)
+
+---
+
+## Repo structure
+
+```
+docs/            # All site content (MkDocs) — courses, tracks, interview prep, career, books
+  foundations/     courses 01–05        build/           courses 06–11
+  production/      courses 12–14        advanced/        courses 15–16
+  agent-engineering/  ai-engineering-2026/   # tracks
+  interview-prep/  career/  books/      # capability sections
+  deep-dives/  exercises/  resources/   # reference material
+scripts/         # Nav generation, link verification, resource extraction
+resources/       # Auto-generated link indexes (npm run extract-resources)
+maintainers/     # MAINTAINING, DEPTH_STANDARDS, GAPS (internal docs)
+.github/         # CI workflows, issue templates, CONTRIBUTING, CoC, SECURITY
+curriculum.yml   # Source of truth for course order → mkdocs nav
+```
 
 ---
 
@@ -148,7 +166,7 @@ Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](
 
 Found a typo? Want to deepen a lesson? **PRs welcome.**
 
-[CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](https://psssnikhil.github.io/ai-engineering-handbook/roadmap/) · [Open an issue](https://github.com/psssnikhil/ai-engineering-handbook/issues)
+[CONTRIBUTING.md](.github/CONTRIBUTING.md) · [Roadmap](https://psssnikhil.github.io/ai-engineering-handbook/roadmap/) · [Open an issue](https://github.com/psssnikhil/ai-engineering-handbook/issues)
 
 ---
 
