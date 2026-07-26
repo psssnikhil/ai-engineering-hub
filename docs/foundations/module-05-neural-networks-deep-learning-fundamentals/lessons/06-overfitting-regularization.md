@@ -26,7 +26,7 @@ objectives:
 
 ## What You'll Learn
 
-```
+```text
 The fundamental tension:
   Underfitting ←————————————→ Overfitting
   (high bias)                  (high variance)
@@ -41,7 +41,7 @@ Goal: Find the sweet spot → generalizes to new data
 
 Any model's expected test error can be decomposed into three terms:
 
-```
+```text
 Expected MSE = Bias² + Variance + Irreducible Noise
 
 Bias²:     Error from wrong assumptions (underfitting)
@@ -178,12 +178,12 @@ def plot_learning_curves(
 
 L2 regularization adds a penalty proportional to the squared magnitude of weights:
 
-```
+```text
 Loss_L2 = Loss_data + λ/2 × Σ_i w_i²
 ```
 
 **Gradient effect**:
-```
+```text
 ∂Loss_L2/∂w = ∂Loss_data/∂w + λ × w
 
 Weight update:
@@ -296,7 +296,7 @@ optimizer = optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-4)
 
 ## 4. L1 Regularization (Lasso)
 
-```
+```text
 Loss_L1 = Loss_data + λ × Σ_i |w_i|
 
 Gradient: ∂|w|/∂w = sign(w)  (1 if w > 0, -1 if w < 0, undefined at 0)
@@ -601,7 +601,7 @@ def training_loop_with_early_stopping(
 
 Batch normalization normalizes layer inputs to zero mean and unit variance, then allows the network to learn a scale (γ) and shift (β):
 
-```
+```text
 μ_B = (1/m) Σ x_i          (batch mean)
 σ²_B = (1/m) Σ (x_i - μ_B)² (batch variance)
 x̂_i = (x_i - μ_B) / √(σ²_B + ε)   (normalize)
@@ -661,7 +661,7 @@ class BatchNorm1D:
 
 ## Regularization Strategy Guide
 
-```
+```text
 Start with:
   1. L2 weight decay (λ = 1e-4)  — always safe
   2. Early stopping (patience = 10-20 epochs)

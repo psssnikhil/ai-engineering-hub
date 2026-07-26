@@ -139,7 +139,7 @@ Full lesson: [M18 · MCP](../build/module-18-agent-harness-tools-runtime/lessons
 
 ### Step-by-step run
 
-```
+```text
 User: "How do we handle API rate limits?"
 
 Step 1 — LLM picks search_docs
@@ -181,7 +181,7 @@ A/B testing tool descriptions often moves tool-selection accuracy by 10–20% �
 
 ### Boot sequence
 
-```
+```text
 1. Host starts MCP client
 2. Client connects to configured servers (stdio or HTTP)
 3. Server advertises tools + resources

@@ -34,7 +34,7 @@ module: module-10
 
 Before optimizing, you need to understand the cost equation. LLM costs are not flat per request—they are proportional to the tokens you send and receive.
 
-```
+```text
 Total Cost = (Input Tokens × Input Price/1M) + (Output Tokens × Output Price/1M)
            × Number of Requests
            × Average LLM Calls Per Request (for agentic systems)
@@ -130,7 +130,7 @@ class CostTrackingCache:
 
 The most powerful long-term cost strategy: match the cost of the model to the complexity of the task.
 
-```
+```text
 GPT-4o:      ~$0.007/request (complex reasoning, analysis, code review)
 GPT-4o-mini: ~$0.0007/request (FAQ, classification, summarization)
 Ratio: 10× price difference

@@ -48,7 +48,7 @@ The protocol defines *discovery* and *transport* — how the host finds out what
 
 Before MCP, every agent product invented its own plugin format. Slack bots, browser extensions, IDE integrations, and CLI wrappers each required bespoke glue code. **Model Context Protocol (MCP)** — introduced by Anthropic and now widely adopted — standardizes how an **MCP host** (the harness) discovers and calls capabilities exposed by **MCP servers**.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                     MCP HOST (Harness)                          │
 │   Cursor · Claude Desktop · Custom agent runtime                │
@@ -100,7 +100,7 @@ One protocol, many servers. The harness translates MCP tools into model-facing f
 - Client connects via Server-Sent Events
 - Useful for shared tools (e.g., a team database server)
 
-```
+```text
 stdio transport:
   Host → spawn process → subprocess stdin/stdout → JSON-RPC messages
 
@@ -136,7 +136,7 @@ flowchart TB
 
 Understanding the lifecycle helps debug connection issues:
 
-```
+```text
 1. Host spawns server (subprocess) or connects (HTTP)
 2. Client sends: initialize {protocolVersion, capabilities}
 3. Server responds: {serverInfo, capabilities}

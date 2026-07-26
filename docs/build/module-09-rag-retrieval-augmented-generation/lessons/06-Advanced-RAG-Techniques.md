@@ -43,7 +43,7 @@ Advanced RAG adds *pre-search* and *post-search* stages — a research librarian
 
 The stages map to four techniques:
 
-```
+```text
 User query
     │
     ▼
@@ -181,7 +181,7 @@ def retrieve_multi_query(
 
 Ask the LLM to first identify the *general principle* behind a specific question, then retrieve documents about that principle. Useful for physics, law, medicine where specific cases are explained by general rules.
 
-```
+```text
 Specific: "Why does my JWT expire after 15 minutes?"
 Step-back: "What are the security trade-offs of JWT expiration policies?"
 ```
@@ -200,7 +200,7 @@ Vector search uses **bi-encoders**: query and document are embedded independentl
 
 The standard two-stage architecture:
 
-```
+```text
 Stage 1: Vector search → top 50 candidates   (milliseconds, bi-encoder)
 Stage 2: Cross-encoder re-rank → top 5       (100–500 ms, cross-encoder)
 Stage 3: LLM generation with top-5 context
@@ -339,7 +339,7 @@ def multi_step_rag(
 
 **Worked example — "Which plan has better support AND lower price?"**
 
-```
+```text
 Sub-query 1: "support features and SLA by plan"
   → Retrieved: "Pro plan: 24/7 chat support, 4-hour response SLA"
               "Free plan: email only, 3-day response"

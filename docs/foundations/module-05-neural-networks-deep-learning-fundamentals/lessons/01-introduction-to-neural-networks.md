@@ -150,7 +150,7 @@ This is the exact computation performed by a Transformer's feed-forward layer (`
 
 Stacking layers creates a **deep network**. The output of layer L becomes the input to layer L+1. Each layer transforms its input into a new representation:
 
-```
+```text
 Input → [Layer 1] → [Layer 2] → [Layer 3] → Output
 (raw)    (simple)   (composite)  (abstract)
 ```
@@ -231,7 +231,7 @@ Why not use a single large layer? The answer is expressivity: deep networks can 
 
 Intuition for a digit classifier:
 
-```
+```text
 Layer 1 (simple patterns): detects edges at various angles and positions
   Neuron activates for: /  \  |  _  ~  (edge detectors)
 
@@ -257,7 +257,7 @@ This hierarchical composition — simple → composite → abstract — is what 
 
 Understanding this comparison clarifies when neural networks are appropriate:
 
-```
+```text
 Traditional programming:
   Developer writes rules explicitly
   if text.contains("urgent") and text.contains("!!!"):

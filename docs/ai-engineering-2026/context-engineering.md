@@ -70,7 +70,7 @@ If any section grows unbounded, quality **degrades** — models attend poorly to
 
 Don't preload everything — let the agent pull via tools:
 
-```
+```text
 Bad:  Dump 50 PDFs into context
 Good: search_docs(query) → read top 3 chunks
 ```
@@ -134,7 +134,7 @@ JSON status blocks beat paragraphs for machine consumption:
 
 ### Bad assembly (22K tokens, wrong answer)
 
-```
+```text
 System prompt: 2K
 ALL API docs (50 files dumped): 14K
 Full deploy log from yesterday: 5K
@@ -144,7 +144,7 @@ Conversation: 1K
 
 ### Good assembly (6K tokens, correct answer)
 
-```
+```text
 System + policy: 1.5K
 Project CLAUDE.md (deploy runbook pointer): 400
 Ticket + user message: 200
@@ -173,7 +173,7 @@ def build_context(ticket: str, project_rules: str) -> list[dict]:
 
 Critical rule repeated at **end** of system block (recency bias):
 
-```
+```text
 ...
 REMINDER: Prefer /api/v2 docs; v1 is deprecated.
 ```

@@ -49,7 +49,7 @@ Three qualities define a well-built tool layer:
 
 [M11 Lesson 4](../../module-11-ai-agents-fundamentals/lessons/04-Tool-Use.md) established the core contract: the LLM outputs **which** tool to call and **with what arguments**. The harness **executes** the tool and returns the result. That separation is non-negotiable in production.
 
-```
+```text
   User goal
       │
       ▼

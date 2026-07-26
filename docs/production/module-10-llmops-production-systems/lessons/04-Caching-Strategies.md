@@ -42,7 +42,7 @@ Every LLM API call has three undesirable properties that caching can address:
 
 The fundamental trade-off: **freshness vs. cost**. A cached response may not reflect the very latest information or the exact model behavior today. For many applications (FAQ answers, document summaries, classification results), this trade-off heavily favors caching.
 
-```
+```text
 Query: "What are your business hours?"
 → Without cache: $0.003, 1.4 seconds
 → With cache hit: $0.000, 0.8 milliseconds
@@ -222,7 +222,7 @@ class CachedLLMClient:
 
 Exact-match caching only helps when users ask *exactly* the same question. In practice, users paraphrase:
 
-```
+```text
 User A: "What are your business hours?"
 User B: "When are you open?"
 User C: "What time does your office close?"
@@ -233,7 +233,7 @@ These four queries have different text but the same (or very similar) intent. A 
 
 ### How Semantic Caching Works
 
-```
+```text
 New query: "When do you close on Fridays?"
     ↓
 Embed query → vector [0.23, -0.11, 0.87, ...]
@@ -349,7 +349,7 @@ The `similarity_threshold` is the most important tuning parameter:
 
 Combine layers for maximum coverage with minimum complexity:
 
-```
+```text
 User Request
      ↓
 [L1: In-Memory Cache]  — 0.5ms hit latency, 1,000 entry capacity
@@ -541,7 +541,7 @@ print(analysis)
 
 Exact-match cache is deterministic and risk-free. Deploy it first:
 
-```
+```text
 Expected impact:
 - Hit rate: 12% (from analysis above)
 - Daily LLM calls avoided: 600

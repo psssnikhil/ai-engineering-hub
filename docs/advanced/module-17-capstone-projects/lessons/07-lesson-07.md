@@ -58,7 +58,7 @@ pip install pytesseract pdf2image pillow
 
 ## Architecture
 
-```
+```text
 [Document Input]
     |  PDF / TXT / MD files
     v

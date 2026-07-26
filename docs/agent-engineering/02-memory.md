@@ -151,7 +151,7 @@ Update via tool: `update_user_profile(field, value)` with human-readable audit l
 
 ### Memory flow
 
-```
+```text
 1. Session start
    → load profile: {"user_id": "u_42", "team": "platform"}
    → recall(query="deployment issue last week", k=5) from vector DB
@@ -231,7 +231,7 @@ Multi-tenant SaaS: **partition** vector collections by `tenant_id` + `user_id`. 
 
 ### Memory write decision tree
 
-```
+```text
 Should this information persist beyond this session?
 ├─ No  → keep in working memory only (maybe compact later)
 ├─ Yes → is it about the USER?

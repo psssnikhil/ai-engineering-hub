@@ -87,7 +87,7 @@ Strongly recommended. [Exercises index](exercises/index.md) · Portfolio work: [
 | **Agents** | Medium–high | Days–weeks | Multi-step + tools | Simple single-shot Q&A |
 | **Workflows** | Low–medium | Days | Deterministic pipelines | Open-ended exploration |
 
-```
+```text
 Can prompts solve it? → Yes: prompts
                       → No: Need your docs? → Yes: RAG (Course 06)
                                               → No: Consistent style? → Fine-tune (Course 15)

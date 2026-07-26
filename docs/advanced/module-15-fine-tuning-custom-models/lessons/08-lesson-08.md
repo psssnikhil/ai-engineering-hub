@@ -63,7 +63,7 @@ By the end of this lesson, you will have:
 
 ## Architecture
 
-```
+```text
 [Client Application]
     |  OpenAI SDK / HTTP requests
     v

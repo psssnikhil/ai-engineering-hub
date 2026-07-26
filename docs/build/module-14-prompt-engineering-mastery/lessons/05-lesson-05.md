@@ -54,7 +54,7 @@ SUMMARIZE_TEMPLATE = """Summarize this {language} code:
 
 ```{language}
 {code}
-```
+```text
 
 Focus on: {aspect}
 Output format: {format}
@@ -82,7 +82,7 @@ def build_summary_prompt(
 
 ```{language}
 {code}
-```
+```text
 
 Focus on: {aspect}
 Output format: {fmt}

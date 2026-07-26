@@ -191,7 +191,7 @@ print(f"Tokens so far: {bot.get_token_count()}")
 
 ### Why Token Count Grows with Conversation Length
 
-```
+```text
 Turn 1 API call: [system, user_1]                    → 50 tokens
 Turn 2 API call: [system, user_1, assistant_1, user_2] → 200 tokens
 Turn 3 API call: [system, user_1, assistant_1, user_2, assistant_2, user_3] → 500 tokens
@@ -280,7 +280,7 @@ demonstrate_temperature(
 
 **What temperature actually does:** Temperature T scales the logits (raw model scores) before softmax: `p_i = softmax(logits / T)`. At T=0, the highest-scoring token always wins (deterministic). At T=1, the original probability distribution is used. At T>1, lower-probability tokens get more weight.
 
-```
+```text
 Practical guidelines:
   temperature=0.0:   Facts, math, classification, code where correctness matters
   temperature=0.3:   Technical writing, summarization

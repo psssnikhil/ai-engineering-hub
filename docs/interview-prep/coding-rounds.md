@@ -19,4 +19,4 @@ Implement-from-scratch exercises that show up in AI engineering coding interview
 
 Practice against the [exercises](../exercises/index.md) and the [Build These First projects](../projects/build-these.md).
 
-*Status: scaffold — reference solutions coming. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

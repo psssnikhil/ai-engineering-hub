@@ -42,7 +42,7 @@ Regular (cross) attention: the decoder asks questions of the encoder.
 
 Think of a sentence as a roundtable discussion. Each word gets to say: "What context do I need from the rest of the sentence to understand my own meaning?"
 
-```
+```text
 "The animal didn't cross the street because it was too tired."
 
 When processing "it":
@@ -61,7 +61,7 @@ This is fundamentally different from an RNN, where "it" can only see "tired" imm
 
 For each token embedding `x_i ∈ ℝ^{d_model}`, self-attention creates three vectors:
 
-```
+```text
 q_i = x_i · W_Q    (query  — "what am I looking for?")  shape: (d_k,)
 k_i = x_i · W_K    (key    — "what do I advertise?")    shape: (d_k,)
 v_i = x_i · W_V    (value  — "what do I actually give?") shape: (d_v,)
@@ -77,7 +77,7 @@ Where:
 
 In matrix form for a sequence of `n` tokens:
 
-```
+```text
 Q = X · W_Q    shape: (n, d_k)   — all queries stacked
 K = X · W_K    shape: (n, d_k)   — all keys stacked
 V = X · W_V    shape: (n, d_v)   — all values stacked
@@ -87,7 +87,7 @@ V = X · W_V    shape: (n, d_v)   — all values stacked
 
 ## The Full Formula
 
-```
+```text
 Attention(Q, K, V) = softmax(Q K^T / √d_k) · V
 ```
 
@@ -109,7 +109,7 @@ The (n, n) matrix is the **attention matrix** `A`. Entry `A[i, j]` says how much
 
 Sentence: **"The cat sat"** — 3 tokens, `d_model = 4`, `d_k = d_v = 4`.
 
-```
+```text
 Embeddings X (3, 4):
   The = [1, 0, 1, 0]
   cat = [0, 1, 0, 1]
@@ -122,7 +122,7 @@ So Q = K = V = X.
 
 **Step 1 — Raw scores (Q @ K^T)**:
 
-```
+```text
 Q @ K^T =
   [1,0,1,0]   [1,0,1,0]^T       row 0 (The):  [2, 0, 1]
   [0,1,0,1] · [0,1,0,1]^T  =    row 1 (cat):  [0, 2, 1]
@@ -133,7 +133,7 @@ Q @ K^T =
 
 **Step 2 — Scale by √d_k = √4 = 2**:
 
-```
+```text
 [[2, 0, 1],    /2 =    [[1.00, 0.00, 0.50],
  [0, 2, 1],             [0.00, 1.00, 0.50],
  [1, 1, 2]]             [0.50, 0.50, 1.00]]
@@ -141,7 +141,7 @@ Q @ K^T =
 
 **Step 3 — Softmax (row-wise)**:
 
-```
+```text
 Row 0: softmax([1.00, 0.00, 0.50]) = [0.462, 0.170, 0.368]
 Row 1: softmax([0.00, 1.00, 0.50]) = [0.170, 0.462, 0.368]
 Row 2: softmax([0.50, 0.50, 1.00]) = [0.244, 0.244, 0.512]
@@ -151,7 +151,7 @@ Interpretation: "The" attends mostly to itself (0.46), then "sat" (0.37), less t
 
 **Step 4 — Output = A @ V** (V = X here):
 
-```
+```text
 Output[0] ("The") = 0.462×[1,0,1,0] + 0.170×[0,1,0,1] + 0.368×[1,1,0,0]
                   = [0.462,0,0.462,0] + [0,0.170,0,0.170] + [0.368,0.368,0,0]
                   = [0.830, 0.538, 0.462, 0.170]

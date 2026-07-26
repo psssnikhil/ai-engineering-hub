@@ -46,7 +46,7 @@ This lesson gives you the end-to-end workflow.
 
 ## The Production Prompt Lifecycle
 
-```
+```text
 Development → Evaluation → Staging → Production → Monitoring → Iteration
      ↑                                                              │
      └──────────────────────────────────────────────────────────────┘

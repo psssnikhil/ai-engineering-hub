@@ -49,7 +49,7 @@ The harness is the component that *owns* this structure. The model sees a window
 
 [M11 Lesson 3](../../module-11-ai-agents-fundamentals/lessons/03-ReAct-Pattern.md) introduced ReAct: the model *reasons* in text and *acts* via tools. The harness maps that pattern onto three concrete phases each loop iteration:
 
-```
+```text
   ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
   │   PERCEIVE   │────▶│    REASON    │────▶│     ACT      │
   │ Build context│     │  LLM call    │     │ Run tools    │
@@ -350,7 +350,7 @@ Each loop iteration appends to `messages`. Token usage grows roughly **linearly 
 
 **Numerical example:**
 
-```
+```text
 Step 0: system(200) + user(50) = 250 tokens in context
 Step 1: + assistant(tool_call 80) + tool_result(400) = 730 tokens
 Step 2: + assistant(tool_call 80) + tool_result(600) = 1,410 tokens
@@ -481,7 +481,7 @@ This pattern is how Cursor and Claude Desktop gate filesystem writes and termina
 
 It helps to think of `AgentState.status` as a mini state machine — each transition is explicit and testable:
 
-```
+```text
             ┌──────────┐
  goal ─────▶│ running  │◀──────────────────────┐
             └────┬─────┘                        │

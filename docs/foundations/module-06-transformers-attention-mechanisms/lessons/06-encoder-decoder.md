@@ -43,7 +43,7 @@ The decoder writes the output one token at a time. It uses *causal* self-attenti
 
 Think of machine translation:
 
-```
+```text
 Encoder: reads "The cat sat on the mat" in English
          → produces 7 context vectors (one per token)
          each vector encodes "what this token means given its full context"
@@ -87,7 +87,7 @@ def encode(
 
 In each decoder block, after the masked self-attention sublayer, the decoder performs **cross-attention**:
 
-```
+```text
 Q = decoder_hidden × W_Q      (B, T_tgt, d_k)  — decoder asks questions
 K = memory × W_K              (B, T_src, d_k)  — encoder offers keys
 V = memory × W_V              (B, T_src, d_v)  — encoder offers values
@@ -168,7 +168,7 @@ class CrossAttention:
 
 During training, the decoder does not actually generate tokens — it uses the ground-truth target sequence shifted by one position.
 
-```
+```text
 Target:  "Le chat s'assit sur le tapis"
 
 Decoder input  (shifted right):  [<BOS>, "Le", "chat", "s'assit", "sur", "le"]
@@ -239,7 +239,7 @@ def greedy_decode(
 
 Beam search maintains `k` candidate sequences (the "beam") and expands each at every step:
 
-```
+```text
 Beam width k=3, vocabulary size V:
 
 Step 0:   ["<BOS>"]   (1 beam)
@@ -251,7 +251,7 @@ Step T:   select highest-scoring complete sequence
 
 Scores are log probabilities summed across positions (with length normalization):
 
-```
+```text
 score(y) = (1/|y|^α) × Σ log p(y_t | y_{<t}, x)
 ```
 

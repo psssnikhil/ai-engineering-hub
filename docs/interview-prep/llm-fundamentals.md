@@ -17,4 +17,4 @@ Rapid-fire concepts interviewers actually ask, with pointers to the deep materia
 
 State the mechanism in 2–3 sentences, then one engineering consequence. Interviewers are testing whether you can connect theory to shipped systems.
 
-*Status: scaffold — model answers being written. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

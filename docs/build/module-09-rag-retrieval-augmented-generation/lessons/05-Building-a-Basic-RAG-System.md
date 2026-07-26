@@ -36,7 +36,7 @@ youtube: 'https://www.youtube.com/watch?v=sVcwVQRHIc8'
 
 All previous lessons covered individual components. Now you assemble them:
 
-```
+```text
 OFFLINE PIPELINE (runs once or on document updates)
 ────────────────────────────────────────────────────
 Raw documents (PDFs, text, HTML)
@@ -492,7 +492,7 @@ print(f"Latency: {response.latency_ms}")
 ```
 
 Expected output:
-```
+```text
 Answer: No — digital products are non-refundable once downloaded,
         according to the Refund Policy.
 

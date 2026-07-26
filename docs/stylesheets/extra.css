@@ -201,6 +201,11 @@
   .md-sidebar--primary {
     max-width: 100%;
   }
+
+  /* Code blocks are small (0.82em of a 0.94rem base) — bump on mobile for legibility */
+  .md-typeset pre code {
+    font-size: 0.88em;
+  }
 }
 
 /* ── Typography & reading width ─────────────────────────── */
@@ -328,6 +333,10 @@
 .persona-card:hover {
   border-color: var(--md-primary-fg-color);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .persona-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .persona-card__title {

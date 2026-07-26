@@ -111,7 +111,7 @@ Record full trajectory for offline scoring. See [Agent Evals](07-agent-evals.md)
 
 ## Reference architecture
 
-```
+```text
 User request
     │
     ▼
@@ -171,7 +171,7 @@ If `read_file(path="test_auth.py")` repeats 3×, harness injects: `"You already 
 
 ### Permission escalation
 
-```
+```text
 Step 5: model requests write_file(path="src/auth/secrets.py")
 Harness: DENY — path not in allowlist
 Observation: {"error": "PERMISSION_DENIED", "hint": "secrets.py is blocked; fix test only"}
@@ -243,7 +243,7 @@ Invest in checkpoints before you need them — the first 45-minute coding agent 
 
 ### Failure recovery walkthrough
 
-```
+```text
 Step 22: write_file → success, checkpoint saved
 Step 23: llm.reason → 429 rate limit from provider
 Harness: pause 60s, resume from checkpoint step 22

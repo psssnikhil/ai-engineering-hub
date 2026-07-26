@@ -269,7 +269,7 @@ def encoder_block(X: np.ndarray,
 
 Without residual connections, gradients vanish in deep networks. The residual ensures a direct gradient path from the loss to every layer:
 
-```
+```text
 Without residual: gradient at layer 1 = product of 95 Jacobians (for 96 layers)
                   → typically vanishes to 0
 
@@ -284,7 +284,7 @@ Residual connections are what allow Transformers to be stacked 96+ layers deep w
 
 The original paper used **Post-LN** (normalize after the residual). Most modern models (GPT-3, LLaMA) use **Pre-LN** (normalize before the sub-layer):
 
-```
+```text
 Post-LN (original paper): X → SubLayer → Add → LayerNorm
 Pre-LN  (modern default): X → LayerNorm → SubLayer → Add
 ```
@@ -376,7 +376,7 @@ def output_projection(X: np.ndarray, W_embed: np.ndarray) -> np.ndarray:
 | **Decoder-only** | Only decoder stack with causal attention | Next-token prediction | GPT, Claude, LLaMA, Mistral | Text generation, code, chatbots |
 | **Encoder-decoder** | Both stacks with cross-attention | Seq2seq (translate, summarize) | T5, BART, original Transformer | Translation, summarization, structured generation |
 
-```
+```text
 Encoder-only (BERT):
   Input:  "The [MASK] sat on the mat"
   Output: probability distribution for [MASK] → "cat" (0.72), "dog" (0.15)...

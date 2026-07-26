@@ -44,7 +44,7 @@ Think of it like a city map where every neighborhood (concept) is a location. "M
 
 An **embedding** is a fixed-length list of floating-point numbers — a vector — that represents a piece of text. OpenAI's `text-embedding-3-small` model produces 1,536 numbers for any input text, from a single word to an 8,000-token passage.
 
-```
+```text
 "The refund policy allows returns within 30 days."
     → [0.021, -0.145, 0.872, 0.003, ..., -0.034]
         ↑_________________________________↑
@@ -186,7 +186,7 @@ Builds a multi-layer graph where each node connects to its nearest neighbors. Se
 **IVF (Inverted File Index)**  
 Divides vectors into K clusters using k-means. At query time, only the nearest C clusters are searched. Good for very large corpora (tens of millions of vectors) where HNSW memory is prohibitive.
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │            HNSW Multi-Layer Graph            │
 │                                              │

@@ -21,4 +21,4 @@ Everything you need to interview for AI Engineer / Agent Engineer roles — orga
 3. **System design** — design an agentic system end to end
 4. **Behavioral** — depth on your own shipped projects
 
-*Status: scaffold — questions and worked answers being added. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

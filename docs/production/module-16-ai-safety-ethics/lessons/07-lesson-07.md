@@ -61,7 +61,7 @@ The EU AI Act is the first comprehensive AI regulation. It classifies AI systems
 
 If your AI system falls under "high risk":
 
-```
+```text
 Required Technical Measures:
 1. Risk management system (ongoing, documented)
 2. Data governance (training data quality, bias testing)
@@ -101,7 +101,7 @@ By the end of this lesson, you will have:
 
 ### NIST AI Risk Management Framework
 
-```
+```text
 Four Core Functions:
 
 GOVERN  -->  MAP  -->  MEASURE  -->  MANAGE
@@ -119,7 +119,7 @@ oversight
 
 ### Governance Structure
 
-```
+```text
 [Executive Sponsor]
         |
         v
@@ -386,7 +386,7 @@ print(f"Review status: {status.value}")
 
 ### The AI Review Checklist
 
-```
+```text
 1. Impact Assessment
    - [ ] Who is affected by this AI system?
    - [ ] What happens if it fails or produces wrong output?
@@ -501,7 +501,7 @@ Compliance is a continuous process:
 
 ### Incident Response Plan
 
-```
+```text
 AI Incident Detected
     |
     v

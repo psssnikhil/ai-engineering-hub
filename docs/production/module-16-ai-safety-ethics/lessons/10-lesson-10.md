@@ -32,7 +32,7 @@ objectives:
 
 A safety audit evaluates an AI system across every dimension we have covered in this module:
 
-```
+```text
 SAFETY AUDIT CHECKLIST
 ======================
 
@@ -195,7 +195,7 @@ def run_security_tests(system_prompt, tests):
 
 Verify transparency requirements:
 
-```
+```text
 Transparency Checklist:
 [x] Users are informed they are interacting with AI
 [x] AI responses include source citations (from RAG)

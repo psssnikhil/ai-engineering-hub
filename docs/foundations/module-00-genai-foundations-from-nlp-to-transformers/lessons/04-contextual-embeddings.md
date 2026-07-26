@@ -58,7 +58,7 @@ The challenge: to produce a context-aware embedding for "bank" in sentence 1, th
 
 The natural solution (circa 2013): process words sequentially, maintaining a **hidden state** that accumulates information as the model reads left to right.
 
-```
+```text
 Input:   "The"  → "cat"  → "sat"  → "on"  → "bank"
 State:   [h₀]  →  [h₁]  →  [h₂]  →  [h₃]  →  [h₄]
 
@@ -119,7 +119,7 @@ The hidden state after "bank" (h₅) contains some information about all previou
 
 This is where RNNs fundamentally break. During backpropagation, gradients flow backward through time. At each step, they are multiplied by `W_h` and the derivative of tanh. For long sequences, this multiplication compresses the gradient exponentially:
 
-```
+```text
 Gradient at step 0 ≈ (W_h × tanh_grad)^L × gradient_at_step_L
                    ≈ (something < 1)^{100} × gradient
                    ≈ effectively 0
@@ -208,7 +208,7 @@ def lstm_step(x_t, h_prev, c_prev, W, b):
 
 The cell state `c_t` provides an "information highway" where gradients can flow without being multiplied by weights repeatedly. The forget gate can learn to preserve important information across hundreds of steps. This significantly helps.
 
-```
+```text
 RNN:  gradient × W_h × W_h × W_h × ... (L times) → vanishes
 LSTM: gradient flows through c_t with forget gate additions → preserved longer
 ```
@@ -225,7 +225,7 @@ However, LSTMs still have three fundamental problems:
 
 ELMo (Embeddings from Language Models, Peters et al.) ran two LSTMs — one forward, one backward — and concatenated their outputs:
 
-```
+```text
 Forward LSTM:   "The" → "cat" → "sat" → "on" → "bank"
 Backward LSTM:  "The" ← "cat" ← "sat" ← "on" ← "bank"
 

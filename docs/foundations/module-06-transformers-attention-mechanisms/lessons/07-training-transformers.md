@@ -52,7 +52,7 @@ The solution: **start low, ramp up, then decay**.
 
 The original Transformer paper used:
 
-```
+```text
 lr(step) = d_model^(-0.5) × min(step^(-0.5), step × warmup_steps^(-1.5))
 ```
 
@@ -145,7 +145,7 @@ for step, batch in enumerate(dataloader, start=1):
 
 **Solution**: Soften the one-hot target distribution.
 
-```
+```text
 Hard target:   [0, 0, 0, 1, 0, 0]   ← 100% on correct token
 Smooth target: [ε/V, ε/V, ε/V, 1-ε+ε/V, ε/V, ε/V]
 
@@ -225,7 +225,7 @@ Transformers can suffer from gradient spikes, especially early in training. A si
 
 **Global gradient clipping** rescales the gradient so its L2 norm never exceeds `max_norm`:
 
-```
+```text
 g_clipped = g × (max_norm / ‖g‖₂)   if ‖g‖₂ > max_norm
 ```
 

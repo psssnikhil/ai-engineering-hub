@@ -49,7 +49,7 @@ Your vector database is the press + newsstand. The original documents in S3/Post
 
 ## Production Architecture Overview
 
-```
+```text
                     ┌─────────────────────────────────────┐
                     │         Document Sources             │
                     │  S3 / GDrive / CMS / Database        │
@@ -297,7 +297,7 @@ ACTIVE_FILTER = {"deleted": {"$ne": True}}
 
 The most complex production operation. Plan as a formal project:
 
-```
+```text
 Phase 1: Build new index with new embedding model (parallel to old)
 Phase 2: Run eval harness — compare recall@5 old vs new
 Phase 3: Dual-write queries to both indexes (shadow mode)

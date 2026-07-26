@@ -57,7 +57,7 @@ You also need an OpenAI API key for embeddings. ChromaDB can use its built-in em
 
 ## Architecture
 
-```
+```text
 [Web Search UI]
     |
     |  query + filters (category, date)

@@ -36,7 +36,7 @@ Traditional CI/CD answers one question: "Does the code work?" It runs unit tests
 
 AI applications require a second question: "Does the *AI* work?" The code can be perfect—imports clean, API calls correct, JSON parsed properly—while the AI system degrades significantly. A prompt change, model update, or retrieval config modification does not break unit tests. It breaks user experience.
 
-```
+```text
 Traditional CI: Green build = code works
 AI quality CI:  Green build + green evals = code works AND AI works
 
@@ -556,7 +556,7 @@ def analyze_shadow_traffic(comparisons: list[ShadowComparison]) -> dict:
 
 ## The Complete CI/CD Pipeline
 
-```
+```text
 PR Stage:
   Code change
     → Unit tests (existing)

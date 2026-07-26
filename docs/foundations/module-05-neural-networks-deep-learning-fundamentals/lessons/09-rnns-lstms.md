@@ -40,7 +40,7 @@ objectives:
 
 Standard feed-forward networks process each input independently:
 
-```
+```text
 x₁ → NN → y₁     (x₁ has no effect on how x₂ is processed)
 x₂ → NN → y₂
 x₃ → NN → y₃
@@ -48,7 +48,7 @@ x₃ → NN → y₃
 
 But language, audio, and time-series are different: context matters.
 
-```
+```text
 "The bank on the river bank" — "bank" has different meanings depending on context
 "Yesterday 10°C, today ___" — prediction requires knowing yesterday's value
 ```
@@ -67,7 +67,7 @@ At each timestep `t`, given:
 
 The RNN update:
 
-```
+```text
 h_t = tanh(W_h · h_{t-1} + W_x · x_t + b_h)
 
 y_t = W_y · h_t + b_y
@@ -168,7 +168,7 @@ print(f"Hiddens: {hiddens.shape}")  # (10, 16)
 
 To train the RNN, we need gradients of the loss with respect to the shared weights. The gradient of `W_h` involves multiplying Jacobians across timesteps:
 
-```
+```text
 ∂L/∂W_h = Σ_t ∂L_t/∂W_h
 
 For L_t (loss at time t), chain rule across timesteps:
@@ -247,7 +247,7 @@ LSTMs (Hochreiter & Schmidhuber, 1997) solve the vanishing gradient problem via 
 
 The key innovation: `c_t` flows through the network with only **additive** updates. Additive paths don't multiply gradients — they add them, preventing vanishing:
 
-```
+```text
 c_t = f_t ⊙ c_{t-1}  +  i_t ⊙ ĉ_t
        ↑ forget gate       ↑ input gate
 ```
@@ -256,7 +256,7 @@ This is a constant error carousel: gradients for `c_t` backpropagate directly to
 
 ### The Four LSTM Equations
 
-```
+```text
 f_t = σ(W_f · [h_{t-1}, x_t] + b_f)     # forget gate: what to forget from c
 i_t = σ(W_i · [h_{t-1}, x_t] + b_i)     # input gate: what new info to write
 ĉ_t = tanh(W_c · [h_{t-1}, x_t] + b_c)  # candidate cell update
@@ -392,7 +392,7 @@ print(f"Cell state range: [{cells.min():.2f}, {cells.max():.2f}]")
 
 GRU (Cho et al., 2014) simplifies LSTM from 3 gates to 2 by merging the forget and input gates:
 
-```
+```text
 z_t = σ(W_z · [h_{t-1}, x_t] + b_z)       # update gate (replaces forget+input)
 r_t = σ(W_r · [h_{t-1}, x_t] + b_r)       # reset gate
 

@@ -19,4 +19,4 @@ Situation → constraint → decision → measured result → what you'd change 
 - READMEs that show architecture diagrams and eval results
 - One project with real users or real data, however small
 
-*Status: scaffold. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

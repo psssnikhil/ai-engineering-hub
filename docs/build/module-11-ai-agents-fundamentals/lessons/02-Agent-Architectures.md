@@ -47,7 +47,7 @@ This lesson maps four patterns to their appropriate task types and shows you how
 
 ## The Architecture Landscape
 
-```
+```text
 Simplicity                                          Capability
 |──────────────────────────────────────────────────|
 │                                                   │
@@ -71,7 +71,7 @@ Complexity should be introduced only when simpler patterns fail. Resist the temp
 
 The simplest agentic pattern: the LLM decides which tool to call, calls it once, and synthesizes an answer.
 
-```
+```text
 User query
     │
     ▼
@@ -186,7 +186,7 @@ print(simple_tool_agent("What's the weather like in Tokyo right now?"))
 
 The workhorse pattern. The agent cycles through Thought → Action → Observation until it decides the goal is achieved. No upfront plan — each step is decided based on what was learned in previous steps.
 
-```
+```text
 User goal
     │
     ▼
@@ -277,7 +277,7 @@ def react_agent(goal: str, tools: list, max_steps: int = 10) -> str:
 
 For complex tasks, an upfront plan reduces wasted steps and makes failures easier to diagnose. The LLM first generates a structured plan, then an executor handles each step.
 
-```
+```text
 User goal
     │
     ▼
@@ -401,7 +401,7 @@ print(f"\nFinal answer:\n{result}")
 
 For tasks where output *quality* matters more than external information gathering, the reflection pattern iteratively improves a draft by having the LLM critique its own work.
 
-```
+```text
 Task
  │
  ▼
@@ -524,7 +524,7 @@ print(f"\nFinal:\n{result}")
 
 **Decision flowchart**:
 
-```
+```text
 Can the task be answered with one tool call?
     Yes → Simple Tool Use
     No  ↓

@@ -33,7 +33,7 @@ Before any formulas, here is the mental model: a neural network is a **parameter
 
 Every AI system — from GPT to an image classifier to a recommender system — follows this identical pattern:
 
-```
+```text
 1. Take an input (text tokens, pixels, user behavior)
 2. Multiply by learned weight matrices (linear transformations)
 3. Apply non-linear functions (activation functions)
@@ -213,7 +213,7 @@ print(f"Numerical gradient: {numerical.round(4)}")  # [5.0, 5.0]
 
 The gradient gives the direction of *steepest increase*. Since we want to *minimize* loss, we move in the *opposite* direction — this is gradient descent.
 
-```
+```text
 Weight space with loss function plotted as height:
 
          High Loss

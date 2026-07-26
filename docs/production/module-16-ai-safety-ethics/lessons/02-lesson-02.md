@@ -31,7 +31,7 @@ objectives:
 
 ### Where Bias Comes From
 
-```
+```text
 Training Data → Model Weights → Application Design → User Impact
      |                |                |                |
   Historical     Amplification    Deployment       Disparate

@@ -211,7 +211,7 @@ A neural network layer is literally just: `output = input @ weights + bias`.
 
 Understanding matrix multiplication means understanding what a neural network layer computes.
 
-```
+```text
 Input shape:  (batch_size, input_dim)
 Weight shape: (input_dim, output_dim)
 Output shape: (batch_size, output_dim)

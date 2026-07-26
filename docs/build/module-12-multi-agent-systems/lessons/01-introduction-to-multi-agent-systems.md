@@ -53,7 +53,7 @@ Just like a company, agents specialize and work together!
 
 A **single agent** faces several challenges:
 
-```
+```text
 Single Agent Trying to Do Everything:
 ┌─────────────────────────────────────┐
 │  One Agent Must:                    │
@@ -71,7 +71,7 @@ Single Agent Trying to Do Everything:
 
 ### Multi-Agent Advantages
 
-```
+```text
 Multi-Agent System:
 ┌────────────┐  ┌────────────┐  ┌────────────┐
 │ Research   │→ │ Decision   │→ │ Execution  │
@@ -102,7 +102,7 @@ better results on complex tasks
 
 ### Decision Framework
 
-```
+```text
 Use Multi-Agent Systems When:
 ✅ Task requires multiple areas of expertise
 ✅ Work can be parallelized
@@ -123,7 +123,7 @@ Stick with Single Agent When:
 
 ### 1. Hierarchical Structure
 
-```
+```text
                   ┌──────────────┐
                   │ Orchestrator │
                   │    Agent     │
@@ -147,7 +147,7 @@ Stick with Single Agent When:
 
 ### 2. Peer-to-Peer Collaboration
 
-```
+```text
     ┌─────────┐ ←→ ┌─────────┐
     │ Agent 1 │    │ Agent 2 │
     └────┬────┘    └────┬────┘
@@ -167,7 +167,7 @@ Stick with Single Agent When:
 
 ### 3. Pipeline Architecture
 
-```
+```text
 Input → │Agent 1│ → │Agent 2│ → │Agent 3│ → Output
         Research    Process     Validate
 ```
@@ -182,7 +182,7 @@ Input → │Agent 1│ → │Agent 2│ → │Agent 3│ → Output
 
 ### 4. Debate/Consensus Pattern
 
-```
+```text
        Problem
           ↓
     ┌─────┴─────┐
@@ -213,7 +213,7 @@ Input → │Agent 1│ → │Agent 2│ → │Agent 3│ → Output
 
 ### 1. Software Development Teams
 
-```
+```text
 PM Agent: "We need to add a login feature"
     ↓
 Architect Agent: Designs the system
@@ -229,7 +229,7 @@ DevOps Agent: Deploys to production
 
 ### 2. Customer Support System
 
-```
+```text
 Classifier Agent → Routes to appropriate specialist
     ↓
 Technical Agent  → Handles technical issues
@@ -243,7 +243,7 @@ Escalation Agent → Escalates complex cases
 
 ### 3. Research & Analysis
 
-```
+```text
 Search Agent      → Finds relevant information
     ↓
 Analysis Agent    → Analyzes and summarizes
@@ -297,7 +297,7 @@ Report Agent      → Generates final report
 
 ## 🎓 Key Takeaways
 
-```
+```text
 ✅ Multi-agent systems split complex tasks across specialized agents
 ✅ Use them when complexity justifies coordination overhead
 ✅ Choose architecture pattern based on task structure

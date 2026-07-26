@@ -46,7 +46,7 @@ In RAG terms: each chunk becomes one vector. At query time you retrieve the top-
 
 Embedding models accept up to 512–8,192 tokens depending on the model. Even with 8K-token windows, collapsing an entire document into one vector produces an average representation — the signal for any specific fact is drowned out by the rest of the document.
 
-```
+```text
 10,000-token document → single 1,536-dim vector
                        → loses specificity
 
@@ -396,7 +396,7 @@ In production systems the chunking pipeline is one of the highest-leverage place
 
 Use this guide to pick a starting strategy before benchmarking:
 
-```
+```text
 What type of documents are you chunking?
     │
     ├─ Short, self-contained entries (FAQ, product descriptions, records)

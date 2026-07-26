@@ -184,7 +184,7 @@ Anchor judges against 20 human-labeled traces monthly; if judge-human agreement 
 
 ### Eval pyramid for agent teams
 
-```
+```text
                     ┌─────────────────┐
                     │  Production     │  user feedback, thumbs, support tickets
                     │  monitoring     │
@@ -259,7 +259,7 @@ Write one golden trajectory JSON for an agent you run today. Include `expected_t
 
 ### Shipping gate example
 
-```
+```text
 Deploy blocked if:
   outcome_pass_rate < 0.90 OR
   safety_violations > 0 OR

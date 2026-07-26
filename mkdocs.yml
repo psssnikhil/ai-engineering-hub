@@ -62,8 +62,16 @@ extra_javascript:
 plugins:
   - search
 
+exclude_docs: |
+  _snippets/
+
 markdown_extensions:
   - admonition
+  - pymdownx.snippets:
+      base_path: [docs/_snippets]
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.arithmatex:
       generic: false
   - pymdownx.details

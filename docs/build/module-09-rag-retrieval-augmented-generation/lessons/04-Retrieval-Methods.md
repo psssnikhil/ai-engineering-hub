@@ -53,7 +53,7 @@ In RAG:
 
 Retrieval decides **which context the LLM sees**. A state-of-the-art generator with poor retrieval still hallucinates — it invents answers from irrelevant chunks.
 
-```
+```text
 User query → Retriever → Top-K chunks → LLM → Answer
               ↑
          The retriever is the gatekeeper.
@@ -119,7 +119,7 @@ for score, chunk in scores:
 ```
 
 Expected output:
-```
+```text
 0.847  Password reset instructions: visit account settings and...
 0.312  API error 429 means the rate limit has been exceeded...
 0.198  Quarterly revenue for Q3 2024 came in at USD 14.2 bill...
@@ -184,7 +184,7 @@ for doc, score in sorted(zip(corpus, scores), key=lambda x: x[1], reverse=True):
 ```
 
 Expected output:
-```
+```text
 3.421  Rate limiting prevents abuse. When you hit error 429, implement...
 2.876  API error 429 means the rate limit has been exceeded...
 0.000  Password reset instructions: visit account settings...
@@ -264,7 +264,7 @@ for doc_id, score in fused:
     print(f"{score:.4f}  {doc_id}")
 ```
 
-```
+```text
 0.0328  doc_a    ← top in dense (#1), high in sparse (#2)
 0.0311  doc_b    ← top in sparse (#1), high in dense (#3)
 0.0295  doc_c    ← #2 dense, #4 sparse
@@ -283,7 +283,7 @@ for doc_id, score in fused:
 
 First-pass retrieval (dense or hybrid) casts a wide net — it prioritizes recall by returning K=20 candidates. A **cross-encoder reranker** then scores each candidate against the query to produce a precision-optimized top-5.
 
-```
+```text
 Dense retrieval → top 20 candidates (high recall, some noise)
         ↓
 Cross-encoder reranker → rescores all 20 with deeper attention
@@ -316,7 +316,7 @@ for doc, score in ranked:
 ```
 
 Expected output:
-```
+```text
  8.23  Password reset: go to account settings and click Forgot Password.
  7.41  To recover access: click the link emailed to your registered...
 -2.34  API rate limit error 429: implement exponential backoff.

@@ -31,7 +31,7 @@ objectives:
 
 Supervised fine-tuning (SFT) teaches a model **what** to say. Preference tuning teaches it **how** to say it — aligning outputs with human preferences for helpfulness, safety, and quality.
 
-```
+```text
 SFT: "Here is a good response. Learn to generate this."
 RLHF/DPO: "Here are two responses. This one is better. Learn why."
 ```
@@ -50,7 +50,7 @@ Train the base model on high-quality instruction-response pairs (what we covered
 
 Train a separate model to predict human preferences:
 
-```
+```text
 Input: (prompt, response)
 Output: scalar reward score (higher = more preferred)
 ```
@@ -64,7 +64,7 @@ The reward model learns from human comparisons:
 
 Use the reward model to guide further training via Proximal Policy Optimization:
 
-```
+```text
 For each training prompt:
   1. Generate a response with the current model
   2. Score it with the reward model
@@ -90,7 +90,7 @@ Direct Preference Optimization (DPO) achieves similar results without a reward m
 
 Instead of training a reward model and then doing RL, DPO directly optimizes the language model on preference pairs:
 
-```
+```text
 For each training example:
   - Prompt: "Explain quantum computing"
   - Chosen response: (the human-preferred response)

@@ -177,7 +177,7 @@ eval_dataset = [
 
 ### Eval Dataset Growth Plan
 
-```
+```text
 Week 1:  30 queries from most common user questions (manual)
 Week 4:  50 queries + add failure cases from production logs
 Month 3: 100 queries + click-through data from top 20 queries

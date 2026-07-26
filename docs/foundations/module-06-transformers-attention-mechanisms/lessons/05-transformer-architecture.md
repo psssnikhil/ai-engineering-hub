@@ -38,7 +38,7 @@ objectives:
 
 ## The 30,000-Foot View
 
-```
+```text
 "Attention Is All You Need" (Vaswani et al., 2017)
 removes recurrence entirely and relies solely on:
 
@@ -59,7 +59,7 @@ Before diving into the full architecture, we need LayerNorm.
 
 Unlike BatchNorm (normalizes across the batch dimension), LayerNorm normalizes across the **feature dimension** for each sample independently:
 
-```
+```text
 LayerNorm(x) = γ · (x - μ) / (σ + ε) + β
 
 where:
@@ -102,7 +102,7 @@ class LayerNorm:
 
 Each encoder/decoder layer contains a **position-wise FFN** — applied independently to each token:
 
-```
+```text
 FFN(x) = max(0, x · W₁ + b₁) · W₂ + b₂
 
 W₁ ∈ ℝ^{d_model × d_ff}    (expand)
@@ -144,19 +144,19 @@ class FeedForward:
 
 Every sublayer uses a residual (skip) connection:
 
-```
+```text
 x = x + Sublayer(LayerNorm(x))   # Pre-LN formulation
 ```
 
 or in the original post-LN formulation:
 
-```
+```text
 x = LayerNorm(x + Sublayer(x))
 ```
 
 **Why residuals?** Without them, gradients must pass through every multiplication on the way to early layers. With residuals, gradients can take a "highway" that bypasses the sublayer:
 
-```
+```text
 ∂L/∂x = ∂L/∂(x + f(x)) · (1 + ∂f/∂x)
 ```
 
@@ -347,7 +347,7 @@ class Transformer:
 
 ## Tensor Shape Trace (N=2 for illustration)
 
-```
+```text
 src: (2, 12)  ← batch of 2 sentences, 12 tokens each
                             tgt: (2, 8)   ← 8 output tokens (teacher-forced)
 
@@ -488,7 +488,7 @@ print(f"  FFN fraction: {gpt2['ffn_fraction']:.1%}")
 
 Without residual connections, the gradient at layer `l` from the top layer `L` is:
 
-```
+```text
 ∂L/∂x_l = ∏_{k=l}^{L-1} ∂f_k/∂x_k
 
 For L=100 layers, each ∂f_k/∂x_k ≈ 0.9 (typical):
@@ -497,7 +497,7 @@ For L=100 layers, each ∂f_k/∂x_k ≈ 0.9 (typical):
 
 With residual connections, `x_l = x_{l-1} + f(x_{l-1})`, so:
 
-```
+```text
 ∂L/∂x_l = ∂L/∂x_{l+1} · (1 + ∂f/∂x_l)
 
 The "+1" creates an additive path:

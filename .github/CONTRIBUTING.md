@@ -29,7 +29,7 @@ objectives:           # optional
 
 ## File layout
 
-```
+```text
 docs/
   {phase}/                         # foundations | build | production | advanced
     index.md                       # phase overview
@@ -41,6 +41,39 @@ docs/
         01-starter.py
         01-solution.py
 ```
+
+## Code fences — always label the language
+
+Every fence must declare a language, even for ASCII diagrams and program output:
+
+- Runnable code: ` ```python `, ` ```bash `, ` ```json `, ` ```yaml `, etc.
+- ASCII diagrams, tree layouts, math derivations, or console/program output: ` ```text `
+- Architecture diagrams that can be drawn as a graph: prefer ` ```mermaid ` over ASCII art — it renders as an actual diagram and stays readable on mobile.
+
+An unlabeled fence (bare ` ``` `) fails CI. Run the linter locally before opening a PR:
+
+```bash
+npm run lint:fences
+```
+
+The allowed language list lives in `scripts/lint-code-fences.mjs` — add to it if you have a genuine new case (e.g. `rust`, `go`), don't just silence the error.
+
+## Reusable snippets
+
+Content repeated across multiple pages (setup instructions, standard admonitions, disclaimers) belongs in `docs/_snippets/` and is pulled in with:
+
+```markdown
+--8<-- "snippet-name.md"
+```
+
+Existing snippets:
+
+| Snippet | Use for |
+|---|---|
+| `scaffold-note.md` | Marking a page as a work-in-progress scaffold, with a link to good-first-issues |
+| `api-key-setup.md` | Standard "install the SDK + export your API key" callout before a runnable example |
+
+To add a new one: create `docs/_snippets/your-snippet.md`, then reference it from any page with `--8<-- "your-snippet.md"`. `pymdownx.snippets` is configured with `check_paths: true`, so a typo'd snippet name fails the build immediately rather than silently rendering nothing.
 
 Module IDs (`module-00`, `module-09`, etc.) match the AI Engineering Mastery platform on disk. **Site navigation** uses numbered course titles from `curriculum.yml` — run `npm run sync-nav` after changing order or adding courses. See [MAINTAINING.md](../maintainers/MAINTAINING.md).
 

@@ -69,7 +69,7 @@ flowchart LR
 
 **ReAct** (Reason + Act) structures each step as explicit thought + action:
 
-```
+```text
 Thought: I need current weather before recommending clothes.
 Action: get_weather(city="London")
 Observation: 12°C, rain

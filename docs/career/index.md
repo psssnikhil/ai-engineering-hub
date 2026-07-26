@@ -21,4 +21,4 @@ The non-technical half of becoming an AI engineer: roles, portfolio, visibility.
 
 Head to [Interview Prep](../interview-prep/index.md).
 
-*Status: scaffold — salary data, resume guidance, and job-search playbook coming. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

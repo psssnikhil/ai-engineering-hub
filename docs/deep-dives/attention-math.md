@@ -37,14 +37,14 @@ The genius of the Transformer formulation is making this relevance score
 Every token's embedding `x_i ∈ ℝ^d_model` is linearly projected into three
 different vector spaces:
 
-```
+```text
 Q_i = x_i · W_Q    (query:  "what am I looking for?")
 K_i = x_i · W_K    (key:    "what do I contain?")
 V_i = x_i · W_V    (value:  "what information do I provide?")
 ```
 
 Shapes:
-```
+```text
 x_i:  (d_model,)          e.g. 512
 W_Q:  (d_model, d_k)      e.g. 512 × 64
 W_K:  (d_model, d_k)      e.g. 512 × 64
@@ -55,7 +55,7 @@ Q_i, K_i, V_i: (d_k,) or (d_v,)
 
 For a full sequence of length `n`, we stack all token vectors into matrices:
 
-```
+```text
 X:  (n, d_model)
 Q = X · W_Q   →  (n, d_k)
 K = X · W_K   →  (n, d_k)
@@ -91,13 +91,13 @@ model learn different representations for "what I'm searching for" vs.
 
 For each query-key pair, compute a **raw score** (logit) via dot product:
 
-```
+```text
 score(q_i, k_j) = q_i · k_j = Σ_d (q_i[d] × k_j[d])
 ```
 
 In matrix form for the full sequence:
 
-```
+```text
 Scores = Q · K^T          shape: (n, n)
 
 Scores[i, j] = q_i · k_j = "how much should token i attend to token j?"
@@ -110,7 +110,7 @@ The raw dot product can get very large when `d_k` is large. To see why:
 If `q_i` and `k_j` are independent random vectors with elements drawn from
 `N(0, 1)`, then:
 
-```
+```text
 q_i · k_j = Σ_{d=1}^{d_k} q_i[d] × k_j[d]
 
 E[q_i · k_j]     = 0              (zero mean)
@@ -124,7 +124,7 @@ vanish (near-zero gradients on all but the largest score).
 
 Fix: divide by √(d_k):
 
-```
+```text
 Scaled_Scores = Q · K^T / √(d_k)   shape: (n, n)
 ```
 
@@ -136,7 +136,7 @@ gradient-rich linear regime.
 For **decoder self-attention** (causal/autoregressive), we prevent token `i`
 from attending to future token `j > i`. Add −∞ to all future positions:
 
-```
+```text
 if i < j:  Scaled_Scores[i, j] = -∞
 ```
 
@@ -148,7 +148,7 @@ For **encoder self-attention** and **cross-attention**, no causal mask is needed
 
 Apply softmax to each row (each query position attends over all key positions):
 
-```
+```text
 Weights[i, :] = softmax(Scaled_Scores[i, :])
 
 softmax(z)_j = exp(z_j) / Σ_k exp(z_k)
@@ -161,7 +161,7 @@ Properties of these weights:
 
 ### Step 5: Weighted Sum of Values
 
-```
+```text
 Output = Weights · V        shape: (n, d_v)
 
 Output[i] = Σ_j Weights[i, j] × V[j]
@@ -178,7 +178,7 @@ most relevant to query `i` get the highest weights.
 
 Shape summary for a sequence of length `n = 4`, `d_k = d_v = 3`:
 
-```
+```text
 Q:       (4, 3)
 K:       (4, 3)
 V:       (4, 3)

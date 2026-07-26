@@ -88,7 +88,7 @@ BM25 ranks Doc A highest — exact keyword match with high-IDF terms. Doc B rank
 
 ## How Hybrid Search Works
 
-```
+```text
                     ┌─ Dense search (embeddings) ─→ Ranked list A
 User query ────────►│
                     └─ Sparse search (BM25) ───→ Ranked list B

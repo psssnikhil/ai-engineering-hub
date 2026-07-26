@@ -42,7 +42,7 @@ Before scaling laws, training an LLM meant guessing hyperparameters and hoping. 
 
 This transforms AI engineering from art to science:
 
-```
+```text
 Given: $10M compute budget
 Before scaling laws: train a 175B model with 300B tokens (GPT-3 approach)
 After Chinchilla:    train a 70B model with 1.4T tokens (same compute, lower loss!)
@@ -56,7 +56,7 @@ The Chinchilla result (DeepMind, 2022) showed that GPT-3 was significantly under
 
 Kaplan et al. trained hundreds of models from 700K to 1.5B parameters on 22B tokens and fit power-law curves:
 
-```
+```text
 L(N) ≈ (N_c / N)^(α_N)    with α_N ≈ 0.076
 L(D) ≈ (D_c / D)^(α_D)    with α_D ≈ 0.095
 L(C) ≈ (C_c / C)^(α_C)    with α_C ≈ 0.050
@@ -115,7 +115,7 @@ Hoffmann et al. (2022) trained 400+ models of different sizes and asked: *given 
 
 For a fixed C FLOPs (with FLOPs ≈ 6ND for a Transformer forward + backward):
 
-```
+```text
 C = 6ND
 Optimal N* ≈ (C / 6)^0.5   ← model and data scale equally
 Optimal D* ≈ (C / 6)^0.5
@@ -166,7 +166,7 @@ print(f"1000 A100s:   {a100_days/1000:.1f} days")
 
 Naive scaled dot-product attention for sequence length `n` materializes a full `(n, n)` attention weight matrix in GPU High-Bandwidth Memory (HBM):
 
-```
+```text
 Memory for attention weights: n² × 4 bytes (FP32) or 2 bytes (FP16)
 
 For n=8192, 32 heads:
@@ -180,7 +180,7 @@ For n=128K (Gemini 1.5):
 
 Flash Attention (Dao et al. 2022) tiles the computation so the full `(n, n)` matrix is **never materialized**. It works in blocks that fit in L2 cache / SRAM:
 
-```
+```text
 Divide K and V into blocks of size B_c columns.
 Divide Q into blocks of size B_r rows.
 
@@ -393,7 +393,7 @@ for batch in dataloader:
 
 ### ZeRO (Zero Redundancy Optimizer)
 
-```
+```text
 Standard DDP: each GPU holds full model + optimizer state
   Memory per GPU = model_params × 16 bytes (FP32 params + gradients + Adam moments)
 

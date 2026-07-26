@@ -25,7 +25,7 @@ module: module-15
 
 **Fine-tuning** is the process of further training a pre-trained LLM on a smaller, domain-specific dataset to specialize its behavior for your use case.
 
-```
+```text
 Pre-trained Model (General Knowledge)
         |
         | + Your Training Data (100s-10,000s of examples)
@@ -55,7 +55,7 @@ Fine-tuning adjusts the model's weights to:
 
 Before fine-tuning, consider cheaper and faster alternatives:
 
-```
+```text
 Start Here: Can prompt engineering solve it?
   |
   |-- Yes -> Use prompt engineering (cheapest, fastest)
@@ -120,7 +120,7 @@ training_example = {
 
 If you have a long system prompt that you send with every request, fine-tuning can bake those instructions into the model:
 
-```
+```text
 Before fine-tuning:
   System prompt: 2,000 tokens (sent every request)
   x 1M requests/month = 2 BILLION extra input tokens
@@ -142,7 +142,7 @@ When the model needs to understand specialized terminology, reasoning patterns, 
 
 Fine-tuned smaller models can match larger models on specific tasks, with much faster inference:
 
-```
+```text
 GPT-4.1 (large):  ~2s response, $10/1M output tokens
 Fine-tuned GPT-4.1-mini: ~0.3s response, $1.6/1M output tokens
                          (if fine-tuned well for your task)
@@ -174,7 +174,7 @@ Fine-tuned GPT-4.1-mini: ~0.3s response, $1.6/1M output tokens
 
 ### Timeline
 
-```
+```text
 Week 1: Data collection and preparation
 Week 2: Initial fine-tuning experiments
 Week 3: Evaluation and iteration

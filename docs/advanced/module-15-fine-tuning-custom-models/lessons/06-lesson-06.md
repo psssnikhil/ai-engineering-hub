@@ -40,7 +40,7 @@ Fine-tuning can make a model better at your task but worse at everything else. W
 
 ### The Three-Layer Approach
 
-```
+```text
 Layer 1: Automated Metrics (fast, cheap, limited)
   - Loss curves, perplexity, exact match, BLEU/ROUGE
   

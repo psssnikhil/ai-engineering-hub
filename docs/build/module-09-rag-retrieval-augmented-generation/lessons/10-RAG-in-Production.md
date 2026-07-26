@@ -70,7 +70,7 @@ The mental model: think of your RAG system as three cooperating services — **i
 
 ## Production Architecture
 
-```
+```text
                     ┌─────────────────┐
   User ──→ API ────→│  Query Router   │
                     └────────┬────────┘

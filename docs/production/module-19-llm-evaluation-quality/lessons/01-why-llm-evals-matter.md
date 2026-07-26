@@ -316,7 +316,7 @@ class EvalBaseline:
 
 Quality gates are automated decision points in your deployment pipeline that block bad changes from reaching users. They transform eval results from informational dashboards into actionable enforcement mechanisms.
 
-```
+```text
 Without quality gates:
   Dev notices quality dropped 12% → 4 days after deploy → damage done
 

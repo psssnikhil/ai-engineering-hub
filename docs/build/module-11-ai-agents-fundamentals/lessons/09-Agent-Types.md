@@ -34,7 +34,7 @@ By the end of this lesson, you'll understand:
 
 Agents range from simple (reactive) to complex (fully autonomous). Understanding this spectrum helps you pick the right architecture.
 
-```
+```text
 Simple ◄──────────────────────────────────────► Complex
 
 Reactive    Tool-Use    RAG Agent    Deliberative    Autonomous

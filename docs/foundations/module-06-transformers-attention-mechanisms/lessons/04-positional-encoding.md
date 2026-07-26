@@ -38,7 +38,7 @@ objectives:
 
 Consider these two sentences:
 
-```
+```text
 "Dog bites man"   → The dog is aggressive
 "Man bites dog"   → Newsworthy, unusual
 ```
@@ -55,7 +55,7 @@ The key design constraint: the position signal must be **differentiable** and mu
 
 The general approach:
 
-```
+```text
 final_embedding[i] = token_embedding[i] + position_embedding[i]
 ```
 
@@ -70,7 +70,7 @@ The model then receives position information encoded in the same vector space as
 
 Vaswani et al. 2017 defined:
 
-```
+```text
 PE(pos, 2i)   = sin(pos / 10000^(2i/d_model))
 PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
 ```
@@ -95,7 +95,7 @@ Each position gets a unique combination of clock readings. The pattern is determ
 
 The key property: for any fixed offset `k`, `PE(pos+k)` can be expressed as a **linear transformation** of `PE(pos)`. Specifically:
 
-```
+```text
 PE(pos+k) = M_k · PE(pos)
 ```
 
@@ -105,7 +105,7 @@ This means: when computing `q · k` in attention, the dot product between `PE(po
 
 **Worked verification** (dimension pair `i=0`):
 
-```
+```text
 PE(pos, 0)   = sin(pos)
 PE(pos, 1)   = cos(pos)
 PE(pos+k, 0) = sin(pos+k) = sin(pos)cos(k) + cos(pos)sin(k)
@@ -144,7 +144,7 @@ print("Pos 5:", pe[5].round(3))
 
 Expected output (approximate):
 
-```
+```text
 Pos 0: [0.    1.    0.    1.    0.    1.    0.    1.   ]
 Pos 1: [0.841 0.540 0.100 0.995 0.010 1.000 0.001 1.000]
 Pos 5: [0.959 -0.279 0.479 0.877 0.050 0.999 0.005 1.000]
@@ -250,7 +250,7 @@ x = token_embed + pos_embedding(positions)
 
 Instead of adding PE to embeddings, RoPE **rotates** the Q and K vectors before computing attention scores:
 
-```
+```text
 q_rotated[pos] = Rotate(q[pos], angle=pos × θ)
 k_rotated[pos] = Rotate(k[pos], angle=pos × θ)
 
@@ -287,7 +287,7 @@ def apply_rope(x: torch.Tensor, cos: torch.Tensor, sin: torch.Tensor) -> torch.T
 
 ALiBi adds a linear slope to attention scores based on token distance:
 
-```
+```text
 score[i, j] = (q_i · k_j) / √d_k  −  m × |i − j|
 ```
 

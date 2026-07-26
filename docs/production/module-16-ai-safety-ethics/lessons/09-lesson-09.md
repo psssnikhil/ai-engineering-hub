@@ -33,7 +33,7 @@ Not every AI output should go directly to the end user. For high-stakes decision
 
 ### Pattern 1: Human Approval Gate
 
-```
+```text
 User Request --> AI generates response --> Human reviews --> User sees response
 
 Best for: Medical advice, legal documents, hiring decisions
@@ -42,7 +42,7 @@ Tradeoff: Slower, but highest safety
 
 ### Pattern 2: Confidence-Based Routing
 
-```
+```text
 User Request --> AI generates response + confidence score
   |
   |-- High confidence (>0.9) --> Send directly to user
@@ -78,7 +78,7 @@ def route_response(ai_response, confidence, threshold_auto=0.9, threshold_human=
 
 ### Pattern 3: Post-Hoc Review (Sampling)
 
-```
+```text
 User Request --> AI responds immediately --> Log response
                                               |
                                               v
@@ -97,7 +97,7 @@ Never deploy an AI feature to 100% of users on day one.
 
 ### Phased Rollout
 
-```
+```text
 Week 1: Internal team only (dogfooding)
   |-- Fix critical issues
   |
@@ -223,7 +223,7 @@ def check_safety_metrics(metrics, baselines, alert_fn):
 
 When an AI system produces harmful output in production:
 
-```
+```text
 INCIDENT DETECTED (automated alert or user report)
     |
     v

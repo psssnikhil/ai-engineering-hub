@@ -49,7 +49,7 @@ Your job in production is picking the right translator for your domain and budge
 
 An embedding is a fixed-length dense vector that encodes semantic meaning. Similar texts produce vectors with high cosine similarity (small angle between them).
 
-```
+```text
 "How to configure HNSW ef parameter"  → [0.12, -0.34, 0.87, ..., 0.05]  (1536d)
 "Tuning HNSW search accuracy"         → [0.11, -0.31, 0.85, ..., 0.07]  (similar!)
 "Best pizza recipes in Naples"        → [0.78,  0.33, 0.05, ..., -0.91] (different)

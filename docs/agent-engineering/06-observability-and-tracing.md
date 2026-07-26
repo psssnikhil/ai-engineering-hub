@@ -31,7 +31,7 @@ A chat completion log tells you the final answer. An **agent trace** tells you t
 
 When a user says "the agent deleted the wrong file," you need:
 
-```
+```text
 trace_id: tr_a91f
   step 3: tool.write_file(path="config.yaml")  ← culprit
   step 2: tool.list_files(dir=".")           ← model saw wrong directory
@@ -223,7 +223,7 @@ Export to Grafana, Datadog, or Langfuse. Align with [OpenTelemetry GenAI semanti
 
 ### Cost attribution example
 
-```
+```text
 trace tr_support_991 — total $0.34
   llm.reason  step 1: $0.08
   tool.lookup:        $0.00

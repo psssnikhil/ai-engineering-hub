@@ -74,7 +74,7 @@ The biggest shift: **you no longer control the model**. Provider updates can cha
 
 The lifecycle has six stages that repeat continuously. Unlike a waterfall model, you cycle through them on every significant change.
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────────────┐
 │                        LLMOps Lifecycle                              │
 │                                                                      │
@@ -368,7 +368,7 @@ Most production applications at companies with fewer than 20 engineers operate a
 
 ### What "Level 1 Ready" Looks Like
 
-```
+```text
 ✓ All prompts live in prompts/ directory with version numbers
 ✓ Pull requests include prompt diff if any prompt file changed
 ✓ 50+ golden test cases run in CI against every PR

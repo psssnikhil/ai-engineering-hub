@@ -75,7 +75,7 @@ This is why the pre-training paradigm was revolutionary: the training signal (pr
 
 ## Pre-Training: The Process
 
-```
+```text
 Stage: PRE-TRAINING
 
 Data:   Trillions of tokens from the web, books, code, scientific papers
@@ -156,7 +156,7 @@ The architecture did not fundamentally change from GPT-1 to GPT-3. The gains cam
 
 A striking finding: some capabilities appear suddenly at specific scale thresholds. Below a threshold, performance is near-random. Above it, the capability materializes:
 
-```
+```text
 Few-shot learning:        emerges ~50B parameters
 Multi-step arithmetic:    emerges ~100B parameters
 Chain-of-thought reasoning: emerges ~100B parameters
@@ -172,7 +172,7 @@ Code generation:          emerges ~12B parameters (with code-focused training)
 
 While GPT pursued generation (decoder-only), Google took a different path:
 
-```
+```text
 BERT (2018) — Bidirectional Encoder Representations from Transformers
 
 Pre-training task 1: Masked Language Modeling (MLM)
@@ -212,7 +212,7 @@ Three techniques transform a base model into an assistant:
 
 Continue training on a small dataset of high-quality (instruction, response) pairs:
 
-```
+```text
 Instruction: "Summarize this article in 3 bullet points: [article]"
 Response:    "• Point 1\n• Point 2\n• Point 3"
 
@@ -238,7 +238,7 @@ graph LR
     E --> B
 ```
 
-```
+```text
 Prompt: "Explain quantum entanglement"
 
 Response A: Accurate, clear, appropriate length, good analogies    → Rank 1
@@ -270,7 +270,7 @@ In practice: DPO is simpler to implement, more stable, and now widely used (Zeph
 
 ## The Modern LLM Training Pipeline
 
-```
+```text
 Stage 1: PRE-TRAINING (weeks to months)
   Data:   1T–15T tokens from internet, books, code
   Task:   Predict next token (autoregressive)

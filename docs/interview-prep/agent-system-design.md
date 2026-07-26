@@ -27,4 +27,4 @@ The signature round for agent-engineering roles. You'll be asked to design an ag
 - [Orchestration](../agent-engineering/05-orchestration.md)
 - [Agent Evals](../agent-engineering/07-agent-evals.md)
 
-*Status: scaffold — worked example designs coming. [Contribute](../contribute.md).*
+--8<-- "scaffold-note.md"

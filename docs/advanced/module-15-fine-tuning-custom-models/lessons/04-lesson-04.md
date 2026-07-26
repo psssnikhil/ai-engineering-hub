@@ -74,7 +74,7 @@ By the end of this lesson, you will have:
 
 ## Architecture
 
-```
+```text
 [Training Data]  training_data.jsonl
        |
        v

@@ -43,7 +43,7 @@ The key question is: *what self-supervised objective forces the model to encode 
 
 The answer depends on what you want the model to do:
 
-```
+```text
 If you want generation → Causal LM (predict next token)
 If you want understanding → Masked LM (predict masked tokens)
 If you want seq2seq → Span corruption (reconstruct corrupted spans)
@@ -436,7 +436,7 @@ for name, params, gpus in configs:
 
 ### Loss Spike Pattern
 
-```
+```text
 Normal training curve:
 Step 0:     Loss = 6.5  (random model)
 Step 1000:  Loss = 4.2  (learning)

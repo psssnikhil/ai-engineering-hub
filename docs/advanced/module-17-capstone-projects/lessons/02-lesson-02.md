@@ -31,7 +31,7 @@ Build a production-quality document Q&A system that can:
 
 ## Architecture
 
-```
+```text
 Documents (PDF/MD/TXT)
     |
     v

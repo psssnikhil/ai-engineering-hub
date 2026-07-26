@@ -266,7 +266,7 @@ for ef in [10, 20, 50, 100, 200, 400]:
 
 Typical output pattern:
 
-```
+```text
     ef  recall@10     p50 ms     p95 ms
 ------------------------------------------
     10      0.912       0.05       0.08
@@ -281,7 +281,7 @@ Pick the lowest `ef` that meets your recall target within your latency SLA.
 
 ## Index Selection Decision Tree
 
-```
+```text
 How many vectors?
   ├─ < 50K        → Flat (brute force) — exact, simple, no tuning
   ├─ 50K – 1M     → HNSW — best recall/latency for real-time

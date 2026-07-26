@@ -53,7 +53,7 @@ Every computation can be represented as a directed acyclic graph (DAG) where:
 - **Nodes** are values (scalars, vectors, matrices)
 - **Edges** are operations (addition, multiplication, activation functions)
 
-```
+```text
 x → [multiply w] → z → [ReLU] → a → [multiply w2] → y_hat → [MSE with y] → Loss
 ```
 

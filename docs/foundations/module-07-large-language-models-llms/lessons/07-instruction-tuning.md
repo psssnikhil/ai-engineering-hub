@@ -33,7 +33,7 @@ A pre-trained LLM completes text. An instruction-tuned LLM *follows instructions
 
 After pre-training, a 7B model given:
 
-```
+```text
 Input: "What is the capital of France?"
 ```
 
@@ -41,7 +41,7 @@ Might continue: `"What is the capital of Germany? What is the capital of Spain? 
 
 After instruction tuning:
 
-```
+```text
 Input: "[INST] What is the capital of France? [/INST]"
 Output: "The capital of France is Paris."
 ```

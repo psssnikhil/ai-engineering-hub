@@ -38,7 +38,7 @@ objectives:
 
 Before deciding *how* to fine-tune, decide *whether* to fine-tune:
 
-```
+```text
 Prompting is better when:
   - Task is general (translation, summarization, QA)
   - You have <100 examples
@@ -160,7 +160,7 @@ def full_finetune(
 
 LoRA (Hu et al., 2021) is the most widely used parameter-efficient fine-tuning technique. Instead of updating the full weight matrix `W ∈ ℝ^{d×d}`, it adds a low-rank decomposition:
 
-```
+```text
 W_new = W_original + ΔW = W_original + B × A
 
 where:
@@ -170,7 +170,7 @@ where:
 ```
 
 **Why this saves parameters**:
-```
+```text
 Full fine-tuning:   d × d = 4096 × 4096 = 16.7M parameters per matrix
 LoRA (r=8):         d × r + r × d = 4096×8 + 8×4096 = 65,536 parameters
 Savings:            16,777,216 / 65,536 = 256× fewer parameters!

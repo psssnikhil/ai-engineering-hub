@@ -51,7 +51,7 @@ Without a harness, you have a prompt and a `while True:` loop. With a harness, y
 
 In [M11 Lesson 1](../../module-11-ai-agents-fundamentals/lessons/01-Introduction-to-Agents.md), you learned that an agent is a **perceive → reason → act** loop wrapped around an LLM. That loop is the *behavior*. The **harness** is the *runtime* that makes the behavior safe, repeatable, and debuggable in production.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                      AGENT HARNESS                          │
 │  ┌─────────┐  ┌─────────┐  ┌──────────┐  ┌─────────────┐  │
@@ -189,7 +189,7 @@ The harness owns **how many times** this runs, **what happens on errors**, and *
 
 **Worked example — tracing a 3-step loop:**
 
-```
+```text
 Step 1:
   Model receives: [system, user: "Find the pricing for plan A and plan B"]
   Model emits: tool_call("search_docs", {"query": "plan A pricing"})

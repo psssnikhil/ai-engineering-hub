@@ -82,7 +82,7 @@ for text in examples:
 ```
 
 Expected output:
-```
+```text
 'Hello, world!'
   Tokens (4): ['Hello', ',', ' world', '!']
 
@@ -104,7 +104,7 @@ Expected output:
 
 At every training step, the model sees a sequence of tokens and must predict the next one:
 
-```
+```text
 Input sequence:  [The] [cat] [sat] [on] [the]
                   ↓     ↓     ↓     ↓     ↓
 Target:          [cat] [sat] [on] [the]  [mat]
@@ -237,7 +237,7 @@ for temp in [0.1, 0.5, 1.0, 2.0]:
 ```
 
 Output:
-```
+```text
 Temp=0.1: [0.993 0.007 0.000 0.000 0.000]  ← very peaked, almost greedy
 Temp=0.5: [0.762 0.209 0.020 0.009 0.000]  ← more confident
 Temp=1.0: [0.432 0.264 0.097 0.080 0.065]  ← baseline
@@ -256,7 +256,7 @@ Temp=2.0: [0.260 0.220 0.177 0.171 0.163]  ← flatter, more random
 
 ### 1. Autoregressive (Decoder-Only)
 
-```
+```text
 Examples: GPT-2/3/4, LLaMA, Mistral, Claude, Gemini
 Training: predict next token given all previous tokens (left-to-right)
 Masking:  causal (upper-triangular) — can't see future tokens
@@ -268,7 +268,7 @@ Token embeddings → N × [Causal Self-Attention + FFN] → Output logits
 
 ### 2. Masked Language Models (Encoder-Only)
 
-```
+```text
 Examples: BERT, RoBERTa, ALBERT
 Training: predict randomly masked tokens using full bidirectional context
 Masking:  none — every token sees every other token
@@ -280,7 +280,7 @@ Token embeddings → N × [Bidirectional Self-Attention + FFN] → [CLS] → Cla
 
 ### 3. Encoder-Decoder
 
-```
+```text
 Examples: T5, BART, mT5, FLAN-T5
 Training: span corruption (T5) or denoising (BART)
 Best for: translation, summarization, structured output
@@ -306,7 +306,7 @@ Target → N × Decoder Blocks (with cross-attention to Memory) → Output
 
 One of the strangest phenomena in LLM research is **emergence** — capabilities that appear suddenly at certain scales and are essentially absent at smaller scales.
 
-```
+```text
 Few-shot learning:
   1B params:  ~55% on 5-shot GSM8K (grade school math)
   7B params:  ~62%
@@ -348,7 +348,7 @@ prompt = "The paper 'Attention Is All You Need' was published in:"
 
 Training data has a fixed end date. Events after the cutoff are unknown to the model.
 
-```
+```text
 GPT-4: knowledge cutoff ≈ April 2023
 LLaMA-3: knowledge cutoff ≈ December 2023
 Models can extrapolate from training but cannot know recent facts.

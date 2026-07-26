@@ -154,7 +154,7 @@ Claude Code can spawn **subagents** for parallel research or isolated tasks — 
 
 For `refactor auth module` (large blast radius):
 
-```
+```text
 1. User enables plan mode
 2. Agent outputs plan only — no writes
 3. User edits plan: "Don't touch session store"

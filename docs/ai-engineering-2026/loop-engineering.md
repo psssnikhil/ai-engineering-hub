@@ -86,7 +86,7 @@ See [Agent Loop](../agent-engineering/01-agent-loop.md).
 
 Cursor supports **recurring agent prompts** (loop skill) — run a check on an interval:
 
-```
+```text
 /loop 5m check CI status and fix lint errors
 ```
 
@@ -135,7 +135,7 @@ Implementation: [M19 · CI/CD for AI Quality](../production/module-19-llm-evalua
 
 Developer asks Claude Code: `"Address review comment on auth.py"`
 
-```
+```text
 max_steps=20, timeout=180s, cost_cap=$0.50
 → 6 steps, tests pass, PR updated
 ```
@@ -152,14 +152,14 @@ jobs:
           if outcome_rate < 0.9; then exit 1; fi
 ```
 
-```
+```text
 Change merged → eval pass rate 94% → deploy
 Model upgrade → pass rate 81% → BLOCKED → engineer adjusts CLAUDE.md → 93% → merge
 ```
 
 ### Scheduled loop (nightly)
 
-```
+```text
 Cron: 0 2 * * *
 Task: "Scan open issues labeled flaky-test; attempt fix; open draft PR"
 Harness: max_steps=30, read-only prod, write only on branch bot/*
@@ -168,7 +168,7 @@ Idempotency: skip if draft PR already exists for issue
 
 ### Shared trace across loops
 
-```
+```text
 trace_id: tr_outer_88
   child: tr_inner_ci_run (eval harness)
   child: tr_inner_nightly_2026-07-12 (cron agent)

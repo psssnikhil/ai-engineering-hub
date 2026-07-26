@@ -45,7 +45,7 @@ Most production teams iterate 5–15 times before a prompt reaches acceptable qu
 
 ## The Prompt Optimization Loop
 
-```
+```text
 Write prompt → Test on eval set → Measure metrics → Identify failures → Refine → Repeat
 ```
 
