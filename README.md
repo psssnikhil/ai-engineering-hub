@@ -17,7 +17,7 @@
 
 <br/>
 
-**[Browse 16 courses](https://psssnikhil.github.io/learn-ai-engineering/learn/)** · **[Build portfolio projects](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/learn-ai-engineering/learn/study-plans/)**
+**[Browse 16 courses](https://psssnikhil.github.io/learn-ai-engineering/learn/)** · **[Build portfolio projects](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/learn-ai-engineering/learn/study-plans/)** · **[Interview prep](https://psssnikhil.github.io/learn-ai-engineering/interview-prep/)** · **[Books](https://psssnikhil.github.io/learn-ai-engineering/books/)**
 
 <br/>
 
