@@ -162,11 +162,21 @@ curriculum.yml   # Source of truth for course order → mkdocs nav
 
 ---
 
-## Contribute
+## Run the code, not just the docs
 
-Found a typo? Want to deepen a lesson? **PRs welcome.**
+New: hands-on notebooks in [`labs/`](labs/) — starting with [RAG from scratch](labs/lab-01-rag-from-scratch.ipynb) (chunking → retrieval → grounded generation → a 10-line eval, no frameworks). More labs are [up for grabs](https://github.com/psssnikhil/ai-engineering-handbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
-[CONTRIBUTING.md](.github/CONTRIBUTING.md) · [Roadmap](https://psssnikhil.github.io/ai-engineering-handbook/roadmap/) · [Open an issue](https://github.com/psssnikhil/ai-engineering-handbook/issues)
+---
+
+## Contribute — we want your PRs
+
+This handbook is built in the open, and contributions of every size are welcome: a typo fix, a dead-link repair, a new lab notebook, a worked interview answer, or a whole lesson.
+
+- **New here?** Grab a [good first issue](https://github.com/psssnikhil/ai-engineering-handbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- **Have an idea or question?** Start a [Discussion](https://github.com/psssnikhil/ai-engineering-handbook/discussions)
+- **Ready to write?** Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) and the [Roadmap](https://psssnikhil.github.io/ai-engineering-handbook/roadmap/)
+
+Every contributor is credited. If you learned something here, the best thank-you is a PR that helps the next person.
 
 ---
 
