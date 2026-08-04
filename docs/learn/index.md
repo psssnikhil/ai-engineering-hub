@@ -33,6 +33,7 @@ Follow this order from top to bottom. Each course opens with a lesson list — w
 | Track |
 |-------|
 | [Agent Engineering](../agent-engineering/index.md) |
+| [Interview Prep & System Design](../interview-prep/index.md) |
 | [Modern AI (2026)](../ai-engineering-2026/index.md) |
 
 ## Quick links

@@ -50,4 +50,5 @@ Full interactive list: [Learn overview](learn/index.md)
 ## Optional tracks
 
 - [Agent Engineering](agent-engineering/index.md)
+- [Interview Prep & System Design](interview-prep/index.md)
 - [Modern AI (2026)](ai-engineering-2026/index.md)

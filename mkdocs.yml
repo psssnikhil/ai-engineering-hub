@@ -117,6 +117,16 @@ nav:
           - "Observability & Tracing": agent-engineering/06-observability-and-tracing.md
           - Agent Evals: agent-engineering/07-agent-evals.md
           - Related Papers: agent-engineering/related-papers.md
+      - "Track · Interview Prep & System Design":
+          - Overview: interview-prep/index.md
+          - "LLM & Transformer Fundamentals Q&A": interview-prep/questions-llm-fundamentals.md
+          - "RAG Q&A": interview-prep/questions-rag.md
+          - "Agents Q&A": interview-prep/questions-agents.md
+          - "Evals & Production Q&A": interview-prep/questions-evals-production.md
+          - "Case Study: Design a RAG System": interview-prep/design-rag-system.md
+          - "Case Study: Design an Agent Platform": interview-prep/design-agent-platform.md
+          - "Case Study: Design an LLM Serving System": interview-prep/design-llm-serving.md
+          - "Case Study: Design an Eval Pipeline": interview-prep/design-eval-pipeline.md
       - Track · Modern AI (2026):
           - Overview: ai-engineering-2026/index.md
           - Claude Code: ai-engineering-2026/claude-code.md
