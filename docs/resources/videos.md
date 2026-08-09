@@ -1,6 +1,6 @@
 ---
 title: Complete AI Engineering Video Catalog
-description: Curated index of essential YouTube lectures, playlists, course series, and code walkthroughs for AI Engineers.
+description: Curated index of essential YouTube lectures, playlists, course series, paper code walkthroughs, and production talks for AI Engineers.
 ---
 
 # 🎬 Complete AI Engineering Video & Lecture Catalog
@@ -20,7 +20,38 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 ---
 
-## 📄 2. Landmark Paper Code Walkthroughs
+## ⚡ 2. Reasoning Models, RL & Test-Time Compute
+
+| Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
+|-----------------|---------------------|---------------------|-------------|
+| **DeepSeek-R1 & Reinforcement Learning Breakdown** | Andrej Karpathy | Deep technical breakdown of how pure RL incentivizes CoT reasoning, reward modeling, and distilled reasoning models. | [Watch Video](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
+| **DeepSeek-R1 PyTorch & GRPO Walkthrough** | Umar Jamil | Line-by-line derivation of Group Relative Policy Optimization (GRPO), rule-based rewards, and token reasoning traces. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **Process Reward Models & Tree of Thoughts** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Watch Video](https://www.youtube.com/watch?v=w65l4T2pndE) |
+
+---
+
+## 👁️ 3. Multimodal AI & Vision-Language Models
+
+| Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
+|-----------------|---------------------|---------------------|-------------|
+| **CLIP PyTorch Code & Architecture Walkthrough** | Umar Jamil | Step-by-step PyTorch code walkthrough of CLIP contrastive loss, image encoder, and text encoder. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **LLaVA & Visual Instruction Tuning** | Umar Jamil | Architectural breakdown of LLaVA vision projections, vicuna LLM integration, and visual tuning. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **ColPali & Vision Document Retrieval** | James Briggs / Answer.AI | Hands-on video tutorial showing how to index PDF pages visually without text extraction errors. | [Watch Video](https://www.youtube.com/@jamesbriggs) |
+| **CS231n: Deep Learning for Computer Vision** | Stanford University | Flagship Stanford course covering Convolutional Networks, Vision Transformers, and Multimodal AI. | [Course Site](https://cs231n.stanford.edu/) |
+
+---
+
+## 💻 4. Code Intelligence & SWE Agents
+
+| Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
+|-----------------|---------------------|---------------------|-------------|
+| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
+| **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for real-world software engineering agents. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
+
+---
+
+## 📄 5. Landmark Paper Code Walkthroughs
 
 | Video / Paper | Creator | Engineering Focus | Direct Link |
 |---------------|---------|-------------------|-------------|
@@ -31,7 +62,7 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 ---
 
-## 📚 3. RAG, Retrieval & Vector Search
+## 📚 6. RAG, Retrieval & Vector Search
 
 | Video / Masterclass | Creator / Host | Engineering Focus | Direct Link |
 |---------------------|----------------|-------------------|-------------|
@@ -41,17 +72,16 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 ---
 
-## 🤖 4. AI Agents, Harnesses & Multi-Agent Systems
+## 🤖 7. AI Agents, Harnesses & Multi-Agent Systems
 
 | Video / Lecture | Creator / Host | Engineering Focus | Direct Link |
 |-----------------|----------------|-------------------|-------------|
 | **AI Agent Design Patterns** | Andrew Ng | Masterclass breaking down Reflection, Tool Use, Planning, and Multi-Agent Collaboration. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 | **Functions, Tools & Agents with LangChain** | Harrison Chase (LangChain) | Hands-on video tutorial covering tool execution, persistent state memory, and LangGraph subgraphs. | [Free Course](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) |
-| **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for real-world reliability. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
 
 ---
 
-## ⚡ 5. LLMOps, High-Throughput Serving & Evals
+## ⚡ 8. LLMOps, High-Throughput Serving & Evals
 
 | Video / Lecture | Presenter / Host | Engineering Focus | Direct Link |
 |-----------------|------------------|-------------------|-------------|

@@ -14,17 +14,26 @@ High-signal videos for visual learners. Full auto-index: [Videos](videos.md).
 | [Attention in transformers, visually explained](https://www.youtube.com/watch?v=eMlx5fFNoYc) | 3Blue1Brown | M06 |
 | [Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) | Andrej Karpathy | M07 |
 
-## RAG & agents
+## Reasoning & Reinforcement Learning
+
+| Video | Creator | Module |
+|-------|---------|--------|
+| [DeepSeek-R1 & RL Breakdown](https://www.youtube.com/watch?v=7xTGNNLPyMI) | Andrej Karpathy | M07 |
+| [DeepSeek-R1 GRPO Code Walkthrough](https://www.youtube.com/@UmarJamil) | Umar Jamil | M07 |
+
+## RAG & Agents
 
 | Video | Creator | Module |
 |-------|---------|--------|
 | [State of GPT](https://www.youtube.com/watch?v=bZQun8Y4L2A) | Andrej Karpathy | M07 |
-| Microsoft [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) video series | Microsoft | M11, M12 |
+| [AI Agent Design Patterns](https://www.youtube.com/watch?v=sal78ACtGTc) | Andrew Ng | M11, M12 |
+| [Building Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) | DeepLearning.AI | M09 |
 
-## Production
+## Production & Serving
 
 | Resource | Topic | Module |
 |----------|-------|--------|
+| [vLLM & PagedAttention](https://www.youtube.com/watch?v=80bIUggjpDs) | High-throughput serving | M10 |
 | [Agents Towards Production](https://github.com/NirDiamant/agents-towards-production) tutorials | Deploying agents | M10, M18 |
 | LangChain/LangSmith observability demos | Tracing | M10, M19 |
 

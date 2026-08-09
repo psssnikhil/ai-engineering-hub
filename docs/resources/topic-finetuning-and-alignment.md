@@ -16,7 +16,8 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | **LoRA: Low-Rank Adaptation of Large Language Models** *(Hu et al., 2021)* | Freezes pre-trained weights and injects trainable rank decomposition matrices, reducing trainable parameters by 10,000x. | [ArXiv Link](https://arxiv.org/abs/2106.09685) |
 | **QLoRA: Efficient Finetuning of Quantized LLMs** *(Dettmers et al., 2023)* | 4-bit NormalFloat (NF4) quantization + Double Quantization + Paged Optimizers enabling 65B LLM fine-tuning on a single 48GB GPU. | [ArXiv Link](https://arxiv.org/abs/2305.14314) |
 | **Direct Preference Optimization: Your Language Model is Secretly a Reward Model** *(Rafailov et al., 2023)* | Solves RLHF optimization via simple classification loss without needing a separate reward model or PPO training loop. | [ArXiv Link](https://arxiv.org/abs/2305.18290) |
-| **Training language models to follow instructions with human feedback (InstructGPT)** *(Ouyang et al., 2022)* | Foundational 3-step RLHF pipeline: SFT -> Reward Model Training -> PPO Optimization. | [ArXiv Link](https://arxiv.org/abs/2203.02155) |
+| **DeepSeekMath: Pushing the Limits of Mathematical Reasoning (GRPO)** *(Shao et al., 2024)* | Introduces Group Relative Policy Optimization, computing advantage relative to a group of sampled outputs to eliminate critic models. | [ArXiv Link](https://arxiv.org/abs/2402.03300) |
+| **SimPO: Simple Preference Optimization with Reference-Free Reward** *(Meng et al., 2024)* | Uses average log probability as implicit reward with a target margin, outperforming DPO without reference models. | [ArXiv Link](https://arxiv.org/abs/2405.14734) |
 | **Orpo: Monolithic Preference Optimization Without Reference Model** *(Hong et al., 2024)* | Combines SFT and alignment into a single loss function without requiring a reference model during training. | [ArXiv Link](https://arxiv.org/abs/2403.07691) |
 
 ---

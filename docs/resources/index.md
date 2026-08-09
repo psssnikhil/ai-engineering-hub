@@ -91,6 +91,9 @@ Jump directly to a dedicated resource guide combining **landmark papers, top Git
 ## 🔗 Handbook Reference Indexes
 
 - **[Transformers & LLM Architecture Resources](topic-transformers-and-llms.md)** — Dedicated topic guide
+- **[Reasoning & Test-Time Compute Resources](topic-reasoning-and-test-time-compute.md)** — Dedicated topic guide
+- **[Multimodal AI & VLM Resources](topic-multimodal-and-vlm.md)** — Dedicated topic guide
+- **[Code Intelligence & SWE Agent Resources](topic-code-intelligence-and-swe-agents.md)** — Dedicated topic guide
 - **[RAG & Vector Search Resources](topic-rag-and-vector-search.md)** — Dedicated topic guide
 - **[AI Agents & Harness Resources](topic-agents-and-harnesses.md)** — Dedicated topic guide
 - **[LLMOps & Serving Resources](topic-llmops-evals-serving.md)** — Dedicated topic guide

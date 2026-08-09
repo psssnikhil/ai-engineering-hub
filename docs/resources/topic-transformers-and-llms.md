@@ -17,7 +17,10 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | **BERT: Pre-training of Deep Bidirectional Transformers** *(Devlin et al., 2018)* | Showed bidirectional masked language modeling for downstream NLP transfer learning. | [ArXiv Link](https://arxiv.org/abs/1810.04805) |
 | **Language Models are Few-Shot Learners (GPT-3)** *(Brown et al., 2020)* | Demonstrated scaling laws, zero-shot, and few-shot in-context learning capabilities. | [ArXiv Link](https://arxiv.org/abs/2005.14165) |
 | **RoFormer: Enhanced Transformer with Rotary Position Embedding** *(Su et al., 2021)* | Introduced RoPE, the dominant positional encoding used in LLaMA, Mistral, and Claude. | [ArXiv Link](https://arxiv.org/abs/2104.09864) |
+| **GQA: Training Generalized Multi-Query Transformer Models** *(Ainslie et al., 2023)* | Grouped-Query Attention reducing KV cache memory bandwidth bottlenecks during LLM inference. | [ArXiv Link](https://arxiv.org/abs/2305.13245) |
+| **Mamba: Linear-Time Sequence Modeling with Selective State Spaces** *(Gu et al., 2023)* | Introduced selective SSM architecture achieving $O(N)$ linear sequence length scaling without attention. | [ArXiv Link](https://arxiv.org/abs/2312.00752) |
 | **FlashAttention: Fast and Memory-Efficient Exact Attention** *(Dao et al., 2022)* | IO-aware exact attention algorithm reducing memory complexity from $O(N^2)$ to $O(N)$ speedups. | [ArXiv Link](https://arxiv.org/abs/2205.14135) |
+| **FlashAttention-3: Fast Attention with Asynchronous Execution** *(Shah et al., 2024)* | Exploits FP8 Tensor Cores and asynchronous GPU warp execution on Hopper architecture for 2-3x speedup. | [ArXiv Link](https://arxiv.org/abs/2407.08608) |
 
 ---
 

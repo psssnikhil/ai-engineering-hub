@@ -14,6 +14,9 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | Paper / Reference | Key Takeaways & Focus | Link |
 |-------------------|-----------------------|------|
 | **vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention** *(Kwon et al., 2023)* | Introduced PagedAttention, eliminating KV cache fragmentation and achieving 2-4x higher throughput. | [ArXiv Link](https://arxiv.org/abs/2309.06180) |
+| **SGLang: Fast and Expressive Language Model Execution** *(Zheng et al., 2024)* | Introduces RadixAttention for automatic KV cache reuse across multi-turn agent calls and structured prompts. | [ArXiv Link](https://arxiv.org/abs/2312.07104) |
+| **Fast Inference from Transformers via Speculative Decoding** *(Leviathan et al., 2023)* | Uses a small draft model to generate candidate tokens verified in parallel by a larger target model. | [ArXiv Link](https://arxiv.org/abs/2211.17192) |
+| **DeepSeek-V3 Technical Report (Multi-Head Latent Attention)** *(DeepSeek AI, 2024)* | Introduces MLA to compress KV cache into low-rank latent vectors, achieving near-MHA quality with 93% memory savings. | [ArXiv Link](https://arxiv.org/abs/2412.19437) |
 | **Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena** *(Zheng et al., 2023)* | Proved GPT-4 level LLM judges align 80%+ with human preference for evaluating chat assistants. | [ArXiv Link](https://arxiv.org/abs/2306.05685) |
 | **HELM: Holistic Evaluation of Language Models** *(Liang et al., 2022)* | Standardized benchmarking methodology assessing accuracy, bias, toxicity, robustness, and efficiency. | [ArXiv Link](https://arxiv.org/abs/2211.09110) |
 | **G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment** *(Liu et al., 2023)* | Framework using CoT prompts and form-based scoring to measure generation quality. | [ArXiv Link](https://arxiv.org/abs/2303.16634) |

@@ -17,7 +17,10 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | **Dense Passage Retrieval (DPR)** *(Karpukhin et al., 2020)* | Proved dual-encoder dense vector retrieval outperforms traditional sparse BM25 for open-domain QA. | [ArXiv Link](https://arxiv.org/abs/2004.04906) |
 | **ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction** *(Khattab et al., 2020)* | Late-interaction model preserving fine-grained token-level matching with sub-second vector search speed. | [ArXiv Link](https://arxiv.org/abs/2004.12832) |
 | **Precise Zero-Shot Dense Retrieval without Relevance Labels (HyDE)** *(Gao et al., 2022)* | Hypothetical Document Embeddings — generating candidate answers first to retrieve relevant real documents. | [ArXiv Link](https://arxiv.org/abs/2212.10496) |
-| **RAG-Sequence vs RAG-Token** *(Lewis et al., 2020)* | Deep dive comparing sequence-level document retrieval vs token-level dynamic retrieval during generation. | [ArXiv Link](https://arxiv.org/abs/2005.11401) |
+| **From Local to Global Retrieval-Augmented Generation (GraphRAG)** *(Edge et al., Microsoft 2024)* | Combines knowledge graph extraction with LLM community summaries for global dataset understanding. | [ArXiv Link](https://arxiv.org/abs/2404.16130) |
+| **Corrective Retrieval-Augmented Generation (CRAG)** *(Yan et al., 2024)* | Evaluates document relevance dynamically and triggers web search fallbacks for low-confidence retrievals. | [ArXiv Link](https://arxiv.org/abs/2401.15884) |
+| **Speculative RAG: Enhancing Retrieval-Augmented Generation via Draft Models** *(Wang et al., 2024)* | Uses a small specialist draft model to evaluate multiple document subsets in parallel for fast verification. | [ArXiv Link](https://arxiv.org/abs/2407.08223) |
+| **LightRAG: Simple and Fast Knowledge Graph RAG** *(Guo et al., 2024)* | Dual-level retrieval paradigm combining entity-relation graphs with low-overhead vector search. | [ArXiv Link](https://arxiv.org/abs/2410.05779) |
 
 ---
 
