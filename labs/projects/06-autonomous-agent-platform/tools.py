@@ -1,37 +1,71 @@
-"""Tool Registry for Autonomous Agent Platform."""
+"""
+Tool Registry and Implementations for Autonomous Agent Platform.
+================================================================
+"""
 
 import json
+import os
 from typing import Dict, List, Any, Callable
 
 
 def search_web(query: str) -> str:
-    """Search online knowledge base."""
+    """Search online knowledge base for structured documentation."""
     knowledge = {
-        "mcp": "Model Context Protocol (MCP) by Anthropic is an open standard connecting AI models to external tools, databases, and context servers.",
-        "evals": "LLM evaluation requires golden datasets, rubric scoring, and CI quality gates to catch non-deterministic regressions.",
-        "agent": "Agents use an LLM reasoning loop to call tools, inspect results, and autonomously achieve multi-step goals.",
+        "mcp": (
+            "Model Context Protocol (MCP) by Anthropic is an open standard designed to connect "
+            "AI models to external tools, databases, and context servers securely. "
+            "It eliminates custom tool integrations by establishing a unified protocol standard."
+        ),
+        "evals": (
+            "Continuous evaluation loops require robust golden datasets, multiple LLM judges, "
+            "and programmatic execution triggers like GitHub Actions to ensure zero performance regressions."
+        ),
+        "agent": (
+            "Autonomous agents coordinate actions by maintaining state, planning multi-step tasks, "
+            "handling unexpected tool exceptions, and synthesizing results into cohesive artifacts."
+        ),
     }
     q_lower = query.lower()
-    for k, v in knowledge.items():
-        if k in q_lower:
-            return f"[Web Search Result for '{query}']: {v}"
-    return f"[Web Search Result for '{query}']: Found relevant articles discussing {query} implementation strategies."
+    for key, val in knowledge.items():
+        if key in q_lower:
+            return f"[Search Success] Topic: {key.upper()} | Details: {val}"
+            
+    return f"[Search Reference] Query: '{query}' | Details: Found articles highlighting advanced patterns for {query}."
 
 
 def calculate(expression: str) -> str:
-    """Safely evaluate arithmetic expressions."""
+    """Safely evaluate arithmetic expressions, handling decimals and parameters."""
     allowed = set("0123456789+-*/.() ")
     if not all(c in allowed for c in expression):
         return "Error: Expression contains prohibited characters."
     try:
-        return str(eval(expression))
+        # Evaluate safely
+        res = eval(expression)
+        return str(res)
     except Exception as e:
-        return f"Error: {e}"
+        return f"Error: Failed to calculate expression due to syntax: {e}"
 
 
-def generate_markdown_report(title: str, content: str) -> str:
-    """Format and synthesize a research report in Markdown."""
-    return f"# {title}\n\n{content}\n\n---\n*Report generated autonomously by Agent Platform.*"
+def generate_markdown_report(title: str, content: str, filename: Optional[str] = None) -> str:
+    """Format and synthesize a research report in Markdown, persisting it to disk if specified."""
+    report = (
+        f"# {title}\n\n"
+        f"{content}\n\n"
+        f"---\n"
+        f"*Report generated autonomously by Production Agent Platform.*\n"
+    )
+    if filename:
+        try:
+            # Clean filename
+            safe_name = "".join(c for c in filename if c.isalnum() or c in "._-")
+            target_path = os.path.join(os.path.dirname(__file__), safe_name)
+            with open(target_path, "w", encoding="utf-8") as f:
+                f.write(report)
+            return f"[File Saved] Report successfully persisted to {target_path}"
+        except Exception as e:
+            return f"[File Error] Could not write report to disk: {e}. Output:\n{report}"
+            
+    return report
 
 
 TOOLS_SCHEMAS = [
@@ -39,11 +73,11 @@ TOOLS_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "search_web",
-            "description": "Search the web for information on a topic.",
+            "description": "Query the web index for structured technical documentations.",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "query": {"type": "string", "description": "The search query"}
+                    "query": {"type": "string", "description": "Search keyword or keyphrase"}
                 },
                 "required": ["query"],
             },
@@ -53,11 +87,11 @@ TOOLS_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "calculate",
-            "description": "Evaluate a math expression.",
+            "description": "Perform floating-point math evaluations.",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "expression": {"type": "string", "description": "Math expression string"}
+                    "expression": {"type": "string", "description": "Mathematical expression"}
                 },
                 "required": ["expression"],
             },
@@ -67,12 +101,13 @@ TOOLS_SCHEMAS = [
         "type": "function",
         "function": {
             "name": "generate_markdown_report",
-            "description": "Synthesize a final report in Markdown.",
+            "description": "Format technical findings in markdown and optionally save it to a local file.",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "title": {"type": "string", "description": "Report title"},
-                    "content": {"type": "string", "description": "Detailed body content"},
+                    "title": {"type": "string", "description": "Structured header title"},
+                    "content": {"type": "string", "description": "Synthesized markdown body text"},
+                    "filename": {"type": "string", "description": "Optional local filename to save, e.g. report.md"}
                 },
                 "required": ["title", "content"],
             },

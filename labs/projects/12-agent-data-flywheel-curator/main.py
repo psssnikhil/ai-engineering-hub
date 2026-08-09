@@ -3,14 +3,11 @@ Project 12: Agent Data Flywheel & Trajectory Curator
 =====================================================
 Domain: AI Infrastructure, Trajectory Curation & Alignment Flywheels
 
-An automated trajectory curation and synthetic dataset flywheel featuring:
-1. Agent Trajectory Collector & Step Execution Quality Evaluator
-2. Deterministic & LLM-Judge Rejection Sampling Filter
-3. Preference Pair Curator (Exporting DPO / ORPO dataset pairs in JSONL format)
-4. Telemetry Scorecard & Continuous Data Quality Analytics
-
-Usage:
-  python main.py
+Features:
+  1. Trajectory Loop Detector: Detects consecutive tool loops or redundant reasoning thoughts.
+  2. Multi-Metric Reward Evaluator: Combines program check rules and LLM-as-a-Judge evaluations.
+  3. Rejection Sampling Filter: Accepts DPO preference pairs only if margin threshold (chosen - rejected) is met.
+  4. Fine-tuning export format: Generates DPO/ORPO JSON structures ready for trl/alignment frameworks.
 """
 
 import os
@@ -99,6 +96,14 @@ RAW_TRAJECTORY_DATA = [
                     "action_input": {"query": "verify"},
                     "observation": "Error: Tool unknown_tool not found.",
                     "is_error": True
+                },
+                {
+                    "step_number": 3,
+                    "thought": "Try invalid tool call format again.",
+                    "action": "unknown_tool",
+                    "action_input": {"query": "verify"},
+                    "observation": "Error: Tool unknown_tool not found.",
+                    "is_error": True
                 }
             ],
             "final_answer": "Final invoice is $104,500.",
@@ -160,61 +165,80 @@ RAW_TRAJECTORY_DATA = [
 
 
 class TrajectoryEvaluator:
-    """Evaluates agent trajectories using deterministic verifiers and LLM reward heuristics."""
+    """Evaluates agent trajectories using programmatic checks and LLM-as-a-Judge reward metrics."""
     
     def __init__(self, gateway: Optional[LLMGateway] = None):
         self.gateway = gateway or LLMGateway()
 
-    def score_trajectory(self, prompt: str, steps: List[Dict[str, Any]], final_answer: str, execution_time_ms: float) -> float:
-        # Deterministic Penalty Checks
-        has_tool_error = any(step.get("is_error", False) for step in steps)
-        step_count = len(steps)
-        
+    def check_trajectory_loops(self, steps: List[Dict[str, Any]]) -> bool:
+        """Heuristic check: Detects if same tool called consecutively with identical parameters."""
+        for i in range(1, len(steps)):
+            prev = steps[i-1]
+            curr = steps[i]
+            if prev.get("action") == curr.get("action") and prev.get("action_input") == curr.get("action_input"):
+                return True
+        return False
+
+    def score_trajectory(self, prompt: str, steps: List[Dict[str, Any]], final_answer: str) -> float:
+        # 1. Programmatic Rule-based Deductions
         base_score = 1.0
         
+        # Tool errors deduction
+        has_tool_error = any(step.get("is_error", False) for step in steps)
         if has_tool_error:
-            base_score -= 0.35
+            base_score -= 0.30
             
-        if step_count > 5:
+        # Loop/Repetition deduction
+        if self.check_trajectory_loops(steps):
+            base_score -= 0.40
+            
+        # Excess step limit deduction
+        if len(steps) > 5:
             base_score -= 0.15
-            
-        # Reward heuristic bonus for proper tool parameter structure
-        valid_actions = all(isinstance(step.get("action_input"), dict) for step in steps)
-        if valid_actions:
-            base_score += 0.05
-            
-        # LLM Reward Judge evaluation
+
+        # 2. LLM Reward Judge Score
         messages = [
             {
                 "role": "system",
                 "content": (
-                    "You are a trajectory reward model evaluator. Evaluate how logical, accurate, "
-                    "and hallucination-free this agent execution trace is. "
-                    "Return ONLY a JSON object with: {\"quality_score\": float (0.0 to 1.0), \"reason\": string}"
+                    "You are an expert trajectory critic. Evaluate this agent trace for efficiency, "
+                    "logical flow, and validity of thoughts. "
+                    "Score quality from 0.0 (unusable) to 1.0 (perfect reasoning).\n"
+                    "Return ONLY JSON: {\"quality_score\": <float>, \"explanation\": \"<string>\"}"
                 )
             },
             {
                 "role": "user",
-                "content": f"Prompt: {prompt}\nSteps: {json.dumps(steps)}\nFinal Answer: {final_answer}"
+                "content": f"User Prompt: {prompt}\n\nSteps:\n{json.dumps(steps, indent=2)}\n\nFinal Answer:\n{final_answer}"
             }
         ]
         
         try:
             res = self.gateway.generate(messages=messages, temperature=0.0)
-            parsed = json.loads(res.content)
+            # Simple JSON cleaner
+            import re
+            cleaned = res.content.strip()
+            if cleaned.startswith("```"):
+                match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", cleaned, re.DOTALL)
+                if match:
+                    cleaned = match.group(1)
+            parsed = json.loads(cleaned)
             llm_score = float(parsed.get("quality_score", 0.8))
         except Exception:
+            # Fallback rating
             llm_score = 0.85 if not has_tool_error else 0.40
             
+        # Combined score weighting
         final_reward = round(min(1.0, max(0.0, 0.4 * base_score + 0.6 * llm_score)), 3)
         return final_reward
 
 
 class DataFlywheelCurator:
-    """Curates trajectories, applies rejection sampling, and exports DPO preference pairs."""
+    """Curates trajectories, applies rejection sampling, and exports DPO alignment pairs."""
     
-    def __init__(self, evaluator: Optional[TrajectoryEvaluator] = None):
+    def __init__(self, evaluator: Optional[TrajectoryEvaluator] = None, min_margin: float = 0.20):
         self.evaluator = evaluator or TrajectoryEvaluator()
+        self.min_margin = min_margin
 
     def process_flywheel_batch(self, raw_data: List[Dict[str, Any]]) -> List[CuratedPreferencePair]:
         preference_pairs = []
@@ -226,16 +250,14 @@ class DataFlywheelCurator:
             good = item["successful_run"]
             bad = item["flawed_run"]
             
-            score_good = self.evaluator.score_trajectory(
-                prompt, good["steps"], good["final_answer"], good["execution_time_ms"]
-            )
-            score_bad = self.evaluator.score_trajectory(
-                prompt, bad["steps"], bad["final_answer"], bad["execution_time_ms"]
-            )
+            score_good = self.evaluator.score_trajectory(prompt, good["steps"], good["final_answer"])
+            score_bad = self.evaluator.score_trajectory(prompt, bad["steps"], bad["final_answer"])
             
-            # Rejection Sampling Filter: Accept only if margin > 0.20
+            # Rejection Sampling Filter: Accept only if margin exceeds threshold
             margin = round(score_good - score_bad, 3)
-            if margin >= 0.20:
+            
+            # Accept if margin criteria and absolute score criteria are met
+            if margin >= self.min_margin and score_good >= 0.70:
                 pair = CuratedPreferencePair(
                     trajectory_id=tid,
                     prompt=prompt,
@@ -246,49 +268,64 @@ class DataFlywheelCurator:
                     margin=margin
                 )
                 preference_pairs.append(pair)
+            else:
+                print(f"  [Rejection Sampling] Trajectory '{tid}' filtered out. Margin: {margin} (Min required: {self.min_margin})")
                 
         return preference_pairs
 
-    def export_dpo_jsonl(self, pairs: List[CuratedPreferencePair]) -> str:
+    def export_dpo_payload(self, pairs: List[CuratedPreferencePair]) -> str:
+        """Formulate DPO-style alignment dataset compatible with standard trainers."""
         records = []
         for p in pairs:
+            # Formulate chat prompts structure
             records.append({
-                "trajectory_id": p.trajectory_id,
                 "prompt": p.prompt,
-                "chosen": p.chosen_trajectory,
-                "rejected": p.rejected_trajectory,
-                "reward_score_chosen": p.reward_score_chosen,
-                "reward_score_rejected": p.reward_score_rejected,
-                "margin": p.margin
+                "chosen": self._convert_steps_to_chat(p.chosen_trajectory),
+                "rejected": self._convert_steps_to_chat(p.rejected_trajectory),
+                "metadata": {
+                    "trajectory_id": p.trajectory_id,
+                    "reward_score_chosen": p.reward_score_chosen,
+                    "reward_score_rejected": p.reward_score_rejected,
+                    "margin": p.margin
+                }
             })
         return json.dumps(records, indent=2)
 
+    def _convert_steps_to_chat(self, steps: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+        chat_format = []
+        for s in steps:
+            # Convert thought/actions to assistant blocks and observations to tool responses
+            chat_format.append({
+                "role": "assistant",
+                "content": f"Thought: {s.get('thought')}\nAction: {s.get('action')}({json.dumps(s.get('action_input'))})"
+            })
+            chat_format.append({
+                "role": "tool",
+                "content": f"Observation: {s.get('observation')}"
+            })
+        return chat_format
+
 
 def main():
-    print("=" * 70)
-    print("  Project 12: Agent Data Flywheel & Trajectory Curator")
-    print("=" * 70 + "\n")
+    print("=" * 75)
+    print("  Agent Data Flywheel & Trajectory Curator (Project 12)")
+    print("=" * 75 + "\n")
 
-    curator = DataFlywheelCurator()
-    print("📥 Ingesting raw multi-step agent execution traces...")
-    print(f"   Batch size: {len(RAW_TRAJECTORY_DATA)} raw trajectory comparisons.\n")
+    curator = DataFlywheelCurator(min_margin=0.20)
+    
+    print("📥 Ingesting multi-step agent logs...")
+    print(f"   Batch size: {len(RAW_TRAJECTORY_DATA)} trajectory pairs.\n")
 
-    print("⚙️  Running Trajectory Evaluation & Rejection Sampling Filter...")
+    print("⚙️  Running Trajectory Evaluation & Loop Detection...")
     curated_pairs = curator.process_flywheel_batch(RAW_TRAJECTORY_DATA)
 
-    print(f"✅ Rejection Sampling complete. Retained {len(curated_pairs)} high-margin DPO preference pairs.\n")
+    print(f"\n✅ Curation complete. Retained {len(curated_pairs)} DPO alignment pairs.")
 
-    print("📊 Exported DPO Dataset Payload (JSONL Preview):")
-    print("-" * 70)
-    jsonl_output = curator.export_dpo_jsonl(curated_pairs)
-    print(jsonl_output)
-    print("-" * 70)
-
-    print("\n📈 Data Flywheel Performance Summary:")
-    print(f"   - Input Trajectories Processed: {len(RAW_TRAJECTORY_DATA) * 2}")
-    print(f"   - Curated Preference Pairs Exported: {len(curated_pairs)}")
-    print(f"   - Average Preference Margin Delta: {sum(p.margin for p in curated_pairs) / len(curated_pairs):.3f}")
-    print("=" * 70)
+    print("\n📊 Formatted DPO Dataset Payload Preview:")
+    print("-" * 75)
+    payload_str = curator.export_dpo_payload(curated_pairs)
+    print(payload_str)
+    print("-" * 75)
 
 
 if __name__ == "__main__":
