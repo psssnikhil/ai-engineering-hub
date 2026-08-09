@@ -249,7 +249,7 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
-      generic: false
+      generic: true
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
