@@ -648,6 +648,99 @@ body {
   box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
 }
 
+/* ── Smooth Theme & Color Transitions ──────────────────────── */
+body, .md-header, .md-tabs, .md-sidebar, .md-content {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ── Navigation Sidebar Polish & Active State ──────────────── */
+.md-nav__link {
+  border-radius: 8px;
+  padding: 0.4em 0.7em !important;
+  transition: all 0.15s ease;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(99, 102, 241, 0.08);
+  color: var(--aie-primary) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background-color: rgba(129, 140, 248, 0.12);
+  color: #a5b4fc !important;
+}
+
+.md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+  background-color: rgba(99, 102, 241, 0.12);
+  color: var(--aie-primary-dark) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background-color: rgba(129, 140, 248, 0.18);
+  color: #c7d2fe !important;
+}
+
+/* ── Content Body Link Hover Underline ─────────────────────── */
+.md-typeset p a:not(.md-button):not(.persona-card__cta):not(.hero__btn),
+.md-typeset li a:not(.md-button):not(.persona-card__cta):not(.hero__btn) {
+  color: var(--aie-primary);
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(135deg, var(--aie-primary), var(--aie-violet));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.25s ease, color 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.md-typeset p a:not(.md-button):not(.persona-card__cta):not(.hero__btn):hover,
+.md-typeset li a:not(.md-button):not(.persona-card__cta):not(.hero__btn):hover {
+  background-size: 100% 2px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset p a:not(.md-button):not(.persona-card__cta):not(.hero__btn),
+[data-md-color-scheme="slate"] .md-typeset li a:not(.md-button):not(.persona-card__cta):not(.hero__btn) {
+  color: #818cf8;
+}
+
+/* ── Blockquotes & Pull Quotes ───────────────────────────── */
+.md-typeset blockquote {
+  border-left: 4px solid var(--aie-primary);
+  border-radius: 0 10px 10px 0;
+  background: var(--aie-glass-bg);
+  padding: 0.9em 1.3em;
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  margin: 1.5em 0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background: rgba(15, 23, 42, 0.5);
+  border-left-color: #818cf8;
+}
+
+/* ── Custom Sleek Scrollbars ────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.35);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
 /* ── Mobile Optimization ─────────────────────────────────── */
 @media screen and (max-width: 768px) {
   .hero {
@@ -667,3 +760,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
