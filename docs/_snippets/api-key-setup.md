@@ -1,7 +1,5 @@
-!!! tip "Setup for runnable examples"
-    Code examples use the Anthropic Python SDK. One-time setup:
-
-    ```bash
-    pip install anthropic
-    export ANTHROPIC_API_KEY=sk-ant-...   # get one at https://platform.claude.com
-    ```
+```bash
+# Set your preferred API key (or both!)
+export OPENAI_API_KEY=sk-proj-...       # https://platform.openai.com
+export ANTHROPIC_API_KEY=sk-ant-...    # https://platform.claude.com
+```
