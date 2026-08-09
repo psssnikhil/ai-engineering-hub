@@ -34,7 +34,7 @@ module: module-10
 
 Traditional APIs are opaque boxes with one input and one output. If the box returns a 200, you're done. LLM applications are transparent pipelines: a user query triggers a retrieval step, which feeds an LLM, which calls a tool, which triggers another LLM call, which produces a response. Any step can silently degrade quality without raising an error code.
 
-```
+```text
 Traditional API (simple):
   User → Request → Response
   Monitor: latency, status code. Done.
@@ -334,7 +334,7 @@ class LLMLogger:
 
 Every LLM application needs one primary dashboard with four panels. This is not a "nice to have"—it is the instrument panel for your application.
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────────────┐
 │  LLM Application Dashboard — Last 24h                               │
 │                                                                      │

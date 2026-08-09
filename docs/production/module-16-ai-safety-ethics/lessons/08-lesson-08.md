@@ -37,7 +37,7 @@ Red teaming is the practice of systematically probing an AI system to find ways 
 - **Reliability issues**: Hallucinations, inconsistencies, edge cases
 - **Policy violations**: Outputs that violate your usage policies
 
-```
+```text
 Traditional Testing:          AI Red Teaming:
   "Does it work correctly?"     "How can it fail dangerously?"
   "Does feature X function?"    "Can I make it do something harmful?"
@@ -193,7 +193,7 @@ print(f"Failures: {len(failures)}")
 
 Document each finding with:
 
-```
+```text
 Finding ID: RT-001
 Category: Prompt Injection
 Severity: High

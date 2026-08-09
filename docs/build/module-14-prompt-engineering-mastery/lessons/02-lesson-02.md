@@ -296,7 +296,7 @@ for text, expected in test_cases:
 
 ## When to Use Each Technique
 
-```
+```text
 Is the task simple and well-defined?
   ├── Yes → Zero-shot (just clear instructions)
   └── No

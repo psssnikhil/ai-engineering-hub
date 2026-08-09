@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Lint code fences
+        run: node scripts/lint-code-fences.mjs
+
       - name: Build docs (strict + link fix)
         run: npm run build:docs
 

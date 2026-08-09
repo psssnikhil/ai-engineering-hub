@@ -66,7 +66,7 @@ Good experiment design happens before writing any code.
 
 A hypothesis is a falsifiable prediction with an expected magnitude:
 
-```
+```text
 WEAK:   "The new prompt will be better."
 
 STRONG: "Replacing the open-ended system prompt with a structured prompt
@@ -393,7 +393,7 @@ Your customer support bot uses a professional, formal tone. The product team hyp
 
 ### Step 1: Write the Hypothesis Before Touching Any Code
 
-```
+```text
 Hypothesis: Switching from formal to conversational tone will increase
 user satisfaction (thumbs-up rate) by 5–10 percentage points while
 maintaining resolution rate and not increasing average response length.

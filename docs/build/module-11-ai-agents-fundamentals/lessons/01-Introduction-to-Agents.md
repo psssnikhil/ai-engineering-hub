@@ -48,7 +48,7 @@ That is an agent: **a system that uses an LLM to decide what actions to take, ex
 
 The distinction is not about intelligence — it is about *control flow*.
 
-```
+```text
 CHATBOT (single-pass LLM call):
 ────────────────────────────────
 User input  →  [LLM]  →  Text response
@@ -126,7 +126,7 @@ def agent(goal: str, max_steps: int = 10) -> str:
 
 Every agent implementation follows this cycle, whether implicit or explicit:
 
-```
+```text
             ┌──────────────────────────────┐
             │         USER GOAL            │
             └──────────────┬───────────────┘

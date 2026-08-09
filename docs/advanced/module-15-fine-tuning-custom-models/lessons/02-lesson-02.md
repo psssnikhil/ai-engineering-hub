@@ -41,7 +41,7 @@ Each line in your training file is a JSON object with a `messages` array:
 ```python
 def reverse_string(s: str) -> str:
     return s[::-1]
-```
+```text
 
 This uses Python's slice notation with a step of -1 to reverse the string."}]}
 ```

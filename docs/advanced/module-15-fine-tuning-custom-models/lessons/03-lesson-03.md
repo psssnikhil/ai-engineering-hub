@@ -70,7 +70,7 @@ By the end of this lesson, you will have:
 
 ## Architecture
 
-```
+```text
 [Training Data]                    [Validation Data]
 training_data.jsonl                validation_data.jsonl
        |                                    |
@@ -362,7 +362,7 @@ print(f"Fine-tuned accuracy: {ft_score['accuracy']:.0%}")
 
 ### Iteration Decision Tree
 
-```
+```text
 Fine-tuned model worse than base?
   ├── Yes → Check data quality, reduce epochs, add more examples
   └── No → Fine-tuned better?

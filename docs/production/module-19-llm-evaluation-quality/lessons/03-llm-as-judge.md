@@ -40,7 +40,7 @@ Option B: Use an LLM to judge all 600 responses. At $0.005 per judgment (GPT-4.1
 
 LLM-as-judge fills the scalability gap between deterministic checks (too narrow) and human review (too slow). It enables evaluation at the speed of code review.
 
-```
+```text
 Evaluation layer costs and speed:
 
 Deterministic checks (regex, JSON schema, exact match):
@@ -68,7 +68,7 @@ Many important response properties cannot be evaluated with string matching:
 
 A capable judge model can evaluate these dimensions at scale. Both Promptfoo (`llm-rubric` assertions) and DeepEval (`GEval` metric) support LLM-as-judge natively.
 
-```
+```text
 Human review cost and speed (baseline):
   100 cases × 2 reviewers × $25/hr × 5 min/case = $417, 8+ hours
 
@@ -86,7 +86,7 @@ The rubric is the single most important factor in judge quality. A vague rubric 
 
 ### The Bad vs. Good Rubric Pattern
 
-```
+```text
 BAD rubric (vague, unreliable):
   "Rate the response quality from 1-5."
 
@@ -468,7 +468,7 @@ LLM-as-judge is a powerful tool, but it has real limits. Misapplying it wastes m
 
 ### The Evaluation Layer Stack
 
-```
+```text
 Use the cheapest, most reliable evaluator for each criterion:
 
 Layer 1: Deterministic checks (free, instant, 100% reliable)

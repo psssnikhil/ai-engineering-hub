@@ -228,7 +228,7 @@ response = llm.generate(clean_input)
 
 Before deploying any LLM application, review this checklist:
 
-```
+```text
 Pre-Deployment Safety Checklist:
 
 [ ] Input validation and length limits implemented

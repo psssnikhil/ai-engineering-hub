@@ -31,7 +31,7 @@ A single agent is like one generalist employee handling every request. That work
 
 Orchestration answers: *who decides the next step, who owns state, and how do agents hand work off without losing context?*
 
-```
+```text
 User: "Research competitors, draft a one-pager, get legal to flag risks"
 
 Single agent:  one context window, 40 tool calls, confused priorities
@@ -127,7 +127,7 @@ Full module: [M12 · Multi-Agent Systems](../build/module-12-multi-agent-systems
 
 ### Trace (simplified)
 
-```
+```text
 Step 1 [Orchestrator]
   Thought: Need diff summary before writing.
   Action: assign_task(agent="researcher", task="Summarize commit abc123")

@@ -58,7 +58,7 @@ In multi-agent systems, **how** agents run affects latency, cost, and correctnes
 
 **Parallel execution** runs independent agents at the same time. Security review, style review, and performance review on the same codebase can happen concurrently.
 
-```
+```text
 Sequential:                         Parallel (fan-out/fan-in):
 
   A ──→ B ──→ C                       ┌──→ B ──┐

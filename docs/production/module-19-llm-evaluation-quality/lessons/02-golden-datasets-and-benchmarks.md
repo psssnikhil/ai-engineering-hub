@@ -44,7 +44,7 @@ This random sample gives you 95%+ pass rate in testing and 78% user satisfaction
 
 A **golden dataset** is fundamentally different from a random sample. It's a *curated* collection designed to be maximally diagnostic—weighted toward the cases that reveal quality gaps, not the cases where you're already strong.
 
-```
+```text
 Random sample:  Representative of frequency
 Golden dataset: Representative of difficulty and coverage
 
@@ -290,7 +290,7 @@ Store golden sets in version control as JSON or YAML. Tag each release: `golden-
 
 ### The Five Core RAGAS Metrics
 
-```
+```text
 RAGAS Metric Map:
 
 Retrieval quality:

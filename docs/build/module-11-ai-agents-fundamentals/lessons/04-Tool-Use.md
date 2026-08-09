@@ -36,7 +36,7 @@ module: module-11
 
 The most important mental model for tool use is the **boundary of responsibility**:
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │                        LLM                               │
 │  - Reads tool descriptions                               │

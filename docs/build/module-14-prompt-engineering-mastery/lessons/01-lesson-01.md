@@ -88,7 +88,7 @@ In production, prompt quality is often the difference between a feature that shi
 
 Every effective prompt contains some or all of these six components:
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │  1. ROLE / PERSONA                          │
 │     Who should the model act as?            │
@@ -246,7 +246,7 @@ The system message is your **persistent contract** with the model. User messages
 
 Prompt engineering is iterative. Start simple, measure output quality, then refine.
 
-```
+```text
 Iteration 1: "Translate this to Spanish"
   Problem: Too formal for a casual chat app
 

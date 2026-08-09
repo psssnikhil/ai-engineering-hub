@@ -42,7 +42,7 @@ This is why safety is a **harness concern**: the harness controls which tools ca
 
 Defense in depth means you have multiple independent gates:
 
-```
+```text
 User prompt → [Input policy] → [Tool allowlist] → [Human approval] → [Budget check] → [Arg validation] → Execute
 ```
 
@@ -54,7 +54,7 @@ Each gate is independently effective. All gates together make it very hard for a
 
 Model alignment and safety training reduce harmful outputs — but they do not stop an agent from **deleting a file** if the tool is available and the prompt says so. Runtime safety belongs in the **harness**, not in the system prompt.
 
-```
+```text
                     ┌─────────────────────────────────┐
   User prompt ─────▶│  Layer 1: Input policy          │
                     │  (block jailbreaks, PII rules)  │
@@ -217,7 +217,7 @@ The approval prompt must give the user enough context to make an informed decisi
 
 **Good approval prompt for a file write:**
 
-```
+```text
 ⚠ Agent wants to write a file
 
 File: /workspace/src/auth.py
@@ -234,7 +234,7 @@ as requested."
 
 **Good approval prompt for a terminal command:**
 
-```
+```text
 ⚠ Agent wants to run a terminal command
 
 Command: git push origin feature/auth-refactor
@@ -317,7 +317,7 @@ def perceive_with_budget(self, state, enforcer: BudgetEnforcer):
 
 **Worked example — cost accumulation:**
 
-```
+```text
 Step 1: gpt-4o, 1,800 input + 200 output → ~$0.0050
 Step 2: gpt-4o, 2,400 input + 150 output → ~$0.0064
 Step 3: gpt-4o, 3,100 input + 300 output → ~$0.0086

@@ -56,7 +56,7 @@ In Lesson 2, we compared message passing with shared memory. Now we go deeper. *
 
 The **blackboard architecture** is a classic AI pattern from the 1980s, still highly relevant for LLM agents. A shared "blackboard" holds hypotheses, partial solutions, and facts. Specialist agents watch the blackboard, contribute when they can add value, and react to others' contributions.
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │              BLACKBOARD (Shared State)       │
 │  ┌─────────┐ ┌─────────┐ ┌─────────────┐   │

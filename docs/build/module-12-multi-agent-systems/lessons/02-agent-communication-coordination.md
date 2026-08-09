@@ -42,7 +42,7 @@ Good communication enables:
 
 ### 1. Direct Messaging (Point-to-Point)
 
-```
+```text
 Agent A ────message────> Agent B
          <────reply─────
 ```
@@ -83,7 +83,7 @@ class DataAgent:
 
 ### 2. Broadcast (One-to-Many)
 
-```
+```text
          Agent A (broadcasts)
               |
      ┌────────┼────────┐
@@ -118,7 +118,7 @@ class OrchestratorAgent:
 
 ### 3. Publish-Subscribe
 
-```
+```text
               ┌─────────────┐
               │   Message   │
               │    Bus      │
@@ -166,7 +166,7 @@ data_agent.publish(bus, "data_ready", processed_data)
 
 ### 4. Request-Reply Pattern
 
-```
+```text
 Agent A ──── request ───→ Agent B
                           ↓ (process)
 Agent A ←─── reply ─────  Agent B
@@ -197,7 +197,7 @@ class ValidationAgent:
 
 ### Message Passing
 
-```
+```text
 Agent A                    Agent B
    │                          │
    │ ─────message───────────> │
@@ -218,7 +218,7 @@ Agent A                    Agent B
 
 ### Shared Memory
 
-```
+```text
 ┌─────────────────────────┐
 │    Shared Memory/DB     │
 │  ┌──────────────────┐   │
@@ -330,7 +330,7 @@ class CollaborativeAgent:
 
 ### 3. Contract Net Protocol
 
-```
+```text
 Orchestrator: "Who can handle task X?"
     ↓
 Agent A: "I can, cost=10, time=5min"
@@ -531,7 +531,7 @@ asyncio.run(main())
 
 ## 🎓 Key Takeaways
 
-```
+```text
 ✅ Choose communication pattern based on system needs
 ✅ Direct messaging: simple, few agents
 ✅ Pub-Sub: scalable, many agents, events

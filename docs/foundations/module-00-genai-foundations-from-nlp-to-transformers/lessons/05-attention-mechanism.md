@@ -46,7 +46,7 @@ When you read "The animal didn't cross the street because **it** was too tired,"
 
 Attention is a mechanism that lets a model **learn** which words to focus on when processing each position. Instead of reading left-to-right and hoping context accumulates in a hidden state, attention asks: "For each word I am processing, which other words in this sentence are most relevant to me right now?"
 
-```
+```text
 Processing "it" in "The animal didn't cross the street because it was too tired":
 
   Word      Raw Score   Attention Weight (after softmax)
@@ -308,7 +308,7 @@ print("Output shape:", ctx.shape)   # (4, 3)
 
 Compare how RNNs and Attention handle the relationship between word 1 and word 100 in a sequence:
 
-```
+```text
 RNN: word 1 → h₁ → h₂ → ... → h₉₉ → h₁₀₀
      gradient must flow through 99 weight matrices → vanishes
 
@@ -332,7 +332,7 @@ The trade-off: attention requires O(n²) memory and compute, while RNNs require 
 
 One of the most informative ways to understand what trained attention learns:
 
-```
+```text
 Input: "The animal didn't cross the street because it was too tired"
 
 Attention weights when processing "it" (row = "it", columns = all words):

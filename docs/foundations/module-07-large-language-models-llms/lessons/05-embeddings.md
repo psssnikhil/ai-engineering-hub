@@ -39,14 +39,14 @@ objectives:
 
 A neural network cannot process integer IDs directly — it needs floating-point vectors it can differentiate through. The embedding layer converts the discrete token ID into a continuous vector:
 
-```
+```text
 Token ID: 3797    →    embedding[3797]    →    [0.2, -0.5, 0.1, ..., 0.3]
   (integer)               (lookup)                (512 or 4096 floats)
 ```
 
 This is just a learned lookup table. The model learns during training to assign similar vectors to semantically similar tokens:
 
-```
+```text
 embedding["cat"]  ≈  embedding["cats"]   (same concept, different form)
 embedding["dog"]  ~  embedding["cat"]    (both animals, somewhat similar)
 embedding["car"]  ≠  embedding["cat"]    (different domain)
@@ -488,7 +488,7 @@ flowchart LR
 
 **RAG (Retrieval-Augmented Generation)** is built on embeddings:
 
-```
+```text
 1. Index: Embed all documents → store in vector database (Pinecone, Qdrant, pgvector)
 2. Retrieve: Embed user query → find top-k similar documents
 3. Generate: Concatenate retrieved documents + query → call LLM

@@ -162,7 +162,7 @@ Quick decision guide — full tables in [FAQ](faq.md#rag-vs-fine-tuning-vs-agent
 | API key / rate limit errors | [FAQ — Troubleshooting](faq.md#troubleshooting) |
 | Term I don't understand | [Glossary](glossary.md) |
 | Want a portfolio project | [Build These First](projects/build-these.md) |
-| Content gap or bug | [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/learn-ai-engineering/issues) |
+| Content gap or bug | [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/ai-engineering-handbook/issues) |
 
 ---
 

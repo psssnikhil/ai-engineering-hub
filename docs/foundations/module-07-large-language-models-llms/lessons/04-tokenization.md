@@ -41,7 +41,7 @@ There are three obvious approaches to representing text for a neural network:
 
 ### Too coarse: Word-level tokenization
 
-```
+```text
 "The cat sat on the mat"
 → ["The", "cat", "sat", "on", "the", "mat"]
 
@@ -55,7 +55,7 @@ Problems:
 
 ### Too fine: Character-level tokenization
 
-```
+```text
 "The cat sat"
 → ['T', 'h', 'e', ' ', 'c', 'a', 't', ' ', 's', 'a', 't']
 
@@ -68,7 +68,7 @@ Problems:
 
 ### Just right: Subword tokenization (BPE)
 
-```
+```text
 "The cat sat on the antidisestablishmentarianism"
 → ["The", " cat", " sat", " on", " the",
    " ant", "idis", "establishment", "arian", "ism"]
@@ -175,7 +175,7 @@ merges = bpe_train(corpus, num_merges=10)
 ```
 
 Expected output (first few merges):
-```
+```text
 Merge 1: ('t', 'h') → th  (freq=12)
 Merge 2: ('th', 'e') → the  (freq=9)
 Merge 3: ('s', 'a') → sa  (freq=4)
@@ -307,7 +307,7 @@ for n in numbers:
 ```
 
 Output:
-```
+```text
            1 → 1 token(s): ['1']
           42 → 1 token(s): ['42']
          123 → 1 token(s): ['123']
@@ -358,7 +358,7 @@ Chinese and Arabic text often requires 3–5× more tokens per semantic unit tha
 
 Adversarial strings can exploit tokenization to slip past content filters or inject into system prompts:
 
-```
+```text
 "Ignore previous instructions" might be:
 → Single coherent instruction (filter detects it)
 

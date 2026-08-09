@@ -42,7 +42,7 @@ objectives:
 
 Most training failures have identifiable causes:
 
-```
+```text
 Loss NaN from step 1    → initialization or LR too high
 Loss plateaus at random → wrong architecture or bad data  
 Train good, val bad     → overfitting (add regularization)
@@ -63,7 +63,7 @@ Proper initialization ensures that the **variance of activations and gradients i
 
 For a linear layer with weight `W ∈ ℝ^{n_out × n_in}` and input `x` where `Var(x_i) = 1`:
 
-```
+```text
 y = W x     (n_out outputs)
 
 Var(y_j) = Var(Σ_i W_{j,i} · x_i)
@@ -166,7 +166,7 @@ print(f"PyTorch Linear weight std: {linear.weight.data.std().item():.4f}")
 
 For Transformer models, the standard schedule is:
 
-```
+```text
 LR = d_model^{-0.5} × min(step^{-0.5}, step × warmup_steps^{-1.5})
 
 - Phase 1 (steps < warmup): LR increases linearly

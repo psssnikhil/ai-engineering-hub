@@ -79,7 +79,7 @@ The key insight: **separate prompts from application logic**. When the applicati
 
 ### The Directory Structure
 
-```
+```text
 prompts/
 ├── support_agent/
 │   ├── v1.yaml    # Original

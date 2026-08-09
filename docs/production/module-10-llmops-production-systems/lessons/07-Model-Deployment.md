@@ -38,7 +38,7 @@ LLM applications depend on third-party model providers—OpenAI, Anthropic, Goog
 
 Your deployment architecture must assume providers will fail, degrade, and change. Everything else follows from this assumption.
 
-```
+```text
 Traditional web app reliability:
   YOU control: servers, databases, code, networking
   Failure mode: you broke something → you fix it
@@ -282,7 +282,7 @@ fallback = FallbackChain(
 
 Blue-green deployment maintains two environments—the current ("blue") and the new ("green")—and switches traffic between them instantaneously. For LLM apps, this pattern handles prompt updates, model migrations, and RAG config changes.
 
-```
+```text
                       ┌──────────────────┐
                       │  Traffic Router   │
                       └────────┬─────────┘

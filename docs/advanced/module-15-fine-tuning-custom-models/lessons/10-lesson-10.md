@@ -33,7 +33,7 @@ Before starting any fine-tuning project, run through this checklist:
 
 ### Step 1: Do You Actually Need Fine-Tuning?
 
-```
+```text
 Have you tried prompt engineering?
   |-- No -> Try it first. 80% of tasks are solved here.
   |-- Yes, but results are inconsistent
@@ -65,7 +65,7 @@ Have you tried prompt engineering?
 
 ### 1. Start Small, Iterate Fast
 
-```
+```text
 Iteration 1: 100-200 examples, 1 epoch, evaluate
   -> Identify gaps in the training data
   
@@ -195,7 +195,7 @@ Fine-tuning on narrow data can degrade general capabilities. Mitigate this by:
 
 ## Production Workflow
 
-```
+```text
 1. Define success criteria (measurable quality threshold)
    |
 2. Establish baseline (best prompt engineering with base model)

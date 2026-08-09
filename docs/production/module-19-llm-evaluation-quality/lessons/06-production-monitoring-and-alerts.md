@@ -34,7 +34,7 @@ module: module-19
 
 Your offline eval suite is your best available proxy for production quality—but it's a static snapshot of yesterday's queries. Production is a moving target:
 
-```
+```text
 Week 1: Offline eval pass rate = 96%. Deploy.
          Production satisfaction = 94%. ✓ Good.
 

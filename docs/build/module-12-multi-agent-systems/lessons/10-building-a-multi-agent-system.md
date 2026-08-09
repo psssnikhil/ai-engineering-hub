@@ -29,7 +29,7 @@ We will build a **Research & Report Pipeline** — a common production use case 
 
 ### Target Architecture
 
-```
+```text
 User Query
     ↓
 ┌──────────┐
@@ -268,7 +268,7 @@ def log_step(state: PipelineState, step: str):
 
 ## 🚀 Step 5: Deployment Checklist
 
-```
+```text
 Architecture
   ✅ Agent roles documented with clear boundaries
   ✅ Execution plan (parallel vs sequential) defined
@@ -313,7 +313,7 @@ Operations
 
 ## 🎓 Key Takeaways
 
-```
+```text
 ✅ Start with requirements: input, output, agents, execution order, failure policy
 ✅ Combine patterns — no single architecture fits every task
 ✅ LangGraph graphs and CrewAI crews both assemble patterns into pipelines

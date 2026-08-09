@@ -42,7 +42,7 @@ function main() {
     const matches = text.match(HTTP) || [];
     for (let url of matches) {
       url = url.replace(/[.,;:]+$/, '');
-      if (!url.includes('github.io/learn-ai-engineering')) allUrls.push(url);
+      if (!url.includes('github.io/ai-engineering-handbook')) allUrls.push(url);
     }
   }
 

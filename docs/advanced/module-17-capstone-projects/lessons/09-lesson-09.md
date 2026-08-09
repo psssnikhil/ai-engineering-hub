@@ -57,7 +57,7 @@ pip install openai pydantic python-dotenv pytest jinja2
 
 ## Architecture
 
-```
+```text
 [Test Configuration]
     |  YAML/JSON test suites by category
     v

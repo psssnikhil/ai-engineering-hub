@@ -31,7 +31,7 @@ Build a content platform that uses AI to help users create, edit, and optimize w
 
 ## Architecture
 
-```
+```text
 [Dashboard UI]
     |
     v

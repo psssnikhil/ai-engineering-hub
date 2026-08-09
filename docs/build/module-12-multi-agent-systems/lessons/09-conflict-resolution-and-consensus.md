@@ -27,7 +27,7 @@ Multiple agents working on the same problem often produce **conflicting outputs*
 
 Ignoring conflicts produces inconsistent final answers. Production systems need explicit **conflict resolution** strategies. Microsoft's [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) includes multi-agent debate as a quality improvement technique. The [agents-towards-production](https://github.com/NirDiamant/agents-towards-production) repo implements reviewer loops where a judge agent resolves disagreements.
 
-```
+```text
     Problem
        ↓
   ┌────┴────┐
@@ -264,7 +264,7 @@ Add consensus when errors are costly: legal review, medical information, financi
 
 ## 🎓 Key Takeaways
 
-```
+```text
 ✅ Agents disagree due to stochastic outputs, different roles, and partial context
 ✅ Debate, voting, judge, and merge patterns each suit different conflict types
 ✅ AutoGen group chat, CrewAI review tasks, and LangGraph judge nodes implement resolution

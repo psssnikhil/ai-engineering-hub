@@ -52,7 +52,7 @@ pip install openai pydantic fastapi python-dotenv
 
 Users, regulators, and stakeholders increasingly demand to know **why** an AI system produced a specific output. This is not just a nice-to-have — in regulated industries (healthcare, finance, hiring) it is often a legal requirement.
 
-```
+```text
 Black Box AI:
   Input --> [???] --> Output
 
@@ -86,7 +86,7 @@ By the end of this lesson, you will have:
 
 ## Architecture
 
-```
+```text
 [User Query]
     |
     v
@@ -405,7 +405,7 @@ Never present AI outputs as absolute truth. Design your UI and messaging to conv
 
 ### Good Patterns
 
-```
+```text
 "Based on the available information, the most likely answer is X.
  However, I'm not fully certain — you may want to verify with [source]."
 
@@ -418,7 +418,7 @@ Never present AI outputs as absolute truth. Design your UI and messaging to conv
 
 ### Bad Patterns
 
-```
+```text
 "The answer is X."  (no qualification)
 "I'm 95% confident." (false precision without calibration)
 "Trust me on this."  (inappropriate certainty)

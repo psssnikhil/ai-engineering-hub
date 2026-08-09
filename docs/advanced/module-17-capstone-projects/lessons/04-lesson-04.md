@@ -32,7 +32,7 @@ Build a multi-agent system where specialized AI agents collaborate to research a
 
 ## Architecture
 
-```
+```text
 User: "Research the current state of AI agents in production"
     |
     v

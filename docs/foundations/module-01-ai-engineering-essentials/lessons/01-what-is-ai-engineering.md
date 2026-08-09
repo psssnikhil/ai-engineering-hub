@@ -61,7 +61,7 @@ Before 2022, building AI systems required training your own models. This meant:
 
 After GPT-3 became widely available via API (2021) and especially after ChatGPT demonstrated the general-public viability of instruction-following models (2022), the economics changed:
 
-```
+```text
 Before 2022 (ML-centric):
   Problem: "Classify customer support tickets by category"
   Solution: Collect 50K labeled tickets → fine-tune BERT → deploy model service
@@ -83,7 +83,7 @@ This shift did not eliminate ML engineering — training custom models still pro
 
 Understanding the stack helps you reason about where a problem lives and what tools to reach for:
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │  APPLICATION LAYER                                    │
 │  Your product: web app, mobile app, API, CLI         │

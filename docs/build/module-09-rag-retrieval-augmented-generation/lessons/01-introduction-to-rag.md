@@ -65,7 +65,7 @@ Even on topics covered in training, LLMs sometimes generate false statements tha
 **4. Fine-tuning is expensive and static**
 You could bake new knowledge into the model weights via fine-tuning, but retraining costs thousands of dollars and takes days. Worse, knowledge baked into weights is still frozen — next month you run the same problem again.
 
-```
+```text
 Without RAG — asking about private or recent information:
 
 User: "What were the key points from our board meeting last Tuesday?"
@@ -91,7 +91,7 @@ The formula:
 
 where \(q\) is the user query, \(\mathcal{D}\) is your document corpus, and \(\|\) means concatenation into the prompt. The model sees the question *and* the evidence before it writes a single token.
 
-```
+```text
 With RAG — same question, different pipeline:
 
 User query: "What were the key points from our board meeting last Tuesday?"
@@ -117,7 +117,7 @@ The LLM didn't memorize this. It read it — just like your analyst with the lib
 
 Every RAG system has two offline stages and one online stage:
 
-```
+```text
 OFFLINE (build once, update as docs change)
 ─────────────────────────────────────────────
 Documents
@@ -192,7 +192,7 @@ Top-1 retrieved: C1.
 
 **Step 3 — Augmented prompt**
 
-```
+```text
 System: Answer using only the provided context. If the answer
         isn't in the context, say "I don't have that information."
 
@@ -205,7 +205,7 @@ User: Can I return something I bought 3 weeks ago?
 
 **Step 4 — Generation**
 
-```
+```text
 LLM: Yes — 3 weeks is 21 days, which is within the 30-day return
      window. Make sure the item is unused and in its original
      packaging. You can initiate the return through your account

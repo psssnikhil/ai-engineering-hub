@@ -1,5 +1,5 @@
 {
-  "name": "learn-ai-engineering",
+  "name": "ai-engineering-handbook",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,6 +11,7 @@
     "fix:exercises": "node scripts/generate-exercise-indexes.mjs",
     "build:docs": "mkdocs build --strict && node scripts/fix-site-links.mjs && node scripts/verify-site-artifact.mjs",
     "verify:site": "node scripts/verify-site-links.mjs",
+    "lint:fences": "node scripts/lint-code-fences.mjs",
     "extract-resources": "node scripts/extract-resources.mjs",
     "docs:serve": "mkdocs serve",
     "docs:build": "npm run build:docs"

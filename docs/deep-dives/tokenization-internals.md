@@ -42,7 +42,7 @@ Sennrich et al. (2016) adapted it for NLP.
 
 ### Training-time BPE (building the vocabulary)
 
-```
+```text
 Input:  Raw corpus
         Target vocabulary size V (e.g., 50,000)
 
@@ -70,7 +70,7 @@ Output: List of merge rules (in order) + final vocabulary
 
 ### Encoding at inference time
 
-```
+```text
 Input:  New text, list of merge rules in training order
 
 Step 1: Pre-tokenize (same rules as training)
@@ -111,7 +111,7 @@ for word, freq in corpus.items():
 ```
 
 **Output:**
-```
+```text
 Initial corpus (character-level):
   5× 'l o w </w>'
   2× 'l o w e r </w>'
@@ -139,7 +139,7 @@ for pair, count in pair_counts.most_common(5):
 ```
 
 **Output:**
-```
+```text
 Top 5 most frequent pairs:
   e + s: 9       ← 6 (newest) + 3 (widest)
   s + t: 9       ← 6 (newest) + 3 (widest)
@@ -170,7 +170,7 @@ for word, freq in corpus.items():
 ```
 
 **Output:**
-```
+```text
 Merge 1: e + s → es
 
 Corpus after merge 1:
@@ -222,7 +222,7 @@ merge_rules = train_bpe(corpus_reset, num_merges=10)
 ```
 
 **Expected output:**
-```
+```text
 Merge  1: 'e' + 's' → 'es' (freq=9)
 Merge  2: 'es' + 't' → 'est' (freq=9)
 Merge  3: 'l' + 'o' → 'lo' (freq=7)
@@ -270,7 +270,7 @@ for word in test_words:
 ```
 
 **Expected:**
-```
+```text
 Encoding test words:
   'low'     → ['low', '</w>']
   'lowest'  → ['low', 'est', '</w>']         ← reuses 'low' and 'est'!
@@ -345,7 +345,7 @@ for ex in examples:
 ```
 
 **Output:**
-```
+```text
 'Hello, world!'
   → ['Hello', ',', ' world', '!']
 
@@ -399,13 +399,13 @@ for text in texts:
 An attacker can craft inputs where a harmful word is split across a token boundary
 that a keyword filter might miss:
 
-```
+```text
 "Ignore previous instructions" as characters: I g n o r e ...
 Tokenized:                                   ['Ignore', ' previous', ' instructions']
 ```
 
 But with subtle Unicode:
-```
+```text
 "Ign\u200bore" (zero-width space inserted)
 Tokenized: ['Ign', '\u200b', 'ore']
 ```

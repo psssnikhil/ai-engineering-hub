@@ -33,7 +33,7 @@ module: module-00
 
 Computers work with numbers. Language is made of symbols. The entire history of NLP — from the 1950s to GPT-4 — is about solving one question: **How do we represent language as numbers in a way that preserves meaning, scales to large vocabularies, and supports efficient computation?**
 
-```
+```text
 "The cat sat on the mat"
          ↓  ??? 
 [0.23, -0.45, 0.87, 0.12, ...]  ← 1536 numbers per word/token
@@ -126,7 +126,7 @@ print("Vocab after merge:", list(vocab.keys()))
 
 After ~10,000 iterations on a real corpus, BPE produces a vocabulary where common words are single tokens and rare words are decomposed into familiar subwords:
 
-```
+```text
 "unhappiness"  → ["un", "happiness"]
 "tokenization" → ["token", "ization"]
 "ChatGPT"      → ["Chat", "G", "PT"]
@@ -301,7 +301,7 @@ Understanding this history explains *why* the Transformer was designed the way i
 
 Word2Vec gives each word *one* vector, forever. But natural language is ambiguous:
 
-```
+```text
 "He went to the bank to cash a check"    → bank = financial institution
 "He went to the bank to catch a fish"    → bank = river bank
 "The blood bank was running low"         → bank = storage facility

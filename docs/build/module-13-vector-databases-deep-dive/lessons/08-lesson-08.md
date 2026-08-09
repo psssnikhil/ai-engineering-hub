@@ -252,7 +252,7 @@ def benchmark_searcher(searcher, eval_queries, k=5):
 
 Run this on 30+ labeled queries. Typical results on mixed technical corpora:
 
-```
+```text
 Method          Recall@5
 ---------------------------
 bm25                 0.620
@@ -293,7 +293,7 @@ Pick the alpha that maximizes recall@K on your eval set. Technical docs often pr
 
 Hybrid search improves recall (finding relevant docs). A cross-encoder reranker (Cohere Rerank, bge-reranker) improves precision (ordering the top results correctly). Pipeline:
 
-```
+```text
 Query → Hybrid (BM25 + Vector) → Top 50 candidates → Cross-encoder rerank → Top 5 to LLM
 ```
 

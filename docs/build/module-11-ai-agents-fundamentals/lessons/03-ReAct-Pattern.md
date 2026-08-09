@@ -44,7 +44,7 @@ Before ReAct, researchers tried two approaches to making LLMs act:
 
 The Yao et al. (2022) paper showed that this interleaving reduces hallucinations, enables self-correction ("The result shows Paris, not Rome — I was wrong in my prior thought"), and improves performance on multi-hop QA tasks by 10–30% over action-only or reasoning-only baselines.
 
-```
+```text
 WITHOUT ReAct (action-only):
   Query → search("Paris") → search("France") → search("Eiffel Tower history")
   (Model has no reasoning trace; actions look random to an observer)
@@ -79,7 +79,7 @@ Modern LLM APIs have built-in support for the ReAct pattern via **tool calling**
 
 The message history *is* the reasoning trace:
 
-```
+```text
 messages = [
   {role: "system",    content: "..."},
   {role: "user",      content: "What is 15% of Paris's metro population?"},
@@ -394,7 +394,7 @@ print(f"Hit max steps: {result.hit_max_steps}")
 ```
 
 Expected trace:
-```
+```text
 Step 1
   Tool:   search
   Args:   {"query": "2024 Summer Olympics host city"}

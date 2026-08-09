@@ -149,7 +149,7 @@ print("CLS shape:", cls_repr.shape)
 
 **Training objective**: next-token prediction (causal language modeling)
 
-```
+```text
 P(token_t | token_1, ..., token_{t-1})
 ```
 
@@ -195,7 +195,7 @@ print(tokenizer.decode(output_ids[0], skip_special_tokens=True))
 
 **Philosophy**: Every NLP task is a text-to-text problem.
 
-```
+```text
 Task           Input                          Output
 Translation:   "translate en to fr: Hello"   "Bonjour"
 Summarization: "summarize: [long article]"   "Short summary"
@@ -207,7 +207,7 @@ Classification:"sentiment: This is great!"   "positive"
 - Replace consecutive token spans with a single sentinel token (`<extra_id_0>`, etc.)
 - Model reconstructs the original spans
 
-```
+```text
 Input:  "Thank you <extra_id_0> me to your <extra_id_1> week."
 Target: "<extra_id_0> for inviting <extra_id_1> party last <extra_id_2>"
 ```
@@ -239,7 +239,7 @@ LLaMA is a decoder-only model like GPT, but with several architectural improveme
 
 ### 1. RMSNorm instead of LayerNorm
 
-```
+```text
 RMSNorm(x) = x / RMS(x) × γ
 RMS(x) = √(mean(x²))
 ```
@@ -264,7 +264,7 @@ class RMSNorm(nn.Module):
 
 ### 2. SwiGLU activation in FFN
 
-```
+```text
 SwiGLU(x, W, V, W₂) = (Swish(xW) ⊙ xV) · W₂
 Swish(z) = z · σ(z)    (sigmoid linear unit)
 ```
@@ -328,7 +328,7 @@ def grouped_query_attention(Q, K, V, num_q_heads, num_kv_heads):
 
 **Mixtral-8×7B**: a **Mixture of Experts (MoE)** model.
 
-```
+```text
 For each token, instead of one FFN:
   8 expert FFNs compete
   A router selects top-2 experts per token

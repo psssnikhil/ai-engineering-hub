@@ -34,7 +34,7 @@ module: module-19
 
 Evaluating a chatbot is straightforward: one input, one output, one quality judgment. Evaluating an agent is evaluating an entire decision-making process that unfolds over time.
 
-```
+```text
 Chatbot evaluation:
   Input:  "What's the weather in Tokyo?"
   Output: "It's 22°C and partly cloudy."

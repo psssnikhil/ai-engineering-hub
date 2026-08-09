@@ -61,7 +61,7 @@ A stateless agent is like a person who wakes up every morning with no memory of 
 
 Consider a 20-turn customer support conversation where the agent uses 5 tools per turn:
 
-```
+```text
 Turn 1:  ~2,000 tokens in context
 Turn 5:  ~12,000 tokens in context
 Turn 10: ~26,000 tokens in context

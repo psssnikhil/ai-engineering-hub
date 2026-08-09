@@ -50,7 +50,7 @@ This matters when:
 
 **Pipeline RAG** — fixed sequence, always the same:
 
-```
+```text
 Query → [Embed] → [Search top-K] → [Generate] → Done
 ```
 
@@ -58,7 +58,7 @@ Every query goes through this sequence whether it needs one step or ten. There's
 
 **Agentic RAG** — LLM controls the sequence:
 
-```
+```text
 Query → Agent observes query → Decides:
          ├─ Search internal KB? → Tool call → observe results
          ├─ Search is insufficient? → Rewrite query → Search again
@@ -240,7 +240,7 @@ def make_tool_handlers(vector_store, document_store):
 
 **Trace of a multi-step agentic retrieval:**
 
-```
+```text
 User: "What's the refund policy for annual plans, and how does it differ from monthly?"
 
 Step 1: search_docs("refund policy annual plan") → 3 results about billing
@@ -258,7 +258,7 @@ Three tool calls; a pipeline RAG with a single search would have missed the mont
 
 **Self-RAG** (Asai et al., 2023) introduces *reflection tokens* — special tokens the model emits to evaluate its own retrieval process:
 
-```
+```text
 Retrieve? [Yes/No] → If Yes: Search → 
 IsRel? [Relevant/Irrelevant] for each chunk → 
 IsSup? [Fully/Partially/No support] → 
@@ -336,7 +336,7 @@ def self_rag_loop(
 
 CRAG (Yan et al., 2024) adds a *relevance evaluator* that triggers a web search fallback when the knowledge base returns poor results.
 
-```
+```text
 Retrieve from vector DB
     ↓
 Grade each chunk: [CORRECT / AMBIGUOUS / INCORRECT]

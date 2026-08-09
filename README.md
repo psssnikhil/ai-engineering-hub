@@ -10,18 +10,18 @@
 
 <br/>
 
-[![Read the handbook](https://img.shields.io/badge/📖_Read_the_handbook-indigo?style=for-the-badge)](https://psssnikhil.github.io/learn-ai-engineering/)
-[![Start Here](https://img.shields.io/badge/→_Start_Here-6366f1?style=for-the-badge&labelColor=4338ca)](https://psssnikhil.github.io/learn-ai-engineering/start-here/)
+[![Read the handbook](https://img.shields.io/badge/📖_Read_the_handbook-indigo?style=for-the-badge)](https://psssnikhil.github.io/ai-engineering-handbook/)
+[![Start Here](https://img.shields.io/badge/→_Start_Here-6366f1?style=for-the-badge&labelColor=4338ca)](https://psssnikhil.github.io/ai-engineering-handbook/start-here/)
 [![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/psssnikhil/learn-ai-engineering?style=flat-square&logo=github&label=Stars)](https://github.com/psssnikhil/learn-ai-engineering)
+[![GitHub stars](https://img.shields.io/github/stars/psssnikhil/ai-engineering-handbook?style=flat-square&logo=github&label=Stars)](https://github.com/psssnikhil/ai-engineering-handbook)
 
 <br/>
 
-**[Browse 16 courses](https://psssnikhil.github.io/learn-ai-engineering/learn/)** · **[Build portfolio projects](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/learn-ai-engineering/learn/study-plans/)**
+**[Browse 16 courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/)** · **[Build portfolio projects](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/ai-engineering-handbook/learn/study-plans/)** · **[Interview prep](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/)** · **[Books](https://psssnikhil.github.io/ai-engineering-handbook/books/)**
 
 <br/>
 
-If this saves you weeks of scattered Googling — **[★ star the repo](https://github.com/psssnikhil/learn-ai-engineering)**.  
+If this saves you weeks of scattered Googling — **[★ star the repo](https://github.com/psssnikhil/ai-engineering-handbook)**.  
 That's how the next engineer finds it.
 
 </div>
@@ -59,7 +59,7 @@ AI content today is **everywhere** and **nowhere useful at once**:
               └─────────────────────────────────────┘
 ```
 
-Open the **[Learn tab](https://psssnikhil.github.io/learn-ai-engineering/learn/)** — work **01 → 16** in order. Each course page lists its lessons. No module codes. No guesswork.
+Open the **[Learn tab](https://psssnikhil.github.io/ai-engineering-handbook/learn/)** — work **01 → 16** in order. Each course page lists its lessons. No module codes. No guesswork.
 
 ---
 
@@ -70,30 +70,30 @@ Open the **[Learn tab](https://psssnikhil.github.io/learn-ai-engineering/learn/)
 <td width="50%">
 
 **I'm new to AI**  
-→ [Start Here](https://psssnikhil.github.io/learn-ai-engineering/start-here/)  
+→ [Start Here](https://psssnikhil.github.io/ai-engineering-handbook/start-here/)  
 → Course 01 (GenAI Foundations)
 
 **I'm a software engineer**  
-→ [Course 02 · AI Essentials](https://psssnikhil.github.io/learn-ai-engineering/foundations/module-01-ai-engineering-essentials/)  
-→ [Course 06 · RAG](https://psssnikhil.github.io/learn-ai-engineering/build/module-09-rag-retrieval-augmented-generation/)
+→ [Course 02 · AI Essentials](https://psssnikhil.github.io/ai-engineering-handbook/foundations/module-01-ai-engineering-essentials/)  
+→ [Course 06 · RAG](https://psssnikhil.github.io/ai-engineering-handbook/build/module-09-rag-retrieval-augmented-generation/)
 
 **I'm an ML engineer**  
-→ [Course 05 · LLMs](https://psssnikhil.github.io/learn-ai-engineering/foundations/module-07-large-language-models-llms/)  
-→ [Course 13 · Evals](https://psssnikhil.github.io/learn-ai-engineering/production/module-19-llm-evaluation-quality/)
+→ [Course 05 · LLMs](https://psssnikhil.github.io/ai-engineering-handbook/foundations/module-07-large-language-models-llms/)  
+→ [Course 13 · Evals](https://psssnikhil.github.io/ai-engineering-handbook/production/module-19-llm-evaluation-quality/)
 
 </td>
 <td width="50%">
 
 **I'm building agents**  
-→ [Agent Engineering track](https://psssnikhil.github.io/learn-ai-engineering/agent-engineering/)  
+→ [Agent Engineering track](https://psssnikhil.github.io/ai-engineering-handbook/agent-engineering/)  
 → Courses 07 → 08 → 09
 
 **I'm shipping to prod**  
-→ [Course 12 · LLMOps](https://psssnikhil.github.io/learn-ai-engineering/production/module-10-llmops-production-systems/)  
-→ [Course 13 · Evals](https://psssnikhil.github.io/learn-ai-engineering/production/module-19-llm-evaluation-quality/)
+→ [Course 12 · LLMOps](https://psssnikhil.github.io/ai-engineering-handbook/production/module-10-llmops-production-systems/)  
+→ [Course 13 · Evals](https://psssnikhil.github.io/ai-engineering-handbook/production/module-19-llm-evaluation-quality/)
 
 **I use Claude Code / Cursor**  
-→ [Modern AI (2026) track](https://psssnikhil.github.io/learn-ai-engineering/ai-engineering-2026/)
+→ [Modern AI (2026) track](https://psssnikhil.github.io/ai-engineering-handbook/ai-engineering-2026/)
 
 </td>
 </tr>
@@ -121,9 +121,9 @@ Don't just read — ship:
 
 | Project | You'll learn | Start |
 |---------|--------------|-------|
-| Doc Q&A bot | RAG basics | [Build These #1](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/#1-doc-qa-bot-rag-starter) |
-| Tool-using agent | ReAct + tools | [Build These #4](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/#4-tool-using-research-agent) |
-| Eval suite in CI | Golden sets + gates | [Build These #9](https://psssnikhil.github.io/learn-ai-engineering/projects/build-these/#9-ai-quality-eval-suite) |
+| Doc Q&A bot | RAG basics | [Build These #1](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/#1-doc-qa-bot-rag-starter) |
+| Tool-using agent | ReAct + tools | [Build These #4](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/#4-tool-using-research-agent) |
+| Eval suite in CI | Golden sets + gates | [Build These #9](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/#9-ai-quality-eval-suite) |
 
 Three projects on GitHub beat fifty completed lessons on a checklist.
 
@@ -132,23 +132,51 @@ Three projects on GitHub beat fifty completed lessons on a checklist.
 ## Run locally
 
 ```bash
-git clone https://github.com/psssnikhil/learn-ai-engineering.git
-cd learn-ai-engineering
+git clone https://github.com/psssnikhil/ai-engineering-handbook.git
+cd ai-engineering-handbook
 pip install -r requirements.txt
 npm install
 mkdocs serve
 # → http://127.0.0.1:8000
 ```
 
-Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](MAINTAINING.md)
+Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](maintainers/MAINTAINING.md)
 
 ---
 
-## Contribute
+## Repo structure
 
-Found a typo? Want to deepen a lesson? **PRs welcome.**
+```
+docs/            # All site content (MkDocs) — courses, tracks, interview prep, career, books
+  foundations/     courses 01–05        build/           courses 06–11
+  production/      courses 12–14        advanced/        courses 15–16
+  agent-engineering/  ai-engineering-2026/   # tracks
+  interview-prep/  career/  books/      # capability sections
+  deep-dives/  exercises/  resources/   # reference material
+scripts/         # Nav generation, link verification, resource extraction
+resources/       # Auto-generated link indexes (npm run extract-resources)
+maintainers/     # MAINTAINING, DEPTH_STANDARDS, GAPS (internal docs)
+.github/         # CI workflows, issue templates, CONTRIBUTING, CoC, SECURITY
+curriculum.yml   # Source of truth for course order → mkdocs nav
+```
 
-[CONTRIBUTING.md](CONTRIBUTING.md) · [Roadmap](https://psssnikhil.github.io/learn-ai-engineering/roadmap/) · [Open an issue](https://github.com/psssnikhil/learn-ai-engineering/issues)
+---
+
+## Run the code, not just the docs
+
+New: hands-on notebooks in [`labs/`](labs/) — starting with [RAG from scratch](labs/lab-01-rag-from-scratch.ipynb) (chunking → retrieval → grounded generation → a 10-line eval, no frameworks). More labs are [up for grabs](https://github.com/psssnikhil/ai-engineering-handbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+
+---
+
+## Contribute — we want your PRs
+
+This handbook is built in the open, and contributions of every size are welcome: a typo fix, a dead-link repair, a new lab notebook, a worked interview answer, or a whole lesson.
+
+- **New here?** Grab a [good first issue](https://github.com/psssnikhil/ai-engineering-handbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- **Have an idea or question?** Start a [Discussion](https://github.com/psssnikhil/ai-engineering-handbook/discussions)
+- **Ready to write?** Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) and the [Roadmap](https://psssnikhil.github.io/ai-engineering-handbook/roadmap/)
+
+Every contributor is credited. If you learned something here, the best thank-you is a PR that helps the next person.
 
 ---
 
@@ -158,7 +186,7 @@ Found a typo? Want to deepen a lesson? **PRs welcome.**
 |---|---|
 | **Name** | AI Engineering Handbook |
 | **Tagline** | The open-source path from zero to production AI |
-| **Live site** | https://psssnikhil.github.io/learn-ai-engineering/ |
+| **Live site** | https://psssnikhil.github.io/ai-engineering-handbook/ |
 
 ---
 
@@ -166,7 +194,7 @@ Found a typo? Want to deepen a lesson? **PRs welcome.**
 
 ### Help us become the handbook every AI engineer bookmarks
 
-**[★ Star on GitHub](https://github.com/psssnikhil/learn-ai-engineering)** · **[Read now →](https://psssnikhil.github.io/learn-ai-engineering/)**
+**[★ Star on GitHub](https://github.com/psssnikhil/ai-engineering-handbook)** · **[Read now →](https://psssnikhil.github.io/ai-engineering-handbook/)**
 
 MIT License · Built in the open
 

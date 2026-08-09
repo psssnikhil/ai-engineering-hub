@@ -57,12 +57,12 @@ flowchart LR
 
 For a two-layer network `L(A2(Z2(A1(Z1(X)))))`:
 
-```
+```text
 dL/dW1 = dL/dA2 × dA2/dZ2 × dZ2/dA1 × dA1/dZ1 × dZ1/dW1
 ```
 
 In matrix notation (critical for implementation):
-```
+```text
 dZ2 = dL/dA2 × dA2/dZ2   (B, 1) — combine sigmoid + BCE gradient
 dW2 = A1ᵀ × dZ2           (8, 1) — gradient w.r.t. W2
 dA1 = dZ2 × W2ᵀ           (B, 8) — backprop through W2
@@ -72,7 +72,7 @@ dW1 = Xᵀ × dZ1            (4, 8) — gradient w.r.t. W1
 
 ### Gradient Derivation: Binary Cross-Entropy + Sigmoid
 
-```
+```text
 L = -[y log σ(z) + (1-y) log(1-σ(z))]
 
 dL/dz = dL/dσ × dσ/dz
@@ -614,7 +614,7 @@ if __name__ == "__main__":
 
 ## Expected Output
 
-```
+```text
 ============================================================
 🧠 Neural Network from Scratch
 ============================================================
@@ -758,7 +758,7 @@ def binary_cross_entropy(self, y_true, y_pred, lambda_reg=0.01):
 
 Extend to 3 layers:
 
-```
+```text
 Input → Hidden1 → Hidden2 → Output
   4   →   8     →    4    →   1
 ```

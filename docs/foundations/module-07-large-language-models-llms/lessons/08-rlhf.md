@@ -32,7 +32,7 @@ RLHF is how ChatGPT, Claude, and most production assistants achieve alignment. T
 
 Instruction tuning teaches models to follow instructions. But "follow instructions" is not the same as "be helpful, harmless, and honest":
 
-```
+```text
 Instruction: "Help me write a persuasive essay."
 Bad (but instruction-following): Helps write propaganda.
 Good (aligned):                  Helps write a balanced, honest essay.

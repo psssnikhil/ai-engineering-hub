@@ -40,7 +40,7 @@ objectives:
 
 The original Transformer (Vaswani et al., 2017) was designed for machine translation:
 
-```
+```text
 English sentence → [Encoder] → Context vectors → [Decoder] → French sentence
 ```
 
@@ -59,7 +59,7 @@ Both abandoned the encoder-decoder design for task-specific simplifications.
 
 GPT (Generative Pre-trained Transformer) kept only the decoder half of the Transformer and removed cross-attention (since there's no encoder to attend to).
 
-```
+```text
 Original Transformer Decoder:
   [Masked Self-Attn] → [Cross-Attention to Encoder] → [FFN]
 
@@ -165,7 +165,7 @@ def gpt_loss(model, token_ids: torch.Tensor) -> torch.Tensor:
 
 BERT (Bidirectional Encoder Representations from Transformers) kept only the encoder half and removed the causal mask — every token can attend to every other token in both directions.
 
-```
+```text
 BERT block:
   [Bidirectional Self-Attn (no mask)] → [FFN]
 
@@ -231,7 +231,7 @@ The same architectural idea — decoder-only, causal language modeling — was s
 
 The architecture barely changed. What changed was scale — and with scale came qualitatively different capabilities:
 
-```
+```text
 GPT-1 (117M):  Can complete sentences, follows simple patterns
 GPT-2 (1.5B):  Coherent paragraphs, basic reasoning, weak translation
 GPT-3 (175B):  Few-shot learning, code generation, complex reasoning,
@@ -249,7 +249,7 @@ By 2022, nearly all frontier models adopted decoder-only architecture. Why?
 ### 1. Training Efficiency
 
 Causal language modeling trains on **every token position simultaneously**:
-```
+```text
 Sequence of length T = T training signals per example
 No need for labeled pairs — raw internet text is training data
 ```
@@ -259,7 +259,7 @@ Masked LM (BERT) wastes 85% of positions (only 15% are masked). The full causal 
 ### 2. Inference Flexibility
 
 A decoder-only model handles *any* task with appropriate prompting:
-```
+```text
 Classification: "Is this review positive or negative? Review: ... Answer:"
 Translation:    "Translate to French: Hello → "
 Summarization:  "Summarize the following text: ..."
@@ -271,7 +271,7 @@ The encoder-decoder paradigm requires task-specific fine-tuning or a text-to-tex
 ### 3. KV Cache Efficiency
 
 At inference, the decoder generates one token at a time. With KV caching:
-```
+```text
 Step 1: compute K, V for all input tokens → cache them
 Step 2+: compute K, V only for the new token → append to cache
 Cost per step: O(T) not O(T²)
@@ -313,7 +313,7 @@ flowchart TD
 
 Let's trace exactly what happens when GPT generates "Paris" given "The capital of France is":
 
-```
+```text
 Step 1: Tokenize input
 "The capital of France is" → [464, 3139, 286, 4881, 318]
 
@@ -359,7 +359,7 @@ for token_id, prob in zip(top5_ids, top5_probs):
 ```
 
 Expected output:
-```
+```text
 Prompt: 'The capital of France is'
 
 Top-5 next token predictions:

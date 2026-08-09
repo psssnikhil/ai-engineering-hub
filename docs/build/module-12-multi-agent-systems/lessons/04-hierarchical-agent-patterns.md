@@ -58,7 +58,7 @@ This mirrors how organizations operate: executives set direction, managers coord
 
 ### Architecture Overview
 
-```
+```text
                     ┌─────────────────┐
                     │  Root Orchestrator │
                     └────────┬────────┘

@@ -31,7 +31,7 @@ objectives:
 
 When users interact with AI systems, sensitive data flows through multiple points:
 
-```
+```text
 User Input (may contain PII)
     |
     v

@@ -54,7 +54,7 @@ Getting handoffs wrong is the most common source of multi-agent bugs: duplicated
 
 An **agent handoff** transfers **control**, **context**, and **accountability** from one agent to another. This is more than sending a message. The receiving agent becomes the active executor, inherits relevant state, and owns the next steps until it hands off again or completes the task.
 
-```
+```text
 Agent A (active)                    Agent B (active)
      │                                   │
      │  1. Summarize progress            │

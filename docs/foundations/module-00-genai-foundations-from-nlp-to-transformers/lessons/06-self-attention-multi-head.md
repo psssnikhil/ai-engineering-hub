@@ -40,7 +40,7 @@ The previous lesson introduced attention in general. Now we need to be precise:
   - Used in encoder-decoder models (original Transformer, T5) for the decoder to attend to the encoder output
   - Also the mechanism underlying RAG: the model attends to retrieved documents
 
-```
+```text
 Self-attention (decoder in GPT):
   Input: "The cat sat"
   Query source:  same sequence ["The", "cat", "sat"]
@@ -127,7 +127,7 @@ print(f"\nRow sums: {weights.sum(axis=1).round(4)}")  # all 1.0
 
 Getting shapes wrong is the most common source of bugs in Transformer code. Let us be explicit:
 
-```
+```text
 For a single-head attention with:
   seq_len = n, d_model = d, d_k = d_k, d_v = d_v
 
@@ -156,7 +156,7 @@ In GPT-3: n=2048, d=12288, d_k=128 (=d/96 heads), 96 layers
 
 A single set of Q, K, V weight matrices can only learn one "projection" of similarity. But language has many simultaneous relationship types that a single projection cannot capture at once:
 
-```
+```text
 "The cat that I adopted from the shelter yesterday sat on the mat"
 
 A complete model needs to capture:
@@ -314,7 +314,7 @@ print(weights.round(3))
 
 Without causal masking, training would require sequential processing (you can only give the model the tokens up to position t). With causal masking, the entire sequence is processed in parallel:
 
-```
+```text
 Training sequence: "The cat sat on the mat"
 Without mask: process positions 0,1,2,3,4,5 separately → 6 forward passes
 With mask:    process all positions simultaneously → 1 forward pass

@@ -29,7 +29,7 @@ Multi-agent systems need something to decide **who does what**. Two closely rela
 
 **Supervisor:** An ongoing overseer that assigns work, reviews results, and decides whether to accept output, retry, or reassign. The supervisor runs in a **loop** until the task meets quality criteria.
 
-```
+```text
 Router Pattern:                    Supervisor Pattern:
 
   Request                            Request
@@ -244,7 +244,7 @@ async def handle_request(query: str) -> str:
 
 ## 🎓 Key Takeaways
 
-```
+```text
 ✅ Routers classify once and dispatch to the right specialist
 ✅ Supervisors loop until output meets quality standards
 ✅ LangGraph conditional edges implement routers; supervisor nodes implement review loops

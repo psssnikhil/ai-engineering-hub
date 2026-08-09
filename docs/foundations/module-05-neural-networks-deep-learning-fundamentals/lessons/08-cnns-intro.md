@@ -39,7 +39,7 @@ flowchart LR
 
 Traditional neural networks treat images as flat arrays:
 
-```
+```text
 Image (28×28 pixels) → flatten to 784 numbers → feed to FC layer
 
 Problems:
@@ -73,7 +73,7 @@ CNNs use **filters** (also called kernels) to detect these patterns.
 
 Slide a small filter over the image and compute dot products:
 
-```
+```text
 Image (5×5):          Filter (3×3):       Output (3×3):
 [1 2 3 4 5]           [1 0 -1]
 [0 1 2 3 4]           [1 0 -1]            Convolve
@@ -85,21 +85,21 @@ Image (5×5):          Filter (3×3):       Output (3×3):
 ### Step-by-Step Example
 
 **Filter (Edge Detector)**:
-```
+```text
 [1  0 -1]
 [1  0 -1]
 [1  0 -1]
 ```
 
 **Image Patch**:
-```
+```text
 [50 50 100]
 [50 50 100]
 [50 50 100]
 ```
 
 **Computation**:
-```
+```text
 Result = 1×50 + 0×50 + (-1)×100 +
          1×50 + 0×50 + (-1)×100 +
          1×50 + 0×50 + (-1)×100
@@ -112,7 +112,7 @@ Negative value = **vertical edge detected!**
 
 ## CNN Architecture
 
-```
+```text
 Input Image
      ↓
 Convolution Layer (learn features)
@@ -208,28 +208,28 @@ print(result)
 ## Common Filters
 
 ### 1. Vertical Edge Detector
-```
+```text
 [ 1  0 -1]
 [ 1  0 -1]
 [ 1  0 -1]
 ```
 
 ### 2. Horizontal Edge Detector
-```
+```text
 [ 1  1  1]
 [ 0  0  0]
 [-1 -1 -1]
 ```
 
 ### 3. Blur
-```
+```text
 [1/9 1/9 1/9]
 [1/9 1/9 1/9]
 [1/9 1/9 1/9]
 ```
 
 ### 4. Sharpen
-```
+```text
 [ 0 -1  0]
 [-1  5 -1]
 [ 0 -1  0]
@@ -247,7 +247,7 @@ print(result)
 
 Take the maximum value in each region:
 
-```
+```text
 Input (4×4):          Max Pooling (2×2, stride=2):
 [1  3  2  4]
 [5  6  7  8]     →    [6  8]
@@ -264,7 +264,7 @@ Input (4×4):          Max Pooling (2×2, stride=2):
 
 Take the average instead of max:
 
-```
+```text
 [1  3  2  4]
 [5  6  7  8]     →    [3.75  5.25]
 [3  2  1  2]          [1.75  2.50]
@@ -377,7 +377,7 @@ print(f"Predicted class: {np.argmax(probs)}")
 **Traditional NN**: Each weight connects to one pixel  
 **CNN**: Same filter applied to entire image
 
-```
+```text
 Traditional: 28×28×100 = 78,400 parameters (first layer!)
 CNN: 3×3×32 = 288 parameters (first layer)
 
@@ -390,7 +390,7 @@ CNN: 3×3×32 = 288 parameters (first layer)
 
 If object moves in image, CNN still detects it:
 
-```
+```text
 Cat in top-left → Detected ✅
 Cat in bottom-right → Detected ✅
 ```
@@ -401,7 +401,7 @@ Same filter slides everywhere!
 
 ### 3. Hierarchical Learning
 
-```
+```text
 Layer 1: Edges, colors
 Layer 2: Textures, simple shapes
 Layer 3: Parts (eyes, wheels, etc.)
@@ -415,7 +415,7 @@ Each layer builds on previous!
 ## Famous CNN Architectures
 
 ### LeNet-5 (1998) - The Pioneer
-```
+```text
 Input (32×32)
  → Conv (6 filters)
  → Pool
@@ -430,7 +430,7 @@ Input (32×32)
 ---
 
 ### AlexNet (2012) - ImageNet Winner
-```
+```text
 Input (224×224×3)
  → Conv (96 filters, 11×11)
  → Pool
@@ -449,7 +449,7 @@ Input (224×224×3)
 ---
 
 ### VGG-16 (2014) - Deeper is Better
-```
+```text
 16 weight layers
 All 3×3 convolutions
 Very deep, very accurate
@@ -458,7 +458,7 @@ Very deep, very accurate
 ---
 
 ### ResNet (2015) - Skip Connections
-```
+```text
 Identity shortcuts:
 x → Conv → Conv → (+) → Output
 └──────────────────┘
@@ -471,7 +471,7 @@ Enables 100+ layer networks!
 ## Output Dimension Formula
 
 Given input `(H, W)`, kernel `(K, K)`, padding `P`, stride `S`:
-```
+```text
 H_out = floor((H + 2P - K) / S) + 1
 W_out = floor((W + 2P - K) / S) + 1
 
@@ -544,7 +544,7 @@ print(f"Output: {output.shape}")   # (8, 6, 6)
 
 ## Parameter Efficiency
 
-```
+```text
 Traditional FC layer (28×28 input, 1000 hidden):
   Parameters: 784 × 1000 = 784,000
 
@@ -560,7 +560,7 @@ CNN uses 2,450× fewer parameters in the first layer!
 
 The **receptive field** is how large an area of the input influences one output neuron.
 
-```
+```text
 Layer 1: 3×3 conv → each output sees 3×3 input pixels
 Layer 2: 3×3 conv → each output sees 5×5 input pixels (3 + 2 from prev)
 Layer 3: 3×3 conv → each output sees 7×7 input pixels
@@ -697,7 +697,7 @@ def train_cnn(epochs: int = 5, batch_size: int = 128, lr: float = 1e-3) -> None:
 | 2019 | EfficientNet | Neural architecture search | 2.9% |
 | 2021 | ViT | Vision Transformer | 2.0% (post-finetuning) |
 
-```
+```text
 ResNet skip connection:
   Input (x)
      │

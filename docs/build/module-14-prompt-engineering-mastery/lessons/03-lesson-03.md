@@ -86,7 +86,7 @@ The system prompt ensures every code review follows the same severity scale and 
 
 A well-structured system prompt has these sections:
 
-```
+```text
 1. Identity:    Who the AI is
 2. Capabilities: What it can and cannot do
 3. Rules:       Behavioral constraints

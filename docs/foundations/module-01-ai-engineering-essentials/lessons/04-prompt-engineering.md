@@ -39,7 +39,7 @@ P(\text{next token} \mid \text{all previous tokens})
 
 The prompt is just the "all previous tokens" part. Every word you include in the prompt shifts the probability distribution over the next token — and transitively, over the entire completion.
 
-```
+```text
 Prompt: "The capital of France is"
 P(next token = "Paris"): 0.94    ← very high
 P(next token = "the"):   0.02
@@ -69,7 +69,7 @@ This means:
 
 A well-structured prompt has five components. Not all are needed for every task:
 
-```
+```text
 [ROLE]        — Who is producing this text?
 [TASK]        — What should they do?
 [CONTEXT]     — What do they need to know to do it?
@@ -80,13 +80,13 @@ A well-structured prompt has five components. Not all are needed for every task:
 ### Before and After: A Real Example
 
 **Before (bad):**
-```
+```text
 Tell me about machine learning.
 ```
 This is maximally ambiguous. The model has to guess: audience level, desired length, format, depth, perspective. The output will be generic.
 
 **After (structured):**
-```
+```text
 [ROLE] You are a technical educator writing for software engineers with 3+ years of Python experience but no ML background.
 
 [TASK] Explain gradient descent.

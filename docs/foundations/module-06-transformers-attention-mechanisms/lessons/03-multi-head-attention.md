@@ -54,7 +54,7 @@ Standard hyperparameters (BERT-Base): `d_model = 768`, `h = 12`, `d_k = d_v = 64
 
 Note: `h × d_k = 12 × 64 = 768 = d_model`. Each head gets its own slice of the representation space.
 
-```
+```text
 For each head i = 1..h:
   Q_i = X · W_Q_i       (B, n, d_k)
   K_i = X · W_K_i       (B, n, d_k)
@@ -68,7 +68,7 @@ MultiHead = Concat(head_1, ..., head_h) · W_O
 
 In practice, the h separate projections are fused into single matrices:
 
-```
+```text
 W_Q ∈ ℝ^{d_model × (h·d_k)}   (all heads' queries at once)
 W_K ∈ ℝ^{d_model × (h·d_k)}
 W_V ∈ ℝ^{d_model × (h·d_v)}
@@ -82,7 +82,7 @@ W_O ∈ ℝ^{(h·d_v) × d_model}   (output projection)
 Input `X: (B, n, d_model)`.  
 `h = 8`, `d_model = 512`, `d_k = d_v = 64`.
 
-```
+```text
 1. Project:
    Q = X · W_Q    (B, n, 512)
    K = X · W_K    (B, n, 512)
@@ -112,7 +112,7 @@ Input `X: (B, n, d_model)`.
 `B=1, n=3, d_model=4, h=2, d_k=2, d_v=2`
 
 Input (3 tokens, 4-dim):
-```
+```text
 X = [[1, 0, 1, 0],   # token 0
      [0, 1, 0, 1],   # token 1
      [1, 1, 0, 0]]   # token 2
@@ -122,13 +122,13 @@ Suppose W_Q = W_K = W_V = I₄ (identity), so Q = K = V = X.
 
 **Split Q into 2 heads** (slice dim=1 into two halves of size 2):
 
-```
+```text
 Head 0 Q:  [[1,0], [0,1], [1,1]]    (first 2 dims)
 Head 1 Q:  [[1,0], [0,1], [0,0]]    (last 2 dims)
 ```
 
 Head 0 scores: Q₀ @ K₀^T / √2:
-```
+```text
 scores = [[1,0,1],[0,1,1],[1,1,2]] / 1.414 = [[0.71,0,0.71],[0,0.71,0.71],[0.71,0.71,1.41]]
 ```
 
@@ -470,7 +470,7 @@ def analyze_head_patterns(weights: np.ndarray, tokens: list[str]) -> None:
 
 **Real findings from BERT-base layer 5** (Clark et al., 2019):
 
-```
+```text
 Head  0: attention_sink    — always attends to [CLS]
 Head  1: prev_token        — tracks syntactic locality
 Head  4: broad             — aggregation head

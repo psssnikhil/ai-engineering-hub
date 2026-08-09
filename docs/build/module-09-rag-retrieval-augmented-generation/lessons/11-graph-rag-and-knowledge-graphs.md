@@ -66,7 +66,7 @@ corpus become answerable in a single pass.
 
 A knowledge graph is a directed, labeled multigraph:
 
-```
+```text
 G = (V, E, L)
 
 V = {entity_1, entity_2, ...}           # nodes
@@ -76,7 +76,7 @@ L: E → label_set                        # edge labels (relation types)
 
 Example triples (RDF-style: subject, predicate, object):
 
-```
+```text
 (Imatinib, inhibits, BCR-ABL1)
 (BCR-ABL1, activates, MAPK pathway)
 (Imatinib, treats, Chronic myeloid leukemia)
@@ -94,7 +94,7 @@ making the graph noisy but comprehensive.
 
 The extraction step turns text chunks into graph triples using an LLM:
 
-```
+```text
 Input:  "Imatinib (Gleevec) is a BCR-ABL1 tyrosine kinase inhibitor used as
          first-line treatment for chronic myeloid leukemia (CML)."
 
@@ -128,7 +128,7 @@ of densely connected nodes.
 optimizes **modularity** — a measure of how many edges fall within communities
 vs. across them:
 
-```
+```text
 Q = (1/2m) × Σ_{i,j} [A_ij - k_i*k_j/(2m)] × δ(c_i, c_j)
 
 where:
@@ -155,7 +155,7 @@ specific queries go to level-2 summaries.
 
 For each community (at each level), an LLM generates a prose summary:
 
-```
+```text
 Community C47 (Level 1):
   Entities: Imatinib, Dasatinib, Nilotinib, BCR-ABL1, CML, resistance mutations
   Relationships: inhibition, treatment, resistance
@@ -179,7 +179,7 @@ indexing, not repeated at query time.
 
 At query time, GraphRAG uses a **map-reduce** pattern:
 
-```
+```text
 Query: "How do resistance mutations affect treatment choices in CML?"
 
 MAP phase:

@@ -43,7 +43,7 @@ LoRA solves this by training only a tiny fraction of the parameters.
 
 LoRA (Low-Rank Adaptation) adds small trainable matrices alongside the frozen base model weights.
 
-```
+```text
 Standard fine-tuning:
   W_new = W_original + delta_W     (delta_W is the same size as W: huge!)
 

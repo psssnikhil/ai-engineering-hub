@@ -81,7 +81,7 @@ for n in [1_000_000, 10_000_000, 100_000_000]:
 ```
 
 Typical output:
-```
+```text
 1M vectors:  raw=6.1GB, HNSW=8.0GB, PQ=0.05GB
 10M vectors: raw=61.4GB, HNSW=79.9GB, PQ=0.48GB
 100M vectors: raw=614.4GB, HNSW=798.7GB, PQ=4.8GB
@@ -97,7 +97,7 @@ At 10M vectors, raw HNSW requires ~80 GB RAM. Quantization or disk-based indexes
 
 Split vectors across nodes; query all shards in parallel; merge top-K results.
 
-```
+```text
 Query → Router
           ├─ Shard 1 (0-3.3M vectors)  → Top 10
           ├─ Shard 2 (3.3M-6.6M)       → Top 10
@@ -203,7 +203,7 @@ DiskANN keeps a compressed graph on SSD with a small in-memory cache for hot nod
 
 ## Replication for High Availability
 
-```
+```text
                 Writes
                   │
           ┌───────┼───────┐

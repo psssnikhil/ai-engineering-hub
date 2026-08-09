@@ -31,7 +31,7 @@ objectives:
 
 Knowledge distillation transfers the capabilities of a large **teacher** model into a smaller **student** model. The student learns to mimic the teacher's behavior on your specific tasks.
 
-```
+```text
 Teacher Model (e.g., GPT-4.1, Claude Opus)
   - Expensive: $10-15/1M output tokens
   - Slow: 1-3 seconds per response

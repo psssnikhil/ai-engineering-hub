@@ -64,7 +64,7 @@ roughly evenly between model parameters `N` and training tokens `D`. More comput
 
 Test-time compute opens a **second axis**:
 
-```
+```text
 Loss = f(N, D, T)
 ```
 
@@ -83,7 +83,7 @@ Chain-of-thought prompting (Wei et al., 2022) was the first demonstration that
 **showing intermediate steps in the prompt** causes the model to produce them too,
 and that those steps improve accuracy. Few-shot CoT:
 
-```
+```text
 Q: Roger has 5 tennis balls. He buys 2 cans, each with 3 balls. How many?
 A: Roger starts with 5. 2 cans × 3 balls = 6 new balls. 5 + 6 = 11. Answer: 11.
 
@@ -122,7 +122,7 @@ that:
    outperforms outcome-only reward models.
 3. Best-of-N search using a PRM beats greedy decoding by a large margin.
 
-```
+```text
 ORM: judge(final_answer) → {0, 1}
 PRM: judge(step_1), judge(step_2), ..., judge(step_k) → product of step scores
 ```
@@ -144,7 +144,7 @@ Given a PRM, you can do structured search over reasoning paths:
 
 **Best-of-N** is the simplest and most widely used. For N samples:
 
-```
+```text
 accuracy(N) ≈ 1 - (1 - p)^N
 ```
 
@@ -193,7 +193,7 @@ benchmarks.
 
 ### 7. The Inference Scaling Curve
 
-```
+```text
          Accuracy (%)
 100 |                                          ●  o3-high
     |                                  ●  o3-low
@@ -263,7 +263,7 @@ print("CoT:", response_cot.choices[0].message.content)
 ```
 
 **Expected CoT trace**:
-```
+```text
 Step 1: Carol has the fish (given). So cat and dog are split between Alice and Bob.
 Step 2: Alice doesn't have the cat. So Alice has the dog.
 Step 3: Bob gets the cat.

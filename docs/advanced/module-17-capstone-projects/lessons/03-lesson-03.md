@@ -32,7 +32,7 @@ Build an AI-powered coding agent that can:
 
 ## Architecture
 
-```
+```text
 User: "Fix the failing tests in src/utils.py"
     |
     v

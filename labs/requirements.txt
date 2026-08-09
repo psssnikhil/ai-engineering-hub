@@ -1,0 +1,4 @@
+anthropic>=0.60.0
+scikit-learn>=1.4
+numpy>=1.26
+jupyterlab>=4.0

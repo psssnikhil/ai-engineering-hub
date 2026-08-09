@@ -42,7 +42,7 @@ LLM applications have three additional constraints that don't exist in tradition
 
 **Variable latency**: A simple query might return in 500ms; a complex reasoning task might take 30 seconds. Load balancers designed for uniform latency don't work well with this distribution. A single slow request in a synchronous handler blocks a thread for 30 seconds.
 
-```
+```text
 Traditional web scaling constraint: infrastructure throughput
   → Add more servers → solved
 
@@ -126,7 +126,7 @@ Run this calculation before committing to an architecture. At 10k DAU you might 
 
 For most LLM applications at significant scale, a synchronous request-response pattern is inadequate. An LLM call that takes 5–15 seconds blocks a web server thread for that duration, limiting concurrency. A queue-based architecture decouples the request intake from LLM processing.
 
-```
+```text
 Synchronous (naive):
   User HTTP Request → Web Server → LLM API (5-15s wait) → Response
   Problem: Thread blocked for 5-15s; low concurrency; no retry on provider errors

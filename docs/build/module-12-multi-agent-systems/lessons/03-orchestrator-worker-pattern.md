@@ -45,7 +45,7 @@ This is the most common pattern in production multi-agent systems because it pro
 
 ### Architecture
 
-```
+```text
                     ┌──────────────────┐
                     │   Orchestrator   │
                     │   (Coordinator)  │

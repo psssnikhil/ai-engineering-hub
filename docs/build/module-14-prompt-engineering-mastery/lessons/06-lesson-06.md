@@ -50,7 +50,7 @@ That is prompt chaining. It is the most reliable architecture for complex LLM wo
 
 Instead of asking an LLM to do everything in one shot, break the task into focused steps:
 
-```
+```text
 Single prompt (unreliable for complex tasks):
   "Read this article, extract entities, classify sentiment,
    generate a summary, and create action items"
@@ -136,7 +136,7 @@ Notice how each step's prompt is short and focused. Step 3 gets richer context (
 
 Each step depends on the previous output:
 
-```
+```text
 Input → Step A → Step B → Step C → Output
 ```
 

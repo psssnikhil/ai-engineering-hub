@@ -54,7 +54,7 @@ flowchart TB
 
 Cursor **Agent Skills** are folders with a `SKILL.md` that teach the agent a specialized workflow:
 
-```
+```text
 my-skill/
   SKILL.md          # Required — when to use, step-by-step instructions
   scripts/          # Optional helper scripts
@@ -179,7 +179,7 @@ All steps green before suggesting `kubectl apply`
 
 ### Layering with CLAUDE.md
 
-```
+```text
 CLAUDE.md (always):     stack, test command, architecture
 deploy-checklist skill: 5-step procedure when deploying
 User message:           "deploy Friday's auth fix to staging"

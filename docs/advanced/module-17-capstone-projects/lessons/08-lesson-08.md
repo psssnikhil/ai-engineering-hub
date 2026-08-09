@@ -56,7 +56,7 @@ pip install openai chromadb fastapi uvicorn pydantic python-dotenv pytest httpx
 
 ## Architecture
 
-```
+```text
 [User Message]
     |
     v

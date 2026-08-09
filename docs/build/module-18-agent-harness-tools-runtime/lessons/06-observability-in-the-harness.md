@@ -50,7 +50,7 @@ This lesson shows you how to build that instrumentation from scratch, then how t
 
 A single user request to an agent may trigger **many** LLM calls and tool invocations. Traditional HTTP logging captures one request/response pair. You need **per-step** visibility inside the loop.
 
-```
+```text
 User: "Fix the failing test in auth.py"
   │
   ├─ span: harness.perceive      (5ms, assembled 4,200 token context)

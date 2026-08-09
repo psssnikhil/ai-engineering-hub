@@ -24,7 +24,7 @@ gradient of the loss with respect to every parameter.
 For a single neuron, this is straightforward. The challenge is that a deep
 network is a *composition* of many functions:
 
-```
+```text
 output = f_n(f_{n-1}(... f_2(f_1(input)) ...))
 ```
 
@@ -38,7 +38,7 @@ The chain rule is the only calculus you need.
 
 We'll analyze a 2-layer fully-connected network for binary classification:
 
-```
+```text
 Input:    x ∈ ℝ^(n_0)
 
 Layer 1:  z1 = W1·x + b1         linear
@@ -64,18 +64,18 @@ For concreteness, we'll use:
 ### Definitions
 
 **Sigmoid activation**:
-```
+```text
 σ(z) = 1 / (1 + exp(-z))
 ```
 
 **Binary cross-entropy loss** (for a single example):
-```
+```text
 L = -[y · log(a2) + (1 - y) · log(1 - a2)]
 ```
 
 ### Forward computation graph
 
-```
+```text
 x → [W1, b1] → z1 → σ → a1 → [W2, b2] → z2 → σ → a2 → L
 ```
 
@@ -89,7 +89,7 @@ derivatives (chain rule).
 ### The Chain Rule
 
 For composed functions `L = f(g(x))`:
-```
+```text
 dL/dx = (dL/df) · (df/dg) · (dg/dx)
 ```
 
@@ -102,7 +102,7 @@ We define **error signals** (δ = backpropagated gradient) at each layer.
 
 ### Step 1: Gradient of L w.r.t. a2
 
-```
+```text
 L = -[y·log(a2) + (1-y)·log(1-a2)]
 
 ∂L/∂a2 = -y/a2 + (1-y)/(1-a2)
@@ -111,14 +111,14 @@ L = -[y·log(a2) + (1-y)·log(1-a2)]
 
 ### Step 2: Sigmoid Derivative — a Key Identity
 
-```
+```text
 σ(z) = 1 / (1 + e^(-z))
 
 σ'(z) = σ(z) · (1 - σ(z))
 ```
 
 Proof:
-```
+```text
 dσ/dz = d/dz [1 + e^(-z)]^{-1}
       = e^(-z) / (1 + e^(-z))^2
       = [1/(1+e^(-z))] · [e^(-z)/(1+e^(-z))]
@@ -132,7 +132,7 @@ dσ/dz = d/dz [1 + e^(-z)]^{-1}
 ### Step 3: Gradient of L w.r.t. z2 (Layer 2 pre-activation)
 
 By chain rule:
-```
+```text
 ∂L/∂z2 = ∂L/∂a2 · ∂a2/∂z2
         = (a2 - y)/(a2(1-a2)) · a2(1-a2)
         = a2 - y
@@ -147,13 +147,13 @@ Define `δ2 = ∂L/∂z2 = a2 - y`.   Shape: `(n_2,) = (1,)`
 
 The linear layer `z2 = W2·a1 + b2`:
 
-```
+```text
 ∂L/∂W2 = δ2 · a1^T         outer product
 ∂L/∂b2 = δ2
 ```
 
 **Derivation for W2:**
-```
+```text
 z2[k] = Σ_j W2[k,j] · a1[j] + b2[k]
 
 ∂z2[k]/∂W2[k,j] = a1[j]
@@ -165,7 +165,7 @@ z2[k] = Σ_j W2[k,j] · a1[j] + b2[k]
 In matrix form: `∂L/∂W2 = δ2 ⊗ a1^T`   shape: `(n_2, n_1) = (1, 3)`
 
 **Derivation for b2:**
-```
+```text
 ∂z2[k]/∂b2[k] = 1
 ∂L/∂b2 = δ2                              shape: (n_2,) = (1,)
 ```
@@ -174,12 +174,12 @@ In matrix form: `∂L/∂W2 = δ2 ⊗ a1^T`   shape: `(n_2, n_1) = (1, 3)`
 
 Now we need to pass the error signal back through W2 to layer 1.
 
-```
+```text
 ∂L/∂a1 = W2^T · δ2        shape: (n_1,) = (3,)
 ```
 
 **Derivation:**
-```
+```text
 z2[k] = Σ_j W2[k,j] · a1[j]
 
 ∂z2[k]/∂a1[j] = W2[k,j]
@@ -192,7 +192,7 @@ z2[k] = Σ_j W2[k,j] · a1[j]
 ### Step 6: Gradient of L w.r.t. z1
 
 Apply the sigmoid derivative at layer 1:
-```
+```text
 δ1 = ∂L/∂z1 = ∂L/∂a1 ⊙ σ'(z1)
              = (W2^T · δ2) ⊙ a1·(1-a1)
 ```
@@ -204,14 +204,14 @@ Shape: `(n_1,) = (3,)`.
 ### Step 7: Gradients w.r.t. W1 and b1
 
 Same pattern as W2/b2:
-```
+```text
 ∂L/∂W1 = δ1 · x^T         shape: (n_1, n_0) = (3, 2)
 ∂L/∂b1 = δ1               shape: (n_1,) = (3,)
 ```
 
 ### Complete Gradient Summary
 
-```
+```text
 Forward:
   z1 = W1·x + b1
   a1 = σ(z1)
@@ -336,7 +336,7 @@ print(f"db1 error: {np.max(np.abs(db1 - db1_num)):.2e}")
 ## Why Vanishing Gradients Happen
 
 Look at the gradient for layer 1:
-```
+```text
 δ1 = (W2^T · δ2) ⊙ a1·(1-a1)
 ```
 
@@ -345,7 +345,7 @@ the maximum of `σ(z)·(1-σ(z))` is **0.25** (achieved at z=0).
 
 For a network with `L` layers, the gradient at layer 1 includes L-1 such terms:
 
-```
+```text
 δ1 ≈ (...) × 0.25^{L-1} × (...)
 ```
 
@@ -367,7 +367,7 @@ With L=10 layers: 0.25^9 ≈ 3.8 × 10^{-6}. The gradient shrinks by a factor of
 | Normalization | BatchNorm, LayerNorm | Re-centers/rescales activations to prevent saturation |
 
 **ReLU derivative:**
-```
+```text
 σ(z) = max(0, z)
 σ'(z) = 1 if z > 0, else 0
 ```
@@ -389,7 +389,7 @@ breakthrough in deep learning (Glorot & Bengio, 2011).
 So far we've computed gradients for a single example `(x, y)`. In practice,
 we compute over a batch of `m` examples and average:
 
-```
+```text
 ∂L/∂W2 = (1/m) × δ2_batch · a1_batch^T
 
 where:

@@ -101,7 +101,7 @@ Pick projects that tell a coherent story about your skills:
 
 Every capstone should follow a consistent production architecture. Adapt the layers to your project, but keep the separation of concerns:
 
-```
+```text
                     [User Interface]
                     (Web UI / CLI / API Client)
                            |
@@ -135,7 +135,7 @@ Every capstone should follow a consistent production architecture. Adapt the lay
 
 ### Recommended Repository Structure
 
-```
+```text
 project/
   README.md              # Setup, architecture, usage, metrics
   requirements.txt       # Pinned dependencies

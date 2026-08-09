@@ -5,7 +5,7 @@ description: Common questions, decision tables, and troubleshooting
 
 # Frequently Asked Questions
 
-Answers for learners at every level. Can't find yours? [Open an issue](https://github.com/psssnikhil/learn-ai-engineering/issues).
+Answers for learners at every level. Can't find yours? [Open an issue](https://github.com/psssnikhil/ai-engineering-handbook/issues).
 
 ---
 
@@ -87,7 +87,7 @@ Strongly recommended. [Exercises index](exercises/index.md) · Portfolio work: [
 | **Agents** | Medium–high | Days–weeks | Multi-step + tools | Simple single-shot Q&A |
 | **Workflows** | Low–medium | Days | Deterministic pipelines | Open-ended exploration |
 
-```
+```text
 Can prompts solve it? → Yes: prompts
                       → No: Need your docs? → Yes: RAG (Course 06)
                                               → No: Consistent style? → Fine-tune (Course 15)
@@ -194,4 +194,4 @@ We **curate and extend** OSS hubs with a unified path. See [Open Source Hubs](re
 
 ## Contributing
 
-[Contribute](contribute.md) · [Roadmap](roadmap.md) · [GitHub Issues](https://github.com/psssnikhil/learn-ai-engineering/issues)
+[Contribute](contribute.md) · [Roadmap](roadmap.md) · [GitHub Issues](https://github.com/psssnikhil/ai-engineering-handbook/issues)

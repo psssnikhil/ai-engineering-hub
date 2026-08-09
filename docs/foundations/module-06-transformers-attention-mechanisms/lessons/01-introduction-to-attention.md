@@ -39,7 +39,7 @@ Imagine you are a professional translator handed a document written in Japanese.
 
 That is what sequence-to-sequence RNNs did before 2015.
 
-```
+```text
 Japanese doc (300 words)
         ↓
      RNN encoder
@@ -72,7 +72,7 @@ d["age"]  # returns exactly 30
 
 A soft dictionary lookup:
 
-```
+```text
 query = "how old?"
 keys   = ["name", "age", "city"]
 values = [alice_vec, thirty_vec, ny_vec]
@@ -99,7 +99,7 @@ The computation has three steps:
 
 ### Step 1 — Compute similarity scores
 
-```
+```text
 e_i = score(q, k_i)
 ```
 
@@ -107,7 +107,7 @@ Different attention variants use different score functions (covered below).
 
 ### Step 2 — Normalize to weights
 
-```
+```text
 α_i = exp(e_i) / Σ_j exp(e_j)   (softmax)
 ```
 
@@ -115,7 +115,7 @@ All `α_i` sum to 1. They are the *attention distribution* — a probability ove
 
 ### Step 3 — Compute context vector
 
-```
+```text
 c = Σ_i α_i · v_i
 ```
 
@@ -129,7 +129,7 @@ Let the encoder produce hidden states `h_1, ..., h_T` (each ∈ ℝ^d). The deco
 
 **Bahdanau (additive) attention**:
 
-```
+```text
 e_{t,i} = v^T · tanh(W_1 · s_{t-1} + W_2 · h_i)
 
 α_{t,i} = softmax(e_{t,i})  over i = 1..T
@@ -141,14 +141,14 @@ Learnable parameters: `W_1 ∈ ℝ^{d_a×d}`, `W_2 ∈ ℝ^{d_a×d}`, `v ∈ ℝ
 
 **Luong (multiplicative) attention**:
 
-```
+```text
 e_{t,i} = s_t^T · h_i        (dot product)
      or  = s_t^T · W · h_i   (general)
 ```
 
 **Scaled dot-product attention** (Transformers — next lesson):
 
-```
+```text
 Attention(Q, K, V) = softmax(Q K^T / √d_k) · V
 ```
 
@@ -165,7 +165,7 @@ Sentence: **"The cat sat on"**
 
 Suppose the encoder produces hidden states (simplified to 2D for legibility):
 
-```
+```text
 h_1 ("The") = [0.1, 0.2]
 h_2 ("cat") = [0.9, 0.8]
 h_3 ("sat") = [0.5, 0.4]
@@ -176,7 +176,7 @@ Decoder state `s = [0.8, 0.7]` (currently generating a word meaning "feline").
 
 **Step 1 — dot-product scores**:
 
-```
+```text
 e_1 = s · h_1 = 0.8×0.1 + 0.7×0.2 = 0.08 + 0.14 = 0.22
 e_2 = s · h_2 = 0.8×0.9 + 0.7×0.8 = 0.72 + 0.56 = 1.28  ← highest
 e_3 = s · h_3 = 0.8×0.5 + 0.7×0.4 = 0.40 + 0.28 = 0.68
@@ -185,7 +185,7 @@ e_4 = s · h_4 = 0.8×0.2 + 0.7×0.9 = 0.16 + 0.63 = 0.79
 
 **Step 2 — softmax**:
 
-```
+```text
 exp([0.22, 1.28, 0.68, 0.79]) = [1.25, 3.60, 1.97, 2.20]
 sum = 9.02
 
@@ -196,7 +196,7 @@ The model focuses most on "cat" (α=0.40) — exactly right for generating a wor
 
 **Step 3 — context vector**:
 
-```
+```text
 c = 0.14×[0.1,0.2] + 0.40×[0.9,0.8] + 0.22×[0.5,0.4] + 0.24×[0.2,0.9]
   = [0.014, 0.028] + [0.360, 0.320] + [0.110, 0.088] + [0.048, 0.216]
   = [0.532, 0.652]
@@ -376,7 +376,7 @@ flowchart TD
 
 ## Attention in Practice: Timeline of Impact
 
-```
+```text
 2015 — Bahdanau attention for NMT: BLEU +3-5 points on long sentences
 2016 — Attention adopted in reading comprehension (SQuAD)
 2017 — "Attention Is All You Need": attention replaces recurrence entirely

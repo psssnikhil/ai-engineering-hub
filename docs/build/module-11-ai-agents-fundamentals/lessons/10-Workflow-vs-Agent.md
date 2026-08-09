@@ -36,7 +36,7 @@ By the end of this lesson, you'll understand:
 
 **Agent**: An autonomous system where the LLM decides what to do next. The developer defines tools and goals, but the LLM controls the flow.
 
-```
+```text
 WORKFLOW (Developer controls flow)          AGENT (LLM controls flow)
 ┌──────┐  ┌──────┐  ┌──────┐              ┌──────────────────────┐
 │Step 1│→ │Step 2│→ │Step 3│              │ LLM decides next step│
@@ -208,7 +208,7 @@ class ResearchAgent:
 
 ## The Decision Framework
 
-```
+```text
                          Is the task predictable?
                         /                        \
                       YES                         NO

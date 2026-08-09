@@ -67,7 +67,7 @@ results = vector_db.search(
 
 ### The Core Pipeline
 
-```
+```text
 User Query: "comfortable shoes for long walks"
                     |
                     v
@@ -144,7 +144,7 @@ Exact nearest-neighbor search compares your query against every stored vector. A
 | **IVF + PQ** | IVF + vector compression | Billion-scale | Memory-constrained |
 | **DiskANN** | SSD-resident graph | Azure AI Search, Milvus | RAM > dataset size |
 
-```
+```text
 Exact Search (brute force):     ANN Search (HNSW):
 Compare with ALL vectors         Navigate graph layers
 O(n) — linear in corpus size    O(log n) — sublinear
@@ -220,7 +220,7 @@ The vector search retrieves `d3` ("How to return an item...") because it underst
 
 ### Decision Matrix
 
-```
+```text
 How many vectors?
   ├─ < 100K        → Chroma or pgvector (simple, cheap)
   ├─ 100K - 10M    → Qdrant, Pinecone, or Weaviate
