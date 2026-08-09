@@ -55,6 +55,15 @@ function buildNavYaml(curriculum) {
     }
   }
 
+  lines.push('  - Resources:');
+  if (curriculum.resources) {
+    for (const item of curriculum.resources) {
+      lines.push(`      - ${escapeYaml(item.title)}: ${item.path}`);
+    }
+  } else {
+    lines.push('      - Overview: resources/index.md');
+  }
+
   lines.push('  - Reference:');
   for (const item of curriculum.reference) {
     lines.push(`      - ${escapeYaml(item.title)}: ${item.path}`);

@@ -139,6 +139,18 @@ nav:
           - Loop Engineering: ai-engineering-2026/loop-engineering.md
           - Context Engineering: ai-engineering-2026/context-engineering.md
           - Related Papers: ai-engineering-2026/related-papers.md
+  - Resources:
+      - Overview: resources/index.md
+      - "Transformers & LLMs": resources/topic-transformers-and-llms.md
+      - "RAG & Vector Search": resources/topic-rag-and-vector-search.md
+      - "AI Agents & Harnesses": resources/topic-agents-and-harnesses.md
+      - "LLMOps & Serving": resources/topic-llmops-evals-serving.md
+      - "Fine-Tuning & Alignment": resources/topic-finetuning-and-alignment.md
+      - Essential Papers: resources/essential-papers.md
+      - Essential Videos: resources/essential-videos.md
+      - "Tools & Frameworks": resources/tools-and-libraries.md
+      - "Courses & Communities": resources/courses-and-communities.md
+      - Open Source Hubs: resources/open-source-hubs.md
   - Reference:
       - Roadmap: roadmap.md
       - Getting Started: getting-started.md
@@ -152,12 +164,6 @@ nav:
       - Agentic AI Hub: agentic-ai/index.md
       - "Evals & Observability": evals-observability/index.md
       - Deep Dives: deep-dives/index.md
-      - Resources: resources/index.md
-      - "Resources · Transformers & LLMs": resources/topic-transformers-and-llms.md
-      - "Resources · RAG & Vector Search": resources/topic-rag-and-vector-search.md
-      - "Resources · AI Agents & Harnesses": resources/topic-agents-and-harnesses.md
-      - "Resources · LLMOps & Serving": resources/topic-llmops-evals-serving.md
-      - "Resources · Fine-Tuning & Alignment": resources/topic-finetuning-and-alignment.md
       - Exercises: exercises/index.md
   - Projects:
       - Overview: projects/index.md

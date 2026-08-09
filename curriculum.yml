@@ -117,13 +117,20 @@ reference:
   - { title: Agentic AI Hub, path: agentic-ai/index.md }
   - { title: Evals & Observability, path: evals-observability/index.md }
   - { title: Deep Dives, path: deep-dives/index.md }
-  - { title: Resources, path: resources/index.md }
-  - { title: "Resources · Transformers & LLMs", path: resources/topic-transformers-and-llms.md }
-  - { title: "Resources · RAG & Vector Search", path: resources/topic-rag-and-vector-search.md }
-  - { title: "Resources · AI Agents & Harnesses", path: resources/topic-agents-and-harnesses.md }
-  - { title: "Resources · LLMOps & Serving", path: resources/topic-llmops-evals-serving.md }
-  - { title: "Resources · Fine-Tuning & Alignment", path: resources/topic-finetuning-and-alignment.md }
   - { title: Exercises, path: exercises/index.md }
+
+resources:
+  - { title: Overview, path: resources/index.md }
+  - { title: "Transformers & LLMs", path: resources/topic-transformers-and-llms.md }
+  - { title: "RAG & Vector Search", path: resources/topic-rag-and-vector-search.md }
+  - { title: "AI Agents & Harnesses", path: resources/topic-agents-and-harnesses.md }
+  - { title: "LLMOps & Serving", path: resources/topic-llmops-evals-serving.md }
+  - { title: "Fine-Tuning & Alignment", path: resources/topic-finetuning-and-alignment.md }
+  - { title: "Essential Papers", path: resources/essential-papers.md }
+  - { title: "Essential Videos", path: resources/essential-videos.md }
+  - { title: "Tools & Frameworks", path: resources/tools-and-libraries.md }
+  - { title: "Courses & Communities", path: resources/courses-and-communities.md }
+  - { title: "Open Source Hubs", path: resources/open-source-hubs.md }
 
 
 projects:
