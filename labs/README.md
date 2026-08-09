@@ -1,8 +1,10 @@
-# Labs — Runnable Code
+# Labs — Runnable Code & Hands-on Notebooks
 
-Hands-on Jupyter notebooks that pair with the [courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/). Reading builds understanding; these build skill.
+Hands-on Jupyter notebooks that pair directly with the [courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/). Reading builds understanding; these build production engineering skills.
 
-## Setup
+---
+
+## Quick Setup
 
 ```bash
 cd labs
@@ -11,18 +13,20 @@ export ANTHROPIC_API_KEY=sk-ant-...   # https://platform.claude.com
 jupyter lab
 ```
 
-## Labs
+---
+
+## Lab Matrix
 
 | Lab | Pairs with | What you build |
 |-----|-----------|----------------|
-| [lab-01-rag-from-scratch](lab-01-rag-from-scratch.ipynb) | Course 06 · RAG | A complete RAG pipeline in ~100 lines: chunking, TF-IDF retrieval, grounded generation with Claude — no frameworks |
-| lab-02-agent-loop *(planned)* | Course 07 · AI Agents | A tool-using agent loop from scratch |
-| lab-03-eval-harness *(planned)* | Course 13 · Evals | A golden-set eval suite with LLM-as-judge |
+| **[lab-01-rag-from-scratch](lab-01-rag-from-scratch.ipynb)** | Course 06 · RAG | Complete RAG pipeline in ~100 lines: chunking, TF-IDF retrieval, grounded generation with Claude — no frameworks |
+| **[lab-02-agent-loop-from-scratch](lab-02-agent-loop-from-scratch.ipynb)** | Course 07 · AI Agents | ReAct (Reasoning + Acting) tool-calling agent loop with JSON schema parsing and error recovery |
+| **[lab-03-eval-harness-from-scratch](lab-03-eval-harness-from-scratch.ipynb)** | Course 13 · LLM Evals | Production-grade LLM-as-a-Judge evaluation harness with G-Eval scoring and CI/CD quality gates |
+
+---
 
 ## Principles
 
-- **No frameworks first.** Every lab builds the core mechanism by hand before mentioning LangChain/LlamaIndex — you should understand what the framework abstracts.
-- **Cheap to run.** Labs minimize API calls; a full run of lab-01 costs a few cents.
-- **Interview-ready.** Each lab maps to a common [coding-round question](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/coding-rounds/).
-
-Want to contribute a lab? See [CONTRIBUTING](../.github/CONTRIBUTING.md) — planned labs above are up for grabs.
+1. **No Frameworks First**: Every lab implements core mechanisms from scratch using Python primitives before introducing high-level frameworks (LangChain, LlamaIndex, Ragas).
+2. **Cheap & Lightweight**: Designed to run efficiently in minutes for pennies of API cost.
+3. **Interview & Production Ready**: Each lab maps directly to real-world [coding interview questions](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/coding-rounds/) and production system requirements.

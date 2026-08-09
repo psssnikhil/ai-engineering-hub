@@ -62,16 +62,8 @@ extra_javascript:
 plugins:
   - search
 
-exclude_docs: |
-  _snippets/
-
 markdown_extensions:
   - admonition
-  - pymdownx.snippets:
-      base_path: [docs/_snippets]
-      check_paths: true
-  - pymdownx.tabbed:
-      alternate_style: true
   - pymdownx.arithmatex:
       generic: false
   - pymdownx.details
@@ -159,13 +151,4 @@ nav:
   - Projects:
       - Overview: projects/index.md
       - Build These First: projects/build-these.md
-  - Interview Prep:
-      - Overview: interview-prep/index.md
-      - Agent System Design: interview-prep/agent-system-design.md
-      - LLM Fundamentals Q&A: interview-prep/llm-fundamentals.md
-      - Coding Rounds: interview-prep/coding-rounds.md
-      - "Behavioral & Portfolio": interview-prep/behavioral-and-portfolio.md
-  - Career:
-      - Overview: career/index.md
-      - Books: books/index.md
   - Contribute: contribute.md

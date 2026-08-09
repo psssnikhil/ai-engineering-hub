@@ -1,7 +1,6 @@
 ---
-title: "16-Course AI Engineering Curriculum — Ground Zero to Production"
-description: "Explore the full 16-course open-source AI Engineering curriculum covering Transformers, Vector DBs, Prompt Engineering, RAG, AI Agents, Evals, and Fine-Tuning."
-keywords: "AI engineering course, LLM curriculum, RAG course, AI agents tutorial, LLMOps course, transformers step by step"
+title: Learn
+description: Sequential curriculum — work through courses in order
 ---
 
 # Learn
@@ -40,7 +39,6 @@ Follow this order from top to bottom. Each course opens with a lesson list — w
 ## Quick links
 
 - [Start Here](../start-here.md) — pick a path by background
-- [Learn with Tutor Skills](using-tutor-skills.md) — Claude Code / Cursor skills that route by goal
 - [FAQ](../faq.md) — RAG vs fine-tune vs agents
 - [Build These First](../projects/build-these.md) — portfolio projects
 - [Topic Map](../topic-map.md) — find any concept

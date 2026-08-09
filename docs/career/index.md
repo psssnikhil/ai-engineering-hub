@@ -1,24 +1,33 @@
-# Career
+---
+title: AI Engineering Career Guide (2026)
+description: Career paths, portfolio strategies, resume optimization, and role definitions for AI/ML Engineers
+---
 
-The non-technical half of becoming an AI engineer: roles, portfolio, visibility.
+# AI Engineering Career Guide
 
-## The role landscape (2026)
+Navigating career paths, role definitions, portfolio development, and hiring expectations in AI Engineering.
 
-| Role | What it actually is | Prep emphasis |
-|---|---|---|
-| AI Engineer | Product engineer who ships LLM features | Courses 06–13, projects |
-| Agent Engineer | Builds/tunes agentic systems and harnesses | Agent Engineering track, evals |
-| ML Engineer | Training, fine-tuning, infra | Courses 03–05, 15 |
-| Applied Researcher | Bridges papers → product | Deep dives, papers |
+---
 
-## Standing out
+## Role Landscape
 
-1. **Ship 2–3 public projects** from [Build These First](../projects/build-these.md) — deployed, with eval numbers in the README.
-2. **Write about what broke.** Postmortems of your own agent failures outperform tutorial-rehash posts.
-3. **Contribute to open source** — this handbook counts: [contribute](../contribute.md).
+| Role | Core Focus | Required Stack & Skills | Handbook Prep Track |
+|------|------------|-------------------------|---------------------|
+| **AI Engineer** | Product engineer shipping end-to-end LLM applications & RAG | Python, OpenAI/Claude APIs, RAG, Vector DBs, Evals | Courses 01–13, [Projects](../projects/build-these.md) |
+| **Agent Engineer** | Builds autonomous coding/support agents & harness runtimes | Agent loops, tool routing, MCP, sandboxing, evals | [Agent Engineering Track](../agent-engineering/index.md) |
+| **LLMOps / Production Engineer** | Inference serving, latency/cost optimization, observability | vLLM, LiteLLM, Kubernetes, OpenTelemetry, CI evals | Courses 12–14, [System Design](../interview-prep/index.md) |
+| **ML/Model Engineer** | Training, pre-training, fine-tuning, and quantization | PyTorch, CUDA/Triton, LoRA/QLoRA, Unsloth | Courses 03–05 & 15 |
 
-## When you land interviews
+---
 
-Head to [Interview Prep](../interview-prep/index.md).
+## How to Stand Out in 2026
 
---8<-- "scaffold-note.md"
+1. **Ship 2–3 Public Portfolio Projects**: Build and deploy non-trivial applications from [Build These First](../projects/build-these.md). Include concrete evaluation benchmarks in your GitHub README.
+2. **Publish Failure Postmortems**: Documenting why an agent loop got stuck or how you fixed context window blowup demonstrates true senior-level production experience.
+3. **Contribute to Open Source**: Submitting bug fixes, lab notebooks, or documentation improvements to AI repositories (like this handbook) provides verifiable proof of skill.
+
+---
+
+## Next Steps
+
+When preparing for candidate interviews, dive into the **[Interview Prep & System Design Track](../interview-prep/index.md)**.
