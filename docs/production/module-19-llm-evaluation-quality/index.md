@@ -20,3 +20,14 @@ Build systematic evaluation pipelines that catch regressions, gate deployments, 
 ## Exercises
 
 Hands-on files: [exercises/index.md](exercises/index.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
+|-------------------|---------------------|------------|-------------|
+| **LLM-as-a-Judge & Eval Pipelines** | Hamel Husain / Eugene Yan | Building production evaluation suites, grading prompts, and human-in-the-loop validation | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Evaluating RAG & Agent Systems with TruLens** | Arize AI / TruLens | Measuring context relevance, groundedness, and hallucination rates in CI/CD | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Agent Trajectory Evals with Ragas & DeepEval** | Ragas / DeepEval | Evaluating multi-step tool calls, reasoning steps, and agent task completion | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+

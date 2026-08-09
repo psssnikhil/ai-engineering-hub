@@ -21,3 +21,14 @@ Understand the critical challenges of AI safety, bias, alignment, and responsibl
 | 9 | [Responsible Deployment Practices](lessons/09-responsible-deployment.md) | 35 min | advanced |
 | 10 | [AI Safety Audit — Putting It All Together](lessons/10-safety-audit-capstone.md) | 45 min | advanced |
 **Start here:** [Foundations of AI Safety and Responsible Development](lessons/01-foundations-ai-safety.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
+|-------------------|---------------------|------------|-------------|
+| **OWASP Top 10 for LLMs & Prompt Injection** | OWASP Foundation / Security Experts | Direct vs indirect prompt injection, jailbreaking vectors, and defensive guardrails | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Anthropic System Alignment & Constitutional AI** | Anthropic Research | RLAIF (RL from AI Feedback), red-teaming methodologies, and harmlessness alignment | [Watch Video](https://www.youtube.com/@AnthropicAI) |
+| **LLM Guardrails & Input Filtering in Action** | Llama Guard / NeMo Guardrails | Live demonstration of input sanitization, output filtering, and topic steering | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+

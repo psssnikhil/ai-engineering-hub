@@ -86,3 +86,14 @@ Start with [LLM & Transformer Fundamentals](questions-llm-fundamentals.md), or j
 straight to [Design a RAG System](design-rag-system.md) if you're prepping for a
 system design round specifically.
 
+---
+
+## 🎬 Recommended Free Videos & Mock Interviews
+
+| Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
+|---------------------|---------------------|------------|-------------|
+| **AI System Design Interview Guide** | Ex-FAANG System Design | Breakdown of 45-minute AI whiteboarding steps, SLAs, and capacity estimation | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **vLLM & LLM Serving Deep Dive** | Woosuk Kwon (vLLM Lead) | High-throughput serving system design, PagedAttention, KV cache memory calculations | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
+| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Whiteboard decomposition of coding agents, repository context management, and ACI design | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+
+

@@ -24,3 +24,14 @@ Master vector databases from fundamentals to production: embeddings, indexing st
 ## Exercises
 
 Hands-on files: [exercises/index.md](exercises/index.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Masterclass | Creator / Presenter | Focus Area | Direct Link |
+|---------------------|---------------------|------------|-------------|
+| **Hierarchical Navigable Small World (HNSW) Indexing** | James Briggs | Geometric intuition and graph construction for ANN (Approximate Nearest Neighbor) search | [Watch Video](https://www.youtube.com/watch?v=QvKMwLjdikU) |
+| **Product Quantization & Vector Compression** | Pinecone / James Briggs | Subspace quantization, IVF-PQ indexing, memory reduction, and recall trade-offs | [Watch Video](https://www.youtube.com/watch?v=t9wXv4yQ4cI) |
+| **Qdrant & Production Vector Search** | Qdrant Engine Team | Payload filtering, multi-vector retrieval, and distributed vector database cluster scaling | [Watch Channel](https://www.youtube.com/@qdrant) |
+

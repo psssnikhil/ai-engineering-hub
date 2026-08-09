@@ -25,3 +25,15 @@ Build the runtime layer that turns an LLM into a reliable agent — loops, tools
 
 **Prerequisites:** [Course 07 · AI Agents](../module-11-ai-agents-fundamentals/index.md) — especially lessons 1–4 on the agent loop, ReAct, and tool use.
 **Start here:** [What Is an Agent Harness?](lessons/01-what-is-an-agent-harness.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
+|-------------------|---------------------|------------|-------------|
+| **Model Context Protocol (MCP) Walkthrough** | Anthropic / Developers | Live demonstration of MCP client/server protocol, tool discovery, and JSON-RPC | [Watch Video](https://www.youtube.com/@AnthropicAI) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider) | Tree-sitter repository maps, git diff management, and agent loop execution | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
+| **OpenTelemetry Tracing for AI Agents** | Arize AI / Phoenix | Step-by-step tutorial on spans, token counts, and tracing agent tool calls | [Watch Channel](https://www.youtube.com/@ArizeAI) |
+| **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for SWE agents | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
+

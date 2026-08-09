@@ -21,3 +21,14 @@ Learn when and how to fine-tune LLMs for specialized tasks, including data prepa
 | 9 | [Model Distillation and Compression](lessons/09-distillation-compression.md) | 40 min | advanced |
 | 10 | [Fine-Tuning Best Practices and Case Studies](lessons/10-best-practices-case-studies.md) | 35 min | advanced |
 **Start here:** [When and Why to Fine-Tune LLMs](lessons/01-when-to-fine-tune.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
+|---------------------|---------------------|------------|-------------|
+| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Low-Rank Adaptation matrices, 4-bit NormalFloat quantization, and NF4 PyTorch code | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **Unsloth 2x Faster Fine-Tuning Tutorial** | Unsloth AI / Daniel & Michael | Memory-efficient Triton kernels for fast LLaMA/Mistral LoRA fine-tuning | [Watch Channel](https://www.youtube.com/@unsloth) |
+| **Fine-Tuning LLMs with Hugging Face & TRL** | Hugging Face | SFTTrainer, DPO (Direct Preference Optimization), and dataset formatting walkthrough | [Watch Video](https://www.youtube.com/watch?v=g68qlo9IzfU) |
+

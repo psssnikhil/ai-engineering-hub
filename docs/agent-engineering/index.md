@@ -91,3 +91,15 @@ Inspired by [Awesome Harness Engineering](https://github.com/ai-boost/awesome-ha
 - [Evals & Observability hub](../evals-observability/index.md)
 - [Glossary — harness, MCP, trajectory eval](../glossary.md)
 - [Related papers](related-papers.md) — ReAct, Toolformer, MemGPT, AgentBench, and more
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Masterclass | Creator / Presenter | Focus Area | Direct Link |
+|---------------------|---------------------|------------|-------------|
+| **AI Agent Design Patterns** | Andrew Ng | Reflection, Tool Use, Planning, and Multi-Agent Collaboration | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
+| **Functions, Tools & Agents with LangChain** | Harrison Chase (LangChain) | Tool execution, persistent state memory, and LangGraph subgraphs | [Free Course](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Repository maps using tree-sitter, git diff management, and harness loops | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
+| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Agent-computer interfaces (ACI), benchmark design, and coding agent loops | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+

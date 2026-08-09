@@ -133,6 +133,45 @@ serving or cause write contention on the index.
   change events, not just at ingestion time, or a revoked user retains retrieval access
   until the next full sync — treat ACL sync as a real-time event stream, not a batch job.
 
+## Deep dive: Observability, Tracing & Production Evals
+
+```
+[Client Query] ──(Trace context propagation)──> [API Gateway Span]
+                                                        │
+         ┌───────────────────────┬──────────────────────┴──────────────────────┐
+         ▼                       ▼                                             ▼
+[Query Rewriter Span]  [Hybrid Retriever Span]                              [LLM Generator Span]
+                        ├─> BM25 Lexical (span)                              ├─> Time to First Token (TTFT)
+                        ├─> Vector ANN Search (span)                         └─> Inline Citation Verification
+                        └─> Reranker Cross-Encoder (span)
+```
+
+### 1. Distributed Tracing (OpenTelemetry)
+- **Trace Propagation**: Standardize OpenTelemetry (OTEL) headers across gateway, embedding workers, vector shards, and LLM gateway.
+- **Span Hierarchy**:
+  - `rag.query` (Root span containing user identity & session state)
+    - `rag.query_rewrite` (Query expansion latency & token count)
+    - `rag.retrieval.hybrid` (Parallel execution of lexical & ANN search)
+      - `rag.retrieval.bm25` (Lexical query execution time, document hits)
+      - `rag.retrieval.vector_ann` (Index partition ID, k-NN search latency)
+    - `rag.rerank` (Cross-encoder batch size, scoring latency)
+    - `rag.generation` (Model ID, prompt/completion token count, TTFT, stream chunks)
+
+### 2. Prometheus Metrics & Alerting Thresholds
+- **Latency SLAs**: Track P50/P95/P99 duration for `rag.query` (Target: P95 < 3s, TTFT < 800ms).
+- **Token Efficiency & Cost**: Log prompt tokens vs completion tokens, embedding token consumption per ingestion batch.
+- **Retrieval Quality Metrics**:
+  - `rag_retrieval_reciprocal_rank` (RRF score distribution).
+  - `rag_acl_filtered_docs_count` (Track docs removed by ACL filter to detect over-filtering anomalies).
+- **Cache Hit Ratio**: Track query embedding cache hit rate (Target > 35% for enterprise intranet queries).
+
+### 3. Continuous Production Evals
+- **RAG Triad Online Evaluation**:
+  - **Context Relevance**: LLM-as-a-judge scores top-k retrieved chunks against raw query (Target > 0.85).
+  - **Faithfulness (Grounding)**: Automated verification that every claim in the generated answer is present in retrieved chunks (Target > 0.98).
+  - **Answer Relevance**: Measure query-answer semantic alignment (Target > 0.90).
+- **Shadow Eval Pipeline**: Asynchronously route 2% of live query traces to an evaluation pipeline running synthetic regression suites to catch accuracy drops post-reindex.
+
 ## Likely follow-ups
 
 - **"How does this change at 10x scale (500M documents)?"** — Sharding strategy becomes

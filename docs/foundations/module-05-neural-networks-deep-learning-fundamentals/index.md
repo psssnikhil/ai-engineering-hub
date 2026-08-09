@@ -24,3 +24,15 @@ Master the fundamentals of neural networks, backpropagation, and how deep learni
 ## Exercises
 
 Hands-on files: [exercises/index.md](exercises/index.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Series | Creator / Institution | Focus Area | Direct Link |
+|----------------|----------------------|------------|-------------|
+| **Building Micrograd & Backprop from Scratch** | Andrej Karpathy | Direct PyTorch derivation of autograd engines and backpropagation DAGs | [Watch Video](https://www.youtube.com/watch?v=VMj-3lSmall) |
+| **Essence of Neural Networks** | 3Blue1Brown | Unrivaled visual animations of network weights, bias vectors, gradient vectors, and loss landscapes | [Watch Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
+| **MIT 6.S191: Introduction to Deep Learning** | MIT | University lecture series on CNNs, RNNs, LSTMs, and neural network optimization | [Course Site](https://introtodeeplearning.com/) |
+| **CS231n: Convolutional Networks for Visual Recognition** | Stanford University | Deep technical lectures on backpropagation calculus, CNN architectures, and batch norm | [Course Site](https://cs231n.stanford.edu/) |
+

@@ -24,3 +24,15 @@ Master the revolutionary Transformer architecture and attention mechanisms that 
 ## Exercises
 
 Hands-on files: [exercises/index.md](exercises/index.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Series | Creator / Presenter | Focus Area | Direct Link |
+|----------------|---------------------|------------|-------------|
+| **Attention Is All You Need PyTorch Code** | Umar Jamil | Complete code walkthrough of Q, K, V matrices, positional encodings, and multi-head attention | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **Let's build GPT: from scratch, in code** | Andrej Karpathy | Building nanoGPT with multi-head self-attention and residual blocks from scratch | [Watch Video](https://www.youtube.com/watch?v=kCc8FmEb1nY) |
+| **Visualizing Self-Attention** | 3Blue1Brown | Interactive 3D geometric intuition for key/query dot products and attention weights | [Watch Video](https://www.youtube.com/watch?v=eMlx5fFNoYc) |
+| **FlashAttention Code & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling | [Watch Video](https://www.youtube.com/@UmarJamil) |
+

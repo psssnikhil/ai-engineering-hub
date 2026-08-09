@@ -21,3 +21,14 @@ Apply everything you have learned by building end-to-end AI projects: a RAG-powe
 | 9 | [Project 9: AI Safety Evaluation Suite](lessons/09-safety-evaluation-suite.md) | 180 min | advanced |
 | 10 | [Project 10: Deploy Your AI Application](lessons/10-deploy-ai-application.md) | 240 min | advanced |
 **Start here:** [Capstone Overview: Building Production AI Applications](lessons/01-capstone-overview.md)
+
+---
+
+## 🎬 Recommended Free Videos & Lectures
+
+| Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
+|---------------------|---------------------|------------|-------------|
+| **Building a Full-Stack AI Application** | Full Stack Deep Learning (FSDL) | Architectural blueprint from frontend UI to backend vector search and evaluation | [Course Site](https://fullstackdeeplearning.com/) |
+| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Building autonomous software engineering agents that pass real-world GitHub issues | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Building Production RAG Systems End-to-End** | Jerry Liu (LlamaIndex) | End-to-end walkthrough of index ingestion, hybrid search, reranking, and deployment | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+

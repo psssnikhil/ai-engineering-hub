@@ -69,3 +69,14 @@ flowchart TD
 ---
 
 👉 **Start Here:** [Claude Code & Terminal Agents](claude-code.md)
+
+---
+
+## 🎬 Recommended Free Videos & Demos
+
+| Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
+|-------------------|---------------------|------------|-------------|
+| **Claude Code & Agentic Workflows** | Anthropic | Official terminal agent walkthrough, permission model, and tools integration | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider) | Repository maps using tree-sitter, git diff management, and context packing | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
+| **Model Context Protocol (MCP) Live Specification** | Anthropic | Live demonstration of MCP client/server protocol, tool discovery, and custom servers | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+
