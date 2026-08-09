@@ -28,25 +28,25 @@ keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI 
     <div class="persona-card__icon">🌱</div>
     <div class="persona-card__title">Complete Beginner</div>
     <div class="persona-card__desc">No prior CS background or Python experience. Start with math, tokenization, and fundamental scripts.</div>
-    <a class="persona-card__cta" href="foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.html">Start Prerequisites →</a>
+    <a class="persona-card__cta" href="../foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.md">Start Prerequisites →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">💻</div>
     <div class="persona-card__title">Software Engineer</div>
     <div class="persona-card__desc">Comfortable in Python / TS. Learn LLM APIs, function calling, RAG, and agent loops.</div>
-    <a class="persona-card__cta" href="foundations/module-01-ai-engineering-essentials/">AI Essentials (02) →</a>
+    <a class="persona-card__cta" href="../foundations/module-01-ai-engineering-essentials/index.md">AI Essentials (02) →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">🧠</div>
     <div class="persona-card__title">ML Engineer</div>
     <div class="persona-card__desc">Know PyTorch and backprop. Jump into transformers, LLM serving, and fine-tuning.</div>
-    <a class="persona-card__cta" href="foundations/module-07-large-language-models-llms/">LLM Deep Dive (05) →</a>
+    <a class="persona-card__cta" href="../foundations/module-07-large-language-models-llms/index.md">LLM Deep Dive (05) →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">🚀</div>
     <div class="persona-card__title">Agent Architect</div>
     <div class="persona-card__desc">Ship autonomous loops, MCP servers, sandboxed tool runtimes, and multi-agent systems.</div>
-    <a class="persona-card__cta" href="agent-engineering/">Agent Track →</a>
+    <a class="persona-card__cta" href="../agent-engineering/index.md">Agent Track →</a>
   </div>
 </div>
 
