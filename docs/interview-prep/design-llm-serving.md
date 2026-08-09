@@ -139,6 +139,38 @@ arriving short requests.
   (route a small percentage of traffic to the new version) with automated eval gates
   (see [Evals & Production Q&A](questions-evals-production.md)) before full cutover.
 
+## Deep dive: Serving Observability, Prometheus Metrics & Hardware Telemetry
+
+```
+[Inference Gateway] ──> [vLLM Replica Engine (Tensor Parallel Shards)]
+                                 │
+   ┌─────────────────────────────┼─────────────────────────────┐
+   ▼                             ▼                             ▼
+[KV Cache Allocator]      [Continuous Scheduler]     [GPU Hardware Telemetry]
+ ├─> Block Usage %        ├─> Prefill vs Decode      ├─> NVLink Bandwidth
+ └─> Eviction Rate        └─> Batch Token Count      └─> GPU Compute Core %
+```
+
+### 1. Prometheus Metrics SLA Dashboard
+- **Serving Performance Metrics**:
+  - `llm_serving_time_to_first_token_seconds` (TTFT P50/P95/P99 latency).
+  - `llm_serving_time_per_output_token_seconds` (TPOT decoding latency per token).
+  - `llm_serving_tokens_per_second_total` (Throughput across prompt vs generation tokens).
+- **GPU Engine Telemetry**:
+  - `vllm_gpu_cache_usage_perc` (Paged KV-cache memory pressure).
+  - `vllm_num_requests_waiting` (Queue depth metric for autoscaling triggers).
+  - `vllm_prompt_tokens_per_second` vs `vllm_generation_tokens_per_second`.
+
+### 2. Distributed OpenTelemetry Tracing
+- **Span Hierarchy**:
+  - `llm_serving.request` (Gateway request duration)
+    - `llm_serving.prefill` (Chunked prefill execution on GPU core)
+    - `llm_serving.decode` (Iterative decoding step loop)
+    - `llm_serving.stream_chunk` (Token chunk dispatch latency to client)
+
+### 3. Continuous Benchmarking & Evals
+- **Synthetic Load Testing**: Daily automated execution of `vllm benchmark_serving` against replica pools under step-function QPS workloads to detect engine memory leaks or latency regressions.
+
 ## Likely follow-ups
 
 - **"How does this change if you switch to a managed inference API instead of

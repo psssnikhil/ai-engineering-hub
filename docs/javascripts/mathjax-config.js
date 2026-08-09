@@ -5,18 +5,22 @@ window.MathJax = {
     displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
-    packages: { "[+]": ["ams", "boldsymbol"] },
+    packages: { "[+]": ["ams", "boldsymbol"] }
   },
   options: {
     ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex",
-  },
+    processHtmlClass: "arithmatex"
+  }
 };
 
-/* Re-typeset math after instant navigation (same pattern as mermaid-init.js). */
+/* Re-typeset math after instant navigation */
 document$.subscribe(function () {
   if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
+    if (MathJax.startup && MathJax.startup.output) {
+      MathJax.startup.output.clearCache();
+    }
     MathJax.typesetClear();
     MathJax.typesetPromise();
   }
 });
+

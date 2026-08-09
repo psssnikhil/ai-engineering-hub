@@ -146,7 +146,33 @@ flowchart LR
 
 ---
 
-## 7. Key Takeaways & Interview Summary
+## 7. Observability, Tracing & Coding Agent Evals
+
+### A. Distributed OpenTelemetry Tracing
+- **Trace Context**: Trace whole session starting from prompt input down to terminal tool executions and AST graph resolution.
+- **Span Hierarchy**:
+  - `code_agent.turn` (User instruction trace)
+    - `code_agent.repo_map` (Tree-Sitter symbol extraction & graph lookup latency)
+    - `code_agent.llm.reason` (Token count, reasoning duration, TTFT)
+    - `code_agent.patch.apply` (Diff validation and line offset matching)
+    - `code_agent.sandbox.exec` (Subshell command runtime: `pytest`, `eslint`)
+
+### B. Telemetry & Quality Metrics
+- **Performance Metrics**:
+  - `code_agent_patch_success_rate` (% of generated search/replace patches applied without line offset error).
+  - `code_agent_test_pass_rate` (% of runs where generated edits pass repository unit tests).
+  - `code_agent_mean_turns_to_resolve` (Average LLM reasoning turns per bug fix / feature addition).
+- **Cost & Latency SLAs**:
+  - Token consumption per editing session (Input/Output breakdown).
+  - Target SLA: Sub-second response streaming startup (< 400ms TTFT).
+
+### C. SWE-bench & Coding Evals Pipeline
+- **Continuous Harness**: Evaluate agent on SWE-bench Light & custom repository test suites.
+- **Automated Regression Gate**: Run patch generation against held-out repositories to measure functional correctness, syntax error rates, and hallucinated import occurrences.
+
+---
+
+## 8. Key Takeaways & Interview Summary
 
 - **Hybrid Indexing**: Combine AST Tree-Sitter symbol graphs with sparse lexical search for sub-second code retrieval.
 - **Patch Precision**: Use explicit Search/Replace blocks over full-file generation to optimize latency and token costs.

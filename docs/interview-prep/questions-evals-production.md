@@ -134,4 +134,16 @@ itself rejects amounts over the threshold without a separate approval token) fai
 regardless of what the model outputs, which is the property you actually need for a
 real financial or safety guardrail.
 
+### Q7 (L3): How do you design OpenTelemetry (OTEL) tracing and real-time continuous evaluation for a production LLM platform without introducing latency overhead?
+
+**Short answer:** Implement asynchronous, out-of-band OpenTelemetry trace exporters that stream GenAI semantic convention spans to Kafka/OTEL Collectors, and decouple heavy LLM-as-a-judge evaluators onto an async worker queue processing a sampled trace stream.
+
+In production high-concurrency LLM applications:
+1. **Tracing Overhead Avoidance**: Never perform synchronous telemetry writes or evaluation scoring inline within the user request loop. Use thread-local or async context propagation (OpenTelemetry Python/Go SDKs) to record `gen_ai.system`, `gen_ai.request.model`, `gen_ai.usage.prompt_tokens`, `gen_ai.usage.completion_tokens`, and `gen_ai.response.finish_reasons`. Export spans asynchronously in batch background buffers.
+2. **Asynchronous Online Evaluation**: Route 1–5% of exported trace payloads via Kafka/Kinesis to an offline Eval Worker cluster. Evaluators execute light-weight classifiers (regex/BERT for safety/PII) in <10ms and asynchronous LLM-as-a-Judge calls (for faithfulness and context relevance) off the critical path, emitting continuous metrics into Prometheus dashboards.
+3. **Drift & Anomaly Alerts**: Alert when rolling 1-hour faithfulness drops below 0.95 or when P95 Time-To-First-Token (TTFT) exceeds SLAs.
+
+**Likely follow-up:** How do OpenTelemetry GenAI semantic conventions handle streaming responses? — Answer: The root span starts on request dispatch, records streaming token events as `gen_ai.completion.chunk` annotations or child spans, and finalizes with total usage tokens (`gen_ai.usage.completion_tokens`) once the final stream chunk closes.
+
 *See also: [AI Safety & Ethics](../production/module-16-ai-safety-ethics/index.md)*
+

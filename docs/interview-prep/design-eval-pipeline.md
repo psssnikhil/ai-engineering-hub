@@ -151,6 +151,34 @@ wouldn't trust a sensor that's failed its own calibration check.
   clear on-call/triage owner decays into noise; treat it with the same incident-response
   discipline as any other production alert (see [Evals & Production Q&A Q5](questions-evals-production.md)).
 
+## Deep dive: Eval Pipeline Observability, Tracing & Inter-Judge Reliability
+
+```
+[CI Build Trigger] ──> [Eval Dispatcher Span]
+                              │
+         ┌────────────────────┼────────────────────┐
+         ▼                    ▼                    ▼
+[Dataset Loader]     [Judge Batch Runner]    [Cohen's Kappa Calibration]
+ ├─> Version Tag      ├─> Parallel LLM Calls  ├─> Human vs Judge Agreement
+ └─> Case Sampling    └─> Rubric Parsing      └─> Bias & Drift Tracking
+```
+
+### 1. Distributed Tracing for Eval Execution
+- **Span Hierarchy**:
+  - `eval_run.execution` (Root trace for CI evaluation run)
+    - `eval.dataset_load` (Golden dataset versioning and stratification)
+    - `eval.test_case` (Individual test case execution)
+      - `eval.candidate_gen` (Candidate model output generation)
+      - `eval.judge_score` (LLM-as-a-judge scoring latency and reasoning trace)
+
+### 2. Inter-Judge Reliability & Production Metrics
+- **Reliability & Consistency Metrics**:
+  - `eval_judge_human_cohens_kappa` (Target: $\kappa > 0.75$ correlation between LLM judge and human experts).
+  - `eval_judge_self_consistency_score` (Variance in judge scores when fed identical inputs at temp 0.0).
+  - `eval_ci_pipeline_duration_seconds` & `eval_cost_per_run_usd`.
+- **Regression Alert Thresholds**:
+  - Block PR build if `faithfulness_score` drops > 2% or any critical security test case fails.
+
 ## Likely follow-ups
 
 - **"How would you evaluate a genuinely new capability (e.g. a new tool the agent didn't

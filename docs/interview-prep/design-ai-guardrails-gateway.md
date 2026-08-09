@@ -146,7 +146,30 @@ If an ONNX classifier node hangs or memory leaks:
 
 ---
 
-## 7. Key Takeaways & Interview Summary
+## 7. Observability, Tracing & Guardrail Evals
+
+### A. Sub-Millisecond OpenTelemetry Tracing
+- **Span Hierarchy**:
+  - `guardrail_gateway.request` (Overall proxy latency)
+    - `guardrail.input_scan` (Parallel execution of Regex, PII, & Injection classifier)
+      - `guardrail.regex_rules` (Sub-1ms matching)
+      - `guardrail.onnx_classifier` (Sub-10ms BERT execution)
+    - `guardrail.stream_buffer` (Sliding window inspection latency per streaming token chunk)
+
+### B. Guardrail Telemetry & Metrics
+- **Security & Performance Metrics**:
+  - `guardrail_blocked_requests_total` (Categorized by rule: `prompt_injection`, `pii_leak`, `toxic_output`).
+  - `guardrail_overhead_latency_seconds` (Target: P99 < 15ms overhead added to LLM stream).
+  - `guardrail_false_positive_rate` (Tracked via user appeal button & shadow eval).
+- **Audit Logging**:
+  - Encrypted, anonymized security audit log of blocked attack payloads for red-teaming analysis.
+
+### C. Continuous Red Teaming & Security Evals
+- **Automated Jailbreak Benchmarks**: Nightly evaluation running 500+ adversarial jailbreak prompts (PyRIT / GCG / TAP attacks) to verify defense robustness before deploying updated ONNX model weights.
+
+---
+
+## 8. Key Takeaways & Interview Summary
 
 - **Streaming Latency**: Never buffer full completions; use sliding window token interceptors to keep latency < 20ms.
 - **Two-Phase Inspection**: Combine sub-2ms deterministic regex/Aho-Corasick matching with sub-10ms quantized ONNX classifier pools.

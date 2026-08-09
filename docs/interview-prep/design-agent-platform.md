@@ -139,6 +139,43 @@ routed, and who approved it.
   on queue depth and consider auto-expiring low-risk-adjacent approvals with a
   conservative default (deny, not approve) on timeout.
 
+## Deep dive: Agent Platform Observability, Tracing & Evals
+
+```
+[Agent Session Run] ──> [Orchestrator Span (tenant_id, session_id)]
+                              │
+         ┌────────────────────┼────────────────────┐
+         ▼                    ▼                    ▼
+[Step 1: LLM Reason] [Step 2: Tool Execution] [Step 3: HITL Gate]
+ ├─> Model & Temp     ├─> Tool Name & Params   ├─> Policy Evaluation
+ ├─> Token Spans      ├─> Sandbox Runtime      └─> Approval Latency
+ └─> Cost Tracking    └─> Exec Status & Logs
+```
+
+### 1. Distributed Multi-Step Agent Tracing
+- **OpenTelemetry DAG Spans**: Agent trajectories are non-linear graph loops. Traces must record `session_id`, `step_index`, and `parent_step_id` metadata.
+- **Span Hierarchy**:
+  - `agent.session` (Root trace with tenant isolation scope)
+    - `agent.step` (Loop iteration N)
+      - `agent.llm.reason` (Prompt context tokens, completion tokens, reasoning time)
+      - `agent.tool.dispatch` (Tool schema, sandbox container spin-up, execution status)
+      - `agent.hitl.wait` (Human queue delay & approval decision audit record)
+
+### 2. Prometheus Metrics & SLA Monitoring
+- **Agent Performance Metrics**:
+  - `agent_steps_per_session_count` (Histogram to detect infinite reasoning loops).
+  - `agent_tool_execution_failure_rate` (Broken down by tool ID and tenant).
+  - `agent_hitl_queue_depth` & `agent_hitl_approval_wait_seconds`.
+- **Cost & Rate Governance**:
+  - `tenant_token_consumption_rate` (Cost per resolved task per tenant).
+  - `llm_gateway_latency_seconds` (P95 TTFT and overall generation latency).
+
+### 3. Continuous Trajectory Evals & Quality Gates
+- **Online Trajectory Auditing**:
+  - **Tool Parameter Grounding**: LLM Judge evaluates whether tool arguments were correctly derived from previous step observations.
+  - **Plan Adherence & Efficiency**: Evaluates whether the agent took redundant steps or achieved task resolution in minimum trajectory steps.
+- **Offline Benchmark Suite**: Nightly regression runs executing 200 standardized agent tasks across all tool suites to ensure system updates don't break agent planning capability.
+
 ## Likely follow-ups
 
 - **"How would you let a tenant add a completely custom tool safely?"** — Tenant-defined

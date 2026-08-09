@@ -146,7 +146,31 @@ where $k = 60$ and $r_m(d)$ is the rank position of document $d$ in retrieval sy
 
 ---
 
-## 7. Key Takeaways & Interview Summary
+## 7. Observability, Tracing & Engine Evals
+
+### A. OpenTelemetry Distributed Shard Tracing
+- **Span Hierarchy**:
+  - `vector_engine.query` (Root query span)
+    - `vector_engine.quantize` (ASymmetric Distance Computation encoding time)
+    - `vector_engine.shard_search` (Parallel fan-out search per shard)
+      - `vector_engine.hnsw_traversal` (Distance calculations per hop, visited nodes)
+      - `vector_engine.bm25_lookup` (Lexical index lookup latency)
+    - `vector_engine.rrf_merge` (Top-K reranking & fusion)
+
+### B. Vector Engine Metrics & Alerting Thresholds
+- **Accuracy & Latency Metrics**:
+  - `vector_engine_recall_at_10` (Continuous estimation against full-precision ground truth).
+  - `vector_engine_search_latency_seconds` (Target: Sub-50ms P99 across 1B vectors).
+  - `vector_engine_tombstone_ratio` (Triggers segment compaction when > 15%).
+- **Hardware Telemetry**:
+  - `vector_engine_mmap_page_faults_total` (Alerts if disk mmap thrashing occurs).
+
+### C. Continuous Recall Evals
+- **Synthetic Probe Queries**: Periodically execute 100 benchmark query vectors against float32 ground truth index to track precision drop and index degradation.
+
+---
+
+## 8. Key Takeaways & Interview Summary
 
 - **Memory Sizing**: Always calculate raw vs quantized memory footprint; PQ is non-negotiable for 1B vector scale.
 - **Single-Pass Filtering**: Explain why post-filtering breaks under high selectivity, and walk through filtered graph traversal.

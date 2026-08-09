@@ -58,6 +58,8 @@ after the question banks — they assume the vocabulary the Q&A pages build.
 | [Design an AI Safety & Guardrails Gateway](design-ai-guardrails-gateway.md) | Sub-20ms streaming reverse proxy for PII scrubbing and prompt injection defense |
 | [Design an LLM Serving System](design-llm-serving.md) | Low-latency, high-throughput model inference at scale |
 | [Design an Eval Pipeline](design-eval-pipeline.md) | Continuous quality measurement for an LLM product in production |
+| [Design a Real-Time Voice AI Agent](design-realtime-voice-agent.md) | Sub-500ms full-duplex speech-to-speech voice agent platform |
+| [Design an Enterprise Multimodal RAG System](design-multimodal-rag-system.md) | ColPali layout-aware multimodal RAG for complex PDF tables and charts |
 
 ## How to use this track
 

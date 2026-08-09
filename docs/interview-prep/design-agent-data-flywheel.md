@@ -138,7 +138,30 @@ where $w_1 = 0.5$, $w_2 = 0.3$, $w_3 = 0.2$. Only trajectories with $R(\mathcal{
 
 ---
 
-## 7. Key Takeaways & Interview Summary
+## 7. Observability, Tracing & Data Flywheel Evals
+
+### A. Telemetry Collection & Distributed Tracing
+- **Trace Exporter**: Production agent platforms emit OpenTelemetry traces (`agent.session`, `agent.step`, `tool.exec`) directly into Kafka / Kinesis streams.
+- **Span Metadata Enriched for Curation**:
+  - `trajectory.id`, `task_domain`, `tool_call_sequence`, `execution_status`.
+  - `llm_reward_score`, `sandbox_test_status`, `user_feedback_score`.
+
+### B. Flywheel Production Metrics
+- **Trajectory Yield Rate**:
+  - `flywheel_raw_traces_collected_total` vs `flywheel_curated_preference_pairs_total` (Conversion % of raw logs to DPO pairs).
+- **Model Evolution Metrics**:
+  - `sft_model_win_rate_vs_base` (Win-rate % of newly fine-tuned model against current production base).
+  - `flywheel_auto_eval_accuracy` (Correlation score between automated LLM judge rewards and ground-truth human annotations).
+- **Quality SLA**:
+  - Retain 0% unverified trajectories in SFT datasets. Target > 85% DPO preference pair score delta.
+
+### C. Continuous Drift & Performance Monitoring
+- **Data Drift Detection**: Monitor distribution changes in user prompts and tool calling frequency.
+- **Regression Gates**: Shadow proxy comparison running live production queries in parallel through new LoRA adapter vs current base model with zero latency impact to users.
+
+---
+
+## 8. Key Takeaways & Interview Summary
 
 - **Ground Truth Verification**: Always prefer deterministic execution verifiers (sandbox unit tests, AST parsers) over pure LLM-as-a-judge evaluation.
 - **Two-Speed Improvement**: Use **Prompt/Skill Patching** for fast 1-hour fixes, and **Nightly SFT/DPO** for deep architectural capabilities.

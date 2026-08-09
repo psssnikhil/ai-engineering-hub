@@ -132,6 +132,8 @@ nav:
           - "Case Study: Design an AI Safety & Guardrails Gateway": interview-prep/design-ai-guardrails-gateway.md
           - "Case Study: Design an LLM Serving System": interview-prep/design-llm-serving.md
           - "Case Study: Design an Eval Pipeline": interview-prep/design-eval-pipeline.md
+          - "Case Study: Design a Real-Time Voice AI Agent": interview-prep/design-realtime-voice-agent.md
+          - "Case Study: Design an Enterprise Multimodal RAG System": interview-prep/design-multimodal-rag-system.md
       - Track · Modern AI (2026):
           - Overview: ai-engineering-2026/index.md
           - Claude Code: ai-engineering-2026/claude-code.md

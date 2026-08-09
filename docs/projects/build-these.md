@@ -28,6 +28,9 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 | 8 | [Domain style fine-tune](#8-domain-style-fine-tune) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 15, Course 05 | 2–3 weeks |
 | 9 | [AI quality eval suite](#9-ai-quality-eval-suite) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 13, Course 14 | 1 week |
 | 10 | [Deploy your AI app](#10-deploy-your-ai-app) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 12, Course 16 | 1–2 weeks |
+| 11 | [Agent Data Flywheel & Curator](#11-agent-data-flywheel-curator) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 13, Course 15 | 1–2 weeks |
+| 12 | [Observability & Eval Gateway](#12-observability-eval-gateway) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 12, Course 13 | 1–2 weeks |
+| 13 | [Multimodal Document RAG Engine](#13-multimodal-document-rag-engine) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 06, Course 10 | 1–2 weeks |
 
 ---
 
@@ -251,6 +254,71 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] README with architecture diagram
 
 **Capstone link:** [Capstone project 10 — Deploy](../advanced/module-17-capstone-projects/lessons/10-deploy-ai-application.md)
+
+---
+
+## 11. Agent Data Flywheel & Curator
+
+**What:** Telemetry collector, rejection sampling filter, and DPO preference pair exporter.
+
+**Learn first:**
+
+| Module | Lessons |
+|--------|---------|
+| [Course 13](../production/module-19-llm-evaluation-quality/index.md) | Trajectory evals & Reward scoring |
+| [Course 15](../advanced/module-15-fine-tuning-custom-models/index.md) | DPO & Model alignment |
+
+**Build checklist:**
+
+- [ ] Multi-step agent trajectory ingestion
+- [ ] Automated LLM judge & deterministic score computation
+- [ ] Rejection sampling filter ($\Delta \text{score} \ge 0.20$)
+- [ ] Export Hugging Face TRL-compatible DPO JSONL format
+
+**Working starter repository:** [`labs/projects/12-agent-data-flywheel-curator/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/12-agent-data-flywheel-curator)
+
+---
+
+## 12. Observability & Eval Gateway
+
+**What:** Production AI proxy gateway with OpenTelemetry tracing spans, Prometheus metrics, and continuous evals.
+
+**Learn first:**
+
+| Module | Lessons |
+|--------|---------|
+| [Course 12](../production/module-10-llmops-production-systems/index.md) | Observability & OpenTelemetry |
+| [Course 13](../production/module-19-llm-evaluation-quality/index.md) | Online real-time evaluation |
+
+**Build checklist:**
+
+- [ ] OpenTelemetry distributed tracing context propagation
+- [ ] Prometheus metrics (TTFT, token metrics, cost)
+- [ ] Inline faithfulness evaluation
+- [ ] Model fallback & circuit breaker
+
+**Working starter repository:** [`labs/projects/13-observability-tracing-eval-gateway/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/13-observability-tracing-eval-gateway)
+
+---
+
+## 13. Multimodal Document RAG Engine
+
+**What:** ColPali visual patch embeddings + sparse lexical search for complex PDFs with tables and charts.
+
+**Learn first:**
+
+| Module | Lessons |
+|--------|---------|
+| [Course 06](../build/module-09-rag-retrieval-augmented-generation/index.md) | Advanced RAG |
+| [Course 10](../build/module-13-vector-databases-deep-dive/index.md) | Vector Databases |
+
+**Build checklist:**
+
+- [ ] Layout-aware document parsing (Text, HTML Tables, Chart Images)
+- [ ] Cross-modal visual patch retrieval
+- [ ] Vision LLM generator with visual bounding box citations
+
+**Working starter repository:** [`labs/projects/14-multimodal-document-rag-engine/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/14-multimodal-document-rag-engine)
 
 ---
 
