@@ -17,13 +17,12 @@ import hashlib
 from collections import Counter
 from typing import List, Tuple, Dict
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+from labs.common import load_sample_documents
 
-DOCUMENTS = [
-    "Dense vector search finds semantic similarity but can miss exact keyword matches like product codes.",
-    "BM25 keyword search scores term frequency and inverse document frequency for exact word matching.",
-    "Reciprocal Rank Fusion (RRF) combines rank positions from keyword and vector searches: RRF(d) = sum(1 / (k + rank(d))).",
-    "Cross-encoder rerankers re-score retrieved candidates to maximize precision in multi-stage search pipelines.",
-]
+
+DOCUMENTS = load_sample_documents()
+
 
 
 class HybridSearchEngine:

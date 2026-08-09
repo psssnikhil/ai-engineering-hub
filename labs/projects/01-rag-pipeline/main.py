@@ -20,17 +20,11 @@ from typing import List, Tuple, Dict, Any, Optional
 
 # Ensure repository root is on sys.path for labs.common imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
-from labs.common.gateway import LLMGateway
+from labs.common import LLMGateway, load_sample_documents
 
 
-DOCUMENTS = [
-    "RAG stands for Retrieval-Augmented Generation. It combines a retriever with a generator to produce grounded answers.",
-    "Vector databases store dense embeddings and support fast nearest-neighbor similarity search. Popular options include Chroma, Pinecone, and pgvector.",
-    "Chunking is the process of splitting documents into smaller pieces for retrieval. Common strategies include fixed-size, sentence-based, and recursive splitting.",
-    "Cosine similarity measures the angle between two vectors. A score of 1.0 means identical direction; 0.0 means orthogonal.",
-    "The embedding model converts text into dense numerical vectors. OpenAI's text-embedding-3-small produces 1536-dimensional vectors.",
-    "Hybrid search combines keyword search (BM25) with dense vector search to improve recall. Reciprocal Rank Fusion (RRF) merges result lists.",
-]
+DOCUMENTS = load_sample_documents()
+
 
 
 @dataclass
