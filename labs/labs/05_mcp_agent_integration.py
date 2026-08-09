@@ -11,13 +11,17 @@ Pure Python reference implementation of Model Context Protocol (MCP) concepts:
 
 Requirements:
   pip install openai anthropic
-  export OPENAI_API_KEY="sk-..."
+  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
 """
 
+import os
+import sys
 import json
 import uuid
 from typing import Dict, Any, List, Optional
-from labs.common.gateway import LLMGateway, OpenAIProvider
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+from labs.common.gateway import LLMGateway
 
 
 # ── Step 1: In-Memory MCP Server Specification ────────────────────────────────
@@ -132,7 +136,7 @@ class MCPAgentClient:
     """Client agent that discovers MCP server capabilities and executes tools via JSON-RPC protocol."""
     def __init__(self, mcp_server: MCPServer, gateway: Optional[LLMGateway] = None):
         self.mcp_server = mcp_server
-        self.gateway = gateway or LLMGateway([OpenAIProvider()])
+        self.gateway = gateway or LLMGateway()
         self.discovered_tools: List[Dict[str, Any]] = []
 
     def initialize_mcp_connection(self) -> None:
@@ -176,12 +180,12 @@ class MCPAgentClient:
                 messages.append({
                     "role": "assistant",
                     "content": resp.content or "",
-                    "tool_calls": resp.raw_response.choices[0].message.tool_calls
+                    "tool_calls": resp.raw_response.choices[0].message.tool_calls if resp.raw_response else None
                 })
 
                 for tc in resp.tool_calls:
                     fn_name = tc["name"]
-                    fn_args = json.loads(tc["arguments"])
+                    fn_args = json.loads(tc["arguments"]) if isinstance(tc["arguments"], str) else tc["arguments"]
                     print(f"  [MCP Dispatch] Requesting method 'tools/call' for '{fn_name}' with args {fn_args}")
 
                     # Format JSON-RPC request over MCP

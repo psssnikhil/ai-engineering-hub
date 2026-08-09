@@ -8,17 +8,16 @@ Uses `labs.common.gateway` for standardized provider access and tool execution.
 
 Requirements:
   pip install openai anthropic
-  export OPENAI_API_KEY="sk-..."
+  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
 """
 
-import json
 import os
 import sys
+import json
 from typing import List, Dict, Any, Callable, Optional
 
-# Ensure repository root is on sys.path for labs.common imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-from labs.common.gateway import LLMGateway, OpenAIProvider
+from labs.common.gateway import LLMGateway
 
 
 def calculator(expression: str) -> str:
@@ -76,7 +75,7 @@ TOOL_MAP: Dict[str, Callable] = {
 
 class ReActAgent:
     def __init__(self, gateway: Optional[LLMGateway] = None):
-        self.gateway = gateway or LLMGateway([OpenAIProvider()])
+        self.gateway = gateway or LLMGateway()
 
     def run(self, goal: str, max_steps: int = 5) -> str:
         messages = [
@@ -93,12 +92,12 @@ class ReActAgent:
                 messages.append({
                     "role": "assistant",
                     "content": resp.content or "",
-                    "tool_calls": resp.raw_response.choices[0].message.tool_calls,
+                    "tool_calls": resp.raw_response.choices[0].message.tool_calls if resp.raw_response else None,
                 })
 
                 for tc in resp.tool_calls:
                     fn_name = tc["name"]
-                    fn_args = json.loads(tc["arguments"])
+                    fn_args = json.loads(tc["arguments"]) if isinstance(tc["arguments"], str) else tc["arguments"]
                     print(f"  Action: {fn_name}({fn_args})")
                     
                     func = TOOL_MAP.get(fn_name)

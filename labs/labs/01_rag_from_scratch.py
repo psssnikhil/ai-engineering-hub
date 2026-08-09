@@ -4,23 +4,24 @@ Lab 01: RAG Pipeline from Scratch
 Course 06 — RAG: Retrieval Augmented Generation
 
 A pure, modular Python implementation of a RAG pipeline without framework bloat.
-Demonstrates document chunking, dense vector retrieval via OpenAI embeddings,
+Demonstrates document chunking, dense vector retrieval via OpenAI embeddings (with offline fallback),
 and grounded answer generation via LLMGateway.
 
 Requirements:
   pip install openai anthropic
-  export OPENAI_API_KEY="sk-..."
+  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
 """
 
 import math
 import os
 import sys
+import hashlib
 from dataclasses import dataclass
 from typing import List, Tuple, Dict, Any, Optional
 
 # Ensure repository root is on sys.path for labs.common imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-from labs.common.gateway import LLMGateway, OpenAIProvider
+from labs.common.gateway import LLMGateway
 
 
 DOCUMENTS = [
@@ -42,17 +43,32 @@ class Chunk:
 
 class RAGPipeline:
     def __init__(self, gateway: Optional[LLMGateway] = None):
-        self.gateway = gateway or LLMGateway([OpenAIProvider()])
-        from openai import OpenAI
-        self.openai_client = OpenAI()
+        self.gateway = gateway or LLMGateway()
         self.chunks: List[Chunk] = []
+        self._openai_client = None
+
+    def _get_openai_client(self):
+        if self._openai_client is None and os.getenv("OPENAI_API_KEY"):
+            from openai import OpenAI
+            self._openai_client = OpenAI()
+        return self._openai_client
 
     def get_embedding(self, text: str) -> List[float]:
-        res = self.openai_client.embeddings.create(
-            model="text-embedding-3-small",
-            input=text
-        )
-        return res.data[0].embedding
+        client = self._get_openai_client()
+        if client:
+            res = client.embeddings.create(
+                model="text-embedding-3-small",
+                input=text
+            )
+            return res.data[0].embedding
+        else:
+            # Deterministic pseudo-embedding for offline keyless execution
+            words = text.lower().split()
+            vec = [0.0] * 64
+            for w in words:
+                idx = int(hashlib.md5(w.encode()).hexdigest(), 16) % 64
+                vec[idx] += 1.0
+            return vec
 
     def index(self, docs: List[str]) -> None:
         self.chunks = []
