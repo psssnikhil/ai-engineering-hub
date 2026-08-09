@@ -1,22 +1,43 @@
 ## Summary
 
-<!-- What does this PR improve? Link related issue if any. -->
+<!-- Provide a brief, high-level summary of what this PR introduces or fixes. -->
 
-## Type
+| Type of Change | Check |
+|----------------|:-----:|
+| 📖 Curriculum / Handbook Lesson | [ ] |
+| 🧪 New Executable Lab Notebook | [ ] |
+| 🤖 Agent Skill / Rule Update | [ ] |
+| 💼 Interview Prep / Case Study | [ ] |
+| 🛠 Tooling / Script / CI/CD Fix | [ ] |
 
-- [ ] Lesson content (fix / deepen / new)
-- [ ] Hub page or navigation
-- [ ] Exercise or project
-- [ ] Site / build / CI
-- [ ] Docs (README, CONTRIBUTING)
+---
+
+## What Changes Were Made?
+
+<!-- Bulleted list of specific changes, new files added, or modifications made. -->
+- 
+
+---
+
+## Test Plan & Verification
+
+Please ensure all appropriate verification checks pass before requesting review:
+
+- [ ] `npm run sync-nav` — Synced navigation (`curriculum.yml` → `mkdocs.yml`)
+- [ ] `mkdocs build --strict` — Site builds locally with **0 errors or broken links**
+- [ ] `node scripts/verify-site-links.mjs` — All internal and external links verified
+- [ ] Runnable code / notebook verified without errors (if applicable)
+
+```bash
+# Verification commands run locally:
+npm run sync-nav
+mkdocs build --strict
+```
+
+---
 
 ## Checklist
 
-- [ ] Previewed locally (`mkdocs serve` or `npm run build:docs`)
-- [ ] Links work (no raw `href="*.md"` in HTML blocks)
-- [ ] No secrets or API keys
-- [ ] Learner-facing pages have no author/meta jargon (word counts, depth standards, etc.)
-
-## Test plan
-
-<!-- How did you verify? -->
+- [ ] Follows the handbook's [DEPTH_STANDARDS.md](maintainers/DEPTH_STANDARDS.md) content bar.
+- [ ] Preserves LaTeX math syntax (`\( ... \)` for inline, `\[ ... \]` for block).
+- [ ] No raw secret keys committed.
