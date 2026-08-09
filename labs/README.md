@@ -30,9 +30,14 @@ jupyter lab
 
 ---
 
-## Principles
+## Quality Bar & Contribution Guidelines
 
-1. **Multi-Provider Support**: Notebooks support both **OpenAI** (`OPENAI_API_KEY`) and **Anthropic** (`ANTHROPIC_API_KEY`) model providers out of the box.
-2. **No Frameworks First**: Every lab implements core mechanisms from scratch using Python primitives before introducing high-level frameworks (LangChain, LlamaIndex, Ragas).
-3. **Cheap & Lightweight**: Designed to run efficiently in minutes for pennies of API cost.
-4. **Interview & Production Ready**: Each lab maps directly to real-world [coding interview questions](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/coding-rounds/) and production system requirements.
+We invite community contributions to make these notebooks the highest quality AI engineering reference code available.
+
+### Contribution Requirements:
+1. **Zero Framework Bloat**: Implement core mechanics from scratch with pure Python and official SDKs (`openai`, `anthropic`).
+2. **Production-Grade Design Patterns**: Include explicit error handling, retries, fallback logic, and clear output schemas.
+3. **Comprehensive Markdown Explanations**: Walk the reader through architectural decisions, math, and tradeoffs.
+4. **Saved Execution Outputs**: Notebooks submitted via PR must be clean, executable, and include saved cell outputs.
+
+👉 **[View Open Lab Request Issues on GitHub](https://github.com/psssnikhil/ai-engineering-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** to pick up a lab notebook topic!
