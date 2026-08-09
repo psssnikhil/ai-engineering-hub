@@ -151,6 +151,9 @@ nav:
       - "Tools & Frameworks": resources/tools-and-libraries.md
       - "Courses & Communities": resources/courses-and-communities.md
       - Open Source Hubs: resources/open-source-hubs.md
+      - Complete Papers Catalog: resources/papers.md
+      - Complete Video Catalog: resources/videos.md
+      - "Technical Blogs & Architecture Guides": resources/blogs-and-guides.md
   - Reference:
       - Roadmap: roadmap.md
       - Getting Started: getting-started.md

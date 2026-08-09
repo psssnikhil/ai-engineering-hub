@@ -1,6 +1,6 @@
 ---
 title: Complete AI Engineering Research Papers Catalog
-description: Categorized index of landmark AI/ML research papers covering Transformers, RAG, Agents, LLMOps, Serving, Fine-Tuning, and Safety.
+description: Categorized index of landmark AI/ML research papers covering Transformers, Reasoning, RAG, Agents, LLMOps, Serving, Fine-Tuning, Quantization, and Safety.
 ---
 
 # 📄 Complete AI Engineering Research Papers Catalog
@@ -9,7 +9,7 @@ An annotated, categorized reference catalog of essential research papers referen
 
 ---
 
-## 🧠 1. Foundations & Transformer Architecture
+## 🧠 1. Foundations, Transformer Architecture & Scaling Laws
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|
@@ -28,7 +28,18 @@ An annotated, categorized reference catalog of essential research papers referen
 
 ---
 
-## 📚 2. RAG & Retrieval Systems
+## ⚡ 2. Reasoning Models & Test-Time Compute
+
+| Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
+|-------------|----------------|-----------------------------|------------|
+| **DeepSeek-R1: Incentivizing Reasoning Capability via RL** | DeepSeek AI (2025) | Demonstrates pure reinforcement learning without supervised warmups for eliciting chain-of-thought reasoning. | [ArXiv:2501.12948](https://arxiv.org/abs/2501.12948) |
+| **Let's Verify Step by Step (Process Reward Models)** | Lightman et al. (2023) | Introduces Process Reward Models (PRMs) trained to evaluate individual intermediate reasoning steps vs outcome reward models. | [ArXiv:2305.20050](https://arxiv.org/abs/2305.20050) |
+| **Quiet-STaR: Language Models Can Teach Themselves to Think** | Zelikman et al. (2024) | Enables LMs to generate rationale thoughts at every token position to improve future token predictions. | [ArXiv:2403.09629](https://arxiv.org/abs/2403.09629) |
+| **Tree of Thoughts: Deliberate Problem Solving with LLMs** | Yao et al. (2023) | Enables tree-structured search (BFS/DFS) over intermediate reasoning paths for complex math and planning tasks. | [ArXiv:2305.04091](https://arxiv.org/abs/2305.04091) |
+
+---
+
+## 📚 3. Advanced RAG & Vector Search
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|
@@ -36,33 +47,47 @@ An annotated, categorized reference catalog of essential research papers referen
 | **Dense Passage Retrieval for Open-Domain QA (DPR)** | Karpukhin et al. (2020) | Proved dual-encoder dense vector embeddings outperform classical BM25 sparse keyword search. | [ArXiv:2004.04906](https://arxiv.org/abs/2004.04906) |
 | **ColBERT: Late Interaction over BERT** | Khattab et al. (2020) | Introduced token-level late interaction matrix matching for fast, accurate multi-vector retrieval. | [ArXiv:2004.12832](https://arxiv.org/abs/2004.12832) |
 | **Precise Zero-Shot Dense Retrieval (HyDE)** | Gao et al. (2022) | Hypothetical Document Embeddings — generates synthetic candidate answers to retrieve true source documents. | [ArXiv:2212.10496](https://arxiv.org/abs/2212.10496) |
+| **From Local to Global Retrieval-Augmented Generation (GraphRAG)** | Edge et al. (Microsoft, 2024) | Combines knowledge graph extraction with community summaries for global dataset summarization. | [ArXiv:2404.16130](https://arxiv.org/abs/2404.16130) |
+| **RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval** | Sarthi et al. (2024) | Builds hierarchical document summary trees to enable multi-level granular document retrieval. | [ArXiv:2401.18059](https://arxiv.org/abs/2401.18059) |
 | **Self-RAG: Learning to Retrieve, Generate, and Critique** | Asai et al. (2023) | Endows LLMs with adaptive self-reflection tokens to decide *when* to retrieve and *how* to evaluate context. | [ArXiv:2310.11511](https://arxiv.org/abs/2310.11511) |
 
 ---
 
-## 🤖 3. AI Agents & Reasoning Loops
+## 🤖 4. AI Agents, Tool Execution & Benchmarks
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|
 | **ReAct: Synergizing Reasoning and Acting in Language Models** | Yao et al. (2022) | Standardized the Thought-Action-Observation loop driving modern autonomous agents. | [ArXiv:2210.03629](https://arxiv.org/abs/2210.03629) |
-| **Chain-of-Thought Prompting Elicits Reasoning** | Wei et al. (2022) | Showed intermediate step-by-step reasoning prompts dramatically boost complex problem-solving. | [ArXiv:2201.11903](https://arxiv.org/abs/2201.11903) |
-| **Tree of Thoughts: Deliberate Problem Solving with LLMs** | Yao et al. (2023) | Generalized CoT to tree structures, enabling BFS/DFS exploration of candidate solution paths. | [ArXiv:2305.04091](https://arxiv.org/abs/2305.04091) |
 | **Toolformer: Language Models Can Teach Themselves to Use Tools** | Schick et al. (2023) | Self-supervised model learning where and how to call external APIs (calculators, search, Q&A). | [ArXiv:2302.04761](https://arxiv.org/abs/2302.04761) |
 | **Reflexion: Language Agents with Verbal Reinforcement** | Shinn et al. (2023) | Autonomous agents reflecting on execution feedback, storing verbal episodic memories to prevent repeat mistakes. | [ArXiv:2303.11366](https://arxiv.org/abs/2303.11366) |
 | **Generative Agents: Interactive Simulacra of Human Behavior** | Park et al. (2023) | Multi-agent sandbox simulation detailing memory streams, reflection summaries, and dynamic plan updates. | [ArXiv:2304.03442](https://arxiv.org/abs/2304.03442) |
 | **Voyager: An Open-Ended Embodied Agent with LLMs** | Wang et al. (2023) | Lifelong learning agent in Minecraft continuously writing, executing, and expanding a skill library of Python code. | [ArXiv:2305.10601](https://arxiv.org/abs/2305.10601) |
+| **SWE-bench: Can Language Models Resolve Real-World GitHub Issues?** | Jimenez et al. (2024) | Standardized benchmark testing autonomous coding agents on resolving real software engineering issues. | [ArXiv:2310.06770](https://arxiv.org/abs/2310.06770) |
 
 ---
 
-## ⚡ 4. LLMOps & High-Throughput Serving
+## 💾 5. Long Context & Memory Architecture
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|
-| **vLLM: Memory Management for LLM Serving with PagedAttention** | Kwon et al. (2023) | Introduced PagedAttention, virtualizing GPU memory for KV caches to achieve 2-4x higher serving throughput. | [ArXiv:2309.06180](https://arxiv.org/abs/2309.06180) |
+| **RingAttention with Blockwise Transformers** | Liu et al. (2023) | Distributes sequence attention computation across multiple GPUs, enabling million-token context windows. | [ArXiv:2310.01889](https://arxiv.org/abs/2310.01889) |
+| **MemGPT: Towards LLMs as Operating Systems** | Packer et al. (2023) | Manages bounded LLM context windows using OS-like virtual memory tiers (main context vs archival memory). | [ArXiv:2310.08560](https://arxiv.org/abs/2310.08560) |
+| **Leave No Context Behind: Infini-attention** | Manya et al. (Google, 2024) | Integrates a compressive memory module into vanilla self-attention for infinite context handling. | [ArXiv:2404.07143](https://arxiv.org/abs/2404.07143) |
 
 ---
 
-## 🎛 5. Fine-Tuning & Model Alignment
+## ⚡ 6. Serving Engines & Quantization
+
+| Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
+|-------------|----------------|-----------------------------|------------|
+| **vLLM: Memory Management with PagedAttention** | Kwon et al. (2023) | Introduced PagedAttention, virtualizing GPU memory for KV caches to achieve 2-4x higher serving throughput. | [ArXiv:2309.06180](https://arxiv.org/abs/2309.06180) |
+| **AWQ: Activation-aware Weight Quantization for LLMs** | Lin et al. (2023) | Protects 1% salient weight channels based on activation magnitude to achieve lossless 4-bit quantization. | [ArXiv:2306.00978](https://arxiv.org/abs/2306.00978) |
+| **GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers** | Frantar et al. (2022) | One-shot weight quantization method reducing LLMs to 3/4 bits in sub-second per layer execution time. | [ArXiv:2210.17323](https://arxiv.org/abs/2210.17323) |
+| **The Era of 1-bit LLMs: BitNet b1.58** | Ma et al. (2024) | 1.58-bit ternary weight LLM architecture ($\{-1, 0, 1\}$) matching full-precision performance with zero matrix multiplications. | [ArXiv:2402.17764](https://arxiv.org/abs/2402.17764) |
+
+---
+
+## 🎛 7. Fine-Tuning & Model Alignment
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|
@@ -73,7 +98,7 @@ An annotated, categorized reference catalog of essential research papers referen
 
 ---
 
-## 🛡 6. Evaluation & Safety
+## 🛡 8. Evaluation & Safety
 
 | Paper Title | Authors / Year | Key Contribution & Takeaway | ArXiv Link |
 |-------------|----------------|-----------------------------|------------|

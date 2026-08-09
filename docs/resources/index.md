@@ -92,10 +92,11 @@ Jump directly to a dedicated resource guide combining **landmark papers, top Git
 - **[AI Agents & Harness Resources](topic-agents-and-harnesses.md)** — Dedicated topic guide
 - **[LLMOps & Serving Resources](topic-llmops-evals-serving.md)** — Dedicated topic guide
 - **[Fine-Tuning & Alignment Resources](topic-finetuning-and-alignment.md)** — Dedicated topic guide
+- **[Technical Blogs & Architecture Guides](blogs-and-guides.md)** — Curated engineering blogs (Aman Chadha, Lil'Log, Eugene Yan, Chip Huyen, Raschka)
 - **[Essential Papers](essential-papers.md)** — landmark research papers referenced across lessons
 - **[Essential Videos](essential-videos.md)** — core lectures and video walkthroughs
 - **[Open Source Hubs](open-source-hubs.md)** — curated hubs (Agents Towards Production, RAG Techniques)
 - **[Courses & Communities](courses-and-communities.md)** — free interactive courses and engineering forums
-- **[All Papers Index](papers.md)** — complete auto-extracted paper list
-- **[All Videos Index](videos.md)** — complete auto-extracted video list
-- **[Tools & Libraries Index](tools-and-libraries.md)** — complete SDK and framework index
+- **[Complete Papers Catalog](papers.md)** — complete annotated research paper catalog
+- **[Complete Videos Catalog](videos.md)** — complete video series and lecture catalog
+- **[Tools & Frameworks Index](tools-and-libraries.md)** — complete SDK, vector DB, and framework index

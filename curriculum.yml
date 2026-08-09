@@ -131,6 +131,9 @@ resources:
   - { title: "Tools & Frameworks", path: resources/tools-and-libraries.md }
   - { title: "Courses & Communities", path: resources/courses-and-communities.md }
   - { title: "Open Source Hubs", path: resources/open-source-hubs.md }
+  - { title: "Complete Papers Catalog", path: resources/papers.md }
+  - { title: "Complete Video Catalog", path: resources/videos.md }
+  - { title: "Technical Blogs & Architecture Guides", path: resources/blogs-and-guides.md }
 
 
 projects:
