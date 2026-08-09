@@ -121,14 +121,16 @@ reference:
 
 resources:
   - { title: Overview, path: resources/index.md }
-  - { title: "Transformers & LLMs", path: resources/topic-transformers-and-llms.md }
-  - { title: "Reasoning & Test-Time Compute", path: resources/topic-reasoning-and-test-time-compute.md }
-  - { title: "Multimodal AI & VLMs", path: resources/topic-multimodal-and-vlm.md }
-  - { title: "Code Intelligence & SWE Agents", path: resources/topic-code-intelligence-and-swe-agents.md }
-  - { title: "RAG & Vector Search", path: resources/topic-rag-and-vector-search.md }
-  - { title: "AI Agents & Harnesses", path: resources/topic-agents-and-harnesses.md }
-  - { title: "LLMOps & Serving", path: resources/topic-llmops-evals-serving.md }
-  - { title: "Fine-Tuning & Alignment", path: resources/topic-finetuning-and-alignment.md }
+  - category: "🎯 Resources by Topic"
+    pages:
+      - { title: "Transformers & LLMs", path: resources/topic-transformers-and-llms.md }
+      - { title: "Reasoning & Test-Time Compute", path: resources/topic-reasoning-and-test-time-compute.md }
+      - { title: "Multimodal AI & VLMs", path: resources/topic-multimodal-and-vlm.md }
+      - { title: "Code Intelligence & SWE Agents", path: resources/topic-code-intelligence-and-swe-agents.md }
+      - { title: "RAG & Vector Search", path: resources/topic-rag-and-vector-search.md }
+      - { title: "AI Agents & Harnesses", path: resources/topic-agents-and-harnesses.md }
+      - { title: "LLMOps & Serving", path: resources/topic-llmops-evals-serving.md }
+      - { title: "Fine-Tuning & Alignment", path: resources/topic-finetuning-and-alignment.md }
   - { title: "Essential Papers", path: resources/essential-papers.md }
   - { title: "Essential Videos", path: resources/essential-videos.md }
   - { title: "Tools & Frameworks Index", path: resources/tools-and-libraries.md }
