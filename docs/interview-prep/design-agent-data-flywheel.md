@@ -102,13 +102,13 @@ To avoid training models on hallucinated or incomplete runs:
 1. **Deterministic Sandboxed Execution**: For coding/SQL agents, code payloads are isolated inside gVisor containers and run against ground-truth unit tests.
 2. **LLM-as-a-Judge Tier**: For subjective reasoning, an LLM judge evaluates trajectory efficiency using a structured schema:
 
-$$\text{Reward Score } R(\mathcal{T}) = w_1 \cdot \text{Correctness} + w_2 \cdot \text{Efficiency} + w_3 \cdot \text{Safety}$$
+\[ \text{Reward Score } R(\mathcal{T}) = w_1 \cdot \text{Correctness} + w_2 \cdot \text{Efficiency} + w_3 \cdot \text{Safety} \]
 
-where $w_1 = 0.5$, $w_2 = 0.3$, $w_3 = 0.2$. Only trajectories with $R(\mathcal{T}) \ge 0.85$ enter the SFT dataset.
+where \( w_1 = 0.5 \), \( w_2 = 0.3 \), \( w_3 = 0.2 \). Only trajectories with \( R(\mathcal{T}) \ge 0.85 \) enter the SFT dataset.
 
 ### C. Continuous Model Training & Dynamic Prompt Optimization
 - **SFT Distillation**: Runs nightly using LoRA (Low-Rank Adaptation) on 70B parameter models, reducing training cost by 80%.
-- **DPO Preference Pairs**: Pairs a failed trajectory step $a_{rejected}$ with the successful counterfactual execution $a_{chosen}$ to train token log-probability preferences.
+- **DPO Preference Pairs**: Pairs a failed trajectory step \( a_{rejected} \) with the successful counterfactual execution \( a_{chosen} \) to train token log-probability preferences.
 - **Dynamic Prompt Patching**: Clustering failure vectors identifies systemic operational gaps (e.g. "agent repeatedly forgets to pass `-y` to `apt-get`"). An automated optimizer generates system prompt amendments (e.g. "Always append non-interactive flags `-y` to package manager commands").
 
 ---
@@ -120,7 +120,7 @@ where $w_1 = 0.5$, $w_2 = 0.3$, $w_3 = 0.2$. Only trajectories with $R(\mathcal{
 | **LLM-only filtering** | **Deterministic Sandbox + LLM Judge** | Deterministic Sandbox + LLM Judge | LLM judges drift and exhibit self-bias; sandbox tests provide ground truth for code/SQL. |
 | **Real-time online SFT** | **Nightly Batch SFT + Rapid Prompt Patches** | Nightly Batch + Rapid Prompt Patches | Online model retraining risks catastrophic collapse; prompt patches deploy in 1 hr while models train nightly. |
 | **Full Fine-Tuning** | **LoRA / QLoRA Parameter Efficient Tuning** | LoRA Tuning | LoRA reduces memory overhead and allows hot-swapping task adapters without redeploying base models. |
-| **Direct Production Deploy** | **Shadow Proxy $\rightarrow$ Canary Gate** | Shadow Proxy $\rightarrow$ Canary Gate | Shadowing live traffic verifies latency, token consumption, and failure rates without impacting real users. |
+| **Direct Production Deploy** | **Shadow Proxy \( \rightarrow \) Canary Gate** | Shadow Proxy \( \rightarrow \) Canary Gate | Shadowing live traffic verifies latency, token consumption, and failure rates without impacting real users. |
 
 ---
 

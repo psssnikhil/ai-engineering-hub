@@ -38,11 +38,11 @@ Backpropagation is the **chain rule for derivatives applied systematically to a 
 
 Nothing more. No magic.
 
-The chain rule: if $L = f(g(x))$, then:
+The chain rule: if \( L = f(g(x)) \), then:
 
-$$
+\[
 \frac{dL}{dx} = \frac{dL}{df} \cdot \frac{df}{dg} \cdot \frac{dg}{dx}
-$$
+\]
 
 In a neural network, each layer is a function. Composing layers is function composition. The chain rule decomposes the gradient of the loss w.r.t. any parameter into a product of local gradients along the path from that parameter to the loss.
 

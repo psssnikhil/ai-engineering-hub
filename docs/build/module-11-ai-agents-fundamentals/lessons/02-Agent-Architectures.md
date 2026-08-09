@@ -548,11 +548,11 @@ print(f"\nFinal:\n{result}")
 
 | Task | Pattern | Cost | Latency |
 |------|---------|------|---------|
-| Weather lookup, single-step Q&A | Simple Tool Use | $ | Low |
-| Web research, bug fixing, data analysis | ReAct | $$ | Medium |
-| Multi-step report, project planning | Plan-and-Execute | $$$ | High |
-| Writing, code generation, structured docs | Reflection | $$ | Medium |
-| Research + polished report | Plan-and-Execute + Reflection | $$$$ | High |
+| Weather lookup, single-step Q&A | Simple Tool Use | `$` | Low |
+| Web research, bug fixing, data analysis | ReAct | `$$` | Medium |
+| Multi-step report, project planning | Plan-and-Execute | `$$$` | High |
+| Writing, code generation, structured docs | Reflection | `$$` | Medium |
+| Research + polished report | Plan-and-Execute + Reflection | `$$$$` | High |
 
 **Decision flowchart**:
 
