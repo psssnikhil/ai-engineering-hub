@@ -1,8 +1,8 @@
 /* MathJax configuration for MkDocs Material + pymdownx.arithmatex */
 window.MathJax = {
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    inlineMath: [["\\(", "\\)"], ["$", "$"]],
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true,
     packages: { "[+]": ["ams", "boldsymbol"] },

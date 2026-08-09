@@ -53,7 +53,25 @@ When processing "it":
 → Self-attention assigns high weight to "animal" when encoding "it"
 ```
 
-This is fundamentally different from an RNN, where "it" can only see "tired" immediately before it unless the LSTM gates preserve earlier context. Self-attention gives every token **direct access** to every other token in a single layer.
+```mermaid
+flowchart TD
+    classDef proj fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef dot fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef out fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    X["Input Embeddings X (N x d_model)"]:::proj --> ProjQ["Query Projection Q = X * W_Q"]:::proj
+    X --> ProjK["Key Projection K = X * W_K"]:::proj
+    X --> ProjV["Value Projection V = X * W_V"]:::proj
+
+    ProjQ & ProjK --> DotMat["Dot Product Scores S = Q * K^T (N x N)"]:::dot
+    DotMat --> Scale["Scale by 1/sqrt(d_k)"]:::dot
+    Scale --> Mask["Causal Masking (Optional)"]:::dot
+    Mask --> Softmax["Softmax Row-Wise (Attention Weights A)"]:::dot
+
+    Softmax & ProjV --> Output["Context Output Matrix Output = A * V (N x d_v)"]:::out
+```
+
+> *Self-Attention Architecture — adapted from "Attention Is All You Need" (Vaswani et al., 2017).*
 
 ---
 

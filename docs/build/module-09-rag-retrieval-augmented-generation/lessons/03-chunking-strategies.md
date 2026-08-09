@@ -46,6 +46,19 @@ In RAG terms: each chunk becomes one vector. At query time you retrieve the top-
 
 Embedding models accept up to 512–8,192 tokens depending on the model. Even with 8K-token windows, collapsing an entire document into one vector produces an average representation — the signal for any specific fact is drowned out by the rest of the document.
 
+```mermaid
+flowchart TD
+    classDef raw fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef strategy fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef chunk fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+
+    Doc["Raw Full Document"]:::raw --> StrategySplit{"Choose Chunking Strategy"}:::strategy
+
+    StrategySplit -- Fixed Size --> FixedChunks["Fixed Character Window (e.g., 500 chars + 50 overlap)"]:::chunk
+    StrategySplit -- Semantic --> SemanticChunks["Embedding Distance Threshold (Group Similar Sentences)"]:::chunk
+    StrategySplit -- Parent-Child --> HierarchicalChunks["Small Child Chunks (128t) mapped to Large Parent Chunks (1024t)"]:::chunk
+```
+
 ```text
 10,000-token document → single 1,536-dim vector
                        → loses specificity

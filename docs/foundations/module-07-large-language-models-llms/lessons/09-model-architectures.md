@@ -41,6 +41,24 @@ graph TD
     LLAMA --> LLAMA3["2024 LLaMA-3\n8B/70B/405B"]
 ```
 
+### Attention Masking Mechanism Comparison
+
+```mermaid
+flowchart LR
+    subgraph Enc["Encoder-Only (BERT)"]
+        direction TB
+        E_Tokens["Bidirectional Context"] --> E_Mask["Full Matrix Allowed (1s everywhere)"]
+    end
+    subgraph Dec["Decoder-Only (GPT / LLaMA)"]
+        direction TB
+        D_Tokens["Autoregressive Context"] --> D_Mask["Lower Triangular Mask (0s for future)"]
+    end
+    subgraph EncDec["Encoder-Decoder (T5 / Whisper)"]
+        direction TB
+        ED_Tokens["Full Input + Causal Target"] --> ED_Cross["Cross-Attention Layer"]
+    end
+```
+
 | Architecture | Attention | Best for | Examples |
 |---|---|---|---|
 | Encoder-only | Bidirectional | Classification, NER, embeddings | BERT, RoBERTa |

@@ -38,10 +38,11 @@ Backpropagation is the **chain rule for derivatives applied systematically to a 
 
 Nothing more. No magic.
 
-The chain rule: if \(L = f(g(x))\), then:
-\[
+The chain rule: if $L = f(g(x))$, then:
+
+$$
 \frac{dL}{dx} = \frac{dL}{df} \cdot \frac{df}{dg} \cdot \frac{dg}{dx}
-\]
+$$
 
 In a neural network, each layer is a function. Composing layers is function composition. The chain rule decomposes the gradient of the loss w.r.t. any parameter into a product of local gradients along the path from that parameter to the loss.
 
@@ -53,8 +54,21 @@ Every computation can be represented as a directed acyclic graph (DAG) where:
 - **Nodes** are values (scalars, vectors, matrices)
 - **Edges** are operations (addition, multiplication, activation functions)
 
-```text
-x → [multiply w] → z → [ReLU] → a → [multiply w2] → y_hat → [MSE with y] → Loss
+```mermaid
+flowchart LR
+    classDef fwd fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef bwd fill:#fdf2f8,stroke:#f43f5e,stroke-width:2px;
+
+    subgraph ForwardPass["Forward Pass (Left to Right)"]
+        Input["x"]:::fwd --> Dot["Linear z = w*x + b"]:::fwd
+        Dot --> Act["ReLU Activation a = max(0,z)"]:::fwd
+        Act --> LossNode["Loss Function L(a, y)"]:::fwd
+    end
+
+    subgraph BackwardPass["Backward Pass (Right to Left via Chain Rule)"]
+        LossNode -- "dL/da" --> ActGrad["dL/dz = dL/da * ReLUDeriv(z)"]:::bwd
+        ActGrad -- "dL/dz" --> WeightGrad["dL/dw = dL/dz * x"]:::bwd
+    end
 ```
 
 The **forward pass** computes values left to right. The **backward pass** computes gradients right to left, using the chain rule at each node.

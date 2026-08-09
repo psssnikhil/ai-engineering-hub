@@ -33,10 +33,17 @@ module: module-00
 
 Computers work with numbers. Language is made of symbols. The entire history of NLP — from the 1950s to GPT-4 — is about solving one question: **How do we represent language as numbers in a way that preserves meaning, scales to large vocabularies, and supports efficient computation?**
 
-```text
-"The cat sat on the mat"
-         ↓  ??? 
-[0.23, -0.45, 0.87, 0.12, ...]  ← 1536 numbers per word/token
+```mermaid
+flowchart TD
+    classDef text fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef tok fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef vec fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+
+    RawText["Raw String Text: 'Tokenization in AI'"]:::text --> BPE["BPE Subword Tokenizer"]:::tok
+    BPE --> Subwords["Subword Tokens: ['Token', 'ization', ' in', ' AI']"]:::tok
+    Subwords --> TokenIDs["Vocabulary Indices: [3482, 1923, 284, 8912]"]:::tok
+    TokenIDs --> EmbeddingLookup["Embedding Matrix Lookup E[i]"]:::vec
+    EmbeddingLookup --> DenseVector["Dense Vector Embeddings (1536-dim per token)"]:::vec
 ```
 
 Getting this representation right is the difference between a model that understands "bank" means a financial institution in one sentence and a riverbank in another, and a model that treats them as identical.
