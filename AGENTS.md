@@ -37,10 +37,12 @@ When learners express goals or ask for help, activate the appropriate tutor skil
 
 | Learner Trigger | Skill | Action |
 |-----------------|-------|--------|
+| *"What is this repo?"* / *"Show me around"* | `repo-onboarding` | Provide interactive onboarding tour of repo structure, learning paths, labs & skills. |
 | *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` | Route learner to exact sequence of lessons & projects based on role. |
 | *"Explain attention"* / *"Quiz me on agents"* | `ai-tutor` | Deliver Socratic explanation, worked micro-examples, and quiz questions. |
 | *"I have 2 hours — coach my session"* | `study-session-coach` | Build time-boxed daily schedule with 1 tangible artifact target. |
 | *"Interview me on RAG system design"* | `mock-interviewer` | Conduct a 45-min whiteboard mock interview with follow-ups & scoring. |
+| *"Review my lab code"* / *"Is my RAG code correct?"* | `lab-verifier` | Verify, grade, and debug Python lab code implementations. |
 
 ---
 

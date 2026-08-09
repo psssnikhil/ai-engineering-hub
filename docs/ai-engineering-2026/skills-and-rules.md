@@ -117,6 +117,7 @@ in Claude Code or Cursor and express your goal in chat:
 
 | Skill | Trigger (examples) | Output |
 |-------|-------------------|--------|
+| `repo-onboarding` | "What is this repo?" / "Show me around" | Interactive onboarding tour of repo structure, learning paths & skills |
 | `learning-path-advisor` | "I want to learn RAG" / "Where should I start?" | Multi-week path with exact lesson links |
 | `ai-tutor` | "Explain attention" / "Quiz me on agents" | Socratic teaching from handbook lessons |
 | `study-session-coach` | "I have 2 hours — coach my session" | Time-boxed session with one artifact |

@@ -47,10 +47,12 @@ When a user prompt matches a trigger, load and follow the corresponding skill in
 
 | Trigger / User Intent | Activated Skill | Target Path & Action |
 |-----------------------|-----------------|----------------------|
+| *"What is this repo?"* / *"Show me around"* | `repo-onboarding` | Interactive onboarding tour of repo structure, learning paths, labs & skills. |
 | *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` | Route learner through exact sequence of lessons & projects based on role. |
 | *"Explain attention"* / *"Quiz me on agents"* | `ai-tutor` | Deliver Socratic explanation, tensor shape intuition, worked math, and quiz questions. |
 | *"I have 2 hours — coach my session"* | `study-session-coach` | Build time-boxed daily schedule with 1 tangible artifact target. |
 | *"Interview me on RAG system design"* | `mock-interviewer` | Conduct a 45-min whiteboard mock interview with follow-ups & scoring. |
+| *"Review my lab code"* / *"Is my RAG code correct?"* | `lab-verifier` | Verify, grade, and debug Python lab code implementations. |
 | Add/edit handbook lesson or track | `curriculum-content-writer` | Write/update docs following `DEPTH_STANDARDS.md` and sync nav. |
 | Add interview Q&A bank | `interview-question-writer` | Add Q&A in `docs/interview-prep/questions-*.md`. |
 | Add system design case study | `system-design-case-study-writer` | Add case study in `docs/interview-prep/design-*.md`. |

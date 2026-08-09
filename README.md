@@ -21,10 +21,12 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 | Objective | What to ask / trigger prompt | Activated Tutor Skill |
 |:---|:---|:---|
+| 🧭 **Repo Tour & Overview** | *"What is this repo?"* / *"Show me around"* | `repo-onboarding` |
 | 🎯 **Personalized Roadmap** | *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` |
 | 💡 **Concept Deep-Dive & Quiz** | *"Explain attention mechanisms"* / *"Quiz me on agents"* | `ai-tutor` |
 | ⏱️ **Time-boxed Study Session** | *"I have 2 hours — coach my session"* | `study-session-coach` |
 | 🏗️ **Mock System Design Interview** | *"Interview me on RAG system design"* | `mock-interviewer` |
+| 🧪 **Lab Code Review & Debug** | *"Review my lab code"* / *"Verify exercise 01"* | `lab-verifier` |
 
 👉 **[Learn how to activate Tutor Skills →](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)**
 
