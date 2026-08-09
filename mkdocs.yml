@@ -16,17 +16,17 @@ theme:
     code: JetBrains Mono
   palette:
     - scheme: default
-      primary: indigo
+      primary: custom
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: Dark mode
+        name: Switch to dark mode
     - scheme: slate
-      primary: indigo
+      primary: custom
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Light mode
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
@@ -34,10 +34,13 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.indexes
+    - navigation.path
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.action.edit
+    - content.code.annotate
+    - toc.follow
 
 extra_css:
   - stylesheets/extra.css

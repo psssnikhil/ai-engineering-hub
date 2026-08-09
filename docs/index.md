@@ -27,70 +27,127 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 # AI Engineering Hub
 
 <div class="hero">
-  <p class="hero__tagline">The open-source path from zero to production AI</p>
-  <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No paywall. No module codes. Just start at course 01 and build real systems.</p>
+  <div class="hero__badge">✨ Free &amp; Open Source AI Engineering Curriculum</div>
+  <p class="hero__tagline">The path from transformers to production AI</p>
+  <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No paywall. No scattered tutorials. Just start at course 01 and build real systems.</p>
   <div class="hero__actions">
-    <a class="hero__btn hero__btn--primary" href="start-here/">Start Here</a>
-    <a class="hero__btn hero__btn--secondary" href="learn/">Browse all 16 courses</a>
+    <a class="hero__btn hero__btn--primary" href="start-here/">⚡ Start Here</a>
+    <a class="hero__btn hero__btn--secondary" href="learn/">📚 Browse 16 Courses</a>
     <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-hub">★ Star on GitHub</a>
   </div>
 </div>
 
 <div class="stat-row">
-  <span class="stat-pill"><span class="stat-pill__value">16</span> courses</span>
-  <span class="stat-pill"><span class="stat-pill__value">140+</span> lessons</span>
-  <span class="stat-pill"><span class="stat-pill__value">2</span> agent tracks</span>
-  <span class="stat-pill"><span class="stat-pill__value">MIT</span> license</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">16</span> Courses</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">140+</span> Lessons</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">3</span> Specialized Tracks</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">30+</span> Hands-on Labs</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">MIT</span> License</span>
 </div>
 
 ---
 
-## Who is this for?
+## 🗺️ Curriculum Architecture
+
+```mermaid
+flowchart TD
+    classDef foundation fill:#eef2ff,stroke:#6366f1,stroke-width:2px,color:#312e81;
+    classDef build fill:#f0fdf4,stroke:#10b981,stroke-width:2px,color:#064e3b;
+    classDef prod fill:#fff7ed,stroke:#f59e0b,stroke-width:2px,color:#78350f;
+    classDef adv fill:#fdf2f8,stroke:#f43f5e,stroke-width:2px,color:#881337;
+    classDef track fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px,color:#4c1d95;
+
+    subgraph Phase1["1. Understand AI (Courses 01–05)"]
+        C01["01. GenAI Foundations"]:::foundation --> C02["02. AI Essentials"]:::foundation
+        C02 --> C03["03. Neural Networks"]:::foundation
+        C03 --> C04["04. Transformers & Attention"]:::foundation
+        C04 --> C05["05. Large Language Models"]:::foundation
+    end
+
+    subgraph Phase2["2. Build Systems (Courses 06–11)"]
+        C05 --> C06["06. RAG Systems"]:::build
+        C06 --> C07["07. AI Agents"]:::build
+        C07 --> C08["08. Agent Harness & Runtime"]:::build
+        C08 --> C09["09. Multi-Agent Systems"]:::build
+        C06 --> C10["10. Vector Databases"]:::build
+        C07 --> C11["11. Prompt Mastery"]:::build
+    end
+
+    subgraph Phase3["3. Production & Scale (Courses 12–14)"]
+        C09 --> C12["12. LLMOps & Serving"]:::prod
+        C12 --> C13["13. LLM Evals & Quality"]:::prod
+        C13 --> C14["14. AI Safety & Guardrails"]:::prod
+    end
+
+    subgraph Phase4["4. Advanced & Capstones (Courses 15–16)"]
+        C14 --> C15["15. Fine-Tuning & Quantization"]:::adv
+        C15 --> C16["16. Enterprise Capstone Projects"]:::adv
+    end
+
+    subgraph Tracks["Specialized Role Tracks"]
+        T1["Track 1: Agent Engineering"]:::track
+        T2["Track 2: Interview Prep & System Design"]:::track
+        T3["Track 3: Modern AI & IDE Agents (2026)"]:::track
+    end
+
+    C07 -.-> T1
+    C12 -.-> T2
+    C08 -.-> T3
+```
+
+---
+
+## 🎯 Who is this for?
 
 <div class="persona-grid">
   <div class="persona-card">
+    <div class="persona-card__icon">🌱</div>
     <div class="persona-card__title">New to AI</div>
-    <div class="persona-card__desc">Software engineer or student starting from scratch</div>
+    <div class="persona-card__desc">Software engineer or student starting from ground zero with Python and LLMs.</div>
     <a class="persona-card__cta" href="start-here/">Start Here →</a>
   </div>
   <div class="persona-card">
+    <div class="persona-card__icon">🧠</div>
     <div class="persona-card__title">Know ML, need LLMs</div>
-    <div class="persona-card__desc">ML practitioner catching up on transformers and APIs</div>
-    <a class="persona-card__cta" href="learn/">Jump to Learn →</a>
+    <div class="persona-card__desc">ML practitioner catching up on modern transformers, APIs, vector DBs, and fine-tuning.</div>
+    <a class="persona-card__cta" href="learn/">Browse Curriculum →</a>
   </div>
   <div class="persona-card">
-    <div class="persona-card__title">Building agents</div>
-    <div class="persona-card__desc">Engineer shipping autonomous AI systems</div>
-    <a class="persona-card__cta" href="agent-engineering/">Agent Engineering →</a>
+    <div class="persona-card__icon">🤖</div>
+    <div class="persona-card__title">Building AI Agents</div>
+    <div class="persona-card__desc">Engineer shipping autonomous agent loops, tools, MCP, and multi-agent systems.</div>
+    <a class="persona-card__cta" href="agent-engineering/">Agent Track →</a>
   </div>
   <div class="persona-card">
-    <div class="persona-card__title">Using Claude Code / Cursor</div>
-    <div class="persona-card__desc">Skills, loops, and context for IDE agents</div>
+    <div class="persona-card__icon">⚡</div>
+    <div class="persona-card__title">IDE &amp; Coding Agents</div>
+    <div class="persona-card__desc">Mastering Claude Code, Cursor skills, execution loops, and context engineering.</div>
     <a class="persona-card__cta" href="ai-engineering-2026/">Modern AI (2026) →</a>
   </div>
   <div class="persona-card">
-    <div class="persona-card__title">Shipping to production</div>
-    <div class="persona-card__desc">Need LLMOps, evals, monitoring, safety</div>
-    <a class="persona-card__cta" href="production/module-10-llmops-production-systems/">LLMOps & Production →</a>
+    <div class="persona-card__icon">🛡️</div>
+    <div class="persona-card__title">Shipping to Production</div>
+    <div class="persona-card__desc">Architecting LLMOps, automated evals, continuous monitoring, and security guardrails.</div>
+    <a class="persona-card__cta" href="production/module-10-llmops-production-systems/">Production Track →</a>
   </div>
 </div>
 
 ---
 
-## How to navigate
+## 🧭 Navigation & Shortcuts
 
 <div class="quick-nav">
-  <a class="quick-nav__item" href="start-here/">Start Here</a>
-  <a class="quick-nav__item" href="learn/">Learn</a>
-  <a class="quick-nav__item" href="learn/study-plans/">Study Plans</a>
-  <a class="quick-nav__item" href="projects/build-these/">Build These</a>
-  <a class="quick-nav__item" href="topic-map/">Topic Map</a>
-  <a class="quick-nav__item" href="faq/">FAQ</a>
-  <a class="quick-nav__item" href="getting-started/">Setup</a>
+  <a class="quick-nav__item" href="start-here/">🚀 Start Here</a>
+  <a class="quick-nav__item" href="learn/">📚 Learn Courses</a>
+  <a class="quick-nav__item" href="learn/study-plans/">⏱️ Study Plans</a>
+  <a class="quick-nav__item" href="projects/build-these/">🛠️ Build Projects</a>
+  <a class="quick-nav__item" href="topic-map/">🗺️ Topic Map</a>
+  <a class="quick-nav__item" href="faq/">💡 FAQ</a>
+  <a class="quick-nav__item" href="getting-started/">⚙️ Setup</a>
 </div>
 
-| Goal | Go to |
-|------|-------|
+| Goal | Destination |
+|------|-------------|
 | **Follow the curriculum** | **[Learn](learn/index.md)** — 16 courses in order |
 | **New here** | [Start Here](start-here.md) |
 | **Week-by-week schedule** | [Study Plans](learn/study-plans.md) |
@@ -100,36 +157,22 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 
 ---
 
-## The learning path
+## ⚡ The Learning Roadmap
 
-| Part | Courses | Topics |
-|------|---------|--------|
-| **Understand AI** | 01–05 | NLP → neural nets → transformers → LLMs |
-| **Build applications** | 06–11 | RAG, agents, harness, multi-agent, vector DBs, prompts |
-| **Production** | 12–14 | LLMOps, evals, safety |
-| **Advanced** | 15–16 | Fine-tuning, capstone projects |
+| Stage | Courses | Core Topics Covered |
+|-------|---------|--------------------|
+| **1. Understand AI** | 01–05 | NLP → neural nets → transformers → attention → LLM architecture |
+| **2. Build Applications** | 06–11 | Modular RAG, autonomous agents, tool runtime, multi-agent systems, vector DBs, prompts |
+| **3. Production & Ops** | 12–14 | Serving, vLLM/Ollama, LLMOps, automated evals, safety & guardrail gateways |
+| **4. Advanced** | 15–16 | Fine-tuning (LoRA/QLoRA), quantization, enterprise capstones |
 
-Optional tracks: [Agent Engineering](agent-engineering/index.md) · [Modern AI (2026)](ai-engineering-2026/index.md)
-
-[Full course list →](learn/index.md)
+Specialized tracks: [Agent Engineering](agent-engineering/index.md) · [Interview Prep & System Design](interview-prep/index.md) · [Modern AI (2026)](ai-engineering-2026/index.md)
 
 ---
 
-## Why this handbook?
+## 🤝 Contribute & Star
 
-| | Typical blog / course | This handbook |
-|---|----------------------|---------------|
-| **Structure** | Scattered posts | One sequential path, 16 courses |
-| **Depth** | Surface-level | Engineer-grade foundations + production |
-| **Agents** | Tutorial-only | Harness, MCP, multi-agent, evals |
-| **Cost** | Paywalled | Free, MIT, forever |
+If this open handbook helps you learn or ship AI systems, **[star the repository on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** to support open AI education.
 
----
+Improve a lesson, fix a link, or submit an exercise: [Contribute Guide](contribute.md) · [Roadmap](roadmap.md)
 
-## Contribute & star
-
-If this helps you learn or ship AI systems, **[star the repo on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** — it helps others find it.
-
-Improve a lesson, fix a link, or add an exercise: [Contribute](contribute.md) · [Roadmap](roadmap.md)
-
-[GitHub →](https://github.com/psssnikhil/ai-engineering-hub){ .md-button }

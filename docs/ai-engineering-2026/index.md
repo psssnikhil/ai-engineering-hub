@@ -1,73 +1,71 @@
 ---
-title: AI Engineering 2026
-description: Modern skills — Claude Code, agent skills, loop engineering, context engineering
+title: "Modern AI & IDE Agents (2026 Track)"
+description: "Master modern 2026 AI developer primitives: Claude Code, agent skills (SKILL.md), loop engineering, and context engineering."
 ---
 
-# AI Engineering in 2026
+# ⚡ AI Engineering in 2026: IDE Agents & Modern Primitives
 
-New primitives that didn't exist in the 2023 "just call the API" era. This section covers **skills you need now** — complementary to the core curriculum.
+Master modern AI developer primitives: Claude Code, agent skills (`SKILL.md`), rule systems (`AGENTS.md`), loop engineering, and context window optimization.
 
-## Who should read this section?
+<div class="lesson-meta">
+  <span class="badge badge--module">Track 03</span>
+  <span class="badge badge--advanced">🔥 Modern AI (2026)</span>
+  <span class="badge">⏱️ 4 Core Modules</span>
+</div>
 
-| Background | Start here |
-|------------|------------|
-| Finished courses 01–05 (foundations) | [Context Engineering](context-engineering.md) → [Loop Engineering](loop-engineering.md) |
-| Building agents (courses 07–08) | [Claude Code](claude-code.md) + [Skills & Rules](skills-and-rules.md) |
-| Production LLMOps (courses 12–13) | [Loop Engineering](loop-engineering.md) outer loop + [Agent Evals](../agent-engineering/07-agent-evals.md) |
+---
 
-These pages are **practitioner guides** — they connect 2026 tooling (Claude Code, Cursor skills, MCP) to the handbook's modules without replacing depth lessons in Foundations or Build.
+## 🏗️ 2026 IDE Agent Execution & Context Loop Architecture
 
 ```mermaid
-flowchart LR
-  CC[Claude Code] --> Loop[Loop engineering]
-  Skills[Skills & rules] --> Loop
-  Loop --> Harness[Harness]
-  Ctx[Context engineering] --> Harness
-  Harness --> Ship[Production agents]
+flowchart TD
+    classDef ctx fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef skills fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef loop fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+    classDef tool fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    subgraph ContextEngine["1. Dynamic Context Engine"]
+        RepoFiles["Workspace Codebase & AST"]:::ctx --> ContextAssembler["Context Engineering (Sub-files, Tree)"]:::ctx
+        UserPrompt["User Intent / Slash Command"]:::ctx --> ContextAssembler
+    end
+
+    subgraph SkillsRules["2. Agentic Instruction Layer"]
+        SkillFiles["SKILL.md (Modular Workflows)"]:::skills --> SkillRouter["Skill & Rule Routing Engine"]:::skills
+        AgentsRules["AGENTS.md (Global Constraints)"]:::skills --> SkillRouter
+        SkillRouter --> SystemContext["Injected Agent System Prompt"]:::skills
+    end
+
+    subgraph LoopEngine["3. Execution & Verification Loop"]
+        ContextAssembler & SystemContext --> InnerLoop["Inner ReAct Loop (Think -> Tool Call)"]:::loop
+        InnerLoop --> ToolExecution["Tool execution (Bash / File Edit / MCP)"]:::tool
+        ToolExecution --> Verification["Outer Loop (Linter / Build / Test Suite)"]:::loop
+        Verification -- Pass --> Success["Task Complete & Artifact Commit"]:::skills
+        Verification -- Fail --> InnerLoop
+    end
 ```
 
-## Topics in this section
+---
 
-| Topic | What you'll learn | Page |
-|-------|-------------------|------|
-| **Claude Code** | Agentic terminal coding, permissions, workflows | [Claude Code](claude-code.md) |
-| **Skills & rules** | SKILL.md, Cursor skills, persistent agent instructions | [Skills & Rules](skills-and-rules.md) |
-| **Loop engineering** | Inner/outer loops, /loop, scheduled agents, harness cycles | [Loop Engineering](loop-engineering.md) |
-| **Context engineering** | What goes in the window — the new prompt engineering | [Context Engineering](context-engineering.md) |
+## 📚 Practitioner Guides
 
-## How this fits the handbook
+| Topic | What You'll Learn | Page | Core Primitives |
+|-------|-------------------|------|-----------------|
+| ⚡ **Claude Code** | Agentic terminal coding, security permissions, autonomous workflows | [Claude Code](claude-code.md) | Terminal CLI, permission model, git tools |
+| 🛠️ **Skills & Rules** | `SKILL.md`, `AGENTS.md`, Cursor skills, persistent custom instructions | [Skills & Rules](skills-and-rules.md) | YAML frontmatter, trigger matching, instructions |
+| 🔄 **Loop Engineering** | Inner/outer loops, scheduled agents, harness execution cycles | [Loop Engineering](loop-engineering.md) | Subagent delegation, verification loops, timers |
+| 🧠 **Context Engineering** | What goes in the window — the modern prompt engineering | [Context Engineering](context-engineering.md) | Window packing, AST reduction, dynamic truncation |
 
-| 2026 skill | Handbook foundation |
+---
+
+## 🧩 2026 Skills vs. Core Handbook Mapping
+
+| 2026 Skill | Handbook Foundation |
 |------------|---------------------|
-| Claude Code | [Agent Engineering](../agent-engineering/index.md) → [Harness](../agent-engineering/04-harness-engineering.md) |
-| Skills files | [Course 11 · Prompts](../build/module-14-prompt-engineering-mastery/index.md) |
-| Loop engineering | [Agent Loop](../agent-engineering/01-agent-loop.md), [Course 08](../build/module-18-agent-harness-tools-runtime/index.md) |
-| Context engineering | [Course 02 · Tokens](../foundations/module-01-ai-engineering-essentials/lessons/03-tokens-and-costs.md), [Memory](../agent-engineering/02-memory.md) |
+| **Claude Code** | [Agent Engineering Track](../agent-engineering/index.md) → [Harness Engineering](../agent-engineering/04-harness-engineering.md) |
+| **Skills & Rules Files** | [Course 11 · Prompt Engineering](../build/module-14-prompt-engineering-mastery/index.md) |
+| **Loop Engineering** | [The Agent Loop](../agent-engineering/01-agent-loop.md), [Course 08 · Harness](../build/module-18-agent-harness-tools-runtime/index.md) |
+| **Context Engineering** | [Course 02 · Tokens & Costs](../foundations/module-01-ai-engineering-essentials/lessons/03-tokens-and-costs.md), [Memory Systems](../agent-engineering/02-memory.md) |
 
-## What's still evolving (2026)
+---
 
-| Trend | Status | Handbook coverage |
-|-------|--------|-------------------|
-| Reasoning models (o3, R1) | Production | [Course 05 · Reasoning models](../foundations/module-07-large-language-models-llms/lessons/11-reasoning-models-and-test-time-compute.md) |
-| MCP everywhere | Standardizing | [Course 08 · MCP](../build/module-18-agent-harness-tools-runtime/lessons/04-mcp-model-context-protocol.md) |
-| Computer use agents | Early production | Planned |
-| Agent skills marketplaces | Emerging | [Skills & Rules](skills-and-rules.md) |
-| Eval-driven development | Best practice | [Course 13 · Evals](../production/module-19-llm-evaluation-quality/index.md) |
-
-## How to study this section (2-week add-on)
-
-| Week | Focus | Pages | Hands-on |
-|------|-------|-------|----------|
-| **1** | Context + skills | [Context Engineering](context-engineering.md), [Skills & Rules](skills-and-rules.md) | Write a `CLAUDE.md` or `SKILL.md` for a repo you own |
-| **2** | Loops + tooling | [Claude Code](claude-code.md), [Loop Engineering](loop-engineering.md) | Run a local agent session; add one golden eval case |
-
-Pair with [Agent Engineering](../agent-engineering/index.md) for harness, memory, and orchestration depth.
-
-## OSS hubs to watch
-
-- [Awesome Harness Engineering](https://github.com/ai-boost/awesome-harness-engineering)
-- [Anthropic Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
-- [Cursor Skills](https://cursor.com/docs/context/skills) (ecosystem)
-- [Related papers](related-papers.md) — DeepSeek-R1, SWE-agent, DSPy, Lost in the Middle, and more
-
-**Start:** [Claude Code →](claude-code.md)
+👉 **Start Here:** [Claude Code & Terminal Agents](claude-code.md)

@@ -21,97 +21,101 @@ keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI 
 
 ---
 
-## Who are you?
+## 🎯 Choose Your Pathway
 
-| Persona | Background | Start with | Time to first app |
-|---------|------------|------------|-------------------|
-| **Complete beginner** | No CS / no Python | [Prerequisites](foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.md) → [01 GenAI Foundations](foundations/module-00-genai-foundations-from-nlp-to-transformers/index.md) → [02 AI Essentials](foundations/module-01-ai-engineering-essentials/index.md) | ~2 weeks part-time |
-| **Software engineer, new to AI** | Can code, never built with LLMs | [02 AI Engineering Essentials](foundations/module-01-ai-engineering-essentials/index.md) | ~3 days |
-| **ML engineer → LLM/agents** | Knows training, needs product stack | [05 Large Language Models](foundations/module-07-large-language-models-llms/index.md) or [06 RAG](build/module-09-rag-retrieval-augmented-generation/index.md) | ~1 week |
-| **Career switcher** | Changing into AI engineering | [Learn overview](learn/index.md) + [Build These First](projects/build-these.md) | 4–6 months part-time |
-
-Need a week-by-week schedule? See [Study Plans](learn/study-plans.md).
+<div class="persona-grid">
+  <div class="persona-card">
+    <div class="persona-card__icon">🌱</div>
+    <div class="persona-card__title">Complete Beginner</div>
+    <div class="persona-card__desc">No prior CS background or Python experience. Start with math, tokenization, and fundamental scripts.</div>
+    <a class="persona-card__cta" href="foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.md">Start Prerequisites →</a>
+  </div>
+  <div class="persona-card">
+    <div class="persona-card__icon">💻</div>
+    <div class="persona-card__title">Software Engineer</div>
+    <div class="persona-card__desc">Comfortable in Python / TS. Learn LLM APIs, function calling, RAG, and agent loops.</div>
+    <a class="persona-card__cta" href="foundations/module-01-ai-engineering-essentials/index.md">AI Essentials (02) →</a>
+  </div>
+  <div class="persona-card">
+    <div class="persona-card__icon">🧠</div>
+    <div class="persona-card__title">ML Engineer</div>
+    <div class="persona-card__desc">Know PyTorch and backprop. Jump into transformers, LLM serving, and fine-tuning.</div>
+    <a class="persona-card__cta" href="foundations/module-07-large-language-models-llms/index.md">LLM Deep Dive (05) →</a>
+  </div>
+  <div class="persona-card">
+    <div class="persona-card__icon">🚀</div>
+    <div class="persona-card__title">Agent Architect</div>
+    <div class="persona-card__desc">Ship autonomous loops, MCP servers, sandboxed tool runtimes, and multi-agent systems.</div>
+    <a class="persona-card__cta" href="agent-engineering/">Agent Track →</a>
+  </div>
+</div>
 
 ---
 
 ## I want to learn…
 
-### By goal
+### By Goal
 
 | I want to… | Read first | Then | Build |
 |------------|------------|------|-------|
-| **Understand how LLMs work** | [01](foundations/module-00-genai-foundations-from-nlp-to-transformers/index.md) → [04 Transformers](foundations/module-06-transformers-attention-mechanisms/index.md) → [05 LLMs](foundations/module-07-large-language-models-llms/index.md) | [Deep Dives](deep-dives/index.md) | [Course 04 exercises](foundations/module-06-transformers-attention-mechanisms/exercises/index.md) |
+| **Understand how LLMs work** | [01 GenAI](foundations/module-00-genai-foundations-from-nlp-to-transformers/index.md) → [04 Transformers](foundations/module-06-transformers-attention-mechanisms/index.md) → [05 LLMs](foundations/module-07-large-language-models-llms/index.md) | [Deep Dives](deep-dives/index.md) | [Course 04 exercises](foundations/module-06-transformers-attention-mechanisms/exercises/index.md) |
 | **Call LLM APIs in production** | [02 AI Essentials](foundations/module-01-ai-engineering-essentials/index.md) | [12 LLMOps](production/module-10-llmops-production-systems/index.md) | [Project 1: Doc Q&A bot](projects/build-these.md#1-doc-qa-bot-rag-starter) |
 | **Build RAG over my documents** | [06 RAG](build/module-09-rag-retrieval-augmented-generation/index.md) | [10 Vector DBs](build/module-13-vector-databases-deep-dive/index.md) | [Project 2: Enterprise RAG](projects/build-these.md#2-enterprise-rag-with-citations) |
 | **Build AI agents** | [Agent Engineering track](agent-engineering/index.md) or [07 AI Agents](build/module-11-ai-agents-fundamentals/index.md) | [08 Agent Harness](build/module-18-agent-harness-tools-runtime/index.md) | [Project 4: Tool-using agent](projects/build-these.md#4-tool-using-research-agent) |
 | **Ship multi-agent systems** | [09 Multi-Agent Systems](build/module-12-multi-agent-systems/index.md) | [13 LLM Evals](production/module-19-llm-evaluation-quality/index.md) | [Project 5: Multi-agent research](projects/build-these.md#5-multi-agent-research-system) |
-| **Fine-tune a model** | [15 Fine-Tuning](advanced/module-15-fine-tuning-custom-models/index.md) | [05 LLMs — fine-tuning lessons](foundations/module-07-large-language-models-llms/index.md) | [Project 8: Domain fine-tune](projects/build-these.md#8-domain-style-fine-tune) |
+| **Fine-tune a model** | [15 Fine-Tuning](advanced/module-15-fine-tuning-custom-models/index.md) | [05 LLMs](foundations/module-07-large-language-models-llms/index.md) | [Project 8: Domain fine-tune](projects/build-these.md#8-domain-style-fine-tune) |
 | **Evaluate & monitor LLM apps** | [13 LLM Evaluation](production/module-19-llm-evaluation-quality/index.md) | [Evals hub](evals-observability/index.md) | [Project 9: Eval suite](projects/build-these.md#9-ai-quality-eval-suite) |
-| **Use Claude Code / agentic IDE skills** | [Modern AI (2026)](ai-engineering-2026/index.md) | [Skills & Rules](ai-engineering-2026/skills-and-rules.md) | Custom skill for your repo |
-| **Get a job in AI engineering** | This page → [Learn](learn/index.md) | [Build These First](projects/build-these.md) (portfolio) | 3 projects + [16 Capstones](advanced/module-17-capstone-projects/index.md) |
-
-### By concept
-
-| Concept | Primary course | Hub / deep dive |
-|---------|----------------|-----------------|
-| Transformers | [04 Transformers & Attention](foundations/module-06-transformers-attention-mechanisms/index.md) | [Attention math](deep-dives/attention-math.md) |
-| Prompting | [11 Prompt Engineering](build/module-14-prompt-engineering-mastery/index.md) | [AI Essentials · Prompts](foundations/module-01-ai-engineering-essentials/lessons/04-prompt-engineering.md) |
-| RAG | [06 RAG](build/module-09-rag-retrieval-augmented-generation/index.md) | [Graph RAG](build/module-09-rag-retrieval-augmented-generation/lessons/11-graph-rag-and-knowledge-graphs.md) |
-| Agents | [07 AI Agents](build/module-11-ai-agents-fundamentals/index.md) | [Agentic AI hub](agentic-ai/index.md) |
-| MCP & tools | [08 Agent Harness](build/module-18-agent-harness-tools-runtime/index.md) | [Agent Engineering · Tools](agent-engineering/03-tools-and-mcp.md) |
-| Safety | [14 AI Safety](production/module-16-ai-safety-ethics/index.md) | [Prompt injection](production/module-16-ai-safety-ethics/lessons/04-prompt-injection-security.md) |
-
-Full index: [Topic Map](topic-map.md) · [Glossary](glossary.md)
+| **Use Claude Code / IDE skills** | [Modern AI (2026)](ai-engineering-2026/index.md) | [Skills & Rules](ai-engineering-2026/skills-and-rules.md) | Custom skill for your repo |
 
 ---
 
-## Prerequisite chains
+## 🔗 Prerequisite & Dependency Map
 
-??? info "Expand prerequisite diagram and course requirements"
+```mermaid
+flowchart TD
+    classDef foundation fill:#eef2ff,stroke:#6366f1,stroke-width:2px,color:#312e81;
+    classDef build fill:#f0fdf4,stroke:#10b981,stroke-width:2px,color:#064e3b;
+    classDef prod fill:#fff7ed,stroke:#f59e0b,stroke-width:2px,color:#78350f;
+    classDef adv fill:#fdf2f8,stroke:#f43f5e,stroke-width:2px,color:#881337;
 
-    Follow these before jumping ahead. Skipping steps causes confusion later.
+    subgraph Beginner["Beginner Entry"]
+        P["00 Prerequisites"]:::foundation --> C01["01 GenAI Foundations"]:::foundation
+        C01 --> C02["02 AI Essentials"]:::foundation
+    end
 
-    ```mermaid
-    flowchart TB
-      subgraph Beginner["Complete beginner"]
-        P[Prerequisites]
-        C01[01 GenAI Foundations]
-        C02[02 AI Essentials]
-        P --> C01 --> C02
-      end
-      subgraph SWE["Software engineer"]
-        C02b[02 AI Essentials]
-        C06[06 RAG]
-        C07[07 AI Agents]
-        C02b --> C06 --> C07
-      end
-      subgraph ML["ML engineer"]
-        C05[05 LLMs]
-        C06b[06 RAG]
-        C15[15 Fine-Tuning]
-        C05 --> C06b
-        C05 --> C15
-      end
-      C02 --> C06
-      C06 --> C07
-      C07 --> C08[08 Harness]
-      C08 --> C09[09 Multi-Agent]
-      C07 --> C13[13 Evals]
-      C06 --> C12[12 LLMOps]
-    ```
+    subgraph SWE["SWE Entry"]
+        C02 --> C06["06 RAG Systems"]:::build
+        C02 --> C11["11 Prompt Mastery"]:::build
+        C06 --> C07["07 AI Agents"]:::build
+    end
 
-    | Course | Requires | Self-check |
-    |--------|----------|------------|
-    | **01 GenAI Foundations** | Python basics, comfort with fractions/exponents | Can you run `pip install numpy` and write a function? |
-    | **02 AI Essentials** | Course 01 or equivalent SWE experience | Can you call a REST API in Python? |
-    | **03–04 Neural nets & transformers** | Course 01 math lessons, NumPy | Can you explain matrix multiply and softmax? |
-    | **05 LLMs** | Course 04 or transformer lessons in course 01 | Can you draw the transformer block? |
-    | **06 RAG** | Course 02 (APIs) + basic embeddings concept | Can you chunk text and call an embedding API? |
-    | **07 AI Agents** | Course 02 + course 06 recommended | Can you explain retrieve-then-generate? |
-    | **08 Agent Harness** | Course 07 agent loop | Can you implement a ReAct loop? |
-    | **09 Multi-Agent** | Courses 07 + 08 | Can you trace a multi-step agent run? |
-    | **15 Fine-Tuning** | Course 05 fine-tuning basics | Do you know LoRA vs full fine-tune? |
-    | **16 Capstones** | Courses 06 + 07 minimum | Have you built one RAG app and one agent? |
+    subgraph AgentProgression["Advanced Agent Architecture"]
+        C07 --> C08["08 Agent Harness"]:::build
+        C08 --> C09["09 Multi-Agent Systems"]:::build
+    end
+
+    subgraph ProductionProgression["Production LLMOps & Evals"]
+        C06 --> C10["10 Vector DBs"]:::build
+        C06 --> C12["12 LLMOps"]:::prod
+        C07 --> C13["13 LLM Evals"]:::prod
+        C12 --> C14["14 AI Safety"]:::prod
+        C14 --> C15["15 Fine-Tuning"]:::adv
+        C15 --> C16["16 Capstone Projects"]:::adv
+    end
+```
+
+| Course | Requires | Self-Check |
+|--------|----------|------------|
+| **01 GenAI Foundations** | Python basics, comfort with math | Can you write a Python function and handle lists/dicts? |
+| **02 AI Essentials** | Course 01 or SWE background | Can you call a REST API or SDK in Python? |
+| **03–04 Neural Nets & Transformers** | Course 01 math, NumPy | Can you explain matrix multiplication and softmax? |
+| **05 LLMs** | Course 04 | Can you sketch self-attention and transformer blocks? |
+| **06 RAG** | Course 02 (APIs) + embeddings | Can you chunk text and call an embedding API? |
+| **07 AI Agents** | Course 02 + Course 06 | Can you explain retrieve-then-generate? |
+| **08 Agent Harness** | Course 07 agent loop | Can you implement a basic ReAct loop? |
+| **09 Multi-Agent** | Courses 07 + 08 | Can you trace state passing between two agents? |
+| **15 Fine-Tuning** | Course 05 fine-tuning basics | Do you know LoRA vs full parameter fine-tuning? |
+| **16 Capstones** | Courses 06 + 07 minimum | Have you built at least one RAG and one agent app? |
 
 ---
 
