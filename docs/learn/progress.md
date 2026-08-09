@@ -92,6 +92,5 @@ Use this page to track your progress through the **AI Engineering Hub** curricul
 - [ ] [LoRA and PEFT](../advanced/module-15-fine-tuning-custom-models/lessons/05-lora-peft.md)
 
 ### 16. Capstone & Portfolio Projects
-- [ ] [Project 1: Document Q&A Bot](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/01-doc-qa-bot)
-- [ ] [Project 4: Autonomous Research Agent](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/04-research-agent)
-- [ ] [Project 9: AI Quality Evaluation Suite](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/09-eval-suite)
+- [ ] [Project 1: Enterprise RAG Assistant](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/enterprise_rag_system)
+- [ ] [Project 2: Autonomous Agent Platform](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/autonomous_agent_platform)

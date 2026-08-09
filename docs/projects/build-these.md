@@ -49,7 +49,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Retrieve top-k, inject into prompt
 - [ ] Show source snippets in UI
 
-**Working starter repository:** [`labs/projects/01-doc-qa-bot/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/01-doc-qa-bot) (Includes CLI + FastAPI server)
+**Working starter repository:** [`labs/projects/enterprise_rag_system/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/enterprise_rag_system) (Includes CLI + FastAPI server + LLM Judge Evals)
 
 **Stretch:** Add Streamlit or FastAPI frontend.
 
@@ -119,7 +119,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Structured final report (markdown)
 - [ ] Trace log of each step
 
-**Working starter repository:** [`labs/projects/04-research-agent/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/04-research-agent) (Includes tools & step tracer)
+**Working starter repository:** [`labs/projects/autonomous_agent_platform/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/autonomous_agent_platform) (Includes multi-provider gateway, tools & step tracer)
 
 **Capstone link:** [Capstone project 2 — Autonomous Coding Agent](../advanced/module-17-capstone-projects/lessons/03-autonomous-coding-agent.md) (adapt tools for research)
 
@@ -226,7 +226,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Regression test in CI
 - [ ] Dashboard or report for pass/fail trends
 
-**Working starter repository:** [`labs/projects/09-eval-suite/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/09-eval-suite) (Includes golden dataset & CI gate runner)
+**Working starter repository:** [`labs/projects/enterprise_rag_system/evaluator.py`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/enterprise_rag_system) (Includes automated LLM-as-a-Judge evaluation module)
 
 **Capstone link:** [Capstone project 9 — AI Safety Evaluation Suite](../advanced/module-17-capstone-projects/lessons/09-safety-evaluation-suite.md)
 

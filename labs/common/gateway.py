@@ -118,10 +118,7 @@ class AnthropicProvider(BaseProvider):
 
     def __init__(self, model: str = "claude-3-5-haiku-20241022", api_key: Optional[str] = None):
         super().__init__(name="Anthropic", model=model)
-        import anthropic
-
-        key = api_key or os.getenv("ANTHROPIC_API_KEY")
-        self.client = anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()
+        self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
 
     def generate(
         self,
@@ -130,6 +127,8 @@ class AnthropicProvider(BaseProvider):
         temperature: float = 0.0,
         max_tokens: int = 1000,
     ) -> ProviderResponse:
+        import anthropic
+        client = anthropic.Anthropic(api_key=self.api_key) if self.api_key else anthropic.Anthropic()
         # Format messages for Anthropic (separate system prompt)
         system_prompt = ""
         filtered_messages = []
@@ -148,7 +147,7 @@ class AnthropicProvider(BaseProvider):
         if system_prompt:
             kwargs["system"] = system_prompt.strip()
 
-        response = self.client.messages.create(**kwargs)
+        response = client.messages.create(**kwargs)
 
         text_content = ""
         for block in response.content:
