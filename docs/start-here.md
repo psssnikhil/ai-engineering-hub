@@ -13,6 +13,11 @@ description: Single entry point — pick your path, prerequisites, and first pro
 !!! tip "Quick setup"
     Need install commands only? See [Getting Started](getting-started.md#local-setup).
 
+!!! tip "Learning in Claude Code or Cursor?"
+    Clone this repo and **state your goal in chat** — tutor skills in `.claude/skills/` route
+    you through the handbook (paths, sessions, explanations). See
+    **[Learn with Tutor Skills](learn/using-tutor-skills.md)**.
+
 ---
 
 ## Who are you?

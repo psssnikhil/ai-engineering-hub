@@ -110,6 +110,23 @@ Loaded every Claude Code session — reduces repeated corrections.
 4. **Boundaries** — what the skill must not do
 5. **Links** — internal docs, runbooks
 
+## Learner tutor skills (this repo)
+
+This handbook ships **three learner-facing skills** in `.claude/skills/` — open the repo
+in Claude Code or Cursor and express your goal in chat:
+
+| Skill | Trigger (examples) | Output |
+|-------|-------------------|--------|
+| `learning-path-advisor` | "I want to learn RAG" / "Where should I start?" | Multi-week path with exact lesson links |
+| `ai-tutor` | "Explain attention" / "Quiz me on agents" | Socratic teaching from handbook lessons |
+| `study-session-coach` | "I have 2 hours — coach my session" | Time-boxed session with one artifact |
+
+Shared routing index: `.claude/references/handbook-routing.md` · Full guide:
+[Learn with Tutor Skills](../learn/using-tutor-skills.md)
+
+Author skills (contributors): `curriculum-content-writer`, `interview-question-writer`,
+`system-design-case-study-writer`.
+
 ## Handbook skill
 
 See the [Contribute](../contribute.md) guide if you want to add or improve a skill for your team.

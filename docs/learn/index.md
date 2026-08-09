@@ -39,6 +39,7 @@ Follow this order from top to bottom. Each course opens with a lesson list — w
 ## Quick links
 
 - [Start Here](../start-here.md) — pick a path by background
+- [Learn with Tutor Skills](using-tutor-skills.md) — Claude Code / Cursor skills that route by goal
 - [FAQ](../faq.md) — RAG vs fine-tune vs agents
 - [Build These First](../projects/build-these.md) — portfolio projects
 - [Topic Map](../topic-map.md) — find any concept
