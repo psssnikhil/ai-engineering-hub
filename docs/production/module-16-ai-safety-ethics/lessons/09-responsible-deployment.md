@@ -7,7 +7,7 @@ duration: 35 min
 difficulty: advanced
 has_code: false
 module: module-16
-youtube: 'https://www.youtube.com/watch?v=FnM6d7MqpHg'
+youtube: 'https://www.youtube.com/results?search_query=Responsible+Deployment+Practices'
 objectives:
   - Design a human-in-the-loop workflow for high-stakes AI decisions
   - Implement a gradual rollout strategy with safety gates

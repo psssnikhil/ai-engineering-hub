@@ -598,7 +598,7 @@ evaluator.add_test_suite("company_policy", [
 
 ## Resources
 
-- [YouTube: AI Red Teaming](https://www.youtube.com/watch?v=bRm_wCFpoOA) — Systematic AI testing
+- [Search on YouTube →](https://www.youtube.com/results?search_query=YouTube%3A+AI+Red+Teaming) — Systematic AI testing
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — Common LLM vulnerabilities
 - [Garak](https://github.com/NVIDIA/garak) — Open-source LLM vulnerability scanner
 

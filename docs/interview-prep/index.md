@@ -94,8 +94,8 @@ system design round specifically.
 
 | Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
 |---------------------|---------------------|------------|-------------|
-| **AI System Design Interview Guide** | Ex-FAANG System Design | Breakdown of 45-minute AI whiteboarding steps, SLAs, and capacity estimation | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
-| **vLLM & LLM Serving Deep Dive** | Woosuk Kwon (vLLM Lead) | High-throughput serving system design, PagedAttention, KV cache memory calculations | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
-| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Whiteboard decomposition of coding agents, repository context management, and ACI design | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **AI System Design Interview Guide** | Ex-FAANG System Design | Breakdown of 45-minute AI whiteboarding steps, SLAs, and capacity estimation | [Search on YouTube →](https://www.youtube.com/results?search_query=Ex-FAANG+System+Design+AI+System+Design+Interview+Guide) |
+| **vLLM & LLM Serving Deep Dive** | Woosuk Kwon (vLLM Lead) | High-throughput serving system design, PagedAttention, KV cache memory calculations | [Search on YouTube →](https://www.youtube.com/results?search_query=Woosuk+Kwon+%28vLLM+Lead%29+vLLM+%26+LLM+Serving+Deep+Dive) |
+| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Whiteboard decomposition of coding agents, repository context management, and ACI design | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-agent+%26+Coding+Agent+Architectures) |
 
 

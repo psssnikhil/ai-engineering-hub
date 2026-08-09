@@ -8,7 +8,7 @@ duration: 60 min
 difficulty: intermediate
 has_code: true
 module: module-05
-youtube: 'https://www.youtube.com/watch?v=pZEHXsizR7I'
+youtube: 'https://www.youtube.com/results?search_query=Training+Best+Practices+%26+Optimization'
 objectives:
   - Derive the correct variance for Xavier and He initialization
   - Implement cosine warmup and cyclical learning rate schedules

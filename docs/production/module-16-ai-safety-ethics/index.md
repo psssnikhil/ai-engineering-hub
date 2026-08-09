@@ -28,7 +28,7 @@ Understand the critical challenges of AI safety, bias, alignment, and responsibl
 
 | Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
 |-------------------|---------------------|------------|-------------|
-| **OWASP Top 10 for LLMs & Prompt Injection** | OWASP Foundation / Security Experts | Direct vs indirect prompt injection, jailbreaking vectors, and defensive guardrails | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **OWASP Top 10 for LLMs & Prompt Injection** | OWASP Foundation / Security Experts | Direct vs indirect prompt injection, jailbreaking vectors, and defensive guardrails | [Search on YouTube →](https://www.youtube.com/results?search_query=OWASP+Foundation+%2F+Security+Experts+OWASP+Top+10+for+LLMs+%26+Prompt+Injection) |
 | **Anthropic System Alignment & Constitutional AI** | Anthropic Research | RLAIF (RL from AI Feedback), red-teaming methodologies, and harmlessness alignment | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+Research+Anthropic+System+Alignment+%26+Constitutional+AI) |
-| **LLM Guardrails & Input Filtering in Action** | Llama Guard / NeMo Guardrails | Live demonstration of input sanitization, output filtering, and topic steering | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **LLM Guardrails & Input Filtering in Action** | Llama Guard / NeMo Guardrails | Live demonstration of input sanitization, output filtering, and topic steering | [Search on YouTube →](https://www.youtube.com/results?search_query=Llama+Guard+%2F+NeMo+Guardrails+LLM+Guardrails+%26+Input+Filtering+in+Action) |
 

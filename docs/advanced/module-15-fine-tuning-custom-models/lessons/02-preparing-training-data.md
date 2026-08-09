@@ -7,7 +7,7 @@ duration: 40 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=pW8B4SCkr0k'
+youtube: 'https://www.youtube.com/results?search_query=Preparing+Training+Data+for+Fine-Tuning'
 objectives:
   - Format training examples in the OpenAI conversational format
   - Implement data validation and quality checks

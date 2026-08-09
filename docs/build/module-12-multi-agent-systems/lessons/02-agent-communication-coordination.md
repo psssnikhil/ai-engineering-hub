@@ -7,7 +7,7 @@ duration: 40 min
 difficulty: intermediate
 has_code: false
 module: module-12
-youtube: 'https://www.youtube.com/watch?v=L4-Z0K77bgk'
+youtube: 'https://www.youtube.com/results?search_query=Agent+Communication+%26+Coordination'
 ---
 # Agent Communication & Coordination
 
@@ -602,7 +602,7 @@ You'll learn:
 
 ## 📚 Additional Resources
 
-- 📺 [Agent Communication Patterns](https://www.youtube.com/watch?v=L4-Z0K77bgk)
+- 📺 [Search on YouTube →](https://www.youtube.com/results?search_query=Agent+Communication+Patterns)
 - 📄 [LangGraph: Agent Communication](https://langchain-ai.github.io/langgraph/)
 - 💻 [CrewAI Communication Docs](https://docs.crewai.com/)
 - 📖 [AutoGen Message Passing](https://microsoft.github.io/autogen/docs/tutorial/introduction)

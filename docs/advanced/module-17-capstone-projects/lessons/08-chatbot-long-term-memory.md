@@ -571,7 +571,7 @@ def prune_old_memories(store: MemoryStore, max_memories: int = 100):
 
 ## Resources
 
-- [YouTube: AI Memory Systems](https://www.youtube.com/watch?v=6qSqSrJh0kA) — Building persistent memory for chatbots
+- [Search on YouTube →](https://www.youtube.com/results?search_query=YouTube%3A+AI+Memory+Systems) — Building persistent memory for chatbots
 - [MemGPT Paper](https://arxiv.org/abs/2310.08560) — Research on LLM memory management
 - [LangChain Memory](https://python.langchain.com/docs/concepts/memory/) — Framework memory patterns
 

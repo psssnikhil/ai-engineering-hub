@@ -40,7 +40,7 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 |------------------|---------|-------------|------|
 | **Functions, Tools, and Agents with LangChain** | DeepLearning.AI | Free course by Harrison Chase (LangChain Founder) on building tools, memory, and multi-agent systems. | [DeepLearning.AI Site](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) |
 | **AI Agent Design Patterns** | Andrew Ng | Masterclass explaining reflection, tool use, planning, and multi-agent collaboration design patterns. | [YouTube Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
-| **Building Code-Executing Agents** | Hugging Face | Deep dive into Smolagents and code execution vs JSON tool calling for real-world reliability. | [YouTube Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **Building Code-Executing Agents** | Hugging Face | Deep dive into Smolagents and code execution vs JSON tool calling for real-world reliability. | [Search on YouTube →](https://www.youtube.com/results?search_query=Hugging+Face+Building+Code-Executing+Agents) |
 
 ---
 

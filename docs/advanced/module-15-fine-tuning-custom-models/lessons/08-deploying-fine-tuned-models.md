@@ -7,7 +7,7 @@ duration: 45 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=080pyz_vTRo'
+youtube: 'https://www.youtube.com/results?search_query=Deploying+Fine-Tuned+Models'
 objectives:
   - Deploy a fine-tuned model with vLLM
   - Set up an API server for model inference

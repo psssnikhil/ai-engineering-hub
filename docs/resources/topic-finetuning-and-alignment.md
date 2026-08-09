@@ -40,7 +40,7 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 |------------------|---------|-------------|------|
 | **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Line-by-line breakdown and PyTorch matrix implementation of Low-Rank Adaptation and 4-bit NF4 quantization. | [YouTube Video](https://www.youtube.com/watch?net=123) |
 | **Fine-Tuning LLMs with Unsloth & TRL** | Sebastian Raschka | Step-by-step practical guide on fine-tuning open-weight models on custom dataset formatting. | [Search on YouTube →](https://www.youtube.com/results?search_query=Sebastian+Raschka+Fine-Tuning+LLMs+with+Unsloth+%26+TRL) |
-| **DPO vs PPO Alignment** | Cameron Wolfe | Deep dive video explaining mathematical foundations of Direct Preference Optimization vs PPO. | [YouTube Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **DPO vs PPO Alignment** | Cameron Wolfe | Deep dive video explaining mathematical foundations of Direct Preference Optimization vs PPO. | [Search on YouTube →](https://www.youtube.com/results?search_query=Cameron+Wolfe+DPO+vs+PPO+Alignment) |
 
 ---
 

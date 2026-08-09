@@ -7,7 +7,7 @@ duration: 55 min
 difficulty: intermediate
 has_code: true
 module: module-09
-youtube: 'https://www.youtube.com/watch?v=LxDvRsVp31c'
+youtube: 'https://www.youtube.com/results?search_query=Retrieval+Methods'
 ---
 
 # Retrieval Methods
@@ -478,7 +478,7 @@ In production RAG pipelines, retrieval engineering is an ongoing discipline:
 
 ## Further Reading
 
-- [Dense vs Sparse Retrieval Explained](https://www.youtube.com/watch?v=LxDvRsVp31c) — conceptual overview (20 min)
+- [Search on YouTube →](https://www.youtube.com/results?search_query=Dense+vs+Sparse+Retrieval+Explained) — conceptual overview (20 min)
 - [SBERT Documentation](https://www.sbert.net/) — sentence-transformer models including cross-encoders for reranking
 - [Pinecone: Retrieval Series](https://www.pinecone.io/learn/series/rag/) — articles on hybrid search and reranking
 - [BM25 Wikipedia](https://en.wikipedia.org/wiki/Okapi_BM25) — derivation and hyperparameter explanation

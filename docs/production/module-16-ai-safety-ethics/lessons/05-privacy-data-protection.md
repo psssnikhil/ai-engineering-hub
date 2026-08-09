@@ -7,7 +7,7 @@ duration: 35 min
 difficulty: intermediate
 has_code: false
 module: module-16
-youtube: 'https://www.youtube.com/watch?v=gv3zNHBCkiE'
+youtube: 'https://www.youtube.com/results?search_query=Privacy+and+Data+Protection+in+AI+Applications'
 objectives:
   - Identify PII in text data
   - Implement data anonymization for LLM inputs

@@ -7,7 +7,7 @@ duration: 50 min
 difficulty: intermediate
 has_code: true
 module: module-09
-youtube: 'https://www.youtube.com/watch?v=OujMiengFaE'
+youtube: 'https://www.youtube.com/results?search_query=Hybrid+Search'
 ---
 
 ## Prerequisites

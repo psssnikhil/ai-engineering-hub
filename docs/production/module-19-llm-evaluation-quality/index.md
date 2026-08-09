@@ -27,7 +27,7 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 
 | Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
 |-------------------|---------------------|------------|-------------|
-| **LLM-as-a-Judge & Eval Pipelines** | Hamel Husain / Eugene Yan | Building production evaluation suites, grading prompts, and human-in-the-loop validation | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
-| **Evaluating RAG & Agent Systems with TruLens** | Arize AI / TruLens | Measuring context relevance, groundedness, and hallucination rates in CI/CD | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
-| **Agent Trajectory Evals with Ragas & DeepEval** | Ragas / DeepEval | Evaluating multi-step tool calls, reasoning steps, and agent task completion | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **LLM-as-a-Judge & Eval Pipelines** | Hamel Husain / Eugene Yan | Building production evaluation suites, grading prompts, and human-in-the-loop validation | [Search on YouTube →](https://www.youtube.com/results?search_query=Hamel+Husain+%2F+Eugene+Yan+LLM-as-a-Judge+%26+Eval+Pipelines) |
+| **Evaluating RAG & Agent Systems with TruLens** | Arize AI / TruLens | Measuring context relevance, groundedness, and hallucination rates in CI/CD | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+TruLens+Evaluating+RAG+%26+Agent+Systems+with+TruLens) |
+| **Agent Trajectory Evals with Ragas & DeepEval** | Ragas / DeepEval | Evaluating multi-step tool calls, reasoning steps, and agent task completion | [Search on YouTube →](https://www.youtube.com/results?search_query=Ragas+%2F+DeepEval+Agent+Trajectory+Evals+with+Ragas+%26+DeepEval) |
 

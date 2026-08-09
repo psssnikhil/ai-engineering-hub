@@ -26,7 +26,7 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 |-----------------|---------------------|---------------------|-------------|
 | **DeepSeek-R1 & Reinforcement Learning Breakdown** | Andrej Karpathy | Deep technical breakdown of how pure RL incentivizes CoT reasoning, reward modeling, and distilled reasoning models. | [Watch Video](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
 | **DeepSeek-R1 PyTorch & GRPO Walkthrough** | Umar Jamil | Line-by-line derivation of Group Relative Policy Optimization (GRPO), rule-based rewards, and token reasoning traces. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+DeepSeek-R1+PyTorch+%26+GRPO+Walkthrough) |
-| **Process Reward Models & Tree of Thoughts** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Watch Video](https://www.youtube.com/watch?v=w65l4T2pndE) |
+| **Process Reward Models & Tree of Thoughts** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Search on YouTube →](https://www.youtube.com/results?search_query=Yannic+Kilcher+Process+Reward+Models+%26+Tree+of+Thoughts) |
 
 ---
 
@@ -45,8 +45,8 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
 |-----------------|---------------------|---------------------|-------------|
-| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
-| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
+| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-bench+%26+SWE-agent+Deep+Dive) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Search on YouTube →](https://www.youtube.com/results?search_query=Paul+Gauthier+%28Aider+Creator%29+Aider+%26+Repository+Context+Engineering) |
 | **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for real-world software engineering agents. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 
 ---
@@ -68,7 +68,7 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 |---------------------|----------------|-------------------|-------------|
 | **Building & Evaluating Advanced RAG** | Jerry Liu (LlamaIndex) / DeepLearning.AI | Hands-on video training on sentence-window retrieval, auto-merging indexers, and reranking. | [Free Course](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) |
 | **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers. | [Search on YouTube →](https://www.youtube.com/results?search_query=James+Briggs+Vector+Search+%26+Hybrid+BM25+Retrieval) |
-| **RAG Triad & Evaluation Metrics** | Arize AI / TruLens | Video walkthrough explaining Context Relevance, Groundedness, and Answer Relevance scoring. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+| **RAG Triad & Evaluation Metrics** | Arize AI / TruLens | Video walkthrough explaining Context Relevance, Groundedness, and Answer Relevance scoring. | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+TruLens+RAG+Triad+%26+Evaluation+Metrics) |
 
 ---
 
@@ -85,6 +85,6 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Lecture | Presenter / Host | Engineering Focus | Direct Link |
 |-----------------|------------------|-------------------|-------------|
-| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
+| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Search on YouTube →](https://www.youtube.com/results?search_query=Woosuk+Kwon+%28vLLM+Lead%29+vLLM%3A+PagedAttention+%26+Virtual+Memory+Management) |
 | **Full Stack LLM Bootcamp** | FSDL (Full Stack Deep Learning) | Comprehensive lecture series covering LLM application stack, prompt engineering, cost optimization, and evals. | [Course Site](https://fullstackdeeplearning.com/) |
 | **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+Phoenix+OpenTelemetry+%26+LLM+Observability) |

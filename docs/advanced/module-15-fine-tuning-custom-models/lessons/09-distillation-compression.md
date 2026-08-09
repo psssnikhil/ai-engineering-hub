@@ -7,7 +7,7 @@ duration: 40 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=SYB1FaFcxbE'
+youtube: 'https://www.youtube.com/results?search_query=Model+Distillation+and+Compression'
 objectives:
   - Explain the knowledge distillation process
   - Generate distillation training data from a teacher model

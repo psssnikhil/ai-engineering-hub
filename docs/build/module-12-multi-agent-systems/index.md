@@ -29,6 +29,6 @@ Learn to build systems where multiple AI agents collaborate, communicate, and co
 | Video / Workshop | Creator / Presenter | Focus Area | Direct Link |
 |------------------|---------------------|------------|-------------|
 | **Multi-Agent Systems & LangGraph** | Harrison Chase / DeepLearning.AI | Hierarchical subgraphs, state handoffs, supervisor pattern, and parallel agent execution | [Free Course](https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/) |
-| **AutoGen & Multi-Agent Collaboration** | Microsoft Research | Conversational patterns, agent handoffs, consensus loops, and multi-agent code execution | [Watch Video](https://www.youtube.com/watch?v=v8-nO0b2_Ew) |
+| **AutoGen & Multi-Agent Collaboration** | Microsoft Research | Conversational patterns, agent handoffs, consensus loops, and multi-agent code execution | [Search on YouTube →](https://www.youtube.com/results?search_query=Microsoft+Research+AutoGen+%26+Multi-Agent+Collaboration) |
 | **CrewAI Multi-Agent Workflows** | Joao Moura (CrewAI) | Designing autonomous agent roles, task delegation, hierarchical crews, and shared memory | [Watch Video](https://www.youtube.com/watch?v=sPzc6hMg7So) |
 

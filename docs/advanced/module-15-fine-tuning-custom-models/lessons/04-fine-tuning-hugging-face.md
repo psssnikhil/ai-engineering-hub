@@ -7,7 +7,7 @@ duration: 50 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=Q9zv369Elqk'
+youtube: 'https://www.youtube.com/results?search_query=Fine-Tuning+Open-Source+Models+with+Hugging+Face'
 objectives:
   - Set up a Hugging Face fine-tuning environment
   - Load and prepare a model for training with PEFT

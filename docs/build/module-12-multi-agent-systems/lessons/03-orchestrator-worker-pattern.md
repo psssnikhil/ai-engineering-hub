@@ -7,7 +7,7 @@ duration: 45 min
 difficulty: intermediate
 has_code: false
 module: module-12
-youtube: 'https://www.youtube.com/watch?v=cJOxQqZQ7AE'
+youtube: 'https://www.youtube.com/results?search_query=Orchestrator-Worker+Pattern'
 ---
 # Orchestrator-Worker Pattern
 

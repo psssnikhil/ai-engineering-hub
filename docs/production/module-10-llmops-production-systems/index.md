@@ -35,7 +35,7 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 
 | Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
 |-------------------|---------------------|------------|-------------|
-| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of KV cache virtual memory management on GPUs | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
+| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of KV cache virtual memory management on GPUs | [Search on YouTube →](https://www.youtube.com/results?search_query=Woosuk+Kwon+%28vLLM+Lead%29+vLLM%3A+PagedAttention+%26+Virtual+Memory+Management) |
 | **Full Stack LLM Bootcamp** | FSDL (Full Stack Deep Learning) | Comprehensive lecture series covering LLM application stack, prompt versioning, and cost tuning | [Course Site](https://fullstackdeeplearning.com/) |
-| **Ollama & Local LLM Serving** | Ollama Team / Tech Walkthrough | Running, quantizing, and configuring open weights LLMs locally on Apple Silicon and GPU clusters | [Watch Video](https://www.youtube.com/watch?v=oxM962ZplgA) |
+| **Ollama & Local LLM Serving** | Ollama Team / Tech Walkthrough | Running, quantizing, and configuring open weights LLMs locally on Apple Silicon and GPU clusters | [Search on YouTube →](https://www.youtube.com/results?search_query=Ollama+Team+%2F+Tech+Walkthrough+Ollama+%26+Local+LLM+Serving) |
 

@@ -7,7 +7,7 @@ duration: 35 min
 difficulty: intermediate
 has_code: false
 module: module-12
-youtube: 'https://www.youtube.com/watch?v=KSjX4PfW2_8'
+youtube: 'https://www.youtube.com/results?search_query=Introduction+to+Multi-Agent+Systems'
 ---
 # Introduction to Multi-Agent Systems
 
@@ -371,7 +371,7 @@ You'll learn:
 ## 📚 Additional Resources
 
 - 📺 [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
-- 📺 [Multi-Agent Systems Explained](https://www.youtube.com/watch?v=KSjX4PfW2_8)
+- 📺 [Search on YouTube →](https://www.youtube.com/results?search_query=Multi-Agent+Systems+Explained)
 - 📄 [AutoGen: Microsoft's Multi-Agent Framework](https://microsoft.github.io/autogen/)
 - 💻 [CrewAI: Multi-Agent Orchestration](https://www.crewai.io/)
 

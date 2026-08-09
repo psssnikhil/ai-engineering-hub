@@ -7,7 +7,7 @@ duration: 45 min
 difficulty: intermediate
 has_code: true
 module: module-06
-youtube: 'https://www.youtube.com/watch?v=XfpMkf4rD6E'
+youtube: 'https://www.youtube.com/results?search_query=Introduction+to+Attention+Mechanisms'
 objectives:
   - Explain the bottleneck problem in RNN encoder-decoder models
   - Derive attention weights from similarity scores
@@ -515,7 +515,7 @@ In both cases the formula is identical: `Attention(Q, K, V) = softmax(QK^T / √
 
 ## 📹 Recommended Videos
 
-- [StatQuest: Attention for Neural Networks](https://www.youtube.com/watch?v=XfpMkf4rD6E) — Clear step-by-step walkthrough
+- [Search on YouTube →](https://www.youtube.com/results?search_query=StatQuest%3A+Attention+for+Neural+Networks) — Clear step-by-step walkthrough
 - [3Blue1Brown: Attention in Transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc) — Visual geometric intuition
 - [Yannic Kilcher: Attention Is All You Need](https://www.youtube.com/watch?v=iDulhoQ2pro) — Deep paper walkthrough
 

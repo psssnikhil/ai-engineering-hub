@@ -359,7 +359,7 @@ Understanding sequential model limitations helps you reason about production sys
 - [Jay Alammar: Visualizing A Neural Machine Translation Model](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) — the sequence-to-sequence paper that first introduced attention, the direct predecessor of self-attention
 - [Christopher Olah: Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) — the clearest explanation of LSTM mechanics, with excellent diagrams
 - [Peters et al. (2018): Deep Contextualized Word Representations (ELMo)](https://arxiv.org/abs/1802.05365) — the original ELMo paper
-- [Stanford CS224N Lecture: RNNs and Language Models](https://www.youtube.com/watch?v=PLryWeHPcBs) — comprehensive lecture covering the full sequential model lineage
+- [Search on YouTube →](https://www.youtube.com/results?search_query=Stanford+CS224N+Lecture%3A+RNNs+and+Language+Models) — comprehensive lecture covering the full sequential model lineage
 
 ---
 

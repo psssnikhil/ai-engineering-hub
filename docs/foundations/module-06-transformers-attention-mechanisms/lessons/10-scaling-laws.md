@@ -7,7 +7,7 @@ duration: 60 min
 difficulty: advanced
 has_code: true
 module: module-06
-youtube: 'https://www.youtube.com/watch?v=WGMNlKba5qI'
+youtube: 'https://www.youtube.com/results?search_query=Scaling+Laws+%26+Efficient+Transformers'
 objectives:
   - Explain Kaplan and Chinchilla scaling laws and their practical implications
   - Describe Flash Attention's tiling strategy and why it saves memory

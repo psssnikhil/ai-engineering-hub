@@ -7,7 +7,7 @@ duration: 120 min
 difficulty: advanced
 has_code: true
 module: module-17
-youtube: 'https://www.youtube.com/watch?v=K1SFgs6sFQo'
+youtube: 'https://www.youtube.com/results?search_query=Project+4%3A+AI-Powered+Content+Platform'
 objectives:
   - Build an AI content generation pipeline with tone and style controls
   - Implement SEO optimization suggestions using structured output

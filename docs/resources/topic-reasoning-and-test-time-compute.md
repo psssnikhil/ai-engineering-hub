@@ -41,7 +41,7 @@ Curated collection of landmark research papers, open-source repositories, YouTub
 |------------------|---------|-------------|------|
 | **DeepSeek-R1 & Reinforcement Learning Breakthrough** | Andrej Karpathy | Deep technical breakdown of how pure RL incentivizes CoT reasoning, reward modeling, and distilled reasoning models. | [Watch Video](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
 | **DeepSeek-R1 Paper Walkthrough & PyTorch Code** | Umar Jamil | Line-by-line derivation of Group Relative Policy Optimization (GRPO), rule-based rewards, and token reasoning traces. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+DeepSeek-R1+Paper+Walkthrough+%26+PyTorch+Code) |
-| **Process Reward Models & Tree of Thoughts Explanation** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Watch Video](https://www.youtube.com/watch?v=w65l4T2pndE) |
+| **Process Reward Models & Tree of Thoughts Explanation** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Search on YouTube →](https://www.youtube.com/results?search_query=Yannic+Kilcher+Process+Reward+Models+%26+Tree+of+Thoughts+Explanation) |
 | **Reasoning & Test-Time Compute Scaling Masterclass** | DeepLearning.AI | Masterclass explaining test-time compute tradeoffs, search strategies, and reward model architecture. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 
 ---

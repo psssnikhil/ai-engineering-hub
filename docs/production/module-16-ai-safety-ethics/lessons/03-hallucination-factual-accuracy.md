@@ -7,7 +7,7 @@ duration: 40 min
 difficulty: intermediate
 has_code: false
 module: module-16
-youtube: 'https://www.youtube.com/watch?v=HQn1QKQYyJA'
+youtube: 'https://www.youtube.com/results?search_query=Hallucination+and+Factual+Accuracy'
 objectives:
   - Explain why LLMs hallucinate
   - Implement hallucination detection techniques

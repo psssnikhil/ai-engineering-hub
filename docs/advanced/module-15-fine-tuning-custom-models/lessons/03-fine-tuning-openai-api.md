@@ -7,7 +7,7 @@ duration: 45 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=NRVaRXDoI88'
+youtube: 'https://www.youtube.com/results?search_query=Fine-Tuning+with+the+OpenAI+API'
 objectives:
   - Upload a training file to OpenAI
   - Create and monitor a fine-tuning job

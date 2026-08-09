@@ -569,7 +569,7 @@ def submit_batch_job(files: list[tuple[str, str]]) -> str:
 ## Resources
 
 - [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) — Schema-enforced extraction
-- [YouTube: Document AI](https://www.youtube.com/watch?v=xEPX9Hkm5CQ) — Building document processing systems
+- [Search on YouTube →](https://www.youtube.com/results?search_query=YouTube%3A+Document+AI) — Building document processing systems
 - [Instructor Library](https://github.com/jxnl/instructor) — Structured extraction from LLMs
 
 ---

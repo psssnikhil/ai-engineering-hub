@@ -8,7 +8,7 @@ duration: 40 min
 difficulty: advanced
 has_code: false
 module: module-16
-youtube: 'https://www.youtube.com/watch?v=bRm_wCFpoOA'
+youtube: 'https://www.youtube.com/results?search_query=Red+Teaming+and+Adversarial+Testing+for+AI'
 objectives:
   - Design a red teaming plan for an LLM application
   - Craft adversarial test cases for common failure modes

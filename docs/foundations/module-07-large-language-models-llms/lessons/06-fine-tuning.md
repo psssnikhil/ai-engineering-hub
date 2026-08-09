@@ -7,7 +7,7 @@ duration: 65 min
 difficulty: advanced
 has_code: true
 module: module-07
-youtube: 'https://www.youtube.com/watch?v=eC6vEkmqWMA'
+youtube: 'https://www.youtube.com/results?search_query=Fine-Tuning+Techniques'
 objectives:
   - Explain when fine-tuning outperforms prompting
   - Implement full fine-tuning with HuggingFace Trainer

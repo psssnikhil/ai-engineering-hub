@@ -8,7 +8,7 @@ duration: 45 min
 difficulty: advanced
 has_code: false
 module: module-16
-youtube: 'https://www.youtube.com/watch?v=jGMsZoT7MiI'
+youtube: 'https://www.youtube.com/results?search_query=AI+Safety+Audit+%E2%80%94+Putting+It+All+Together'
 objectives:
   - Conduct a bias evaluation on an AI system
   - Run a security assessment for prompt injection and data leakage

@@ -7,7 +7,7 @@ duration: 40 min
 difficulty: advanced
 has_code: false
 module: module-15
-youtube: 'https://www.youtube.com/watch?v=IEVnfrFe2s0'
+youtube: 'https://www.youtube.com/results?search_query=Evaluation+and+Benchmarking+Fine-Tuned+Models'
 objectives:
   - Design an evaluation suite for fine-tuned models
   - 'Implement automated metrics (BLEU, ROUGE, exact match)'

@@ -240,7 +240,7 @@ curl -X POST http://localhost:8000/query \
 ## Resources
 
 - [FastAPI Documentation](https://fastapi.tiangolo.com/) -- API framework
-- [YouTube: Deploying AI Apps](https://www.youtube.com/watch?v=iMZY7x2MSYY) -- End-to-end deployment walkthrough
+- [Search on YouTube →](https://www.youtube.com/results?search_query=YouTube%3A+Deploying+AI+Apps) -- End-to-end deployment walkthrough
 - [Docker Documentation](https://docs.docker.com/get-started/) -- Container basics
 - [Railway](https://railway.app/) -- Simple cloud deployment platform
 
