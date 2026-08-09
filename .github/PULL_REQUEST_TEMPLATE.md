@@ -1,43 +1,45 @@
-## Summary
+## 📌 PR Summary & Context
 
 <!-- Provide a brief, high-level summary of what this PR introduces or fixes. -->
 
-| Type of Change | Check |
-|----------------|:-----:|
-| 📖 Curriculum / Handbook Lesson | [ ] |
-| 🧪 New Executable Lab Notebook | [ ] |
-| 🤖 Agent Skill / Rule Update | [ ] |
-| 💼 Interview Prep / Case Study | [ ] |
-| 🛠 Tooling / Script / CI/CD Fix | [ ] |
+- **Related Issue**: Fixes # <!-- e.g. #8 -->
+- **Type of Change**:
+  - [ ] 📖 Curriculum / Handbook Lesson
+  - [ ] 🧪 New Executable Lab Notebook
+  - [ ] 🤖 Agent Skill / Rule Update
+  - [ ] 💼 Interview Prep / Case Study
+  - [ ] 🛠 Tooling / Script / CI/CD Fix
 
 ---
 
-## What Changes Were Made?
+## 🤖 AI Agent Pre-Flight Checklist
 
-<!-- Bulleted list of specific changes, new files added, or modifications made. -->
-- 
+> **If this PR was generated or assisted by an AI agent (Claude Code, Cursor, Antigravity, Windsurf, Aider, etc.), the following rules MUST be verified before opening:**
+
+- [ ] **Nav Sync**: Updated `curriculum.yml` and ran `npm run sync-nav` (did **NOT** manually edit `nav:` block in `mkdocs.yml`).
+- [ ] **Strict Build**: Ran `npm run build:docs` (`mkdocs build --strict`) with **0 errors, warnings, or broken links**.
+- [ ] **Code Labs Quality**: If editing/adding notebooks in `labs/`, verified zero framework bloat, explicit error handling/fallbacks, and saved cell outputs.
+- [ ] **LaTeX Math**: Preserved standard math delimiters (`\( ... \)` for inline, `\[ ... \]` for block).
+- [ ] **Secrets & Security**: Verified **no API keys, tokens, or raw secrets** are committed.
 
 ---
 
-## Test Plan & Verification
+## 👤 Human Contributor Checklist
 
-Please ensure all appropriate verification checks pass before requesting review:
+- [ ] I have read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) and content guidelines in `maintainers/DEPTH_STANDARDS.md`.
+- [ ] My changes are focused, clear, and accurately documented.
+- [ ] All internal markdown file links use standard github-style links and resolve cleanly.
+- [ ] I have tested code snippets locally to ensure they execute without errors.
 
-- [ ] `npm run sync-nav` — Synced navigation (`curriculum.yml` → `mkdocs.yml`)
-- [ ] `mkdocs build --strict` — Site builds locally with **0 errors or broken links**
-- [ ] `node scripts/verify-site-links.mjs` — All internal and external links verified
-- [ ] Runnable code / notebook verified without errors (if applicable)
+---
+
+## 🧪 Verification Log Output
+
+Paste terminal output from `npm run build:docs` below to prove validation:
 
 ```bash
-# Verification commands run locally:
-npm run sync-nav
-mkdocs build --strict
+# Example output from npm run build:docs:
+# INFO - Building documentation to directory: .../site
+# INFO - Documentation built in 4.25 seconds
+# OK: 6 required pages, no internal .md hrefs
 ```
-
----
-
-## Checklist
-
-- [ ] Follows the handbook's [DEPTH_STANDARDS.md](maintainers/DEPTH_STANDARDS.md) content bar.
-- [ ] Preserves LaTeX math syntax (`\( ... \)` for inline, `\[ ... \]` for block).
-- [ ] No raw secret keys committed.

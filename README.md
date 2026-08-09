@@ -85,6 +85,16 @@ Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your browser.
 
 ---
 
+## 🤝 Contributing
+
+We welcome contributions of all kinds! Whether you are fixing typos, improving explanations, adding executable labs, submitting system design case studies, or building new AI tutor skills — your contributions help make this handbook better for learners worldwide.
+
+- 📖 **[Contribution Guide](docs/contribute.md)** — How to fix lessons, add exercises, and expand the curriculum.
+- 🛠️ **[Full Guidelines](.github/CONTRIBUTING.md)** — Content standards, code fence rules, and PR checklist.
+- 💡 **[Open Issues](https://github.com/psssnikhil/ai-engineering-hub/issues)** — Report gaps or find good first issues to tackle.
+
+---
+
 ## 🤝 1:1 Mentorship & Enterprise AI Consulting
 
 Looking for personalized 1:1 mentorship or enterprise AI consulting from **Nikhil Pentapalli**?
