@@ -131,14 +131,12 @@ resources:
       - { title: "AI Agents & Harnesses", path: resources/topic-agents-and-harnesses.md }
       - { title: "LLMOps & Serving", path: resources/topic-llmops-evals-serving.md }
       - { title: "Fine-Tuning & Alignment", path: resources/topic-finetuning-and-alignment.md }
-  - { title: "Essential Papers", path: resources/essential-papers.md }
-  - { title: "Essential Videos", path: resources/essential-videos.md }
+  - { title: "Research Papers Catalog", path: resources/papers.md }
+  - { title: "Video & Lecture Catalog", path: resources/videos.md }
   - { title: "Tools & Frameworks Index", path: resources/tools-and-libraries.md }
   - { title: "Technical Blogs & Architecture Guides", path: resources/blogs-and-guides.md }
   - { title: "Courses & Communities", path: resources/courses-and-communities.md }
   - { title: "Open Source Hubs", path: resources/open-source-hubs.md }
-  - { title: "Complete Papers Catalog", path: resources/papers.md }
-  - { title: "Complete Video Catalog", path: resources/videos.md }
 
 
 projects:

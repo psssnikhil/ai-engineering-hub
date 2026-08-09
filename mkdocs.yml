@@ -150,14 +150,12 @@ nav:
           - "AI Agents & Harnesses": resources/topic-agents-and-harnesses.md
           - "LLMOps & Serving": resources/topic-llmops-evals-serving.md
           - "Fine-Tuning & Alignment": resources/topic-finetuning-and-alignment.md
-      - Essential Papers: resources/essential-papers.md
-      - Essential Videos: resources/essential-videos.md
+      - Research Papers Catalog: resources/papers.md
+      - "Video & Lecture Catalog": resources/videos.md
       - "Tools & Frameworks Index": resources/tools-and-libraries.md
       - "Technical Blogs & Architecture Guides": resources/blogs-and-guides.md
       - "Courses & Communities": resources/courses-and-communities.md
       - Open Source Hubs: resources/open-source-hubs.md
-      - Complete Papers Catalog: resources/papers.md
-      - Complete Video Catalog: resources/videos.md
   - Reference:
       - Roadmap: roadmap.md
       - Getting Started: getting-started.md
