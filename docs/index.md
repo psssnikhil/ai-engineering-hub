@@ -2,6 +2,8 @@
 title: "AI Engineering Hub — Free Open Source AI Engineering Course & Roadmap"
 description: "Master AI Engineering from ground zero to production: Transformers, RAG, Autonomous AI Agents, LLMOps, Evals, and Fine-Tuning. Free open-source curriculum."
 keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuning, transformers, LLM evaluation, open source AI curriculum"
+hide:
+  - navigation
 ---
 
 <script type="application/ld+json">

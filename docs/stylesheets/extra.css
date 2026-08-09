@@ -103,6 +103,20 @@
   .md-content { max-width: 1040px; }
 }
 
+/* Pages that hide the primary sidebar (e.g. the homepage, via the
+   `hide: [navigation]` frontmatter) free up that column's width —
+   let content actually expand into it instead of staying pinned to
+   the same max-width and leaving a dead gap where the sidebar was. */
+.md-sidebar--primary[hidden] ~ .md-content {
+  max-width: 1180px;
+}
+
+@media screen and (min-width: 1600px) {
+  .md-sidebar--primary[hidden] ~ .md-content {
+    max-width: 1280px;
+  }
+}
+
 body {
   font-family: var(--aie-font-sans);
   text-rendering: optimizeLegibility;
