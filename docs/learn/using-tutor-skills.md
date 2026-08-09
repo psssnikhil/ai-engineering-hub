@@ -33,21 +33,27 @@ from handbook content.
 
 ---
 
-## Three learner skills
+## Learner & Tutor Skills
 
 | Skill | You say… | You get… |
 |-------|----------|----------|
+| **repo-onboarding** | "What is this repo?" / "Show me around" / "Onboard me" | Complete interactive tour of repo structure, learning paths, labs, and skills |
 | **learning-path-advisor** | "I want to learn …" / "Where should I start?" / "Help me get a job" | Multi-week path with exact `docs/` links, prerequisites, and a build project |
 | **ai-tutor** | "Explain …" / "I don't understand …" / "Quiz me on …" | Socratic explanation grounded in handbook lessons + links to go deeper |
 | **study-session-coach** | "I have 2 hours" / "Coach my session" / "Plan my week" | Time-boxed plan: which file to open, what artifact to produce, end-of-session check |
+| **mock-interviewer** | "Interview me on RAG system design" | 45-minute whiteboard mock interview with follow-up questions & scoring |
+| **lab-verifier** | "Review my lab code" / "Is my RAG code correct?" | Automated grading, code quality verification, and edge-case feedback |
 
 Skills live in:
 
 ```text
 .claude/skills/
+  repo-onboarding/SKILL.md
   learning-path-advisor/SKILL.md
   ai-tutor/SKILL.md
   study-session-coach/SKILL.md
+  mock-interviewer/SKILL.md
+  lab-verifier/SKILL.md
   references/handbook-routing.md   ← shared routing index
 ```
 
