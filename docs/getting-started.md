@@ -4,7 +4,7 @@ title: Getting Started
 
 # Getting Started
 
-Welcome to the **AI Engineering Handbook** — free, open-source, and built for engineers who ship.
+Welcome to the **AI Engineering Hub** — free, open-source, and built for engineers who ship.
 
 !!! tip "Not sure where to begin?"
     **[Start Here](start-here.md)** — persona routing, prerequisites, goal tables, first project.  
@@ -67,8 +67,8 @@ Optional tracks at the bottom of **Learn**: [Agent Engineering](agent-engineerin
 ## Local setup
 
 ```bash
-git clone https://github.com/psssnikhil/ai-engineering-handbook.git
-cd ai-engineering-handbook
+git clone https://github.com/psssnikhil/ai-engineering-hub.git
+cd ai-engineering-hub
 pip install -r requirements.txt
 npm install
 mkdocs serve   # http://127.0.0.1:8000
@@ -120,6 +120,6 @@ Full list: [Open Source Hubs](resources/open-source-hubs.md)
 
 ## Contribute
 
-Found a gap? [Roadmap](roadmap.md) · [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/ai-engineering-handbook/issues)
+Found a gap? [Roadmap](roadmap.md) · [Contribute](contribute.md) · [GitHub Issues](https://github.com/psssnikhil/ai-engineering-hub/issues)
 
-If the handbook helps you — **[star the repo](https://github.com/psssnikhil/ai-engineering-handbook)**.
+If the handbook helps you — **[star the repo](https://github.com/psssnikhil/ai-engineering-hub)**.

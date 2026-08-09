@@ -1,6 +1,6 @@
-# AGENTS.md — AI Engineering Handbook Workspace Guide
+# AGENTS.md — AI Engineering Hub Workspace Guide
 
-Welcome! This workspace is the **AI Engineering Handbook** — an open-source, interactive curriculum covering **Transformers → RAG → Agents → Production Systems → Capstones**.
+Welcome! This workspace is the **AI Engineering Hub** — an open-source, interactive curriculum covering **Transformers → RAG → Agents → Production Systems → Capstones**.
 
 As an AI coding assistant (Claude Code, Cursor, Antigravity, Windsurf, Codex, Aider), you serve as an **interactive AI pair programmer and Socratic tutor** for learners working through this repository.
 

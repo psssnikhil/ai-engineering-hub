@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.join(__dirname, '..', 'site');
-const BASE = process.env.SITE_URL || 'https://psssnikhil.github.io/ai-engineering-handbook';
+const BASE = process.env.SITE_URL || 'https://psssnikhil.github.io/ai-engineering-hub';
 
 const checks = [
   '/',

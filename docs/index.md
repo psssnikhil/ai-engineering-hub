@@ -1,5 +1,5 @@
 ---
-title: "AI Engineering Handbook — Free Open Source AI Engineering Course & Roadmap"
+title: "AI Engineering Hub — Free Open Source AI Engineering Course & Roadmap"
 description: "Master AI Engineering from ground zero to production: Transformers, RAG, Autonomous AI Agents, LLMOps, Evals, and Fine-Tuning. Free open-source curriculum."
 keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuning, transformers, LLM evaluation, open source AI curriculum"
 ---
@@ -8,12 +8,12 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "AI Engineering Handbook",
+  "name": "AI Engineering Hub",
   "description": "The free, open-source path from transformers to production AI — RAG, agents, harnesses, evals, and LLMOps.",
   "provider": {
     "@type": "Organization",
-    "name": "AI Engineering Handbook Contributors",
-    "sameAs": "https://github.com/psssnikhil/ai-engineering-handbook"
+    "name": "AI Engineering Hub Contributors",
+    "sameAs": "https://github.com/psssnikhil/ai-engineering-hub"
   },
   "educationalCredentialAwarded": "Open Source AI Engineering Mastery",
   "hasCourseInstance": {
@@ -24,7 +24,7 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 }
 </script>
 
-# AI Engineering Handbook
+# AI Engineering Hub
 
 <div class="hero">
   <p class="hero__tagline">The open-source path from zero to production AI</p>
@@ -32,7 +32,7 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="start-here/">Start Here</a>
     <a class="hero__btn hero__btn--secondary" href="learn/">Browse all 16 courses</a>
-    <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-handbook">★ Star on GitHub</a>
+    <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-hub">★ Star on GitHub</a>
   </div>
 </div>
 
@@ -128,8 +128,8 @@ Optional tracks: [Agent Engineering](agent-engineering/index.md) · [Modern AI (
 
 ## Contribute & star
 
-If this helps you learn or ship AI systems, **[star the repo on GitHub](https://github.com/psssnikhil/ai-engineering-handbook)** — it helps others find it.
+If this helps you learn or ship AI systems, **[star the repo on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** — it helps others find it.
 
 Improve a lesson, fix a link, or add an exercise: [Contribute](contribute.md) · [Roadmap](roadmap.md)
 
-[GitHub →](https://github.com/psssnikhil/ai-engineering-handbook){ .md-button }
+[GitHub →](https://github.com/psssnikhil/ai-engineering-hub){ .md-button }
