@@ -4,12 +4,12 @@ description: "Select your AI Engineering learning path based on your background.
 keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI agents beginner guide, software engineer to AI engineer"
 ---
 
-<div class="top-launcher">
+<div class="top-launcher" markdown="1">
   <div class="hero__badge">🚀 Learner Launchpad</div>
   <h1 class="top-launcher__title">Start Here — Choose Your AI Learning Path</h1>
   <p class="top-launcher__subtitle">Select your entry point based on your background or target outcome. Jump directly to the exact lessons, hands-on labs, and portfolio projects tailored for you.</p>
 
-  <div class="filter-chips">
+  <div class="filter-chips" markdown="1">
     <a class="chip-btn chip-btn--active" href="#choose-your-pathway">🎯 Pick Your Persona</a>
     <a class="chip-btn" href="#i-want-to-learn">💡 Learning Goals</a>
     <a class="chip-btn" href="#prerequisite-dependency-map">🔗 Dependency Map</a>
@@ -18,7 +18,7 @@ keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI 
   </div>
 </div>
 
-<div class="tutor-prompt-bar">
+<div class="tutor-prompt-bar" markdown="1">
   <span class="tutor-prompt-bar__label">💡 Quick Tutor Activation:</span>
   <span class="tutor-chip">"I have 2 hours, coach my session"</span>
   <span class="tutor-chip">"Recommend a learning path for a Backend Engineer"</span>

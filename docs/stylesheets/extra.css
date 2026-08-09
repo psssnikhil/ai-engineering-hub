@@ -20,8 +20,8 @@
   --aie-rose: #f43f5e;
 
   /* Surfaces & Borders */
-  --aie-surface-card: rgba(255, 255, 255, 0.92);
-  --aie-card-border: rgba(99, 102, 241, 0.18);
+  --aie-surface-card: rgba(255, 255, 255, 0.94);
+  --aie-card-border: rgba(99, 102, 241, 0.22);
   --aie-card-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
   --aie-card-shadow-hover: 0 16px 32px -4px rgba(99, 102, 241, 0.18), 0 4px 12px -2px rgba(0, 0, 0, 0.06);
 
@@ -39,8 +39,8 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --aie-surface-card: rgba(15, 23, 42, 0.85);
-  --aie-card-border: rgba(129, 140, 248, 0.22);
+  --aie-surface-card: rgba(15, 23, 42, 0.88);
+  --aie-card-border: rgba(129, 140, 248, 0.28);
   --aie-card-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.35);
   --aie-card-shadow-hover: 0 20px 40px 0 rgba(99, 102, 241, 0.28);
   --aie-gradient-hero-dark: linear-gradient(135deg, rgba(99, 102, 241, 0.16) 0%, rgba(139, 92, 246, 0.12) 50%, rgba(6, 182, 212, 0.08) 100%);
@@ -944,56 +944,63 @@ body, .md-header, .md-tabs, .md-sidebar, .md-content {
 }
 
 /* ── Top Navigation Quick-Launcher Components ─────────────── */
+.md-typeset .top-launcher,
 .top-launcher {
-  position: relative;
-  margin: 0.5rem 0 2rem;
-  padding: 2.2rem 2rem;
-  border-radius: 20px;
-  border: 1px solid rgba(99, 102, 241, 0.25);
-  background: var(--aie-gradient-hero-light);
-  box-shadow: var(--aie-card-shadow);
-  backdrop-filter: blur(14px);
-  overflow: hidden;
+  position: relative !important;
+  margin: 0.8rem 0 2rem !important;
+  padding: 2.2rem 2rem !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(99, 102, 241, 0.28) !important;
+  background: var(--aie-gradient-hero-light) !important;
+  box-shadow: var(--aie-card-shadow) !important;
+  backdrop-filter: blur(14px) !important;
+  overflow: hidden !important;
+  display: block !important;
 }
 
+[data-md-color-scheme="slate"] .md-typeset .top-launcher,
 [data-md-color-scheme="slate"] .top-launcher {
-  border-color: rgba(129, 140, 248, 0.32);
-  background: var(--aie-gradient-hero-dark);
+  border-color: rgba(129, 140, 248, 0.35) !important;
+  background: var(--aie-gradient-hero-dark) !important;
 }
 
 .top-launcher__title {
-  font-family: var(--aie-font-sans);
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin: 0 0 0.5rem;
-  color: var(--md-default-fg-color);
+  font-family: var(--aie-font-sans) !important;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 0.5rem !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 .top-launcher__subtitle {
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: var(--md-default-fg-color--light);
-  margin: 0 0 1.5rem;
-  max-width: 48rem;
+  font-size: 1.02rem !important;
+  line-height: 1.6 !important;
+  color: var(--md-default-fg-color--light) !important;
+  margin: 0 0 1.5rem !important;
+  max-width: 48rem !important;
 }
 
 /* Filter Chips Bar */
+.md-typeset .filter-chips,
 .filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin: 1.2rem 0;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.65rem !important;
+  margin: 1.2rem 0 !important;
 }
 
+.md-typeset .filter-chips a,
 .md-typeset a.chip-btn,
+.md-typeset .chip-btn,
+a.chip-btn,
 .chip-btn {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.45rem !important;
-  padding: 0.5em 1.1em !important;
+  padding: 0.55em 1.2em !important;
   border-radius: 99px !important;
-  border: 1.5px solid rgba(99, 102, 241, 0.28) !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.32) !important;
   background-color: var(--aie-surface-card) !important;
   background-image: none !important;
   font-family: var(--aie-font-sans) !important;
@@ -1004,12 +1011,14 @@ body, .md-header, .md-tabs, .md-sidebar, .md-content {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
   margin: 0.2rem 0 !important;
+  white-space: nowrap !important;
 }
 
+.md-typeset .filter-chips a:hover,
 .md-typeset a.chip-btn:hover,
 .md-typeset a.chip-btn--active,
-.chip-btn:hover,
-.chip-btn--active {
+a.chip-btn:hover,
+a.chip-btn--active {
   background-color: var(--aie-primary) !important;
   background-image: none !important;
   border-color: var(--aie-primary) !important;
@@ -1018,6 +1027,7 @@ body, .md-header, .md-tabs, .md-sidebar, .md-content {
   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35) !important;
 }
 
+[data-md-color-scheme="slate"] .md-typeset .filter-chips a,
 [data-md-color-scheme="slate"] .md-typeset a.chip-btn,
 [data-md-color-scheme="slate"] .chip-btn {
   border-color: rgba(129, 140, 248, 0.35) !important;
@@ -1025,63 +1035,67 @@ body, .md-header, .md-tabs, .md-sidebar, .md-content {
 }
 
 /* Spotlight Cards Grid */
+.md-typeset .spotlight-grid,
 .spotlight-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 1.25rem !important;
+  margin: 1.6rem 0 !important;
 }
 
+.md-typeset .spotlight-card,
 .spotlight-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 16px;
-  border: 1px solid var(--aie-card-border);
-  padding: 1.4rem;
-  background: var(--aie-surface-card);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--aie-card-shadow);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--aie-card-border) !important;
+  padding: 1.4rem !important;
+  background-color: var(--aie-surface-card) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: var(--aie-card-shadow) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.md-typeset .spotlight-card:hover,
 .spotlight-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--aie-primary);
-  box-shadow: var(--aie-card-shadow-hover);
+  transform: translateY(-4px) !important;
+  border-color: var(--aie-primary) !important;
+  box-shadow: var(--aie-card-shadow-hover) !important;
 }
 
 .spotlight-card__tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--aie-primary);
-  margin-bottom: 0.5rem;
+  display: inline-block !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: var(--aie-primary) !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .spotlight-card__title {
-  font-size: 1.12rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  color: var(--md-default-fg-color);
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.4rem !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 .spotlight-card__desc {
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--md-default-fg-color--light);
-  margin-bottom: 1.2rem;
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  color: var(--md-default-fg-color--light) !important;
+  margin-bottom: 1.2rem !important;
 }
 
 /* Phase Stepper Meter */
+.md-typeset .phase-stepper,
 .phase-stepper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.85rem;
-  margin: 1.5rem 0;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 0.85rem !important;
+  margin: 1.5rem 0 !important;
 }
 
 .md-typeset a.phase-step,
@@ -1106,68 +1120,68 @@ body, .md-header, .md-tabs, .md-sidebar, .md-content {
 }
 
 .phase-step__num {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--aie-gradient-primary);
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: var(--aie-gradient-primary) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
 }
 
 .phase-step__info {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .phase-step__title {
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--md-default-fg-color);
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 .phase-step__sub {
-  font-size: 0.78rem;
-  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem !important;
+  color: var(--md-default-fg-color--light) !important;
 }
 
 /* AI Tutor Prompt Bar */
 .tutor-prompt-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 1rem 1.2rem;
-  border-radius: 14px;
-  border: 1px dashed rgba(99, 102, 241, 0.35);
-  background: rgba(99, 102, 241, 0.05);
-  margin: 1.4rem 0;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  padding: 1rem 1.2rem !important;
+  border-radius: 14px !important;
+  border: 1px dashed rgba(99, 102, 241, 0.35) !important;
+  background: rgba(99, 102, 241, 0.05) !important;
+  margin: 1.4rem 0 !important;
 }
 
 .tutor-prompt-bar__label {
-  font-weight: 700;
-  font-size: 0.84rem;
-  color: var(--aie-primary);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  font-weight: 700 !important;
+  font-size: 0.84rem !important;
+  color: var(--aie-primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
 }
 
 .tutor-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35em 0.85em;
-  border-radius: 8px;
-  background: var(--aie-surface-card);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  font-family: var(--aie-font-mono);
-  font-size: 0.8rem;
-  color: var(--md-default-fg-color);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.35em 0.85em !important;
+  border-radius: 8px !important;
+  background: var(--aie-surface-card) !important;
+  border: 1px solid rgba(99, 102, 241, 0.2) !important;
+  font-family: var(--aie-font-mono) !important;
+  font-size: 0.8rem !important;
+  color: var(--md-default-fg-color) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02) !important;
 }
 
 /* ── Custom Sleek Scrollbars ────────────────────────────── */
