@@ -1,87 +1,80 @@
-# Tools & Libraries
+---
+title: Complete AI Tools, Libraries & SDKs Index
+description: Categorized reference directory of top open-source tools, SDKs, vector databases, serving engines, and framework documentation.
+---
 
-Documentation, SDKs, and GitHub repos referenced in lessons.
+# 🛠 Complete AI Tools, Libraries & SDKs Index
 
-_Auto-generated from lesson content. Edit freely and re-run `npm run extract-resources`._
+A categorized, annotated reference directory of essential open-source libraries, SDKs, serving engines, vector databases, and official API documentations referenced throughout the handbook.
 
-- https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
-- https://cookbook.openai.com/examples/question_answering_using_embeddings
-- https://docs.anthropic.com/
-- https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering
-- https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts
-- https://docs.anthropic.com/en/docs/build-with-claude/tool-use
-- https://docs.anthropic.com/en/docs/test-and-evaluate/overview
-- https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-prompt-injections
-- https://docs.arize.com/phoenix
-- https://docs.cohere.com/docs/rerank
-- https://docs.crewai.com/
-- https://docs.docker.com/get-started/
-- https://docs.llamaindex.ai/en/stable/optimizing/advanced_retrieval/query_transformations/
-- https://docs.pinecone.io/
-- https://docs.pinecone.io/guides/data/filter-with-metadata
-- https://docs.pinecone.io/guides/getting-started/overview
-- https://docs.pinecone.io/guides/performance/performance-tuning
-- https://docs.pydantic.dev/
-- https://docs.ragas.io/
-- https://docs.smith.langchain.com/
-- https://docs.trychroma.com/
-- https://docs.vllm.ai
-- https://github.com/BerriAI/litellm
-- https://github.com/NVIDIA/garak
-- https://github.com/beir-cellar/beir
-- https://github.com/dorianbrown/rank_bm25
-- https://github.com/facebookresearch/faiss/wiki
-- https://github.com/google/sentencepiece
-- https://github.com/jxnl/instructor
-- https://github.com/karpathy/micrograd
-- https://github.com/karpathy/nanoGPT
-- https://github.com/letta-ai/letta
-- https://github.com/openai/tiktoken
-- https://github.com/pinecone-io/examples
-- https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them
-- https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety
-- https://huggingface.co/docs/evaluate
-- https://huggingface.co/docs/peft
-- https://huggingface.co/docs/text-generation-inference
-- https://huggingface.co/docs/tokenizers/
-- https://huggingface.co/docs/trl
-- https://huggingface.co/docs/trl/dpo_trainer
-- https://huggingface.co/models
-- https://huggingface.co/spaces/mteb/leaderboard
-- https://langchain-ai.github.io/langgraph/
-- https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_agentic_rag/
-- https://openai.com/pricing
-- https://platform.openai.com
-- https://platform.openai.com/docs
-- https://platform.openai.com/docs/api-reference
-- https://platform.openai.com/docs/api-reference/fine-tuning
-- https://platform.openai.com/docs/guides/distillation
-- https://platform.openai.com/docs/guides/embeddings
-- https://platform.openai.com/docs/guides/evals
-- https://platform.openai.com/docs/guides/fine-tuning
-- https://platform.openai.com/docs/guides/function-calling
-- https://platform.openai.com/docs/guides/prompt-engineering
-- https://platform.openai.com/docs/guides/safety-best-practices
-- https://platform.openai.com/docs/guides/structured-outputs
-- https://platform.openai.com/docs/quickstart
-- https://platform.openai.com/playground
-- https://platform.openai.com/tokenizer
-- https://python.langchain.com/docs/concepts/memory/
-- https://python.langchain.com/docs/concepts/prompt_templates/
-- https://python.langchain.com/docs/how_to/#few-shot-prompting
-- https://python.langchain.com/docs/how_to/#retrieval
-- https://python.langchain.com/docs/integrations/vectorstores/
-- https://python.langchain.com/docs/modules/data_connection/document_transformers/
-- https://python.langchain.com/docs/tutorials/rag/
-- https://smith.langchain.com/
-- https://www.anthropic.com/engineering/building-effective-agents
-- https://www.anthropic.com/pricing
-- https://www.anthropic.com/research/building-effective-agents
-- https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
-- https://www.pinecone.io/learn/chunking-strategies/
-- https://www.pinecone.io/learn/hybrid-search-intro/
-- https://www.pinecone.io/learn/production/
-- https://www.pinecone.io/learn/retrieval-augmented-generation/
-- https://www.pinecone.io/learn/series/langchain/
-- https://www.pinecone.io/learn/series/rag/
-- https://www.pinecone.io/learn/vector-database/
+---
+
+## ⚡ 1. LLM Serving Engines & Gateway Proxies
+
+| Tool / SDK | Description & Focus Area | Official Link |
+|------------|--------------------------|---------------|
+| **vLLM** | High-throughput, memory-efficient LLM inference engine with PagedAttention and continuous batching. | [GitHub Repo](https://github.com/vllm-project/vllm) · [Docs](https://docs.vllm.ai) |
+| **LiteLLM** | Lightweight proxy gateway allowing 100+ LLM APIs to be called using standard OpenAI format with cost tracking. | [GitHub Repo](https://github.com/BerriAI/litellm) |
+| **Ollama** | Get up and running with local open-weight models (Llama 3, Mistral) via simple CLI and REST API. | [Official Site](https://ollama.com) |
+| **Text Generation Inference (TGI)** | Hugging Face's production inference server for deploying large language models with speculative decoding. | [Hugging Face Docs](https://huggingface.co/docs/text-generation-inference) |
+
+---
+
+## 🤖 2. Agent Frameworks, MCP & Tool Execution
+
+| Tool / SDK | Description & Focus Area | Official Link |
+|------------|--------------------------|---------------|
+| **LangGraph** | Industry-standard graph framework for building stateful, multi-agent applications with cyclic workflows. | [Docs](https://langchain-ai.github.io/langgraph/) |
+| **Smolagents** | Lightweight, code-first agent framework from Hugging Face that executes Python code actions natively. | [GitHub Repo](https://github.com/huggingface/smolagents) |
+| **AutoGen** | Microsoft's framework enabling multi-agent conversation, task delegation, and code execution teams. | [GitHub Repo](https://github.com/microsoft/autogen) |
+| **CrewAI** | Role-playing, autonomous multi-agent framework for collaborative task execution. | [Docs](https://docs.crewai.com/) |
+| **FastMCP** | High-level Python SDK for building Model Context Protocol (MCP) servers, tools, and resource providers. | [GitHub Repo](https://github.com/jlowin/fastmcp) |
+| **Instructor** | Python library built on Pydantic for extracting structured, validated JSON data directly from LLM calls. | [GitHub Repo](https://github.com/jxnl/instructor) |
+
+---
+
+## 📚 3. RAG, Retrieval & Vector Databases
+
+| Tool / SDK | Description & Focus Area | Official Link |
+|------------|--------------------------|---------------|
+| **LlamaIndex** | Data framework for connecting private data sources to LLMs with advanced RAG indexing algorithms. | [Docs](https://docs.llamaindex.ai/) |
+| **Qdrant** | High-performance vector database written in Rust with vector payload filtering and hybrid BM25 search. | [Official Site](https://qdrant.tech/) |
+| **Chroma** | Open-source embedding database designed for rapid local prototyping and Python/TypeScript apps. | [Docs](https://docs.trychroma.com/) |
+| **Pinecone** | Managed vector database service built for high scale, low latency, and hybrid vector search. | [Docs](https://docs.pinecone.io/) |
+| **pgvector** | Open-source vector similarity search extension for PostgreSQL supporting HNSW and IVFFlat indexes. | [GitHub Repo](https://github.com/pgvector/pgvector) |
+| **FAISS** | Facebook AI Similarity Search library for efficient dense vector clustering and similarity matching. | [GitHub Wiki](https://github.com/facebookresearch/faiss/wiki) |
+| **rank_bm25** | Python implementation of BM25 algorithms for sparse keyword retrieval and hybrid ranking. | [GitHub Repo](https://github.com/dorianbrown/rank_bm25) |
+
+---
+
+## 📊 4. Evaluation, Observability & Guardrails
+
+| Tool / SDK | Description & Focus Area | Official Link |
+|------------|--------------------------|---------------|
+| **Ragas** | Framework for evaluating Retrieval Augmented Generation pipelines with faithfulness & recall metrics. | [Docs](https://docs.ragas.io/) |
+| **Phoenix (Arize)** | Open-source AI observability platform for tracing LLM applications, agent steps, and evals. | [Docs](https://docs.arize.com/phoenix) |
+| **LangSmith** | Platform for debugging, testing, evaluating, and monitoring LLM applications and agent chains. | [Docs](https://docs.smith.langchain.com/) |
+| **Promptfoo** | Command-line tool and library for testing, evaluating, and red-teaming LLM prompts and guardrails. | [GitHub Repo](https://github.com/promptfoo/promptfoo) |
+| **Garak** | LLM vulnerability scanner for automated prompt injection detection, jailbreaking, and safety red-teaming. | [GitHub Repo](https://github.com/NVIDIA/garak) |
+
+---
+
+## 🎛 5. Fine-Tuning, Quantization & Tokenization
+
+| Tool / SDK | Description & Focus Area | Official Link |
+|------------|--------------------------|---------------|
+| **Unsloth** | Ultra-fast 2-5x faster LLM fine-tuning library with 80% reduced VRAM consumption. | [GitHub Repo](https://github.com/unslothai/unsloth) |
+| **PEFT (Hugging Face)** | Parameter-Efficient Fine-Tuning library supporting LoRA, Prefix Tuning, and P-Tuning. | [Hugging Face Docs](https://huggingface.co/docs/peft) |
+| **TRL (Hugging Face)** | Transformer Reinforcement Learning library for post-training LLMs using SFT, DPO, and PPO. | [Hugging Face Docs](https://huggingface.co/docs/trl) |
+| **tiktoken** | Fast BPE tokenizer library developed by OpenAI for token counting and text encoding. | [GitHub Repo](https://github.com/openai/tiktoken) |
+| **SentencePiece** | Unsupervised text tokenizer and detokenizer for neural network-based text processing. | [GitHub Repo](https://github.com/google/sentencepiece) |
+
+---
+
+## 📑 6. Official API Guides & Cookbooks
+
+| Resource | Description | Official Link |
+|----------|-------------|---------------|
+| **OpenAI Cookbook** | Code examples, integration guides, and recipes for OpenAI APIs and embeddings. | [Cookbook Site](https://cookbook.openai.com/) |
+| **Anthropic Engineering Docs** | Guides on prompt design, context engineering, tool use, and Claude API integration. | [Anthropic Docs](https://docs.anthropic.com/) |
+| **Hugging Face Model Hub & Leaderboards** | Open community platform hosting 500k+ models, datasets, and MTEB leaderboard. | [Hugging Face Site](https://huggingface.co/) |

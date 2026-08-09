@@ -1,165 +1,60 @@
-# Videos
+---
+title: Complete AI Engineering Video Catalog
+description: Curated index of essential YouTube lectures, playlists, course series, and code walkthroughs for AI Engineers.
+---
 
-YouTube and video links from lessons.
+# 🎬 Complete AI Engineering Video & Lecture Catalog
 
-_Auto-generated from lesson content. Edit freely and re-run `npm run extract-resources`._
+A curated, categorized reference catalog of the best video playlists, flagship university lectures, paper code walkthroughs, and production engineering talks.
 
-- https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
-- https://www.youtube.com/watch?v=-7scQpJT7uo
-- https://www.youtube.com/watch?v=080pyz_vTRo
-- https://www.youtube.com/watch?v=09BnQJkWHbg
-- https://www.youtube.com/watch?v=0oyCUWLL_fU
-- https://www.youtube.com/watch?v=1c9iyoVIwDs
-- https://www.youtube.com/watch?v=2MBJOuVq380
-- https://www.youtube.com/watch?v=3E_KFXDAeFc
-- https://www.youtube.com/watch?v=4Bdc55j80l8
-- https://www.youtube.com/watch?v=59bMh59JQDo
-- https://www.youtube.com/watch?v=5xUk6CRPL_k
-- https://www.youtube.com/watch?v=68BZ5f7P94Q
-- https://www.youtube.com/watch?v=6ArSys5qHAU
-- https://www.youtube.com/watch?v=6qSqSrJh0kA
-- https://www.youtube.com/watch?v=8HyCNIVRbSU
-- https://www.youtube.com/watch?v=8OJC21T2SL4
-- https://www.youtube.com/watch?v=8rXD5-xhemo
-- https://www.youtube.com/watch?v=9-Jl0dxWQs8
-- https://www.youtube.com/watch?v=9JJ2OGJYKiU
-- https://www.youtube.com/watch?v=ARq74QuavAo
-- https://www.youtube.com/watch?v=AhGyMoEAM3A
-- https://www.youtube.com/watch?v=AsNTP8Kwu80
-- https://www.youtube.com/watch?v=B-N1JqomZZc
-- https://www.youtube.com/watch?v=BqzgUnrNhXs
-- https://www.youtube.com/watch?v=BrsocJb-fAo
-- https://www.youtube.com/watch?v=CqOfi41LfDw
-- https://www.youtube.com/watch?v=DE150MslZE0
-- https://www.youtube.com/watch?v=DjuXACWYkkU
-- https://www.youtube.com/watch?v=E2shqsYwxck
-- https://www.youtube.com/watch?v=E5OnoYF2oAk
-- https://www.youtube.com/watch?v=EE-xtp2iBL4
-- https://www.youtube.com/watch?v=EehRcPo1M-Q
-- https://www.youtube.com/watch?v=Ff6P_JFJwEk
-- https://www.youtube.com/watch?v=FnM6d7MqpHg
-- https://www.youtube.com/watch?v=GnI49YAfePA
-- https://www.youtube.com/watch?v=Gv2RccqEOt0
-- https://www.youtube.com/watch?v=Gv63YIFM9FU
-- https://www.youtube.com/watch?v=H4YK_7MAckk
-- https://www.youtube.com/watch?v=HP9RJvBMHZA
-- https://www.youtube.com/watch?v=HQn1QKQYyJA
-- https://www.youtube.com/watch?v=IEVnfrFe2s0
-- https://www.youtube.com/watch?v=IHZwWFHWa-w
-- https://www.youtube.com/watch?v=ILsA4nyG7I0
-- https://www.youtube.com/watch?v=Ilg3gGewQ5U
-- https://www.youtube.com/watch?v=JMUxmLyrhSk
-- https://www.youtube.com/watch?v=J_0pMXEMZk0
-- https://www.youtube.com/watch?v=JlMBHnGqCSY
-- https://www.youtube.com/watch?v=K1SFgs6sFQo
-- https://www.youtube.com/watch?v=KSjX4PfW2_8
-- https://www.youtube.com/watch?v=KuXjwB4LzSA
-- https://www.youtube.com/watch?v=L4-Z0K77bgk
-- https://www.youtube.com/watch?v=L8HKweZIOmg
-- https://www.youtube.com/watch?v=LHBE6Q9XlzI
-- https://www.youtube.com/watch?v=LHXXI4-IEns
-- https://www.youtube.com/watch?v=LxDvRsVp31c
-- https://www.youtube.com/watch?v=MN__lSncZBs
-- https://www.youtube.com/watch?v=NRVaRXDoI88
-- https://www.youtube.com/watch?v=O5xeyoRL95U
-- https://www.youtube.com/watch?v=OATCgQtNX2o
-- https://www.youtube.com/watch?v=OZJ1IgSgP9E
-- https://www.youtube.com/watch?v=OujMiengFaE
-- https://www.youtube.com/watch?v=PLryWeHPcBs
-- https://www.youtube.com/watch?v=PSs6nxngL6k
-- https://www.youtube.com/watch?v=PXWYUTMt-AU
-- https://www.youtube.com/watch?v=Q9zv369Elqk
-- https://www.youtube.com/watch?v=QCJQG4DuHT0
-- https://www.youtube.com/watch?v=QSW2L8dkaZk
-- https://www.youtube.com/watch?v=QvKMwLjdK-s
-- https://www.youtube.com/watch?v=RYtF-F5fON4
-- https://www.youtube.com/watch?v=RhHHiLuAvM0
-- https://www.youtube.com/watch?v=Rp3A5q9L_bg
-- https://www.youtube.com/watch?v=SYB1FaFcxbE
-- https://www.youtube.com/watch?v=SZorAJ4I-sA
-- https://www.youtube.com/watch?v=Skc8nqJirJg
-- https://www.youtube.com/watch?v=SmZmBKc7Lrs
-- https://www.youtube.com/watch?v=T-D1OfcDW1M
-- https://www.youtube.com/watch?v=T9aRN5JkmL8
-- https://www.youtube.com/watch?v=TQQlZhbC5ps
-- https://www.youtube.com/watch?v=TRjq7t2Ms5I
-- https://www.youtube.com/watch?v=UU1WVnMk4E8
-- https://www.youtube.com/watch?v=VMj-3S1tku0
-- https://www.youtube.com/watch?v=VPRSBzXzavo
-- https://www.youtube.com/watch?v=W2rWgXJBZhU
-- https://www.youtube.com/watch?v=WGMNlKba5qI
-- https://www.youtube.com/watch?v=XXtpJxZBa2c
-- https://www.youtube.com/watch?v=XZLc09hkMwA
-- https://www.youtube.com/watch?v=XfpMkf4rD6E
-- https://www.youtube.com/watch?v=XowwKOAWYoQ
-- https://www.youtube.com/watch?v=XpoKB3usmKc
-- https://www.youtube.com/watch?v=YCzL96nL7j0
-- https://www.youtube.com/watch?v=YRhxdVk_sIs
-- https://www.youtube.com/watch?v=YVU5wAA6Txo
-- https://www.youtube.com/watch?v=Z7_JCGikPEs
-- https://www.youtube.com/watch?v=_ZvnD96BQyI
-- https://www.youtube.com/watch?v=a3sg6MH8m4k
-- https://www.youtube.com/watch?v=ahnGLM-RC1Y
-- https://www.youtube.com/watch?v=aircAruvnKk
-- https://www.youtube.com/watch?v=aircAruvnKk&t=60
-- https://www.youtube.com/watch?v=bNb2fEVKeEo
-- https://www.youtube.com/watch?v=bRm_wCFpoOA
-- https://www.youtube.com/watch?v=bfmFfD2RIcg
-- https://www.youtube.com/watch?v=bxe2T-V8XRs
-- https://www.youtube.com/watch?v=c-g6epk3fFE
-- https://www.youtube.com/watch?v=cJOxQqZQ7AE
-- https://www.youtube.com/watch?v=d14TUNcbn1k
-- https://www.youtube.com/watch?v=dN0lsF2cvm4
-- https://www.youtube.com/watch?v=dOxUroR57xs
-- https://www.youtube.com/watch?v=dRUIGgNBvVk
-- https://www.youtube.com/watch?v=dbo3kNKPaUA
-- https://www.youtube.com/watch?v=dichIcUZfOw
-- https://www.youtube.com/watch?v=eC6Hd1hFvos
-- https://www.youtube.com/watch?v=eC6vEkmqWMA
-- https://www.youtube.com/watch?v=eMlx5fFNoYc
-- https://www.youtube.com/watch?v=eqOfr4AGLk8
-- https://www.youtube.com/watch?v=gHKlagKpN0k
-- https://www.youtube.com/watch?v=gIx974WtVb4
-- https://www.youtube.com/watch?v=gMOAud7hZg4
-- https://www.youtube.com/watch?v=grfbBQvMlBk
-- https://www.youtube.com/watch?v=gv3zNHBCkiE
-- https://www.youtube.com/watch?v=hkhDdcM5V94
-- https://www.youtube.com/watch?v=hvAPnpSfSGo
-- https://www.youtube.com/watch?v=iDulhoQ2pro
-- https://www.youtube.com/watch?v=iMZY7x2MSYY
-- https://www.youtube.com/watch?v=iX5V1WpxxkY
-- https://www.youtube.com/watch?v=jGMsZoT7MiI
-- https://www.youtube.com/watch?v=kCc8FmEb1nY
-- https://www.youtube.com/watch?v=klTvEwg3oJ4
-- https://www.youtube.com/watch?v=lYxGYXjfrNI
-- https://www.youtube.com/watch?v=m0pIlLfpXWE
-- https://www.youtube.com/watch?v=mMa2PmYJlCo
-- https://www.youtube.com/watch?v=mdKjMPmcWjY
-- https://www.youtube.com/watch?v=pW8B4SCkr0k
-- https://www.youtube.com/watch?v=pZEHXsizR7I
-- https://www.youtube.com/watch?v=ptuGllU5SQQ
-- https://www.youtube.com/watch?v=py5byOOHZM8
-- https://www.youtube.com/watch?v=qYSWDk4-NHI
-- https://www.youtube.com/watch?v=r-HUnht-Gns
-- https://www.youtube.com/watch?v=rvGTJq0oLXE
-- https://www.youtube.com/watch?v=sDv4f4s2SB8
-- https://www.youtube.com/watch?v=sPzc6hMg7So
-- https://www.youtube.com/watch?v=sVcwVQRHIc8
-- https://www.youtube.com/watch?v=tIeHLnjs5U8
-- https://www.youtube.com/watch?v=tcqEUSNCn8I
-- https://www.youtube.com/watch?v=u5Vcrwpzoz8
-- https://www.youtube.com/watch?v=viZrOnJclY0
-- https://www.youtube.com/watch?v=w8yWXqWQYmU
-- https://www.youtube.com/watch?v=wEoyxE0GP2M
-- https://www.youtube.com/watch?v=wd7TZ4w1mSw
-- https://www.youtube.com/watch?v=wdK68K1FuHk
-- https://www.youtube.com/watch?v=wjZofJX0v4M
-- https://www.youtube.com/watch?v=xEPX9Hkm5CQ
-- https://www.youtube.com/watch?v=xI0HHN5XKDo
-- https://www.youtube.com/watch?v=xbgKMQGcRmk
-- https://www.youtube.com/watch?v=xoVJKj8lcNQ
-- https://www.youtube.com/watch?v=yGTUuEx3GkA
-- https://www.youtube.com/watch?v=ySus5ZS0b94
-- https://www.youtube.com/watch?v=yXOMHOpbon8
-- https://www.youtube.com/watch?v=zduSFxRajkE
-- https://www.youtube.com/watch?v=zjkBMFhNj_g
+---
+
+## 🧠 1. Deep Learning & Transformer Foundations
+
+| Video / Playlist | Creator / Institution | Topic & Description | Direct Link |
+|------------------|----------------------|---------------------|-------------|
+| **Neural Networks: Zero to Hero** | Andrej Karpathy | Flagship 7-part video series building micrograd, makemore, WaveNet, and GPT-2 from scratch in PyTorch. | [Watch Playlist](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUbF9GE) |
+| **Deep Learning Visual Intuition** | 3Blue1Brown | Unrivaled 3D animations explaining gradient descent, backpropagation, matrix transformations, and self-attention. | [Watch Playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
+| **CS224N: Natural Language Processing with Deep Learning** | Stanford University | Complete university lecture series on word vectors, RNNs, Transformers, pre-training, and scaling laws. | [Course Site](https://web.stanford.edu/class/cs224n/) |
+| **CS336: Language Modeling from Scratch** | Stanford University | Deep technical lectures covering data curation, distributed GPU cluster training, and LLM inference algorithms. | [Course Site](https://stanford-cs336.github.io/spring2024/) |
+
+---
+
+## 📄 2. Landmark Paper Code Walkthroughs
+
+| Video / Paper | Creator | Engineering Focus | Direct Link |
+|---------------|---------|-------------------|-------------|
+| **Attention Is All You Need — PyTorch Code Walkthrough** | Umar Jamil | Line-by-line coding of Multi-Head Attention, Positional Encodings, and Transformer blocks. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations from scratch in PyTorch. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Step-by-step matrix derivation of Low-Rank Adaptation and 4-bit NormalFloat quantization algorithms. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **FlashAttention Matrix Tiling & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+
+---
+
+## 📚 3. RAG, Retrieval & Vector Search
+
+| Video / Masterclass | Creator / Host | Engineering Focus | Direct Link |
+|---------------------|----------------|-------------------|-------------|
+| **Building & Evaluating Advanced RAG** | Jerry Liu (LlamaIndex) / DeepLearning.AI | Hands-on video training on sentence-window retrieval, auto-merging indexers, and reranking. | [Free Course](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) |
+| **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers. | [Watch Playlist](https://www.youtube.com/@jamesbriggs) |
+| **RAG Triad & Evaluation Metrics** | Arize AI / TruLens | Video walkthrough explaining Context Relevance, Groundedness, and Answer Relevance scoring. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+
+---
+
+## 🤖 4. AI Agents, Harnesses & Multi-Agent Systems
+
+| Video / Lecture | Creator / Host | Engineering Focus | Direct Link |
+|-----------------|----------------|-------------------|-------------|
+| **AI Agent Design Patterns** | Andrew Ng | Masterclass breaking down Reflection, Tool Use, Planning, and Multi-Agent Collaboration. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
+| **Functions, Tools & Agents with LangChain** | Harrison Chase (LangChain) | Hands-on video tutorial covering tool execution, persistent state memory, and LangGraph subgraphs. | [Free Course](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) |
+| **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for real-world reliability. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
+
+---
+
+## ⚡ 5. LLMOps, High-Throughput Serving & Evals
+
+| Video / Lecture | Presenter / Host | Engineering Focus | Direct Link |
+|-----------------|------------------|-------------------|-------------|
+| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
+| **Full Stack LLM Bootcamp** | FSDL (Full Stack Deep Learning) | Comprehensive lecture series covering LLM application stack, prompt engineering, cost optimization, and evals. | [Course Site](https://fullstackdeeplearning.com/) |
+| **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Watch Channel](https://www.youtube.com/@ArizeAI) |

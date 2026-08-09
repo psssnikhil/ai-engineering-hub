@@ -53,24 +53,9 @@ function main() {
 
   fs.mkdirSync(RESOURCES, { recursive: true });
 
-  writeList(path.join(RESOURCES, 'papers.md'), 'Papers & Research', buckets.papers, 'arXiv and research links extracted from lessons.');
-  writeList(path.join(RESOURCES, 'videos.md'), 'Videos', buckets.videos, 'YouTube and video links from lessons.');
-  writeList(path.join(RESOURCES, 'tools-and-libraries.md'), 'Tools & Libraries', buckets.tools, 'Documentation, SDKs, and GitHub repos referenced in lessons.');
-  writeList(path.join(RESOURCES, 'other-links.md'), 'Other Links', buckets.other.slice(0, 200), 'Additional references (truncated if very long).');
+  writeList(path.join(RESOURCES, 'raw-extracted-links.md'), 'Raw Extracted Reference Links', [...buckets.papers, ...buckets.videos, ...buckets.tools, ...buckets.other.slice(0, 100)], 'Auto-extracted raw URLs from lesson files.');
 
-  // Copy into docs for MkDocs
-  const docsResources = path.join(DOCS, 'resources');
-  fs.mkdirSync(docsResources, { recursive: true });
-  fs.copyFileSync(path.join(RESOURCES, 'papers.md'), path.join(docsResources, 'papers.md'));
-  fs.copyFileSync(path.join(RESOURCES, 'videos.md'), path.join(docsResources, 'videos.md'));
-  fs.copyFileSync(path.join(RESOURCES, 'tools-and-libraries.md'), path.join(docsResources, 'tools-and-libraries.md'));
-
-  fs.writeFileSync(
-    path.join(docsResources, 'index.md'),
-    fs.readFileSync(path.join(RESOURCES, 'README.md'), 'utf-8'),
-  );
-
-  console.log(`Extracted: ${buckets.papers.length} papers, ${buckets.videos.length} videos, ${buckets.tools.length} tools.`);
+  console.log(`Extracted: ${buckets.papers.length} papers, ${buckets.videos.length} videos, ${buckets.tools.length} tools to raw-extracted-links.md.`);
 }
 
 function writeList(filePath, title, urls, intro) {
