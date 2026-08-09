@@ -30,6 +30,23 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 ---
 
+## ⚡ Interactive Hub CLI (`python scripts/hub.py`)
+
+Explore reference projects, practice AI system design quizzes, and test your local environment directly from your terminal:
+
+```bash
+# List all 12 reference projects & status
+python scripts/hub.py list
+
+# Interactively run any project (e.g. Project 01 RAG or Project 05 MCP Agent)
+python scripts/hub.py run 01
+
+# Practice interactive AI System Design interview questions
+python scripts/hub.py quiz
+```
+
+---
+
 ## ⚡ Quick Links
 
 - 📖 **[Read the Online Handbook](https://psssnikhil.github.io/ai-engineering-hub/)** — 140+ lessons across 16 core courses
