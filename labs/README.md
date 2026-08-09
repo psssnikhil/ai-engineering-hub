@@ -1,6 +1,6 @@
 # Labs — Runnable Code & Hands-on Notebooks
 
-Hands-on Jupyter notebooks that pair directly with the [courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/). Reading builds understanding; these build production engineering skills.
+Hands-on Jupyter notebooks that pair directly with the [courses](https://psssnikhil.github.io/ai-engineering-hub/learn/). Reading builds understanding; these build production engineering skills.
 
 ---
 
@@ -35,4 +35,4 @@ jupyter lab
 1. **Multi-Provider Support**: Notebooks support both **OpenAI** (`OPENAI_API_KEY`) and **Anthropic** (`ANTHROPIC_API_KEY`) model providers out of the box.
 2. **No Frameworks First**: Every lab implements core mechanisms from scratch using Python primitives before introducing high-level frameworks (LangChain, LlamaIndex, Ragas).
 3. **Cheap & Lightweight**: Designed to run efficiently in minutes for pennies of API cost.
-4. **Interview & Production Ready**: Each lab maps directly to real-world [coding interview questions](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/coding-rounds/) and production system requirements.
+4. **Interview & Production Ready**: Each lab maps directly to real-world [coding interview questions](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/coding-rounds/) and production system requirements.

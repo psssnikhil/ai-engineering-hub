@@ -1,86 +1,124 @@
-# CLAUDE.md — AI Engineering Handbook Agent Operating Guide
+# CLAUDE.md — AI Engineering Hub Agent Operating Guide
 
-Welcome! This repository is the **AI Engineering Handbook** — an open-source, interactive curriculum from **Transformers → RAG → Agents → Production Systems → Capstones**.
+Welcome! This repository is the **AI Engineering Hub** — an open-source, interactive curriculum covering **Transformers → RAG → Agents → Production Systems → Capstones**.
 
-When connected to Claude Code, Cursor, Antigravity, or any AI assistant, this repository operates as an **interactive AI pair programmer, tutor system, and production blueprint workspace**.
+When connected to Claude Code, Cursor, Antigravity, Windsurf, Codex, or any AI assistant, this repository operates as an **interactive AI pair programmer, tutor system, and production blueprint workspace**.
 
 ---
 
-## 🤖 Interactive Learner Tutor Skills
+## 🤖 Core Agent Philosophy & Operating Principles
 
-Express your goal in chat — the agent automatically loads the matching skill from `.claude/skills/` or `.agents/skills/`:
+1. **Verification-First Execution**: Never declare a task complete without executing empirical build, nav-sync, and link verification commands.
+2. **Socratic & Deep Pedagogical Standard**: Every concept must bridge intuitive mental models, mathematical rigor, worked tensor/numerical examples, runnable code, and real-world production trade-offs.
+3. **Zero-Fluff Quality Bar**: Avoid marketing buzzwords, ungrounded code, or superficial placeholders. All content must adhere to `maintainers/DEPTH_STANDARDS.md`.
+4. **Single Source of Truth**: Site navigation is governed strictly by `curriculum.yml`. Never edit `nav:` in `mkdocs.yml` directly.
 
-| What you say in chat | Skill Activated | What Claude Does |
-|----------------------|-----------------|------------------|
-| *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` | Routes you through an exact sequence of lessons, labs & projects based on your role. |
-| *"Explain attention"* / *"Quiz me on agents"* | `ai-tutor` | Delivers Socratic explanations, tensor shape intuition, worked math, and quiz questions. |
-| *"I have 2 hours — coach my session"* | `study-session-coach` | Builds a time-boxed study plan targeting 1 tangible lab/project artifact today. |
-| *"Interview me on RAG system design"* | `mock-interviewer` | Conducts a 45-minute whiteboard mock interview with follow-up trade-off questions & scoring. |
+---
+
+## 🧭 Repository Mental Map
+
+```
+.
+├── curriculum.yml             # Source of truth for 16 courses, 3 tracks & site nav
+├── CLAUDE.md                  # Quick reference & agent operating guide (this file)
+├── AGENTS.md                  # Universal workspace rules & skill catalog
+├── docs/                      # Core handbook content (MkDocs markdown source)
+│   ├── foundations/           # Courses 01–05 (GenAI, Essentials, NNs, Transformers, LLMs)
+│   ├── build/                 # Courses 06–11 (RAG, Agents, Harness, Multi-agent, Vector DBs, Prompts)
+│   ├── production/            # Courses 12–14 (LLMOps, Evals, Safety)
+│   ├── advanced/              # Courses 15–16 (Fine-tuning, Capstone Projects)
+│   ├── agent-engineering/     # Track: Agent Engineering
+│   ├── interview-prep/        # Track: Interview Prep & System Design
+│   ├── ai-engineering-2026/   # Track: Modern AI & IDE Agents
+│   ├── deep-dives/            # Mathematical & Architectural Deep Dives
+│   └── resources/             # Curated AI repos, videos, blogs, and books
+├── labs/                      # Pure Python executable notebooks & lab scripts
+├── scripts/                   # Nav sync (`sync-nav.mjs`) & link verification tools
+├── .claude/skills/            # Claude Code / Cursor agentic skills
+├── .agents/skills/            # Universal agentic skills
+└── maintainers/               # Depth standards & repository guidelines
+```
+
+---
+
+## ⚡ Autonomous Learner & Contributor Skill Matrix
+
+When a user prompt matches a trigger, load and follow the corresponding skill instructions from `.claude/skills/<skill-name>/SKILL.md` or `.agents/skills/<skill-name>/SKILL.md`:
+
+| Trigger / User Intent | Activated Skill | Target Path & Action |
+|-----------------------|-----------------|----------------------|
+| *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` | Route learner through exact sequence of lessons & projects based on role. |
+| *"Explain attention"* / *"Quiz me on agents"* | `ai-tutor` | Deliver Socratic explanation, tensor shape intuition, worked math, and quiz questions. |
+| *"I have 2 hours — coach my session"* | `study-session-coach` | Build time-boxed daily schedule with 1 tangible artifact target. |
+| *"Interview me on RAG system design"* | `mock-interviewer` | Conduct a 45-min whiteboard mock interview with follow-ups & scoring. |
+| Add/edit handbook lesson or track | `curriculum-content-writer` | Write/update docs following `DEPTH_STANDARDS.md` and sync nav. |
+| Add interview Q&A bank | `interview-question-writer` | Add Q&A in `docs/interview-prep/questions-*.md`. |
+| Add system design case study | `system-design-case-study-writer` | Add case study in `docs/interview-prep/design-*.md`. |
 
 **Routing Reference:** `.claude/references/handbook-routing.md`  
-**Universal Agent Rules:** `AGENTS.md`  
 **Full Guide:** [docs/learn/using-tutor-skills.md](docs/learn/using-tutor-skills.md)
 
 ---
 
-## 🛠 Contributor Authoring Skills
+## 🛠 Engineering & Content Quality Standards
 
-When modifying or expanding curriculum content, activate authoring skills:
+### 1. Python Code Standards (`labs/`)
+- **Framework-Light & Pure Python**: Prioritize plain Python & standard library implementations for core mechanisms (e.g. attention, RAG, ReAct loop) so learners understand fundamental mechanisms without black-box magic.
+- **Multi-Provider API Support**: Support both OpenAI, Anthropic, and Gemini out of the box. Use safe fallback checks:
+  ```python
+  import os
+  openai_key = os.getenv("OPENAI_API_KEY")
+  anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+  gemini_key = os.getenv("GEMINI_API_KEY")
+  ```
+- **Type Annotations & Tensor Shapes**: Annotate function parameters, return types, and explicit tensor dimensions in comments (e.g., `# (batch_size, seq_len, d_model)`).
 
-| Skill | Purpose & Target Directory |
-|-------|----------------------------|
-| `curriculum-content-writer` | Add or edit handbook courses (`docs/foundations/`, `docs/build/`, `docs/production/`, `docs/advanced/`) following `maintainers/DEPTH_STANDARDS.md`. |
-| `interview-question-writer` | Add Q&A banks in `docs/interview-prep/questions-*.md`. |
-| `system-design-case-study-writer` | Add end-to-end system design case studies in `docs/interview-prep/design-*.md`. |
-
----
-
-## 🧪 Executable Code & Multi-Provider Setup (`labs/`)
-
-The repository includes framework-free, pure Python lab notebooks supporting both **OpenAI** and **Anthropic** out of the box:
-
-```bash
-cd labs
-pip install -r requirements.txt
-
-# Export your preferred API key (or both!)
-export OPENAI_API_KEY=sk-proj-...      # https://platform.openai.com
-export ANTHROPIC_API_KEY=sk-ant-...   # https://platform.claude.com
-
-jupyter lab
-```
-
-### Lab Index:
-- `lab-01-rag-from-scratch.ipynb`: Chunking, TF-IDF, grounded LLM generation.
-- `lab-02-agent-loop-from-scratch.ipynb`: ReAct tool-calling agent loop & error recovery.
-- `lab-03-eval-harness-from-scratch.ipynb`: LLM-as-a-Judge G-Eval rubrics & CI quality gates.
-- `lab-04-hybrid-search-reranking.ipynb`: BM25 + Dense vector search + Reciprocal Rank Fusion (RRF).
+### 2. Markdown & LaTeX Standards (`docs/`)
+- **LaTeX Math Delimiters**: Always use MathJax/Arthmatex delimiters:
+  - Inline Math: `\( \text{Attention}(Q,K,V) \)`
+  - Block Math: `\[ \text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \]`
+  - **CRITICAL**: Do **NOT** use single `$...$` for inline math — dollar amounts (e.g. `$0.04`) break rendering.
+- **Admonitions & Alerts**: Use GitHub alerts for callouts:
+  - `> [!NOTE]` — Background context or key details
+  - `> [!TIP]` — Best practices & efficiency suggestions
+  - `> [!IMPORTANT]` — Essential requirements & critical takeaways
+  - `> [!WARNING]` — Edge cases & common pitfalls
+- **Mermaid Diagrams**: Ensure node labels with special characters or parentheses are enclosed in double quotes (e.g., `id["Query Matrix (Q)"]`).
 
 ---
 
-## ⚡ Navigation & Verification Rules
+## 🧪 Pre-Commit Verification Workflow
 
-- **Single Source of Truth**: `curriculum.yml`.
-- **Sync Command**: `npm run sync-nav` (Updates `mkdocs.yml` nav automatically).
-- **Strict Site Build**: `mkdocs build --strict` (Ensures zero broken links or markdown errors).
-- **Link Verification**: `node scripts/verify-site-links.mjs`.
-
-> ⚠️ **CRITICAL RULE**: Do **NOT** manually edit the `nav:` block in `mkdocs.yml`. Always edit `curriculum.yml` and run `npm run sync-nav`.
+Before declaring any change complete or committing code, run the full verification pipeline:
 
 ```bash
-# Standard Verification Workflow before committing:
+# 1. Sync Site Navigation (Generates mkdocs.yml nav from curriculum.yml)
 npm run sync-nav
+
+# 2. Strict MkDocs Site Build (Catches markdown formatting & broken links)
 mkdocs build --strict
+
+# 3. Verify Internal & Relative Links
 node scripts/verify-site-links.mjs
+
+# 4. Verify Python Labs (If labs/ files were edited)
+pytest labs/
 ```
+
+> ⚠️ **CRITICAL RULE**: Never manually edit the `nav:` section in `mkdocs.yml`. Always modify `curriculum.yml` and run `npm run sync-nav`.
 
 ---
 
-## 🧭 Key Entry Points
+## 🔍 Agent Diagnostic & Troubleshooting SOP
 
-- `AGENTS.md` — Universal agent workspace rules & skill catalog
-- `docs/start-here.md` — Persona-based entry points
-- `docs/learn/index.md` — 16 courses in order
-- `docs/interview-prep/index.md` — System design case studies & interview question banks
-- `docs/resources/index.md` — Curated GitHub repos, videos, blogs, and books
-- `maintainers/DEPTH_STANDARDS.md` — Content quality & depth bar
+If a verification command fails, follow these automated diagnostic steps:
+
+1. **`mkdocs build --strict` failure**:
+   - Check if a newly added markdown file is listed in `curriculum.yml`.
+   - Check for relative link syntax errors or broken image paths.
+   - Verify LaTeX delimiters (`\( ... \)` and `\[ ... \]`).
+2. **`verify-site-links.mjs` failure**:
+   - Trace the exact line reported in the log output.
+   - Ensure header anchors (e.g., `#prerequisites`) match the exact generated anchor string.
+3. **`npm run sync-nav` failure**:
+   - Validate YAML syntax in `curriculum.yml` using a strict parser or check for missing titles/paths.

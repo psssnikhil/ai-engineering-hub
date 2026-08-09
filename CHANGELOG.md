@@ -35,5 +35,5 @@
 - Exercise folder 404s (exercises/index.md pages)
 - Homepage button typography and contrast
 
-[1.1.0]: https://github.com/psssnikhil/ai-engineering-handbook/releases/tag/v1.1.0
-[1.0.0]: https://github.com/psssnikhil/ai-engineering-handbook/releases/tag/v1.0.0
+[1.1.0]: https://github.com/psssnikhil/ai-engineering-hub/releases/tag/v1.1.0
+[1.0.0]: https://github.com/psssnikhil/ai-engineering-hub/releases/tag/v1.0.0
