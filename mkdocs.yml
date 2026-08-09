@@ -126,9 +126,12 @@ nav:
           - "Evals & Production Q&A": interview-prep/questions-evals-production.md
           - "Case Study: Design a RAG System": interview-prep/design-rag-system.md
           - "Case Study: Design an Agent Platform": interview-prep/design-agent-platform.md
+          - "Case Study: Design a Coding Agent & IDE Assistant": interview-prep/design-code-agent.md
+          - "Case Study: Design an Agent Data Flywheel": interview-prep/design-agent-data-flywheel.md
+          - "Case Study: Design an Enterprise Hybrid Vector Search Engine": interview-prep/design-vector-search-engine.md
+          - "Case Study: Design an AI Safety & Guardrails Gateway": interview-prep/design-ai-guardrails-gateway.md
           - "Case Study: Design an LLM Serving System": interview-prep/design-llm-serving.md
           - "Case Study: Design an Eval Pipeline": interview-prep/design-eval-pipeline.md
-          - "Case Study: Design an Agent Data Flywheel": interview-prep/design-agent-data-flywheel.md
       - Track · Modern AI (2026):
           - Overview: ai-engineering-2026/index.md
           - Claude Code: ai-engineering-2026/claude-code.md

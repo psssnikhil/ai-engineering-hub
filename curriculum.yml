@@ -87,9 +87,12 @@ tracks:
       - { title: Evals & Production Q&A, file: questions-evals-production.md }
       - { title: "Case Study: Design a RAG System", file: design-rag-system.md }
       - { title: "Case Study: Design an Agent Platform", file: design-agent-platform.md }
+      - { title: "Case Study: Design a Coding Agent & IDE Assistant", file: design-code-agent.md }
+      - { title: "Case Study: Design an Agent Data Flywheel", file: design-agent-data-flywheel.md }
+      - { title: "Case Study: Design an Enterprise Hybrid Vector Search Engine", file: design-vector-search-engine.md }
+      - { title: "Case Study: Design an AI Safety & Guardrails Gateway", file: design-ai-guardrails-gateway.md }
       - { title: "Case Study: Design an LLM Serving System", file: design-llm-serving.md }
       - { title: "Case Study: Design an Eval Pipeline", file: design-eval-pipeline.md }
-      - { title: "Case Study: Design an Agent Data Flywheel", file: design-agent-data-flywheel.md }
 
   - title: Modern AI (2026)
     path: ai-engineering-2026

@@ -52,9 +52,12 @@ after the question banks — they assume the vocabulary the Q&A pages build.
 |------|--------|
 | [Design a RAG System](design-rag-system.md) | Retrieval-augmented Q&A over a large private corpus |
 | [Design an Agent Platform](design-agent-platform.md) | Multi-tenant platform running autonomous coding/support agents |
+| [Design a Coding Agent & IDE Assistant](design-code-agent.md) | Autonomous coding assistant (Claude Code / Cursor style) with repo mapping and sandboxed edits |
+| [Design an Agent Data Flywheel](design-agent-data-flywheel.md) | Self-improving agent telemetry, execution verification, and SFT/DPO pipeline |
+| [Design an Enterprise Hybrid Vector Search Engine](design-vector-search-engine.md) | Sub-50ms HNSW + BM25 hybrid vector database for 1B vectors |
+| [Design an AI Safety & Guardrails Gateway](design-ai-guardrails-gateway.md) | Sub-20ms streaming reverse proxy for PII scrubbing and prompt injection defense |
 | [Design an LLM Serving System](design-llm-serving.md) | Low-latency, high-throughput model inference at scale |
 | [Design an Eval Pipeline](design-eval-pipeline.md) | Continuous quality measurement for an LLM product in production |
-| [Design an Agent Data Flywheel](design-agent-data-flywheel.md) | Self-improving agent telemetry, execution verification, and SFT/DPO pipeline |
 
 ## How to use this track
 
@@ -65,6 +68,17 @@ after the question banks — they assume the vocabulary the Q&A pages build.
 3. Do one system design case study per sitting, on a real whiteboard or paper, before
    reading the page's walkthrough. Compare your clarifying questions to the page's list
    first — most candidates lose points here before the architecture even starts.
+
+---
+
+## 🤝 1:1 Mentorship & Enterprise AI Consulting
+
+Need personalized career guidance, mock interviews, or AI architecture consultation from the handbook author?
+
+- 🎯 **1:1 Guidance & Mock Interviews**: Book a 1:1 session with Nikhil Pentapalli on [Topmate](https://topmate.io/nikhil_pentapalli).
+- 🏢 **Enterprise AI Consulting**: For enterprise AI systems design, RAG, agent architecture, and team training, reach out directly to **[psss.nikhil@gmail.com](mailto:psss.nikhil@gmail.com)**.
+
+---
 
 ## Next
 

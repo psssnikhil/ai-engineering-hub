@@ -2,137 +2,63 @@
 
 # AI Engineering Hub
 
-### You learned to prompt. Now learn to **ship**.
+### Learn to ship production AI systems.
 
-**The free, open-source curriculum from transformers → RAG → agents → production.**
+**Free, open-source handbook from Transformers → RAG → Agents → Production.**
 
-![AI Engineering Hub — homepage](docs/assets/social-preview.png)
-
-<br/>
-
-[![Read the handbook](https://img.shields.io/badge/📖_Read_the_handbook-indigo?style=for-the-badge)](https://psssnikhil.github.io/ai-engineering-hub/)
+[![Read Handbook](https://img.shields.io/badge/📖_Read_Handbook-indigo?style=for-the-badge)](https://psssnikhil.github.io/ai-engineering-hub/)
 [![Start Here](https://img.shields.io/badge/→_Start_Here-6366f1?style=for-the-badge&labelColor=4338ca)](https://psssnikhil.github.io/ai-engineering-hub/start-here/)
-[![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/psssnikhil/ai-engineering-hub?style=flat-square&logo=github&label=Stars)](https://github.com/psssnikhil/ai-engineering-hub)
-
-<br/>
-
-**[Browse 16 courses](https://psssnikhil.github.io/ai-engineering-hub/learn/)** · **[Tutor Skills](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)** · **[Interview Prep](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)** · **[Build portfolio projects](https://psssnikhil.github.io/ai-engineering-hub/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/ai-engineering-hub/learn/study-plans/)** · **[Books](https://psssnikhil.github.io/ai-engineering-hub/books/)**
-
-<br/>
-
-If this saves you weeks of scattered Googling — **[★ star the repo](https://github.com/psssnikhil/ai-engineering-hub)**.  
-That's how the next engineer finds it.
+[![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
 </div>
 
 ---
 
-## The problem
+## ⚡ Quick Links
 
-AI content today is **everywhere** and **nowhere useful at once**:
-
-- Blog posts teach one trick, not the stack
-- Awesome lists link 400 repos with no order
-- Courses cost $500 and age out in six months
-- Agent tutorials skip harnesses, evals, and production entirely
-
-**This handbook is the missing middle:** one sequential path, engineer-grade depth, zero paywall.
+- 📖 **[Read the Handbook](https://psssnikhil.github.io/ai-engineering-hub/)** — 140+ lessons & 16 courses
+- 🚀 **[Start Here](https://psssnikhil.github.io/ai-engineering-hub/start-here/)** — Recommended paths based on your experience
+- 🛠️ **[Hands-on Labs](labs/)** — Executable notebooks (RAG, ReAct Agent loop, Evals, Reranking)
+- 🎯 **[Interview Prep](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)** — AI system design case studies & interview questions
+- 🤖 **[Tutor Skills](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)** — AI Pair Programmer & Socratic Tutor for Claude Code / Cursor
 
 ---
 
-## The path (one glance)
+## 🗺️ Curriculum Overview
 
 ```
-  UNDERSTAND          BUILD                 PRODUCTION         ADVANCED
-  ──────────          ─────                 ──────────         ────────
-  01 GenAI       →    06 RAG           →    12 LLMOps     →    15 Fine-tuning
-  02 Essentials  →    07 Agents        →    13 Evals      →    16 Capstones
-  03 Neural nets →    08 Harness       →    14 Safety
-  04 Transformers→    09 Multi-agent
-  05 LLMs        →    10 Vector DBs
-                      11 Prompts
-
-              ┌──────────────────────────────────────────────┐
-              │  + Agent Engineering track (7)               │
-              │  + Interview Prep & System Design track (8)  │
-              │  + Modern AI / IDE agents track (5)          │
-              │  + 3 Interactive Claude Code / Cursor Skills │
-              └──────────────────────────────────────────────┘
+  1. FOUNDATIONS            2. BUILD                 3. PRODUCTION         4. ADVANCED
+  ──────────────            ───────                  ─────────────         ───────────
+  01 GenAI             →    06 RAG              →    12 LLMOps        →    15 Fine-tuning
+  02 AI Essentials     →    07 Agents           →    13 Evals         →    16 Capstones
+  03 Neural Nets       →    08 Agent Harness    →    14 Safety
+  04 Transformers      →    09 Multi-Agent
+  05 LLMs              →    10 Vector DBs
+                            11 Prompts
 ```
 
-Open the **[Learn tab](https://psssnikhil.github.io/ai-engineering-hub/learn/)** — work **01 → 16** in order. Each course page lists its lessons. No module codes. No guesswork.
+### Specialized Learning Tracks
+* **Agent Engineering** (Courses 07–09)
+* **Interview Prep & System Design** (Case studies & Q&A)
+* **Modern AI & IDE Agents** (Claude Code, Cursor, MCP)
 
 ---
 
-## Pick your door
+## 💻 Code Labs (`/labs`)
 
-<table>
-<tr>
-<td width="50%">
+Executable Jupyter Notebooks built from scratch with zero framework bloat (supports OpenAI & Anthropic):
 
-**I'm new to AI**  
-→ [Start Here](https://psssnikhil.github.io/ai-engineering-hub/start-here/)  
-→ Course 01 (GenAI Foundations)
-
-**I'm a software engineer**  
-→ [Course 02 · AI Essentials](https://psssnikhil.github.io/ai-engineering-hub/foundations/module-01-ai-engineering-essentials/)  
-→ [Course 06 · RAG](https://psssnikhil.github.io/ai-engineering-hub/build/module-09-rag-retrieval-augmented-generation/)
-
-**I'm preparing for AI Interviews**  
-→ [Interview Prep Track](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)  
-→ System Design Case Studies & Q&A Banks
-
-</td>
-<td width="50%">
-
-**I'm building agents**  
-→ [Agent Engineering track](https://psssnikhil.github.io/ai-engineering-hub/agent-engineering/)  
-→ Courses 07 → 08 → 09
-
-**I'm shipping to prod**  
-→ [Course 12 · LLMOps](https://psssnikhil.github.io/ai-engineering-hub/production/module-10-llmops-production-systems/)  
-→ [Course 13 · Evals](https://psssnikhil.github.io/ai-engineering-hub/production/module-19-llm-evaluation-quality/)
-
-**I use Claude Code / Cursor**  
-→ [Learn with Tutor Skills](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)  
-→ [Modern AI (2026) track](https://psssnikhil.github.io/ai-engineering-hub/ai-engineering-2026/)
-
-</td>
-</tr>
-</table>
+| Lab | Description | Link |
+|:---|:---|:---|
+| **Lab 01** | RAG Pipeline from scratch (chunking, TF-IDF, generation) | [`lab-01-rag-from-scratch.ipynb`](labs/lab-01-rag-from-scratch.ipynb) |
+| **Lab 02** | ReAct Tool-Calling Agent Loop (parsing, tools, recovery) | [`lab-02-agent-loop-from-scratch.ipynb`](labs/lab-02-agent-loop-from-scratch.ipynb) |
+| **Lab 03** | LLM-as-a-Judge Eval Harness (G-Eval & CI quality gates) | [`lab-03-eval-harness-from-scratch.ipynb`](labs/lab-03-eval-harness-from-scratch.ipynb) |
+| **Lab 04** | Hybrid Search & Reranking Engine (BM25 + Dense + RRF) | [`lab-04-hybrid-search-reranking.ipynb`](labs/lab-04-hybrid-search-reranking.ipynb) |
 
 ---
 
-## What you get
-
-| | This handbook | Typical blog / list |
-|---|:---:|:---:|
-| One ordered curriculum | ✅ 16 courses | ❌ random order |
-| Foundations → production | ✅ full stack | ❌ tutorials only |
-| Agents + harness + MCP | ✅ dedicated courses | ❌ "call this API" |
-| Evals + LLMOps | ✅ CI gates, monitoring | ❌ skipped |
-| Free + MIT forever | ✅ | ❌ paywall / dated |
-
-**140+ lessons** · **Python exercises** · **10 portfolio projects** · **Deep math dives** · **Curated OSS hub links**
-
----
-
-## Build something this week
-
-Don't just read — ship:
-
-| Project | You'll learn | Start |
-|---------|--------------|-------|
-| Doc Q&A bot | RAG basics | [Build These #1](https://psssnikhil.github.io/ai-engineering-hub/projects/build-these/#1-doc-qa-bot-rag-starter) |
-| Tool-using agent | ReAct + tools | [Build These #4](https://psssnikhil.github.io/ai-engineering-hub/projects/build-these/#4-tool-using-research-agent) |
-| Eval suite in CI | Golden sets + gates | [Build These #9](https://psssnikhil.github.io/ai-engineering-hub/projects/build-these/#9-ai-quality-eval-suite) |
-
-Three projects on GitHub beat fifty completed lessons on a checklist.
-
----
-
-## Run locally
+## 🚀 Run Locally
 
 ```bash
 git clone https://github.com/psssnikhil/ai-engineering-hub.git
@@ -140,72 +66,24 @@ cd ai-engineering-hub
 pip install -r requirements.txt
 npm install
 mkdocs serve
-# → http://127.0.0.1:8000
 ```
-
-Maintainers: `npm run sync-nav` · `npm run build:docs` · see [MAINTAINING.md](maintainers/MAINTAINING.md)
-
----
-
-## Repo structure
-
-```
-docs/            # All site content (MkDocs) — courses, tracks, interview prep, career, books
-  foundations/     courses 01–05        build/           courses 06–11
-  production/      courses 12–14        advanced/        courses 15–16
-  agent-engineering/  ai-engineering-2026/   # tracks
-  interview-prep/  career/  books/      # capability sections
-  deep-dives/  exercises/  resources/   # reference material
-scripts/         # Nav generation, link verification, resource extraction
-resources/       # Auto-generated link indexes (npm run extract-resources)
-maintainers/     # MAINTAINING, DEPTH_STANDARDS, GAPS (internal docs)
-.github/         # CI workflows, issue templates, CONTRIBUTING, CoC, SECURITY
-curriculum.yml   # Source of truth for course order → mkdocs nav
-```
+Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your browser.
 
 ---
 
-## Run the code, not just the docs
+## 🤝 1:1 Mentorship & Enterprise AI Consulting
 
-Hands-on executable Jupyter notebooks in [`labs/`](labs/) — supporting both **OpenAI** (`OPENAI_API_KEY`) and **Anthropic** (`ANTHROPIC_API_KEY`) out of the box with **no frameworks**:
+Looking for personalized 1:1 mentorship or enterprise AI consulting from **Nikhil Pentapalli**?
 
-| Lab | What you build | Link |
-|-----|----------------|------|
-| **Lab 01** | RAG Pipeline from scratch (chunking, TF-IDF, grounded generation) | [`lab-01-rag-from-scratch.ipynb`](labs/lab-01-rag-from-scratch.ipynb) |
-| **Lab 02** | ReAct Tool-Calling Agent Loop (schema parsing & error recovery) | [`lab-02-agent-loop-from-scratch.ipynb`](labs/lab-02-agent-loop-from-scratch.ipynb) |
-| **Lab 03** | LLM-as-a-Judge Eval Harness (G-Eval rubrics & CI/CD gates) | [`lab-03-eval-harness-from-scratch.ipynb`](labs/lab-03-eval-harness-from-scratch.ipynb) |
-| **Lab 04** | Hybrid Search & Reranking Engine (BM25 + Dense + RRF) | [`lab-04-hybrid-search-reranking.ipynb`](labs/lab-04-hybrid-search-reranking.ipynb) |
-
----
-
-## Contribute — we want your PRs
-
-This handbook is built in the open, and contributions of every size are welcome: a typo fix, a dead-link repair, a new lab notebook, a worked interview answer, or a whole lesson.
-
-- **New here?** Grab a [good first issue](https://github.com/psssnikhil/ai-engineering-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-- **Have an idea or question?** Start a [Discussion](https://github.com/psssnikhil/ai-engineering-hub/discussions)
-- **Ready to write?** Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) and the [Roadmap](https://psssnikhil.github.io/ai-engineering-hub/roadmap/)
-
-Every contributor is credited. If you learned something here, the best thank-you is a PR that helps the next person.
-
----
-
-## Brand
-
-| | |
-|---|---|
-| **Name** | AI Engineering Hub |
-| **Tagline** | The open-source path from zero to production AI |
-| **Live site** | https://psssnikhil.github.io/ai-engineering-hub/ |
+- 🎯 **1:1 Guidance & Mock Interviews**: Book a 1:1 call on [Topmate](https://topmate.io/nikhil_pentapalli) for career coaching, resume review, and AI system design interview prep.
+- 🏢 **Enterprise AI Consulting**: For enterprise AI system design, agent platform architecture, RAG systems, and engineering team workshops, email **[psss.nikhil@gmail.com](mailto:psss.nikhil@gmail.com)**.
 
 ---
 
 <div align="center">
 
-### Help us become the handbook every AI engineer bookmarks
+**[★ Star on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** to support the project!
 
-**[★ Star on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** · **[Read now →](https://psssnikhil.github.io/ai-engineering-hub/)**
-
-MIT License · Built in the open
+Distributed under the **MIT License**.
 
 </div>
