@@ -99,7 +99,7 @@ async def handle_audio_stream(websocket, session):
 
 ## 5. Observability, Tracing, Metrics & Voice Evals
 
-```
+```text
 [WebSocket Frame] ──> [Voice Edge Span]
                              │
          ┌───────────────────┼───────────────────┐

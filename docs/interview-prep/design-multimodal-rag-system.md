@@ -84,7 +84,7 @@ def embed_document_page(page_image):
 
 ## 5. Observability, Tracing, Metrics & Vision Evals
 
-```
+```text
 [User Multimodal Query] ──> [Multimodal Gateway Span]
                                    │
          ┌─────────────────────────┼─────────────────────────┐

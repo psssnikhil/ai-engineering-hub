@@ -153,7 +153,7 @@ wouldn't trust a sensor that's failed its own calibration check.
 
 ## Deep dive: Eval Pipeline Observability, Tracing & Inter-Judge Reliability
 
-```
+```text
 [CI Build Trigger] ──> [Eval Dispatcher Span]
                               │
          ┌────────────────────┼────────────────────┐

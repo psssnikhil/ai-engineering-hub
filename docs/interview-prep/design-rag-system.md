@@ -135,7 +135,7 @@ serving or cause write contention on the index.
 
 ## Deep dive: Observability, Tracing & Production Evals
 
-```
+```text
 [Client Query] ──(Trace context propagation)──> [API Gateway Span]
                                                         │
          ┌───────────────────────┬──────────────────────┴──────────────────────┐

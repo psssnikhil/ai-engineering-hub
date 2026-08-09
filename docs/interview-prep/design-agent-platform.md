@@ -141,7 +141,7 @@ routed, and who approved it.
 
 ## Deep dive: Agent Platform Observability, Tracing & Evals
 
-```
+```text
 [Agent Session Run] ──> [Orchestrator Span (tenant_id, session_id)]
                               │
          ┌────────────────────┼────────────────────┐

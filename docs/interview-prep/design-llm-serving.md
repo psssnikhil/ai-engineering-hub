@@ -141,7 +141,7 @@ arriving short requests.
 
 ## Deep dive: Serving Observability, Prometheus Metrics & Hardware Telemetry
 
-```
+```text
 [Inference Gateway] ──> [vLLM Replica Engine (Tensor Parallel Shards)]
                                  │
    ┌─────────────────────────────┼─────────────────────────────┐
