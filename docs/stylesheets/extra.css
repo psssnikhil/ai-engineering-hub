@@ -86,12 +86,21 @@
 }
 
 /* ── Base layout ──────────────────────────────────────────── */
-.md-grid { max-width: 1240px; }
+.md-grid { max-width: 1440px; }
 
 .md-content {
-  max-width: 920px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* On very wide viewports the fixed max-width still leaves large empty
+   gutters either side of the centered grid; nudge the cap up further
+   so the layout keeps using more of the available width instead of
+   floating in a sea of whitespace. */
+@media screen and (min-width: 1600px) {
+  .md-grid { max-width: 1600px; }
+  .md-content { max-width: 1040px; }
 }
 
 body {
@@ -810,9 +819,18 @@ body {
    bottom-right placement needs to win regardless of scroll state. */
 .md-top {
   position: fixed !important;
+  top: auto !important;
   bottom: var(--aie-space-6) !important;
   right: var(--aie-space-6) !important;
+  left: auto !important;
   z-index: 1000 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  align-self: auto !important;
+  margin: 0 !important;
   background: var(--aie-gradient-brand) !important;
   color: #ffffff !important;
   border-radius: var(--aie-radius-full) !important;
