@@ -31,7 +31,7 @@ hide:
 <div class="hero">
   <div class="hero__badge">Free &amp; Open Source</div>
   <p class="hero__tagline">The path from transformers to production AI</p>
-  <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No paywall. No scattered tutorials. Just start at course 01 and build real systems.</p>
+  <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No scattered tutorials. Just start at course 01 and build real systems.</p>
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="start-here/">Start Here</a>
     <a class="hero__btn hero__btn--secondary" href="learn/">Browse 16 Courses</a>
