@@ -5,7 +5,21 @@ description: Curated list of top GitHub repositories, videos, blogs, books, and 
 
 # AI Engineering Resources
 
-A curated collection of the most valuable open-source repositories, video series, technical blogs, and essential books for mastering AI engineering — from foundational deep learning to production agents and LLM serving.
+A curated collection of the most valuable open-source repositories, video series, technical blogs, papers, free courses, and code references for mastering AI engineering — from foundational deep learning to production agents and LLM serving.
+
+---
+
+## 🎯 Resources by Major Topic
+
+Jump directly to a dedicated resource guide combining **landmark papers, top GitHub repositories, YouTube series, free courses, and code references** for each major AI topic:
+
+| Major Topic | What's Included | Link |
+|-------------|-----------------|------|
+| **🧠 Transformers & LLM Architecture** | Vaswani, BERT, GPT-3, RoPE, FlashAttention, nanoGPT, Karpathy series, Stanford CS224N/CS336 | [Transformers & LLM Resources](topic-transformers-and-llms.md) |
+| **📚 RAG & Vector Search** | RAG, DPR, ColBERT, HyDE, LlamaIndex, Qdrant, Chroma, DeepLearning.AI RAG, Vector DB Academy | [RAG & Vector Search Resources](topic-rag-and-vector-search.md) |
+| **🤖 AI Agents & Harness Engineering** | ReAct, Toolformer, Generative Agents, LangGraph, Smolagents, AutoGen, FastMCP, Claude Code | [AI Agents & Harness Resources](topic-agents-and-harnesses.md) |
+| **⚡ LLMOps, Serving, Evals & Safety** | vLLM, PagedAttention, LiteLLM, Ragas, Phoenix, MT-Bench, HELM, Guardrails, Red Teaming | [LLMOps & Serving Resources](topic-llmops-evals-serving.md) |
+| **🎛 Fine-Tuning & Model Alignment** | LoRA, QLoRA, SFT, DPO, RLHF, Unsloth, Axolotl, LLaMA-Factory, TRL, Raschka guides | [Fine-Tuning & Alignment Resources](topic-finetuning-and-alignment.md) |
 
 ---
 
@@ -73,6 +87,11 @@ A curated collection of the most valuable open-source repositories, video series
 
 ## 🔗 Handbook Reference Indexes
 
+- **[Transformers & LLM Architecture Resources](topic-transformers-and-llms.md)** — Dedicated topic guide
+- **[RAG & Vector Search Resources](topic-rag-and-vector-search.md)** — Dedicated topic guide
+- **[AI Agents & Harness Resources](topic-agents-and-harnesses.md)** — Dedicated topic guide
+- **[LLMOps & Serving Resources](topic-llmops-evals-serving.md)** — Dedicated topic guide
+- **[Fine-Tuning & Alignment Resources](topic-finetuning-and-alignment.md)** — Dedicated topic guide
 - **[Essential Papers](essential-papers.md)** — landmark research papers referenced across lessons
 - **[Essential Videos](essential-videos.md)** — core lectures and video walkthroughs
 - **[Open Source Hubs](open-source-hubs.md)** — curated hubs (Agents Towards Production, RAG Techniques)
