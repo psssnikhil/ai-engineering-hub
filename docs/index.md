@@ -1,7 +1,28 @@
 ---
-title: AI Engineering Handbook
-description: The free, open-source path from transformers to production AI
+title: "AI Engineering Handbook — Free Open Source AI Engineering Course & Roadmap"
+description: "Master AI Engineering from ground zero to production: Transformers, RAG, Autonomous AI Agents, LLMOps, Evals, and Fine-Tuning. Free open-source curriculum."
+keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuning, transformers, LLM evaluation, open source AI curriculum"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "AI Engineering Handbook",
+  "description": "The free, open-source path from transformers to production AI — RAG, agents, harnesses, evals, and LLMOps.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AI Engineering Handbook Contributors",
+    "sameAs": "https://github.com/psssnikhil/ai-engineering-handbook"
+  },
+  "educationalCredentialAwarded": "Open Source AI Engineering Mastery",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT40H"
+  }
+}
+</script>
 
 # AI Engineering Handbook
 

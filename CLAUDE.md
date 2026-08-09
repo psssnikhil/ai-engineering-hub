@@ -12,9 +12,11 @@ loads the matching skill and routes you through existing material.
 | "I want to learn RAG" / "Where should I start?" | `learning-path-advisor` |
 | "Explain attention" / "Quiz me on agents" | `ai-tutor` |
 | "I have 2 hours — coach my session" | `study-session-coach` |
+| "Interview me on RAG system design" | `mock-interviewer` |
 
 Full guide: [docs/learn/using-tutor-skills.md](docs/learn/using-tutor-skills.md)
 
+**Universal Agent Guide:** `AGENTS.md`  
 **Routing reference:** `.claude/references/handbook-routing.md`
 
 ## For contributors (author skills)
