@@ -515,7 +515,7 @@ In both cases the formula is identical: `Attention(Q, K, V) = softmax(QK^T / √
 
 ## 📹 Recommended Videos
 
-- [Search on YouTube →](https://www.youtube.com/results?search_query=StatQuest%3A+Attention+for+Neural+Networks) — Clear step-by-step walkthrough
+- [Watch Video](https://www.youtube.com/watch?v=PSs6nxngL6k) — Clear step-by-step walkthrough
 - [3Blue1Brown: Attention in Transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc) — Visual geometric intuition
 - [Yannic Kilcher: Attention Is All You Need](https://www.youtube.com/watch?v=iDulhoQ2pro) — Deep paper walkthrough
 

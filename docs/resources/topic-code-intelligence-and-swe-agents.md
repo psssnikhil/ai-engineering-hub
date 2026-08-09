@@ -37,9 +37,9 @@ Curated collection of landmark research papers, open-source repositories, YouTub
 
 | Video / Playlist | Creator | Description | Link |
 |------------------|---------|-------------|------|
-| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-bench+%26+SWE-agent+Deep+Dive) |
+| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Watch Video](https://www.youtube.com/watch?v=DrLdvbkgmeA) |
 | **Building Code-Executing Agents with Smolagents & FastMCP** | Hugging Face / FastMCP | Deep dive into native Python code execution vs JSON tool calling and setting up MCP servers. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
-| **Aider & Codebase Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Search on YouTube →](https://www.youtube.com/results?search_query=Paul+Gauthier+%28Aider+Creator%29+Aider+%26+Codebase+Context+Engineering) |
+| **Aider & Codebase Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Watch Video](https://www.youtube.com/watch?v=JCrhyFajxYE) |
 
 ---
 

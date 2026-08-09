@@ -29,6 +29,6 @@ Apply everything you have learned by building end-to-end AI projects: a RAG-powe
 | Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
 |---------------------|---------------------|------------|-------------|
 | **Building a Full-Stack AI Application** | Full Stack Deep Learning (FSDL) | Architectural blueprint from frontend UI to backend vector search and evaluation | [Course Site](https://fullstackdeeplearning.com/) |
-| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Building autonomous software engineering agents that pass real-world GitHub issues | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-agent+%26+Coding+Agent+Architectures) |
-| **Building Production RAG Systems End-to-End** | Jerry Liu (LlamaIndex) | End-to-end walkthrough of index ingestion, hybrid search, reranking, and deployment | [Search on YouTube →](https://www.youtube.com/results?search_query=Jerry+Liu+%28LlamaIndex%29+Building+Production+RAG+Systems+End-to-End) |
+| **SWE-agent & Coding Agent Architectures** | Princeton NLP | Building autonomous software engineering agents that pass real-world GitHub issues | [Watch Video](https://www.youtube.com/watch?v=DrLdvbkgmeA) |
+| **Building Production RAG Systems End-to-End** | Jerry Liu (LlamaIndex) | End-to-end walkthrough of index ingestion, hybrid search, reranking, and deployment | [Watch Video](https://www.youtube.com/watch?v=TIouyATCHbU) |
 

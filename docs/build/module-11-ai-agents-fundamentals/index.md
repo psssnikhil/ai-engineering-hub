@@ -37,5 +37,5 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 | **AI Agent Design Patterns** | Andrew Ng | Keynote on Reflection, Tool Use, Planning, and Multi-Agent Collaboration | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 | **Functions, Tools & Agents with LangChain** | Harrison Chase (LangChain) | Hands-on video tutorial covering tool execution, persistent state, and LangGraph | [Free Course](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) |
 | **Building Agents with Smolagents** | Hugging Face | Deep dive into code-executing agents, tool loops, and Python function sandboxing | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
-| **SWE-agent & Agent Computer Interfaces** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and agent loops | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-agent+%26+Agent+Computer+Interfaces) |
+| **SWE-agent & Agent Computer Interfaces** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and agent loops | [Watch Video](https://www.youtube.com/watch?v=DrLdvbkgmeA) |
 

@@ -28,7 +28,7 @@ Learn when and how to fine-tune LLMs for specialized tasks, including data prepa
 
 | Video / Walkthrough | Creator / Presenter | Focus Area | Direct Link |
 |---------------------|---------------------|------------|-------------|
-| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Low-Rank Adaptation matrices, 4-bit NormalFloat quantization, and NF4 PyTorch code | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LoRA+%26+QLoRA+Mathematical+Breakdown) |
+| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Low-Rank Adaptation matrices, 4-bit NormalFloat quantization, and NF4 PyTorch code | [Watch Video](https://www.youtube.com/watch?v=PXWYUTMt-AU) |
 | **Unsloth 2x Faster Fine-Tuning Tutorial** | Unsloth AI / Daniel & Michael | Memory-efficient Triton kernels for fast LLaMA/Mistral LoRA fine-tuning | [Search on YouTube →](https://www.youtube.com/results?search_query=Unsloth+AI+%2F+Daniel+%26+Michael+Unsloth+2x+Faster+Fine-Tuning+Tutorial) |
 | **Fine-Tuning LLMs with Hugging Face & TRL** | Hugging Face | SFTTrainer, DPO (Direct Preference Optimization), and dataset formatting walkthrough | [Search on YouTube →](https://www.youtube.com/results?search_query=Hugging+Face+Fine-Tuning+LLMs+with+Hugging+Face+%26+TRL) |
 

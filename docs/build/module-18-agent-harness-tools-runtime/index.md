@@ -32,8 +32,8 @@ Build the runtime layer that turns an LLM into a reliable agent — loops, tools
 
 | Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
 |-------------------|---------------------|------------|-------------|
-| **Model Context Protocol (MCP) Walkthrough** | Anthropic / Developers | Live demonstration of MCP client/server protocol, tool discovery, and JSON-RPC | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+%2F+Developers+Model+Context+Protocol+MCP+Walkthrough) |
-| **Aider & Repository Context Engineering** | Paul Gauthier (Aider) | Tree-sitter repository maps, git diff management, and agent loop execution | [Search on YouTube →](https://www.youtube.com/results?search_query=Paul+Gauthier+%28Aider%29+Aider+%26+Repository+Context+Engineering) |
-| **OpenTelemetry Tracing for AI Agents** | Arize AI / Phoenix | Step-by-step tutorial on spans, token counts, and tracing agent tool calls | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+Phoenix+OpenTelemetry+Tracing+for+AI+Agents) |
+| **Model Context Protocol (MCP) Walkthrough** | Anthropic / Developers | Live demonstration of MCP client/server protocol, tool discovery, and JSON-RPC | [Watch Video](https://www.youtube.com/watch?v=PLyCki2K0Lg) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider) | Tree-sitter repository maps, git diff management, and agent loop execution | [Watch Video](https://www.youtube.com/watch?v=JCrhyFajxYE) |
+| **OpenTelemetry Tracing for AI Agents** | Arize AI / Phoenix | Step-by-step tutorial on spans, token counts, and tracing agent tool calls | [Watch Video](https://www.youtube.com/watch?v=5PXRRXM8Iqo) |
 | **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for SWE agents | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 

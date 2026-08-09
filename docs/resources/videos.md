@@ -45,8 +45,8 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
 |-----------------|---------------------|---------------------|-------------|
-| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Search on YouTube →](https://www.youtube.com/results?search_query=Princeton+NLP+SWE-bench+%26+SWE-agent+Deep+Dive) |
-| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Search on YouTube →](https://www.youtube.com/results?search_query=Paul+Gauthier+%28Aider+Creator%29+Aider+%26+Repository+Context+Engineering) |
+| **SWE-bench & SWE-agent Deep Dive** | Princeton NLP | Authors explain agent-computer interfaces (ACI), benchmark design, and failure modes of coding agents. | [Watch Video](https://www.youtube.com/watch?v=DrLdvbkgmeA) |
+| **Aider & Repository Context Engineering** | Paul Gauthier (Aider Creator) | Breakdown of repository map construction using tree-sitter, git diff management, and prompt routing. | [Watch Video](https://www.youtube.com/watch?v=JCrhyFajxYE) |
 | **Code-Executing Agents with Smolagents** | Hugging Face | Deep dive comparing Python code actions vs JSON tool calling for real-world software engineering agents. | [Watch Video](https://www.youtube.com/watch?v=sal78ACtGTc) |
 
 ---
@@ -55,10 +55,10 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Paper | Creator | Engineering Focus | Direct Link |
 |---------------|---------|-------------------|-------------|
-| **Attention Is All You Need — PyTorch Code Walkthrough** | Umar Jamil | Line-by-line coding of Multi-Head Attention, Positional Encodings, and Transformer blocks. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+Attention+Is+All+You+Need++PyTorch+Code+Walkthrough) |
-| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations from scratch in PyTorch. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LLaMA+Architecture+%26+SwiGLU+%2F+RoPE+Code) |
-| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Step-by-step matrix derivation of Low-Rank Adaptation and 4-bit NormalFloat quantization algorithms. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LoRA+%26+QLoRA+Mathematical+Breakdown) |
-| **FlashAttention Matrix Tiling & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+FlashAttention+Matrix+Tiling+%26+IO+Awareness) |
+| **Attention Is All You Need — PyTorch Code Walkthrough** | Umar Jamil | Line-by-line coding of Multi-Head Attention, Positional Encodings, and Transformer blocks. | [Watch Video](https://www.youtube.com/watch?v=ISNdQcPhsts) |
+| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations from scratch in PyTorch. | [Watch Video](https://www.youtube.com/watch?v=Mn_9W1nCFLo) |
+| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Step-by-step matrix derivation of Low-Rank Adaptation and 4-bit NormalFloat quantization algorithms. | [Watch Video](https://www.youtube.com/watch?v=PXWYUTMt-AU) |
+| **FlashAttention Matrix Tiling & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling. | [Watch Video](https://www.youtube.com/watch?v=zy8ChVd_oTM) |
 
 ---
 
@@ -85,6 +85,6 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Lecture | Presenter / Host | Engineering Focus | Direct Link |
 |-----------------|------------------|-------------------|-------------|
-| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Search on YouTube →](https://www.youtube.com/results?search_query=Woosuk+Kwon+%28vLLM+Lead%29+vLLM%3A+PagedAttention+%26+Virtual+Memory+Management) |
+| **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Watch Video](https://www.youtube.com/watch?v=UdNocRPQS3Y) |
 | **Full Stack LLM Bootcamp** | FSDL (Full Stack Deep Learning) | Comprehensive lecture series covering LLM application stack, prompt engineering, cost optimization, and evals. | [Course Site](https://fullstackdeeplearning.com/) |
-| **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+Phoenix+OpenTelemetry+%26+LLM+Observability) |
+| **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Watch Video](https://www.youtube.com/watch?v=5PXRRXM8Iqo) |
