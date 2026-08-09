@@ -167,7 +167,14 @@ curriculum.yml   # Source of truth for course order → mkdocs nav
 
 ## Run the code, not just the docs
 
-New: hands-on notebooks in [`labs/`](labs/) — starting with [RAG from scratch](labs/lab-01-rag-from-scratch.ipynb) (chunking → retrieval → grounded generation → a 10-line eval, no frameworks). More labs are [up for grabs](https://github.com/psssnikhil/ai-engineering-handbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+Hands-on executable Jupyter notebooks in [`labs/`](labs/) — supporting both **OpenAI** (`OPENAI_API_KEY`) and **Anthropic** (`ANTHROPIC_API_KEY`) out of the box with **no frameworks**:
+
+| Lab | What you build | Link |
+|-----|----------------|------|
+| **Lab 01** | RAG Pipeline from scratch (chunking, TF-IDF, grounded generation) | [`lab-01-rag-from-scratch.ipynb`](labs/lab-01-rag-from-scratch.ipynb) |
+| **Lab 02** | ReAct Tool-Calling Agent Loop (schema parsing & error recovery) | [`lab-02-agent-loop-from-scratch.ipynb`](labs/lab-02-agent-loop-from-scratch.ipynb) |
+| **Lab 03** | LLM-as-a-Judge Eval Harness (G-Eval rubrics & CI/CD gates) | [`lab-03-eval-harness-from-scratch.ipynb`](labs/lab-03-eval-harness-from-scratch.ipynb) |
+| **Lab 04** | Hybrid Search & Reranking Engine (BM25 + Dense + RRF) | [`lab-04-hybrid-search-reranking.ipynb`](labs/lab-04-hybrid-search-reranking.ipynb) |
 
 ---
 
