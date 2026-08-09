@@ -34,7 +34,7 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 - 📖 **[Read the Online Handbook](https://psssnikhil.github.io/ai-engineering-hub/)** — 140+ lessons across 16 core courses
 - 🚀 **[Start Here Guide](https://psssnikhil.github.io/ai-engineering-hub/start-here/)** — Tailored learning tracks based on your experience
-- 🛠️ **[Code Projects (`/labs/projects`)](labs/projects/)** — Framework-free, pure Python production projects
+- 🛠️ **[Code Projects (`/labs/projects`)](labs/projects/)** — 12 production reference projects across key domains
 - 🎯 **[Interview & System Design](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)** — Production architecture case studies & Q&A banks
 
 ---
@@ -59,19 +59,24 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 ---
 
-## 🚀 Code Projects (`/labs/projects`)
+## 🚀 Realistic Multi-Domain Code Projects (`/labs/projects`)
 
-Framework-free Python reference projects demonstrating production AI systems from zero dependencies to multi-provider architecture:
+Framework-free Python reference projects demonstrating production AI systems from zero dependencies to multi-provider enterprise applications:
 
-| Project | Description & Scope | Link |
-|:---|:---|:---|
-| **Project 01** | **RAG Pipeline**: Chunking, vector embeddings, cosine similarity & grounded generation | [`01-rag-pipeline`](labs/projects/01-rag-pipeline/) |
-| **Project 02** | **ReAct Agent Loop**: Tool parsing, multi-provider LLM gateway & observation recovery | [`02-agent-loop`](labs/projects/02-agent-loop/) |
-| **Project 03** | **LLM Eval Harness**: LLM-as-a-Judge multi-metric scoring (faithfulness & relevance) for CI gates | [`03-eval-harness`](labs/projects/03-eval-harness/) |
-| **Project 04** | **Hybrid Search**: BM25 keyword matching + Dense embeddings fused via Reciprocal Rank Fusion | [`04-hybrid-search`](labs/projects/04-hybrid-search/) |
-| **Project 05** | **Model Context Protocol (MCP)**: In-memory MCP Server, JSON-RPC 2.0 dispatch & agent client | [`05-mcp-agent`](labs/projects/05-mcp-agent/) |
-| **Project 06** | **Autonomous Agent Platform**: Multi-step ReAct agent platform with tool routing & report synthesis | [`06-autonomous-agent-platform`](labs/projects/06-autonomous-agent-platform/) |
-| **Project 07** | **Enterprise RAG System**: Production RAG assistant with CLI, FastAPI server & automated evals | [`07-enterprise-rag-system`](labs/projects/07-enterprise-rag-system/) |
+| # | Project | Domain | Description & Key Capabilities | Link |
+|:---|:---|:---|:---|:---|
+| **01** | **RAG Pipeline** | General AI | Chunking, vector embeddings, cosine similarity & grounded generation | [`01-rag-pipeline`](labs/projects/01-rag-pipeline/) |
+| **02** | **ReAct Agent Loop** | Agent Systems | Tool parsing, multi-provider LLM gateway & observation recovery | [`02-agent-loop`](labs/projects/02-agent-loop/) |
+| **03** | **LLM Eval Harness** | Quality & Evals | LLM-as-a-Judge multi-metric scoring (faithfulness & relevance) for CI gates | [`03-eval-harness`](labs/projects/03-eval-harness/) |
+| **04** | **Hybrid Search** | Search & Retrieval | BM25 keyword matching + Dense embeddings fused via Reciprocal Rank Fusion | [`04-hybrid-search`](labs/projects/04-hybrid-search/) |
+| **05** | **MCP Agent** | Enterprise Tools | Model Context Protocol (MCP) in-memory JSON-RPC server & agent client | [`05-mcp-agent`](labs/projects/05-mcp-agent/) |
+| **06** | **Autonomous Agent Platform** | Multi-Agent | Multi-step ReAct agent platform with tool routing & report synthesis | [`06-autonomous-agent-platform`](labs/projects/06-autonomous-agent-platform/) |
+| **07** | **Enterprise RAG System** | Production LLMOps | Production RAG assistant with CLI, FastAPI server & automated evals | [`07-enterprise-rag-system`](labs/projects/07-enterprise-rag-system/) |
+| **08** | **FinTech Analyst Agent** | Financial Analysis | SEC 10-K filing research, ratio tools (P/E, FCF), & equity report synthesis | [`08-fintech-financial-analyst-agent`](labs/projects/08-fintech-financial-analyst-agent/) |
+| **09** | **Healthcare Safety Agent** | Healthcare & Safety | Multi-layer guardrails gateway, emergency triage classifier, & medical RAG | [`09-healthcare-medical-guardrails-agent`](labs/projects/09-healthcare-medical-guardrails-agent/) |
+| **10** | **E-Commerce Shopping Copilot**| Retail & Support | Long-term user preference memory, SQL inventory search, & recommendations | [`10-ecommerce-ai-shopping-copilot`](labs/projects/10-ecommerce-ai-shopping-copilot/) |
+| **11** | **Code Analysis Assistant** | Developer Tools | Python AST codebase parsing, SQL injection security scanner, & refactoring | [`11-code-analysis-ide-assistant`](labs/projects/11-code-analysis-ide-assistant/) |
+| **12** | **Agent Data Flywheel Curator**| AI Infrastructure | Synthetic trajectory curation, rejection sampling filter, & DPO export | [`12-agent-data-flywheel-curator`](labs/projects/12-agent-data-flywheel-curator/) |
 
 ---
 
