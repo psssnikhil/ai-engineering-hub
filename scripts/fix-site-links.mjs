@@ -17,10 +17,11 @@ function mdHrefToSitePath(href) {
     return href;
   }
   let p = href.slice(0, -3);
-  if (p.endsWith('/index')) {
-    p = p.slice(0, -'/index'.length);
+  if (p.endsWith('/index') || p === 'index') {
+    p = p.slice(0, -5);
+    return p.endsWith('/') ? p : `${p}/`;
   }
-  return p.endsWith('/') ? p : `${p}/`;
+  return `${p}.html`;
 }
 
 function fixHtml(html) {
