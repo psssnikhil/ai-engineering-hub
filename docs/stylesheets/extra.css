@@ -781,10 +781,21 @@ body {
   background-color: rgba(129, 140, 248, 0.14);
 }
 
+/* Material's default --md-code-bg-color (#f5f5f5 light / set below for
+   dark) plus a border are needed to make code blocks read as distinct
+   from body text — the previous border color (rgba(255,255,255,.08))
+   was tuned for dark backgrounds only and was invisible in light mode,
+   so blocks blended into the page with no visible boundary at all. */
 .md-typeset pre {
+  background-color: var(--md-code-bg-color);
   border-radius: var(--aie-radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--aie-border);
+  box-shadow: var(--aie-shadow-sm);
   margin: 1.6em 0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .md-typeset pre code {

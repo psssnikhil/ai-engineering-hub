@@ -376,12 +376,15 @@ Vanilla gradient descent struggles with:
 \[
 m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t \quad \text{(first moment: exponential moving average of gradient)}
 \]
+
 \[
 v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2 \quad \text{(second moment: exponential moving average of gradient squared)}
 \]
+
 \[
 \hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t} \quad \text{(bias correction)}
 \]
+
 \[
 \theta_t = \theta_{t-1} - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \varepsilon}
 \]

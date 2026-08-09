@@ -53,6 +53,7 @@ Without activation functions, no matter how many layers you stack, the network c
 \[
 \mathbf{h}_1 = X W_1 + b_1
 \]
+
 \[
 \mathbf{h}_2 = \mathbf{h}_1 W_2 + b_2 = (XW_1 + b_1)W_2 + b_2 = X(W_1 W_2) + (b_1 W_2 + b_2)
 \]
