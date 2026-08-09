@@ -47,6 +47,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/psssnikhil/ai-engineering-hub
+      name: GitHub Repository
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/nikhilpentapalli/
+      name: Connect on LinkedIn
   announcement:
     text: "Free open-source curriculum — 16 courses from foundations to production AI."
     link: start-here/

@@ -2,41 +2,9 @@
 title: Capstone Projects
 ---
 
-<div class="top-launcher">
-  <div class="hero__badge">🛠️ Hands-On Portfolio Builder</div>
-  <h1 class="top-launcher__title">10 Portfolio Projects & Production Capstones</h1>
-  <p class="top-launcher__subtitle">Build real production AI applications. Every project comes with complete starter code, architectural design specs, verification test suites, and solution benchmarks.</p>
+# Capstone Projects
 
-  <div class="filter-chips">
-    <a class="chip-btn chip-btn--active" href="build-these/#1-doc-qa-bot-rag-starter">🌱 #1 Doc Q&A Bot</a>
-    <a class="chip-btn" href="build-these/#2-enterprise-rag-with-citations">📚 #2 Enterprise RAG</a>
-    <a class="chip-btn" href="build-these/#4-tool-using-research-agent">🤖 #4 Research Agent</a>
-    <a class="chip-btn" href="build-these/#5-multi-agent-research-system">🐝 #5 Multi-Agent System</a>
-    <a class="chip-btn" href="build-these/#9-ai-quality-eval-suite">🛡️ #9 Eval Suite</a>
-    <a class="chip-btn" href="../advanced/module-17-capstone-projects/">🚀 Course 16 Capstones</a>
-  </div>
-</div>
-
-<div class="spotlight-grid">
-  <div class="spotlight-card">
-    <span class="badge badge--beginner">Beginner Project</span>
-    <h3 class="spotlight-card__title">1. Doc Q&amp;A Bot (RAG Starter)</h3>
-    <p class="spotlight-card__desc">Chunk documents, generate vector embeddings, and answer queries with source citations.</p>
-    <a class="persona-card__cta" href="build-these/#1-doc-qa-bot-rag-starter">Build Doc Q&amp;A Bot →</a>
-  </div>
-  <div class="spotlight-card">
-    <span class="badge badge--intermediate">Intermediate Project</span>
-    <h3 class="spotlight-card__title">4. Tool-Using Research Agent</h3>
-    <p class="spotlight-card__desc">Build an autonomous agent loop with custom tools, MCP integration, and web search.</p>
-    <a class="persona-card__cta" href="build-these/#4-tool-using-research-agent">Build Research Agent →</a>
-  </div>
-  <div class="spotlight-card">
-    <span class="badge badge--capstone">Production Capstone</span>
-    <h3 class="spotlight-card__title">Enterprise Hybrid RAG Platform</h3>
-    <p class="spotlight-card__desc">Dense + sparse BM25 retrieval, cross-encoder re-ranking, streaming responses &amp; OTEL tracing.</p>
-    <a class="persona-card__cta" href="build-these/#2-enterprise-rag-with-citations">Build Enterprise RAG →</a>
-  </div>
-</div>
+Apply everything you've learned by building end-to-end systems for your portfolio.
 
 ---
 

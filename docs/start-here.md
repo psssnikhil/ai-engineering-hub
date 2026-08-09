@@ -4,25 +4,20 @@ description: "Select your AI Engineering learning path based on your background.
 keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI agents beginner guide, software engineer to AI engineer"
 ---
 
-<div class="top-launcher" markdown="1">
-  <div class="hero__badge">🚀 Learner Launchpad</div>
-  <h1 class="top-launcher__title">Start Here — Choose Your AI Learning Path</h1>
-  <p class="top-launcher__subtitle">Select your entry point based on your background or target outcome. Jump directly to the exact lessons, hands-on labs, and portfolio projects tailored for you.</p>
+# Start Here
 
-  <div class="filter-chips" markdown="1">
-    <a class="chip-btn chip-btn--active" href="#choose-your-pathway">🎯 Pick Your Persona</a>
-    <a class="chip-btn" href="#i-want-to-learn">💡 Learning Goals</a>
-    <a class="chip-btn" href="#prerequisite-dependency-map">🔗 Dependency Map</a>
-    <a class="chip-btn" href="#your-first-4-weeks-career-switcher-roadmap">⏱️ 4-Week Jumpstart</a>
-    <a class="chip-btn" href="getting-started/#local-setup">⚙️ Local Setup Guide</a>
-  </div>
-</div>
+**One page to route every learner.** Pick your background, follow the sequential path in the **Learn** tab, and build something real.
 
-<div class="tutor-prompt-bar" markdown="1">
-  <span class="tutor-prompt-bar__label">💡 Quick Tutor Activation:</span>
-  <span class="tutor-chip">"I have 2 hours, coach my session"</span>
-  <span class="tutor-chip">"Recommend a learning path for a Backend Engineer"</span>
-</div>
+!!! tip "How the site works"
+    Open **Learn** in the top nav — 16 courses in order (01–16). Each course page lists its lessons. No module codes in the UI.
+
+!!! tip "Quick setup"
+    Need install commands only? See [Getting Started](getting-started.md#local-setup).
+
+!!! tip "Learning in Claude Code or Cursor?"
+    Clone this repo and **state your goal in chat** — tutor skills in `.claude/skills/` route
+    you through the handbook (paths, sessions, explanations). See
+    **[Learn with Tutor Skills](learn/using-tutor-skills.md)**.
 
 ---
 
@@ -33,25 +28,25 @@ keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI 
     <div class="persona-card__icon">🌱</div>
     <div class="persona-card__title">Complete Beginner</div>
     <div class="persona-card__desc">No prior CS background or Python experience. Start with math, tokenization, and fundamental scripts.</div>
-    <a class="persona-card__cta" href="foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.md">Start Prerequisites →</a>
+    <a class="persona-card__cta" href="../foundations/module-00-genai-foundations-from-nlp-to-transformers/lessons/01-prerequisites.md">Start Prerequisites →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">💻</div>
     <div class="persona-card__title">Software Engineer</div>
     <div class="persona-card__desc">Comfortable in Python / TS. Learn LLM APIs, function calling, RAG, and agent loops.</div>
-    <a class="persona-card__cta" href="foundations/module-01-ai-engineering-essentials/index.md">AI Essentials (02) →</a>
+    <a class="persona-card__cta" href="../foundations/module-01-ai-engineering-essentials/index.md">AI Essentials (02) →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">🧠</div>
     <div class="persona-card__title">ML Engineer</div>
     <div class="persona-card__desc">Know PyTorch and backprop. Jump into transformers, LLM serving, and fine-tuning.</div>
-    <a class="persona-card__cta" href="foundations/module-07-large-language-models-llms/index.md">LLM Deep Dive (05) →</a>
+    <a class="persona-card__cta" href="../foundations/module-07-large-language-models-llms/index.md">LLM Deep Dive (05) →</a>
   </div>
   <div class="persona-card">
     <div class="persona-card__icon">🚀</div>
     <div class="persona-card__title">Agent Architect</div>
     <div class="persona-card__desc">Ship autonomous loops, MCP servers, sandboxed tool runtimes, and multi-agent systems.</div>
-    <a class="persona-card__cta" href="agent-engineering/index.md">Agent Track →</a>
+    <a class="persona-card__cta" href="../agent-engineering/index.md">Agent Track →</a>
   </div>
 </div>
 

@@ -3,43 +3,9 @@ title: Ultimate AI Engineering Resources
 description: Curated list of top GitHub repositories, videos, blogs, books, and frameworks for AI Engineers
 ---
 
-<div class="top-launcher" markdown="1">
-  <div class="hero__badge">📖 Curated Knowledge Vault</div>
-  <h1 class="top-launcher__title">AI Engineering Resources & Research Catalog</h1>
-  <p class="top-launcher__subtitle">Hand-curated collection of seminal research papers, top GitHub repositories, video series, technical blogs, and frameworks across the entire AI landscape.</p>
+# AI Engineering Resources
 
-  <div class="filter-chips" markdown="1">
-    <a class="chip-btn" href="topic-transformers-and-llms/">🧠 Transformers & LLMs</a>
-    <a class="chip-btn" href="topic-reasoning-and-test-time-compute/">🧩 Reasoning & R1</a>
-    <a class="chip-btn" href="topic-multimodal-and-vlm/">👁 Multimodal & VLM</a>
-    <a class="chip-btn" href="topic-code-intelligence-and-swe-agents/">💻 SWE Agents</a>
-    <a class="chip-btn" href="topic-rag-and-vector-search/">📚 RAG & Vector Search</a>
-    <a class="chip-btn" href="topic-agents-and-harnesses/">🤖 AI Agents & MCP</a>
-    <a class="chip-btn" href="topic-llmops-evals-serving/">⚡ LLMOps & Serving</a>
-    <a class="chip-btn" href="topic-finetuning-and-alignment/">🎛 Fine-Tuning</a>
-  </div>
-</div>
-
-<div class="spotlight-grid" markdown="1">
-  <div class="spotlight-card" markdown="1">
-    <span class="spotlight-card__tag">⚡ High-Throughput Serving</span>
-    <h3 class="spotlight-card__title">vLLM Inference Engine</h3>
-    <p class="spotlight-card__desc">Memory-efficient LLM serving with PagedAttention and continuous batching.</p>
-    <a class="persona-card__cta" href="https://github.com/vllm-project/vllm">vLLM Repository →</a>
-  </div>
-  <div class="spotlight-card" markdown="1">
-    <span class="spotlight-card__tag">🎬 Must-Watch Series</span>
-    <h3 class="spotlight-card__title">Karpathy: Zero to Hero</h3>
-    <p class="spotlight-card__desc">Build Micrograd, Makemore, and GPT-2 from scratch in PyTorch.</p>
-    <a class="persona-card__cta" href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUbF9GE">Watch Playlist →</a>
-  </div>
-  <div class="spotlight-card" markdown="1">
-    <span class="spotlight-card__tag">📄 Seminal Paper</span>
-    <h3 class="spotlight-card__title">Attention Is All You Need</h3>
-    <p class="spotlight-card__desc">Vaswani et al. — The foundational transformer paper establishing self-attention.</p>
-    <a class="persona-card__cta" href="papers/#1-attention-is-all-you-need">Read Paper Notes →</a>
-  </div>
-</div>
+A curated collection of the most valuable open-source repositories, video series, technical blogs, papers, free courses, and code references for mastering AI engineering — from foundational deep learning to production agents and LLM serving.
 
 ---
 
@@ -98,29 +64,43 @@ Jump directly to a dedicated resource guide combining **landmark papers, top Git
   In-depth articles on ML systems design, real-time machine learning, and moving AI from prototype to production.
 - **[Eugene Yan's Blog](https://eugeneyan.com/)**  
   Practical guides on LLM patterns, search/recommendation systems, evals, and real-world AI engineering tradeoffs.
-- **[Lilian Weng's Blog (OpenAI)](https://lilianweng.github.io/)**  
-  Seminal deep-dive posts on Agent architectures, Prompt Engineering, RAG, and LLM fine-tuning mechanisms.
-- **[Sebastian Raschka's Ahead of AI](https://magazine.sebastianraschka.com/)**  
-  Clear technical breakdowns of LLM fine-tuning methods (LoRA, QLoRA, DPO) and PyTorch architecture optimization.
-- **[Anyscale Engineering Blog](https://www.anyscale.com/blog)**  
-  Technical articles on Ray distributed computing, LLM serving infrastructure, and scalable AI workloads.
+- **[Lilian Weng (Lil'Log)](https://lilianweng.github.io/posts/)**  
+  Comprehensive technical synthesis of research frontiers including autonomous agents, RLHF, and prompt engineering.
+- **[Anthropic Research & Engineering](https://www.anthropic.com/news)**  
+  Insights into constitutional AI, interpretability, prompt design, and system architecture behind Claude.
+- **[OpenAI Cookbook](https://cookbook.openai.com/)**  
+  Hands-on recipes, code snippets, and integration guides for common LLM application patterns.
+- **[Ahead of AI (Sebastian Raschka)](https://magazine.sebastianraschka.com/)**  
+  Clear, breakdown articles explaining recent AI papers, fine-tuning techniques, and model architectures.
 
 ---
 
-## 📚 Essential Books for AI Engineers
+## 📚 Essential Books
 
-| Book Title | Author(s) | Key Takeaway |
-|------------|-----------|--------------|
-| **Designing Machine Learning Systems** | Chip Huyen | End-to-end guide on data engineering, feature stores, model serving, and monitoring. |
-| **Deep Learning** | Ian Goodfellow, Yoshua Bengio, Aaron Courville | The foundational textbook covering neural network math, optimization, and generative models. |
-| **Programming PyTorch for Deep Learning** | Ian Pointer | Practical introduction to building and training PyTorch models. |
-| **Natural Language Processing with Transformers** | Lewis Tunstall, Leandro von Werra, Thomas Wolf | Comprehensive hands-on guide by Hugging Face creators. |
+- **[Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)** *(Chip Huyen)*  
+  The standard textbook for data engineering, model monitoring, deployment pipelines, and system trade-offs.
+- **[Build a Large Language Model From Scratch](https://www.manning.com/books/build-a-large-language-model-from-scratch)** *(Sebastian Raschka)*  
+  Step-by-step tutorial implementing every component of a Transformer LLM from tokenization to instruction tuning.
+- **[Deep Learning](https://www.deeplearningbook.org/)** *(Ian Goodfellow, Yoshua Bengio, Aaron Courville)*  
+  The foundational reference for mathematical theory, optimization, and neural network fundamentals.
+- **[Hands-On Machine Learning](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125608/)** *(Aurélien Géron)*  
+  Practical introduction to standard ML workflows, Scikit-Learn, PyTorch, and model evaluation.
 
 ---
 
 ## 🔗 Handbook Reference Indexes
 
-- [Seminal AI Research Papers Catalog](papers.md)
-- [Must-Watch AI Video Lectures Catalog](videos.md)
-- [AI Tools, Libraries & Frameworks Index](tools-and-libraries.md)
-- [Technical Blogs & Architecture Guides](blogs-and-guides.md)
+- **[Transformers & LLM Architecture Resources](topic-transformers-and-llms.md)** — Dedicated topic guide
+- **[Reasoning & Test-Time Compute Resources](topic-reasoning-and-test-time-compute.md)** — Dedicated topic guide
+- **[Multimodal AI & VLM Resources](topic-multimodal-and-vlm.md)** — Dedicated topic guide
+- **[Code Intelligence & SWE Agent Resources](topic-code-intelligence-and-swe-agents.md)** — Dedicated topic guide
+- **[RAG & Vector Search Resources](topic-rag-and-vector-search.md)** — Dedicated topic guide
+- **[AI Agents & Harness Resources](topic-agents-and-harnesses.md)** — Dedicated topic guide
+- **[LLMOps & Serving Resources](topic-llmops-evals-serving.md)** — Dedicated topic guide
+- **[Fine-Tuning & Alignment Resources](topic-finetuning-and-alignment.md)** — Dedicated topic guide
+- **[Research Papers Catalog](papers.md)** — Complete annotated research paper catalog with ArXiv links
+- **[Video & Lecture Catalog](videos.md)** — Complete video series, paper walkthroughs, and university lectures
+- **[Tools & Frameworks Index](tools-and-libraries.md)** — Complete SDK, vector DB, and framework index
+- **[Technical Blogs & Architecture Guides](blogs-and-guides.md)** — Curated engineering blogs (Aman Chadha, Lil'Log, Eugene Yan, Chip Huyen, Raschka)
+- **[Courses & Communities](courses-and-communities.md)** — Free interactive courses and engineering forums
+- **[Open Source Hubs](open-source-hubs.md)** — Curated hubs (Agents Towards Production, RAG Techniques)
