@@ -57,7 +57,9 @@ When you give a person a complex task, the work structure they use depends on th
 - **Software project**: Break into tasks, assign order, adapt as things fail. You need an explicit plan.
 - **Writing an essay for a deadline**: Write a draft, critique it, revise, critique again. Iterative refinement.
 
-The same logic applies to agent architectures. Simple tasks need simple structures. Complex tasks benefit from explicit planning. Output-quality tasks need self-critique. ```mermaid
+The same logic applies to agent architectures. Simple tasks need simple structures. Complex tasks benefit from explicit planning. Output-quality tasks need self-critique.
+
+```mermaid
 flowchart TD
     classDef react fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
     classDef plan fill:#f0fdf4,stroke:#10b981,stroke-width:2px;

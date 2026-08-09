@@ -44,6 +44,7 @@ sentence_3 = "The blood bank is running critically low"
 
 # All three occurrences of "bank" get the same embedding.
 # A downstream model cannot distinguish them!
+```
 
 ```mermaid
 flowchart TD

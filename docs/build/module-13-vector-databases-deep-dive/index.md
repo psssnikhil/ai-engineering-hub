@@ -21,3 +21,6 @@ Master vector databases from fundamentals to production: embeddings, indexing st
 | 9 | [Vector Database Evaluation and Testing](lessons/09-lesson-09.md) | 35 min | intermediate |
 | 10 | [Production Vector Database Patterns](lessons/10-lesson-10.md) | 40 min | advanced |
 **Start here:** [Introduction to Vector Databases](lessons/01-lesson-01.md)
+## Exercises
+
+Hands-on files: [exercises/index.md](exercises/index.md)

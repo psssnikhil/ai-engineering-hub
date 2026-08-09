@@ -1,26 +1,22 @@
 ---
-title: Agent Exercises
+title: Exercises
 ---
 
-# Agent Exercises
+# Exercises
 
-Hands-on exercises for Course 07 — AI Agents Fundamentals.
-
-| # | Exercise | Skills Practiced | API Key? |
-|---|----------|-----------------|----------|
-| 01 | [ReAct Agent Loop](01-starter.py) | Tool calling, agent loop, message management | Yes (OpenAI) |
-
-## How to run
+Run from this folder in your terminal. Compare your work with `*-solution.py` when stuck.
 
 ```bash
-cd docs/build/module-11-ai-agents-fundamentals/exercises
-export OPENAI_API_KEY="sk-..."
-python 01-starter.py
+cd exercises
+python 01-starter.py   # use the starter file name below
 ```
 
-Compare with `*-solution.py` when stuck.
+## Starter files
 
-## Related labs
+- `01-starter.py`
 
-- [Lab 02 — Agent Loop from Scratch (Jupyter)](https://github.com/psssnikhil/ai-engineering-hub/blob/main/labs/lab-02-agent-loop-from-scratch.ipynb)
+## Solutions
 
+- `01-solution.py`
+
+Back to [course overview](../index.md).

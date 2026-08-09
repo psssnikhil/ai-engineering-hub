@@ -1,20 +1,22 @@
 ---
-title: LLMOps Exercises
+title: Exercises
 ---
 
-# LLMOps & Production Exercises
+# Exercises
 
-Hands-on exercises for Course 12 — LLMOps & Production Systems.
-
-| # | Exercise | Skills Practiced | API Key? |
-|---|----------|-----------------|----------|
-| 01 | [Resilient LLM Gateway with Fallbacks](01-starter.py) | Provider routing, retry with exponential backoff, rate limiting, latency tracking | No |
-
-## How to run
+Run from this folder in your terminal. Compare your work with `*-solution.py` when stuck.
 
 ```bash
-cd docs/production/module-10-llmops-production-systems/exercises
-python 01-starter.py
+cd exercises
+python 01-starter.py   # use the starter file name below
 ```
 
-Compare with `01-solution.py` when stuck.
+## Starter files
+
+- `01-starter.py`
+
+## Solutions
+
+- `01-solution.py`
+
+Back to [course overview](../index.md).

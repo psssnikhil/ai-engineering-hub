@@ -1,20 +1,22 @@
 ---
-title: Vector Database Exercises
+title: Exercises
 ---
 
-# Vector Database Exercises
+# Exercises
 
-Hands-on exercises for Course 10 — Vector Databases Deep Dive.
-
-| # | Exercise | Skills Practiced | API Key? |
-|---|----------|-----------------|----------|
-| 01 | [Vector DB Engine from Scratch](01-starter.py) | Cosine similarity, dense vector indexing, k-NN search, metadata filtering | No |
-
-## How to run
+Run from this folder in your terminal. Compare your work with `*-solution.py` when stuck.
 
 ```bash
-cd docs/build/module-13-vector-databases-deep-dive/exercises
-python 01-starter.py
+cd exercises
+python 01-starter.py   # use the starter file name below
 ```
 
-Compare with `01-solution.py` when stuck.
+## Starter files
+
+- `01-starter.py`
+
+## Solutions
+
+- `01-solution.py`
+
+Back to [course overview](../index.md).

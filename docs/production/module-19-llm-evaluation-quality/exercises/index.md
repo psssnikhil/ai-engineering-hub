@@ -1,24 +1,22 @@
 ---
-title: LLM Evaluation Exercises
+title: Exercises
 ---
 
-# LLM Evaluation & Quality Exercises
+# Exercises
 
-Hands-on exercises for Course 13 — LLM Evaluation & Quality.
-
-| # | Exercise | Skills Practiced | API Key? |
-|---|----------|-----------------|----------|
-| 01 | [LLM-as-a-Judge Eval Harness](01-starter.py) | Faithfulness/relevance rubric scoring, test suite runner, CI quality gates | No |
-
-## How to run
+Run from this folder in your terminal. Compare your work with `*-solution.py` when stuck.
 
 ```bash
-cd docs/production/module-19-llm-evaluation-quality/exercises
-python 01-starter.py
+cd exercises
+python 01-starter.py   # use the starter file name below
 ```
 
-Compare with `01-solution.py` when stuck.
+## Starter files
 
-## Related labs
+- `01-starter.py`
 
-- [Lab 03 — LLM-as-a-Judge Eval Harness (Jupyter)](https://github.com/psssnikhil/ai-engineering-hub/blob/main/labs/lab-03-eval-harness-from-scratch.ipynb)
+## Solutions
+
+- `01-solution.py`
+
+Back to [course overview](../index.md).

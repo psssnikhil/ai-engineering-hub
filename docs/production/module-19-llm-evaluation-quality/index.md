@@ -17,3 +17,6 @@ Build systematic evaluation pipelines that catch regressions, gate deployments, 
 | 5 | [CI/CD for AI Quality](lessons/05-ci-cd-for-ai-quality.md) | 50 min | advanced |
 | 6 | [Production Monitoring & Alerts](lessons/06-production-monitoring-and-alerts.md) | 50 min | advanced |
 **Start here:** [Why LLM Evals Matter](lessons/01-why-llm-evals-matter.md)
+## Exercises
+
+Hands-on files: [exercises/index.md](exercises/index.md)

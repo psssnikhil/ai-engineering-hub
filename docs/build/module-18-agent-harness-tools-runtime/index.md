@@ -1,8 +1,9 @@
 ---
-title: Agent Harness, Tools & Runtime
+title: 'Agent Harness, Tools & Runtime'
 module_id: module-18
 phase: Build
 ---
+# Agent Harness, Tools & Runtime
 Build the runtime layer that turns an LLM into a reliable agent — loops, tools, permissions, MCP, and observability.
 | | |
 |---|---|
@@ -10,7 +11,9 @@ Build the runtime layer that turns an LLM into a reliable agent — loops, tools
 | **Phase** | Build |
 | **Lessons** | 6 |
 | **Est. hours** | ~5.5h |
+**Course 08** · Build · 6 lessons · ~10h
 ## Lessons
+
 | # | Lesson | Duration | Level |
 |---|--------|----------|-------|
 | 1 | [What Is an Agent Harness?](lessons/01-what-is-an-agent-harness.md) | 55 min | intermediate |
@@ -21,5 +24,4 @@ Build the runtime layer that turns an LLM into a reliable agent — loops, tools
 | 6 | [Observability in the Harness](lessons/06-observability-in-the-harness.md) | 55 min | advanced |
 
 **Prerequisites:** [Course 07 · AI Agents](../module-11-ai-agents-fundamentals/index.md) — especially lessons 1–4 on the agent loop, ReAct, and tool use.
-
 **Start here:** [What Is an Agent Harness?](lessons/01-what-is-an-agent-harness.md)
