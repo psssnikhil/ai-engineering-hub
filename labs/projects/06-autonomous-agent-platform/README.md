@@ -1,20 +1,28 @@
-# Reference Project 2: Autonomous Agent Platform
+# Reference Project: Autonomous Agent Platform
 
-An autonomous ReAct research agent platform with multi-step goal decomposition, standardized multi-provider LLM gateways (OpenAI + Anthropic), tool execution, and executive markdown report generation.
+An autonomous ReAct research agent platform with multi-step goal decomposition, standardized multi-provider LLM gateways (OpenAI + Anthropic), tool execution, and executive markdown report synthesis.
 
-## Architecture
+```mermaid
+flowchart TD
+    Task["Complex Task Goal"] --> Planner["Planner & ReAct Loop"]
+    Planner --> SearchTool["Web Search Tool"]
+    Planner --> MathTool["Math Tool"]
+    SearchTool & MathTool --> Synthesizer["Executive Report Synthesizer"]
+    Synthesizer --> Report["Structured Markdown Report"]
+```
 
-- `tools.py`: Tool definitions (web search, safe math calculation, report synthesizer) & OpenAI JSON function schemas.
-- `agent.py`: Autonomous ReAct reasoning loop with step tracing & multi-provider LLM Gateway integration.
-- `main.py`: Interactive CLI entry point.
-- `labs.common.gateway`: Pluggable Multi-Provider LLM Gateway.
+## Quick Example Code
 
-## Quick Start
+```python
+from agent import AutonomousAgent
+
+agent = AutonomousAgent(max_steps=6)
+report = agent.run("Research market trends in AI Agents for 2026.")
+print(report)
+```
+
+## Quickstart
 
 ```bash
-cd labs/projects/autonomous_agent_platform
-pip install -r requirements.txt
-export OPENAI_API_KEY="sk-..."
-
-python -m labs.projects.autonomous_agent_platform.main
+python main.py
 ```
