@@ -86,6 +86,21 @@ steps = decompose_task(
 
 Separate planning from execution. One LLM call creates the plan, then individual calls execute each step.
 
+```mermaid
+flowchart LR
+    GOAL["🎯 Goal"] --> PLAN["📝 Create Plan (1 LLM call)"]
+    PLAN --> S1["Step 1"]
+    S1 --> S2["Step 2"]
+    S2 --> S3["Step N"]
+    S3 --> SYNTH["📊 Synthesize Results"]
+    S1 -.->|"failure"| REPLAN["🔄 Replan"]
+    REPLAN -.-> S2
+
+    style GOAL fill:#6366f1,color:#fff
+    style SYNTH fill:#22c55e,color:#fff
+    style REPLAN fill:#f59e0b,color:#fff
+```
+
 ```python
 class PlanAndExecuteAgent:
     def __init__(self, tools: dict):

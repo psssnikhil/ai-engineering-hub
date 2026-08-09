@@ -108,6 +108,7 @@ reference:
   - { title: Roadmap, path: roadmap.md }
   - { title: Getting Started, path: getting-started.md }
   - { title: Study Plans, path: learn/study-plans.md }
+  - { title: Progress Tracker, path: learn/progress.md }
   - { title: Learn with Tutor Skills, path: learn/using-tutor-skills.md }
   - { title: Learning Path, path: learning-path.md }
   - { title: Topic Map, path: topic-map.md }
@@ -118,6 +119,7 @@ reference:
   - { title: Deep Dives, path: deep-dives/index.md }
   - { title: Resources, path: resources/index.md }
   - { title: Exercises, path: exercises/index.md }
+
 
 projects:
   - { title: Overview, path: projects/index.md }

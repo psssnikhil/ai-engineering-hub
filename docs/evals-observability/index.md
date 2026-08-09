@@ -36,7 +36,7 @@ flowchart LR
 | **Unit / regression** | Every PR | [Course 13](../production/module-19-llm-evaluation-quality/index.md) |
 | **RAG retrieval** | Chunking / index changes | [Course 06 · RAG eval metrics](../build/module-09-rag-retrieval-augmented-generation/lessons/08-RAG-Evaluation-Metrics.md) |
 | **Agent trajectory** | Tool-use agents | [Course 13 · Agent trajectory evals](../production/module-19-llm-evaluation-quality/lessons/04-agent-trajectory-evals.md) |
-| **Safety / red team** | Pre-release | [Course 14 · Red teaming](../production/module-16-ai-safety-ethics/lessons/08-lesson-08.md) |
+| **Safety / red team** | Pre-release | [Course 14 · Red teaming](../production/module-16-ai-safety-ethics/lessons/08-red-teaming-adversarial-testing.md) |
 | **Online / drift** | Production | [Course 13 · Production monitoring](../production/module-19-llm-evaluation-quality/lessons/06-production-monitoring-and-alerts.md) |
 
 ## Observability pillars

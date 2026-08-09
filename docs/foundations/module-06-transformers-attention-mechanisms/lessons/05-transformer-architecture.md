@@ -49,6 +49,34 @@ removes recurrence entirely and relies solely on:
   5. Positional encoding         (sequence order)
 ```
 
+```mermaid
+flowchart TB
+    subgraph Encoder["Encoder (× N layers)"]
+        direction TB
+        IN["Input Embeddings + Positional Encoding"] --> MHA1["Multi-Head Self-Attention"]
+        MHA1 --> AN1["Add & LayerNorm"]
+        AN1 --> FFN1["Feed-Forward Network"]
+        FFN1 --> AN2["Add & LayerNorm"]
+    end
+
+    subgraph Decoder["Decoder (× N layers)"]
+        direction TB
+        OUT["Output Embeddings + Positional Encoding"] --> MMHA["Masked Multi-Head Self-Attention"]
+        MMHA --> AN3["Add & LayerNorm"]
+        AN3 --> CROSS["Multi-Head Cross-Attention"]
+        CROSS --> AN4["Add & LayerNorm"]
+        AN4 --> FFN2["Feed-Forward Network"]
+        FFN2 --> AN5["Add & LayerNorm"]
+    end
+
+    AN2 -- "encoder output (K, V)" --> CROSS
+    AN5 --> LINEAR["Linear + Softmax"]
+    LINEAR --> LOGITS["Output Probabilities"]
+
+    style Encoder fill:#1e1b4b,color:#e0e7ff
+    style Decoder fill:#1e3a5f,color:#e0f2fe
+```
+
 The encoder reads the input sequence and produces a rich representation. The decoder generates the output sequence one token at a time, attending to both previous outputs and the encoder representation.
 
 ---

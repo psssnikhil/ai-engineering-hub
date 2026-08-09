@@ -155,6 +155,30 @@ User query
 Answer (with optional citations)
 ```
 
+Here is the same pipeline as a visual flowchart:
+
+```mermaid
+flowchart LR
+    subgraph Offline["Offline Pipeline (build once)"]
+        direction TB
+        D["📄 Documents"] --> I["1. Ingest & Parse"]
+        I --> C["2. Chunk (300–800 tokens)"]
+        C --> E["3. Embed (→ vectors)"]
+        E --> VDB["4. Index in Vector DB"]
+    end
+
+    subgraph Online["Online Pipeline (per query)"]
+        direction TB
+        Q["❓ User Query"] --> EQ["5. Embed Query"]
+        EQ --> R["6. Retrieve top-K"]
+        R --> A["7. Augment Prompt"]
+        A --> G["8. Generate Answer"]
+        G --> ANS["✅ Grounded Response"]
+    end
+
+    VDB -. "similarity search" .-> R
+```
+
 The offline pipeline runs once (or on updates). The online pipeline runs in milliseconds for every query.
 
 ---

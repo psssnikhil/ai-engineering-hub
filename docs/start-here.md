@@ -59,7 +59,7 @@ Need a week-by-week schedule? See [Study Plans](learn/study-plans.md).
 | RAG | [06 RAG](build/module-09-rag-retrieval-augmented-generation/index.md) | [Graph RAG](build/module-09-rag-retrieval-augmented-generation/lessons/11-graph-rag-and-knowledge-graphs.md) |
 | Agents | [07 AI Agents](build/module-11-ai-agents-fundamentals/index.md) | [Agentic AI hub](agentic-ai/index.md) |
 | MCP & tools | [08 Agent Harness](build/module-18-agent-harness-tools-runtime/index.md) | [Agent Engineering · Tools](agent-engineering/03-tools-and-mcp.md) |
-| Safety | [14 AI Safety](production/module-16-ai-safety-ethics/index.md) | [Prompt injection](production/module-16-ai-safety-ethics/lessons/04-lesson-04.md) |
+| Safety | [14 AI Safety](production/module-16-ai-safety-ethics/index.md) | [Prompt injection](production/module-16-ai-safety-ethics/lessons/04-prompt-injection-security.md) |
 
 Full index: [Topic Map](topic-map.md) · [Glossary](glossary.md)
 

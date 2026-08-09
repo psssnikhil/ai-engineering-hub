@@ -91,6 +91,20 @@ messages = [
 ]
 ```
 
+```mermaid
+flowchart TD
+    START["🧑 User Query"] --> LLM["🤖 LLM Call"]
+    LLM -->|"tool_calls present"| EXEC["⚙️ Execute Tool"]
+    LLM -->|"text response (no tool_calls)"| DONE["✅ Final Answer"]
+    EXEC --> OBS["📋 Observation (tool result)"]
+    OBS -->|"append to messages"| LLM
+    LLM -->|"max steps reached"| BAIL["⛔ Bail Out"]
+
+    style START fill:#6366f1,color:#fff
+    style DONE fill:#22c55e,color:#fff
+    style BAIL fill:#ef4444,color:#fff
+```
+
 Each assistant turn is either a tool call (action) or a text response (conclusion). No tool calls = done.
 
 ---

@@ -548,7 +548,7 @@ Audit logs answer: *Who approved this? When? What arguments were passed? Which p
 
 - [Awesome Harness Engineering](https://github.com/ai-boost/awesome-harness-engineering) — permission and policy patterns
 - [Agents Towards Production](https://github.com/NirDiamant/agents-towards-production) — guardrails in deployed agents
-- [M16 · Prompt Injection](../../../production/module-16-ai-safety-ethics/lessons/04-lesson-04.md) — input-side threats
+- [M16 · Prompt Injection](../../../production/module-16-ai-safety-ethics/lessons/04-prompt-injection-security.md) — input-side threats
 
 ---
 

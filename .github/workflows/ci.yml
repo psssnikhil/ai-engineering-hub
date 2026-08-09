@@ -28,6 +28,9 @@ jobs:
       - name: Lint code fences
         run: node scripts/lint-code-fences.mjs
 
+      - name: Lint content quality & frontmatter
+        run: python3 scripts/lint-content-quality.py
+
       - name: Build docs (strict + link fix)
         run: npm run build:docs
 

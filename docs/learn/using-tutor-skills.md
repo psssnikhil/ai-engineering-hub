@@ -21,7 +21,7 @@ from handbook content.
 3. **State your goal in chat** — no special syntax required.
 
 !!! example "Try these prompts"
-    ```
+    ```text
     I'm a backend engineer — I want to ship a RAG app in a month. Where do I start?
 
     Explain self-attention like I'm prepping for an interview.
@@ -43,7 +43,7 @@ from handbook content.
 
 Skills live in:
 
-```
+```text
 .claude/skills/
   learning-path-advisor/SKILL.md
   ai-tutor/SKILL.md

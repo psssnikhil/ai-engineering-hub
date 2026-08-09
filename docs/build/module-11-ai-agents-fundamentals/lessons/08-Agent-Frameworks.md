@@ -222,17 +222,53 @@ user_proxy.initiate_chat(
 
 ---
 
-## Framework Comparison
+## smolagents (Hugging Face)
 
-| Feature | LangGraph | CrewAI | AutoGen |
-|---------|-----------|--------|---------|
-| Control flow | Explicit graphs | Role-based sequential/hierarchical | Conversation turns |
-| Multi-agent | Via separate nodes | Native crew concept | Native multi-agent chat |
-| Persistence | Built-in checkpoints | Limited | Limited |
-| Learning curve | Medium-high | Low-medium | Low |
-| Debugging | Graph visualization | Verbose logs | Chat transcripts |
-| Production readiness | High | Medium | Medium |
-| Customization | Very flexible | Moderate | Moderate |
+`smolagents` is a minimal, lightweight library by Hugging Face focused on **code-centric agents** where agents write Python code blocks as actions rather than JSON tool calls.
+
+```python
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+
+agent = CodeAgent(
+    tools=[DuckDuckGoSearchTool()],
+    model=HfApiModel(model_id="Qwen/Qwen2.5-Coder-32B-Instruct")
+)
+
+# Agent writes Python code to execute web search and aggregate results
+agent.run("What is the latest release version of PyTorch and what major features were added?")
+```
+
+---
+
+## Comprehensive Framework Selection Matrix
+
+| Dimension | LangGraph | CrewAI | AutoGen | smolagents | Raw Python |
+|-----------|-----------|--------|---------|------------|------------|
+| **Primary Abstraction** | State Machine (Graph) | Team Roles & Tasks | Conversational Actors | Code Execution | Custom Message Loop |
+| **Action Payload** | JSON Function Call | JSON Function Call | Text / Function Call | Python Code Blocks | Custom Schema |
+| **State Persistence** | Native Checkpointing | In-Memory | Custom Handlers | Lightweight State | Fully Custom DB |
+| **Framework Overhead** | ~15–30 ms | ~30–80 ms | ~20–50 ms | ~10–20 ms | 0 ms |
+| **Vendor Lock-in** | Low (Model Agnostic) | Medium | Medium | Low | Zero |
+| **Ideal Team Size** | Enterprise Engineering | Rapid Prototyping | Academic / R&D | Open Source / Local ML | Mission-Critical Systems |
+
+---
+
+## Architectural Decision Framework
+
+```mermaid
+flowchart TD
+    Q1{"Is the task workflow deterministic\nwith known branching?"}
+    Q1 -->|"Yes"| WF["Use a standard Workflow\n(No framework / LangGraph deterministic)"]
+    Q1 -->|"No"| Q2{"Do you need multi-agent\nteam collaboration?"}
+    
+    Q2 -->|"Yes"| Q3{"Do agents need explicit\nrole backstories?"}
+    Q3 -->|"Yes"| CREW["Use CrewAI"]
+    Q3 -->|"No (Explicit graph state)"| LG["Use LangGraph"]
+    
+    Q2 -->|"No"| Q4{"Are latency & custom\ncontrol flow critical?"}
+    Q4 -->|"Yes"| RAW["Build from scratch\n(Raw Python + OpenAI/Anthropic SDK)"]
+    Q4 -->|"No"| SMOL["Use smolagents or LangGraph"]
+```
 
 ---
 
@@ -251,6 +287,7 @@ user_proxy.initiate_chat(
 - Framework overhead is too much for your latency budget
 - You need deep customization of every step
 - You want to minimize dependencies
+
 
 ---
 

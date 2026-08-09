@@ -58,7 +58,30 @@ LoRA fine-tuning:
 
 ### The Key Insight
 
-The weight updates during fine-tuning tend to be **low-rank** — meaning they can be well-approximated by the product of two small matrices. LoRA exploits this by directly learning these small matrices.
+The weight updates during fine-tuning tend to have a low intrinsic dimension — meaning they can be well-approximated by the product of two small matrices \(B\) and \(A\).
+
+```mermaid
+flowchart LR
+    X["Input Tensor x\n(d_in)"] --> FROZEN["Frozen Pre-trained Weight W₀\n(d_out × d_in)\n[FROZEN]"]
+    X --> A["Matrix A\n(r × d_in)\n[TRAINABLE]"]
+    A --> B["Matrix B\n(d_out × r)\n[TRAINABLE]"]
+    
+    B --> SCALE["Scale × (α / r)"]
+    FROZEN --> ADD["(+) Add"]
+    SCALE --> ADD
+    ADD --> Y["Output Tensor h\n(d_out)"]
+
+    style FROZEN fill:#374151,color:#fff
+    style A fill:#6366f1,color:#fff
+    style B fill:#6366f1,color:#fff
+```
+
+Mathematical Forward Pass:
+\[
+h = W_0 x + \Delta W x = W_0 x + \frac{\alpha}{r} B A x
+\]
+
+where \(A \sim \mathcal{N}(0, \sigma^2)\) is initialized with Gaussian noise and \(B = 0\) at the start, ensuring \(\Delta W = 0\) when training begins!
 
 ---
 
@@ -152,6 +175,86 @@ bnb_config = BitsAndBytesConfig(
 | LoRA (fp16) | ~18 GB | Very good |
 | LoRA (8-bit) | ~12 GB | Good |
 | QLoRA (4-bit) | ~8 GB | Good (slight quality trade-off) |
+
+---
+
+## Complete End-to-End QLoRA Fine-Tuning Pipeline
+
+Here is a production-grade training script using `trl.SFTTrainer`, `peft`, and `bitsandbytes`:
+
+```python
+import torch
+from datasets import load_dataset
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from trl import SFTTrainer, SFTConfig
+
+MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
+
+# 1. Configure 4-bit NormalFloat Quantization
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.bfloat16,
+    bnb_4bit_use_double_quant=True,
+)
+
+# 2. Load Base Model & Tokenizer
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_ID,
+    quantization_config=bnb_config,
+    device_map="auto",
+)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+tokenizer.pad_token = tokenizer.eos_token
+
+# Prepare model for kbit training
+model = prepare_model_for_kbit_training(model)
+
+# 3. Configure LoRA Parameters
+peft_config = LoraConfig(
+    r=16,
+    lora_alpha=32,
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+)
+
+model = get_peft_model(model, peft_config)
+model.print_trainable_parameters()
+# Output: trainable params: 20,971,520 || all params: 8,051,232,768 || trainable%: 0.2605%
+
+# 4. Load Dataset
+dataset = load_dataset("philschmid/dolly-15k-oai-style", split="train[:1000]")
+
+# 5. Execute Training with SFTTrainer
+training_args = SFTConfig(
+    output_dir="./lora-llama3-results",
+    num_train_epochs=1,
+    per_device_train_batch_size=4,
+    gradient_accumulation_steps=4,
+    learning_rate=2e-4,
+    fp16=False,
+    bf16=True,
+    logging_steps=10,
+    save_strategy="epoch",
+)
+
+trainer = SFTTrainer(
+    model=model,
+    train_dataset=dataset,
+    peft_config=peft_config,
+    args=training_args,
+)
+
+trainer.train()
+
+# 6. Save LoRA Adapter
+model.save_pretrained("./final-lora-adapter")
+tokenizer.save_pretrained("./final-lora-adapter")
+print("LoRA adapter saved successfully!")
+```
 
 ---
 

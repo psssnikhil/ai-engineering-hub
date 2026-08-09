@@ -94,7 +94,7 @@ Can prompts solve it? → Yes: prompts
                                                                       → Multi-step + tools? → Agent (Course 07)
 ```
 
-See [Course 15 · When to fine-tune](advanced/module-15-fine-tuning-custom-models/lessons/01-lesson-01.md) · [Course 07 · Workflow vs agent](build/module-11-ai-agents-fundamentals/lessons/10-Workflow-vs-Agent.md)
+See [Course 15 · When to fine-tune](advanced/module-15-fine-tuning-custom-models/lessons/01-when-to-fine-tune.md) · [Course 07 · Workflow vs agent](build/module-11-ai-agents-fundamentals/lessons/10-Workflow-vs-Agent.md)
 
 ### RAG vs Graph RAG?
 

@@ -73,6 +73,26 @@ User goal  →  [LLM reasons]  →  decides action
                                                        Final response
 ```
 
+```mermaid
+flowchart LR
+    subgraph Chatbot["Chatbot (single pass)"]
+        direction LR
+        U1["User Input"] --> LLM1["LLM"] --> R1["Text Response"]
+    end
+
+    subgraph Agent["Agent (iterative loop)"]
+        direction TB
+        U2["🎯 User Goal"] --> REASON["🤖 LLM Reasons"]
+        REASON -->|"needs more info"| ACT["⚙️ Execute Tool"]
+        ACT --> OBS["👁️ Observe Result"]
+        OBS --> REASON
+        REASON -->|"goal achieved"| FINAL["✅ Final Response"]
+    end
+
+    style Chatbot fill:#374151,color:#e5e7eb
+    style Agent fill:#1e1b4b,color:#e0e7ff
+```
+
 A chatbot collapses the entire task into one inference call. An agent distributes the task across multiple inference calls, with real-world actions in between. This gives agents the ability to handle tasks that require:
 
 - External data lookup (web search, database query)

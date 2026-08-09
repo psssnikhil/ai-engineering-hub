@@ -73,6 +73,30 @@ Evals—systematic, rubric-based assessments of LLM behavior—are the replaceme
 
 Evaluation happens in two distinct environments. Most teams start with just one; mature teams run both continuously.
 
+```mermaid
+flowchart LR
+    subgraph Offline["Offline Evaluation (pre-deploy)"]
+        GD["📋 Golden Dataset"] --> RUN["Run App on Test Cases"]
+        RUN --> SCORE["Score with Rubrics / LLM Judge"]
+        SCORE --> GATE{"Pass CI\nQuality Gate?"}
+    end
+
+    subgraph Online["Online Evaluation (production)"]
+        PROD["🌐 Production Traffic"] --> SAMPLE["Sample 5% of requests"]
+        SAMPLE --> JUDGE["Auto-score with LLM Judge"]
+        JUDGE --> DASH["📊 Dashboard & Alerts"]
+    end
+
+    GATE -->|"✅ Pass"| DEPLOY["🚀 Deploy"]
+    GATE -->|"❌ Fail"| BLOCK["🚫 Block Merge"]
+    DEPLOY --> PROD
+    DASH -.->|"new failure patterns"| GD
+
+    style GATE fill:#f59e0b,color:#000
+    style DEPLOY fill:#22c55e,color:#fff
+    style BLOCK fill:#ef4444,color:#fff
+```
+
 ### Offline Evaluation
 
 Offline evaluation runs *before deployment* against a fixed dataset of test cases. It is:

@@ -328,11 +328,119 @@ def test_agent():
 
 ---
 
+---
+
+## Complete Agent State Machine
+
+The complete agent architecture operates as a state machine managing state across iterations:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> ReceivingInput: User Prompt
+    ReceivingInput --> LLMInference: Append to Messages
+    LLMInference --> EvaluatingResponse: Stream / Complete
+    
+    EvaluatingResponse --> ToolExecution: tool_calls present
+    EvaluatingResponse --> OutputResponse: text response (done)
+    EvaluatingResponse --> MaxIterationsReached: step count >= max_iterations
+    
+    ToolExecution --> HandlingToolError: Exception / Invalid Args
+    ToolExecution --> AppendingObservation: Success
+    HandlingToolError --> AppendingObservation: Error Message as Observation
+    
+    AppendingObservation --> LLMInference: Loop Next Iteration
+    
+    OutputResponse --> Idle: Complete
+    MaxIterationsReached --> Idle: Fallback Output
+```
+
+---
+
+## Adding Token & Cost Tracking
+
+Production agents can consume thousands of tokens across iterations. Wrap the agent loop with budget tracking:
+
+```python
+@dataclass
+class UsageStats:
+    prompt_tokens: int = 0
+    completion_tokens: int = 0
+    total_cost_usd: float = 0.0
+
+class BudgetAwareAgent(Agent):
+    def __init__(self, *args, max_cost_usd: float = 0.50, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.max_cost_usd = max_cost_usd
+        self.stats = UsageStats()
+        
+        # Pricing per 1M tokens (gpt-4o-mini rates)
+        self.INPUT_COST_PER_M = 0.150
+        self.OUTPUT_COST_PER_M = 0.600
+
+    def _track_usage(self, usage):
+        if not usage:
+            return
+        self.stats.prompt_tokens += usage.prompt_tokens
+        self.stats.completion_tokens += usage.completion_tokens
+        cost = (usage.prompt_tokens / 1_000_000 * self.INPUT_COST_PER_M) + \
+               (usage.completion_tokens / 1_000_000 * self.OUTPUT_COST_PER_M)
+        self.stats.total_cost_usd += cost
+
+    def run(self, user_input: str) -> str:
+        self.messages.append({"role": "user", "content": user_input})
+
+        for i in range(self.max_iterations):
+            if self.stats.total_cost_usd >= self.max_cost_usd:
+                return f"Agent halted: token budget limit of ${self.max_cost_usd:.2f} exceeded."
+
+            response = client.chat.completions.create(
+                model=self.model,
+                messages=self.messages,
+                tools=self.tool_schemas,
+            )
+            self._track_usage(response.usage)
+            message = response.choices[0].message
+
+            if not message.tool_calls:
+                self.messages.append(message)
+                return message.content
+
+            self.messages.append(message)
+            for tool_call in message.tool_calls:
+                result = self._execute_tool(tool_call)
+                self.messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "content": result,
+                })
+
+        return "Agent reached maximum iterations without completing the task."
+```
+
+---
+
+## Production Failure Modes & Mitigation
+
+When building from scratch, watch for these 5 common production failure modes:
+
+| Failure Mode | Root Cause | Mitigation Strategy |
+|--------------|------------|---------------------|
+| **Infinite Tool Ping-Pong** | Agent calls `search("A")` then `search("A")` in a loop | Detect identical consecutive tool calls in history and break loop |
+| **Tool Hallucination** | LLM invokes `delete_database()` which isn't in `TOOLS` | Return `Error: Tool not found` in message history so model self-corrects |
+| **JSON Argument Mismatch** | Model outputs malformed JSON for function arguments | Return `Error: Invalid JSON syntax` to prompt the model to reformat |
+| **Context Window Blowup** | Tool output returns a 50KB webpage | Truncate tool results (e.g. `result[:2000]`) before appending to messages |
+| **Silent API Hangups** | External HTTP tool hangs indefinitely | Enforce strict HTTP timeouts (e.g. `requests.get(url, timeout=5)`) |
+
+---
+
 ## Key Takeaways
 
 - A complete agent needs only ~100 lines: tool definitions, a message loop, and tool execution
 - The agent loop is: prompt -> LLM -> check for tool calls -> execute tools -> repeat
 - Always add error handling for tool execution failures and argument parsing
+- Track token usage and enforce dollar budget caps to prevent runaway iterations
+- Truncate tool results to prevent context window explosion
 - Test with multi-step tasks that require tool chaining
 - Start without a framework, then adopt one only when you need features you cannot build quickly
 
@@ -345,3 +453,4 @@ def test_agent():
 ---
 
 Next: Agent Frameworks
+

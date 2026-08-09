@@ -55,6 +55,24 @@ LLM app reliability:
 
 An API gateway is a single entry point that abstracts your application from the specifics of LLM providers. All LLM calls go through the gateway, which handles routing, logging, timeout enforcement, and authentication.
 
+```mermaid
+flowchart LR
+    APP["Your App"] --> GW["🛡️ API Gateway"]
+    GW --> CACHE{"Cache\nHit?"}
+    CACHE -->|"hit"| CACHED["Return Cached"]
+    CACHE -->|"miss"| ROUTER["Model Router"]
+    ROUTER --> P1["OpenAI (primary)"]
+    ROUTER --> P2["Anthropic (fallback)"]
+    ROUTER --> P3["Google (fallback)"]
+    P1 -.->|"timeout / error"| P2
+    P2 -.->|"timeout / error"| P3
+    GW --> LOG["📊 Logging & Metrics"]
+
+    style GW fill:#6366f1,color:#fff
+    style CACHED fill:#22c55e,color:#fff
+```
+
+
 ```python
 import time
 import logging

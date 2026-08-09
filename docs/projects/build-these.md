@@ -49,9 +49,11 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Retrieve top-k, inject into prompt
 - [ ] Show source snippets in UI
 
+**Working starter repository:** [`labs/projects/01-doc-qa-bot/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/01-doc-qa-bot) (Includes CLI + FastAPI server)
+
 **Stretch:** Add Streamlit or FastAPI frontend.
 
-**Capstone link:** [Capstone project 1 — RAG Knowledge Assistant](../advanced/module-17-capstone-projects/lessons/02-lesson-02.md)
+**Capstone link:** [Capstone project 1 — RAG Knowledge Assistant](../advanced/module-17-capstone-projects/lessons/02-rag-knowledge-assistant.md)
 
 ---
 
@@ -95,7 +97,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Highlight matched spans
 - [ ] Evaluate recall@k on 20 hand-labeled queries
 
-**Capstone link:** [Capstone project 6 — Semantic Search Engine](../advanced/module-17-capstone-projects/lessons/06-lesson-06.md)
+**Capstone link:** [Capstone project 6 — Semantic Search Engine](../advanced/module-17-capstone-projects/lessons/06-semantic-search-engine.md)
 
 ---
 
@@ -117,7 +119,9 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Structured final report (markdown)
 - [ ] Trace log of each step
 
-**Capstone link:** [Capstone project 2 — Autonomous Coding Agent](../advanced/module-17-capstone-projects/lessons/03-lesson-03.md) (adapt tools for research)
+**Working starter repository:** [`labs/projects/04-research-agent/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/04-research-agent) (Includes tools & step tracer)
+
+**Capstone link:** [Capstone project 2 — Autonomous Coding Agent](../advanced/module-17-capstone-projects/lessons/03-autonomous-coding-agent.md) (adapt tools for research)
 
 ---
 
@@ -139,7 +143,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Shared state or blackboard
 - [ ] Eval: did final report cite all sources?
 
-**Capstone link:** [Capstone project 3 — Multi-Agent Research](../advanced/module-17-capstone-projects/lessons/04-lesson-04.md)
+**Capstone link:** [Capstone project 3 — Multi-Agent Research](../advanced/module-17-capstone-projects/lessons/04-multi-agent-research.md)
 
 ---
 
@@ -160,7 +164,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Router classifies intent
 - [ ] Separate RAG indexes per domain
 - [ ] Escalation to human when confidence low
-- [ ] Guardrails ([Course 14 L4](../production/module-16-ai-safety-ethics/lessons/04-lesson-04.md))
+- [ ] Guardrails ([Course 14 L4](../production/module-16-ai-safety-ethics/lessons/04-prompt-injection-security.md))
 
 ---
 
@@ -181,7 +185,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Batch processing with retries
 - [ ] Golden set of 50 examples + accuracy metric
 
-**Capstone link:** [Capstone project 7 — Data Extraction Pipeline](../advanced/module-17-capstone-projects/lessons/07-lesson-07.md)
+**Capstone link:** [Capstone project 7 — Data Extraction Pipeline](../advanced/module-17-capstone-projects/lessons/07-data-extraction-pipeline.md)
 
 ---
 
@@ -222,7 +226,9 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Regression test in CI
 - [ ] Dashboard or report for pass/fail trends
 
-**Capstone link:** [Capstone project 9 — AI Safety Evaluation Suite](../advanced/module-17-capstone-projects/lessons/09-lesson-09.md)
+**Working starter repository:** [`labs/projects/09-eval-suite/`](https://github.com/psssnikhil/ai-engineering-hub/tree/main/labs/projects/09-eval-suite) (Includes golden dataset & CI gate runner)
+
+**Capstone link:** [Capstone project 9 — AI Safety Evaluation Suite](../advanced/module-17-capstone-projects/lessons/09-safety-evaluation-suite.md)
 
 ---
 
@@ -244,7 +250,7 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 - [ ] Rate limiting + cost alerts
 - [ ] README with architecture diagram
 
-**Capstone link:** [Capstone project 10 — Deploy](../advanced/module-17-capstone-projects/lessons/10-lesson-10.md)
+**Capstone link:** [Capstone project 10 — Deploy](../advanced/module-17-capstone-projects/lessons/10-deploy-ai-application.md)
 
 ---
 

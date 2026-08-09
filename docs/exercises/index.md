@@ -88,11 +88,14 @@ Compare with `*-solution.py` when stuck. API keys only needed for exercises that
 | **02** · AI Engineering Essentials | [exercises/](../foundations/module-01-ai-engineering-essentials/exercises/) | `02`–`04` starter/solution + notebook | ✅ Live |
 | **03** · Neural Networks | [exercises/](../foundations/module-05-neural-networks-deep-learning-fundamentals/exercises/) | `01`–`10` starter/solution | ✅ Live |
 | **04** · Transformers | [exercises/](../foundations/module-06-transformers-attention-mechanisms/exercises/) | `01`–`09` starter/solution | ✅ Live |
-| **06** · RAG | `build/module-09-.../exercises/` | — | 🔜 [Roadmap](../roadmap.md) |
-| **07** · Agents | `build/module-11-.../exercises/` | — | 🔜 [Roadmap](../roadmap.md) |
+| **06** · RAG | [exercises/](../build/module-09-rag-retrieval-augmented-generation/exercises/) | `01` starter/solution | ✅ Live |
+| **07** · Agents | [exercises/](../build/module-11-ai-agents-fundamentals/exercises/) | `01` starter/solution | ✅ Live |
+| **10** · Vector Databases | [exercises/](../build/module-13-vector-databases-deep-dive/exercises/) | `01` starter/solution | ✅ Live |
+| **12** · LLMOps & Production | [exercises/](../production/module-10-llmops-production-systems/exercises/) | `01` starter/solution | ✅ Live |
+| **13** · LLM Evaluation & Quality | [exercises/](../production/module-19-llm-evaluation-quality/exercises/) | `01` starter/solution | ✅ Live |
 
-!!! note "Courses 06 & 07 exercises"
-    Listed in course indexes but not yet published as starter files. Use inline lesson code and [Build These](../projects/build-these.md) projects until notebooks land.
+!!! note "More exercises landing continuously"
+    Courses 02, 03, 04, 06, 07, 10, 12, and 13 have live starter/solution code. For additional courses, use inline lesson code and [Build These](../projects/build-these.md) projects.
 
 ---
 
