@@ -269,6 +269,8 @@ class MCPAgentClient:
         print(f"[MCP Handshake] Setup complete. Active Tools: {len(self.discovered_tools)} | Active Resources: {len(self.discovered_resources)}")
 
     def read_resource(self, uri: str) -> str:
+        if not self.discovered_tools:
+            self.perform_handshake()
         req = {
             "jsonrpc": "2.0",
             "id": f"res-read-{uuid.uuid4().hex[:6]}",

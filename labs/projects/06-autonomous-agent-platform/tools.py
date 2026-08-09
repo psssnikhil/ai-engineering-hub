@@ -5,7 +5,7 @@ Tool Registry and Implementations for Autonomous Agent Platform.
 
 import json
 import os
-from typing import Dict, List, Any, Callable
+from typing import Dict, List, Any, Callable, Optional
 
 
 def search_web(query: str) -> str:
