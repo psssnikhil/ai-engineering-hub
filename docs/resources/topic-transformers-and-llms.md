@@ -42,7 +42,7 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 |------------------|---------|-------------|------|
 | **Neural Networks: Zero to Hero** | Andrej Karpathy | 7-part video series building micrograd, makemore, WaveNet, GPT-2 from scratch in PyTorch. | [YouTube Playlist](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUbF9GE) |
 | **Deep Learning Series** | 3Blue1Brown | Unrivaled visual intuition for gradient descent, backpropagation, and self-attention. | [YouTube Playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
-| **Coding Transformer / Attention Papers** | Umar Jamil | Line-by-line PyTorch implementation of Attention Is All You Need and LLaMA architecture. | [YouTube Channel](https://www.youtube.com/@UmarJamil) |
+| **Coding Transformer / Attention Papers** | Umar Jamil | Line-by-line PyTorch implementation of Attention Is All You Need and LLaMA architecture. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+Coding+Transformer+%2F+Attention+Papers) |
 | **LLM Visualization & Intuition** | Jay Alammar | Visual blog posts & videos explaining Transformer matrices, embeddings, and attention. | [Blog / Site](https://jalammar.github.io/illustrated-transformer/) |
 
 ---

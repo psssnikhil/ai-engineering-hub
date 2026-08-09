@@ -28,5 +28,5 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 |----------------|----------------------|------------|-------------|
 | **Full Stack LLM Bootcamp** | FSDL | Comprehensive overview of the modern LLM tech stack, API workflows, and cost management | [Course Site](https://fullstackdeeplearning.com/) |
 | **ChatGPT Prompt Engineering for Developers** | Andrew Ng / OpenAI | Official interactive guide on prompt structures, API calls, and system prompts | [Free Course](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) |
-| **Building Applications with LLM APIs** | Anthropic / OpenAI | Developer tutorials on context windows, tokenization, streaming, and API error handling | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+| **Building Applications with LLM APIs** | Anthropic / OpenAI | Developer tutorials on context windows, tokenization, streaming, and API error handling | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+%2F+OpenAI+Building+Applications+with+LLM+APIs) |
 

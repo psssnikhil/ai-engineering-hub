@@ -25,7 +25,7 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 | Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
 |-----------------|---------------------|---------------------|-------------|
 | **DeepSeek-R1 & Reinforcement Learning Breakdown** | Andrej Karpathy | Deep technical breakdown of how pure RL incentivizes CoT reasoning, reward modeling, and distilled reasoning models. | [Watch Video](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
-| **DeepSeek-R1 PyTorch & GRPO Walkthrough** | Umar Jamil | Line-by-line derivation of Group Relative Policy Optimization (GRPO), rule-based rewards, and token reasoning traces. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **DeepSeek-R1 PyTorch & GRPO Walkthrough** | Umar Jamil | Line-by-line derivation of Group Relative Policy Optimization (GRPO), rule-based rewards, and token reasoning traces. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+DeepSeek-R1+PyTorch+%26+GRPO+Walkthrough) |
 | **Process Reward Models & Tree of Thoughts** | Yannic Kilcher | Paper breakdown of PRMs (Let's Verify Step by Step) and BFS/DFS tree search algorithms over LLM tokens. | [Watch Video](https://www.youtube.com/watch?v=w65l4T2pndE) |
 
 ---
@@ -34,9 +34,9 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Lecture | Creator / Presenter | Topic & Description | Direct Link |
 |-----------------|---------------------|---------------------|-------------|
-| **CLIP PyTorch Code & Architecture Walkthrough** | Umar Jamil | Step-by-step PyTorch code walkthrough of CLIP contrastive loss, image encoder, and text encoder. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **LLaVA & Visual Instruction Tuning** | Umar Jamil | Architectural breakdown of LLaVA vision projections, vicuna LLM integration, and visual tuning. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **ColPali & Vision Document Retrieval** | James Briggs / Answer.AI | Hands-on video tutorial showing how to index PDF pages visually without text extraction errors. | [Watch Video](https://www.youtube.com/@jamesbriggs) |
+| **CLIP PyTorch Code & Architecture Walkthrough** | Umar Jamil | Step-by-step PyTorch code walkthrough of CLIP contrastive loss, image encoder, and text encoder. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+CLIP+PyTorch+Code+%26+Architecture+Walkthrough) |
+| **LLaVA & Visual Instruction Tuning** | Umar Jamil | Architectural breakdown of LLaVA vision projections, vicuna LLM integration, and visual tuning. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LLaVA+%26+Visual+Instruction+Tuning) |
+| **ColPali & Vision Document Retrieval** | James Briggs / Answer.AI | Hands-on video tutorial showing how to index PDF pages visually without text extraction errors. | [Search on YouTube →](https://www.youtube.com/results?search_query=James+Briggs+%2F+Answer.AI+ColPali+%26+Vision+Document+Retrieval) |
 | **CS231n: Deep Learning for Computer Vision** | Stanford University | Flagship Stanford course covering Convolutional Networks, Vision Transformers, and Multimodal AI. | [Course Site](https://cs231n.stanford.edu/) |
 
 ---
@@ -55,10 +55,10 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 
 | Video / Paper | Creator | Engineering Focus | Direct Link |
 |---------------|---------|-------------------|-------------|
-| **Attention Is All You Need — PyTorch Code Walkthrough** | Umar Jamil | Line-by-line coding of Multi-Head Attention, Positional Encodings, and Transformer blocks. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations from scratch in PyTorch. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Step-by-step matrix derivation of Low-Rank Adaptation and 4-bit NormalFloat quantization algorithms. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **FlashAttention Matrix Tiling & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling. | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **Attention Is All You Need — PyTorch Code Walkthrough** | Umar Jamil | Line-by-line coding of Multi-Head Attention, Positional Encodings, and Transformer blocks. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+Attention+Is+All+You+Need++PyTorch+Code+Walkthrough) |
+| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations from scratch in PyTorch. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LLaMA+Architecture+%26+SwiGLU+%2F+RoPE+Code) |
+| **LoRA & QLoRA Mathematical Breakdown** | Umar Jamil | Step-by-step matrix derivation of Low-Rank Adaptation and 4-bit NormalFloat quantization algorithms. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LoRA+%26+QLoRA+Mathematical+Breakdown) |
+| **FlashAttention Matrix Tiling & IO Awareness** | Umar Jamil | Breakdown of GPU memory hierarchy, HBM vs SRAM latency, and FlashAttention CUDA tiling. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+FlashAttention+Matrix+Tiling+%26+IO+Awareness) |
 
 ---
 
@@ -67,7 +67,7 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 | Video / Masterclass | Creator / Host | Engineering Focus | Direct Link |
 |---------------------|----------------|-------------------|-------------|
 | **Building & Evaluating Advanced RAG** | Jerry Liu (LlamaIndex) / DeepLearning.AI | Hands-on video training on sentence-window retrieval, auto-merging indexers, and reranking. | [Free Course](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) |
-| **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers. | [Watch Playlist](https://www.youtube.com/@jamesbriggs) |
+| **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers. | [Search on YouTube →](https://www.youtube.com/results?search_query=James+Briggs+Vector+Search+%26+Hybrid+BM25+Retrieval) |
 | **RAG Triad & Evaluation Metrics** | Arize AI / TruLens | Video walkthrough explaining Context Relevance, Groundedness, and Answer Relevance scoring. | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
 
 ---
@@ -87,4 +87,4 @@ A curated, categorized reference catalog of the best video playlists, flagship u
 |-----------------|------------------|-------------------|-------------|
 | **vLLM: PagedAttention & Virtual Memory Management** | Woosuk Kwon (vLLM Lead) | Architectural explanation of virtual memory management for KV caches in GPU memory. | [Watch Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
 | **Full Stack LLM Bootcamp** | FSDL (Full Stack Deep Learning) | Comprehensive lecture series covering LLM application stack, prompt engineering, cost optimization, and evals. | [Course Site](https://fullstackdeeplearning.com/) |
-| **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Watch Channel](https://www.youtube.com/@ArizeAI) |
+| **OpenTelemetry & LLM Observability** | Arize AI / Phoenix | Video walkthrough on instrumenting OpenTelemetry tracing across agent loops and LLM calls. | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+Phoenix+OpenTelemetry+%26+LLM+Observability) |

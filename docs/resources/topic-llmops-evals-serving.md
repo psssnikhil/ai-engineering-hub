@@ -43,7 +43,7 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | Video / Playlist | Creator | Description | Link |
 |------------------|---------|-------------|------|
 | **vLLM: High-Throughput Serving & PagedAttention** | Woosuk Kwon (vLLM Lead) | Deep architectural explanation of virtual memory management for KV caches in GPU memory. | [YouTube Video](https://www.youtube.com/watch?v=80bIUggjpDs) |
-| **LLM Evaluation & Observability Masterclass** | Arize AI / Phoenix | Step-by-step video guides on instrumenting OpenTelemetry tracing, LLM evaluation, and drift detection. | [YouTube Channel](https://www.youtube.com/@ArizeAI) |
+| **LLM Evaluation & Observability Masterclass** | Arize AI / Phoenix | Step-by-step video guides on instrumenting OpenTelemetry tracing, LLM evaluation, and drift detection. | [Search on YouTube →](https://www.youtube.com/results?search_query=Arize+AI+%2F+Phoenix+LLM+Evaluation+%26+Observability+Masterclass) |
 | **Building Guardrails & Red Teaming** | DeepLearning.AI | Practical short course on securing LLM apps against prompt injection, jailbreaks, and PII leakage. | [DeepLearning.AI Site](https://www.deeplearning.ai/short-courses/) |
 
 ---

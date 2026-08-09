@@ -33,5 +33,5 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 |---------------------|---------------------|------------|-------------|
 | **Hierarchical Navigable Small World (HNSW) Indexing** | James Briggs | Geometric intuition and graph construction for ANN (Approximate Nearest Neighbor) search | [Watch Video](https://www.youtube.com/watch?v=QvKMwLjdikU) |
 | **Product Quantization & Vector Compression** | Pinecone / James Briggs | Subspace quantization, IVF-PQ indexing, memory reduction, and recall trade-offs | [Watch Video](https://www.youtube.com/watch?v=t9wXv4yQ4cI) |
-| **Qdrant & Production Vector Search** | Qdrant Engine Team | Payload filtering, multi-vector retrieval, and distributed vector database cluster scaling | [Watch Channel](https://www.youtube.com/@qdrant) |
+| **Qdrant & Production Vector Search** | Qdrant Engine Team | Payload filtering, multi-vector retrieval, and distributed vector database cluster scaling | [Search on YouTube →](https://www.youtube.com/results?search_query=Qdrant+Engine+Team+Qdrant+%26+Production+Vector+Search) |
 

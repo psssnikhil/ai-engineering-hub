@@ -76,7 +76,7 @@ flowchart TD
 
 | Video / Tech Talk | Creator / Presenter | Focus Area | Direct Link |
 |-------------------|---------------------|------------|-------------|
-| **Claude Code & Agentic Workflows** | Anthropic | Official terminal agent walkthrough, permission model, and tools integration | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+| **Claude Code & Agentic Workflows** | Anthropic | Official terminal agent walkthrough, permission model, and tools integration | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+Claude+Code+%26+Agentic+Workflows) |
 | **Aider & Repository Context Engineering** | Paul Gauthier (Aider) | Repository maps using tree-sitter, git diff management, and context packing | [Watch Video](https://www.youtube.com/watch?v=1bwy4Z2bJc0) |
-| **Model Context Protocol (MCP) Live Specification** | Anthropic | Live demonstration of MCP client/server protocol, tool discovery, and custom servers | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+| **Model Context Protocol (MCP) Live Specification** | Anthropic | Live demonstration of MCP client/server protocol, tool discovery, and custom servers | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+Model+Context+Protocol+MCP+Live+Specification) |
 

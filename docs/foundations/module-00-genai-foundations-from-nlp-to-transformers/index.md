@@ -29,5 +29,5 @@ Build the foundational knowledge needed for modern AI engineering — from prere
 | **Neural Networks: Zero to Hero** | Andrej Karpathy | Micrograd, makemore, WaveNet, and building GPT from scratch in PyTorch | [Watch Playlist](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUbF9GE) |
 | **Deep Learning & Neural Networks** | 3Blue1Brown | Visual 3D intuition behind backpropagation, linear algebra, and self-attention | [Watch Playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
 | **CS224N: NLP with Deep Learning** | Stanford University | Word embeddings, RNNs, Seq2Seq, and Transformer architectures | [Course Lectures](https://web.stanford.edu/class/cs224n/) |
-| **Attention Is All You Need PyTorch Code** | Umar Jamil | Line-by-line coding of Multi-Head Attention and Transformer blocks | [Watch Walkthrough](https://www.youtube.com/@UmarJamil) |
+| **Attention Is All You Need PyTorch Code** | Umar Jamil | Line-by-line coding of Multi-Head Attention and Transformer blocks | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+Attention+Is+All+You+Need+PyTorch+Code) |
 

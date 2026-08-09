@@ -29,6 +29,6 @@ Master advanced prompt engineering techniques including few-shot learning, chain
 | Video / Tutorial | Creator / Presenter | Focus Area | Direct Link |
 |------------------|---------------------|------------|-------------|
 | **ChatGPT Prompt Engineering for Developers** | Andrew Ng / OpenAI | Official interactive guide on prompt structures, API calls, and system prompts | [Free Course](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) |
-| **System Prompt Engineering & Claude Metaprompt** | Anthropic | Crafting production system prompts, xml tag delimiters, and dynamic context injection | [Watch Channel](https://www.youtube.com/@AnthropicAI) |
+| **System Prompt Engineering & Claude Metaprompt** | Anthropic | Crafting production system prompts, xml tag delimiters, and dynamic context injection | [Search on YouTube →](https://www.youtube.com/results?search_query=Anthropic+System+Prompt+Engineering+%26+Claude+Metaprompt) |
 | **DSPy: Assertions & Automatic Prompt Optimization** | Omar Khattab (Stanford) | Compiling declarative prompt pipelines, few-shot bootstrapping, and automatic metric tuning | [Watch Video](https://www.youtube.com/watch?v=41EfOY0Ldkc) |
 

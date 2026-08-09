@@ -38,9 +38,9 @@ Curated collection of landmark research papers, open-source repositories, YouTub
 
 | Video / Playlist | Creator | Description | Link |
 |------------------|---------|-------------|------|
-| **CLIP Code & Architecture PyTorch Walkthrough** | Umar Jamil | Step-by-step PyTorch code walkthrough of CLIP contrastive loss, image encoder, and text encoder. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **LLaVA & Vision-Language Model Architectures** | Umar Jamil | Detailed architectural breakdown of LLaVA vision projections, vicuna LLM integration, and visual tuning. | [Watch Video](https://www.youtube.com/@UmarJamil) |
-| **Multimodal RAG with ColPali & VLM Embeddings** | Answer.AI / James Briggs | Hands-on video tutorial showing how to retrieve PDF pages visually without OCR errors. | [Watch Video](https://www.youtube.com/@jamesbriggs) |
+| **CLIP Code & Architecture PyTorch Walkthrough** | Umar Jamil | Step-by-step PyTorch code walkthrough of CLIP contrastive loss, image encoder, and text encoder. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+CLIP+Code+%26+Architecture+PyTorch+Walkthrough) |
+| **LLaVA & Vision-Language Model Architectures** | Umar Jamil | Detailed architectural breakdown of LLaVA vision projections, vicuna LLM integration, and visual tuning. | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LLaVA+%26+Vision-Language+Model+Architectures) |
+| **Multimodal RAG with ColPali & VLM Embeddings** | Answer.AI / James Briggs | Hands-on video tutorial showing how to retrieve PDF pages visually without OCR errors. | [Search on YouTube →](https://www.youtube.com/results?search_query=Answer.AI+%2F+James+Briggs+Multimodal+RAG+with+ColPali+%26+VLM+Embeddings) |
 | **Stanford CS231n: Deep Learning for Computer Vision** | Stanford University | Complete lecture series covering CNNs, Vision Transformers (ViT), and multimodal image understanding. | [Course Site](https://cs231n.stanford.edu/) |
 
 ---

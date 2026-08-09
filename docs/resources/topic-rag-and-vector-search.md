@@ -43,7 +43,7 @@ Curated list of top landmark papers, open-source repositories, video series, fre
 | Video / Playlist | Creator | Description | Link |
 |------------------|---------|-------------|------|
 | **Building Production RAG Applications** | DeepLearning.AI | Free short course by Jerry Liu (LlamaIndex founder) on advanced RAG patterns (sentence window, auto-merging). | [DeepLearning.AI Site](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) |
-| **RAG Architecture & Vector Search Masterclass** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search, Cohere reranking, and BM25 integration. | [YouTube Channel](https://www.youtube.com/@jamesbriggs) |
+| **RAG Architecture & Vector Search Masterclass** | James Briggs | Step-by-step video tutorials on Pinecone, Qdrant, hybrid search, Cohere reranking, and BM25 integration. | [Search on YouTube →](https://www.youtube.com/results?search_query=James+Briggs+RAG+Architecture+%26+Vector+Search+Masterclass) |
 | **RAG Triad & Evaluation** | TruLens / Arize | Video walkthroughs explaining Context Relevance, Groundedness, and Answer Relevance evaluation. | [YouTube Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
 
 ---

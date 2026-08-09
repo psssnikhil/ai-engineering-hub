@@ -32,5 +32,5 @@ Master Large Language Models from pre-training to fine-tuning and deployment.
 | **Stanford CS336: Language Modeling from Scratch** | Stanford University | Data curation, distributed cluster training, Tokenization, RoPE, and inference | [Course Site](https://stanford-cs336.github.io/spring2024/) |
 | **DeepSeek-R1 & Reinforcement Learning Breakdown** | Andrej Karpathy | Deep technical breakdown of how pure RL incentivizes CoT reasoning and reward modeling | [Watch Video](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
 | **Let's build the GPT Tokenizer** | Andrej Karpathy | Deep dive into Byte-Pair Encoding (BPE), tiktoken, and vocabulary expansion | [Watch Video](https://www.youtube.com/watch?v=zduSFxRajkE) |
-| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations in PyTorch | [Watch Video](https://www.youtube.com/@UmarJamil) |
+| **LLaMA Architecture & SwiGLU / RoPE Code** | Umar Jamil | Implementing RoPE (Rotary Embeddings), RMSNorm, and SwiGLU activations in PyTorch | [Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+LLaMA+Architecture+%26+SwiGLU+%2F+RoPE+Code) |
 

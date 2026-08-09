@@ -53,7 +53,7 @@ Jump directly to a dedicated resource guide combining **landmark papers, top Git
   Stanford’s flagship course covering word embeddings, sequence-to-sequence models, transformers, and pre-training.
 - **[Stanford CS336 — Language Modeling from Scratch](https://stanford-cs336.github.io/spring2024/)**  
   Deep technical lectures on data curation, distributed training, hardware utilization, and LLM inference algorithms.
-- **[Umar Jamil — Paper Walkthroughs](https://www.youtube.com/@UmarJamil)**  
+- **[Search on YouTube →](https://www.youtube.com/results?search_query=Umar+Jamil+%E2%80%94+Paper+Walkthroughs)**  
   Line-by-line PyTorch code walkthroughs of landmark papers (Attention is All You Need, LLaMA, LoRA, FlashAttention).
 
 ---

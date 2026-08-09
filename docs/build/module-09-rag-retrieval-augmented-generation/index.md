@@ -36,7 +36,7 @@ Hands-on files: [exercises/index.md](exercises/index.md)
 | Video / Masterclass | Creator / Institution | Focus Area | Direct Link |
 |---------------------|----------------------|------------|-------------|
 | **Building & Evaluating Advanced RAG** | Jerry Liu (LlamaIndex) / DeepLearning.AI | Sentence-window retrieval, auto-merging indexers, and reranking | [Free Course](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) |
-| **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers | [Watch Playlist](https://www.youtube.com/@jamesbriggs) |
-| **ColPali & Vision Document Retrieval** | Answer.AI / James Briggs | Indexing visual PDF document pages directly without OCR text extraction errors | [Watch Video](https://www.youtube.com/@jamesbriggs) |
+| **Vector Search & Hybrid BM25 Retrieval** | James Briggs | Pinecone, Qdrant, hybrid search (sparse + dense), and Cohere rerankers | [Search on YouTube →](https://www.youtube.com/results?search_query=James+Briggs+Vector+Search+%26+Hybrid+BM25+Retrieval) |
+| **ColPali & Vision Document Retrieval** | Answer.AI / James Briggs | Indexing visual PDF document pages directly without OCR text extraction errors | [Search on YouTube →](https://www.youtube.com/results?search_query=Answer.AI+%2F+James+Briggs+ColPali+%26+Vision+Document+Retrieval) |
 | **RAG Triad & Evaluation Metrics** | Arize AI / TruLens | Context Relevance, Groundedness, and Answer Relevance scoring | [Watch Video](https://www.youtube.com/watch?v=0hM4-S9vW4c) |
 
