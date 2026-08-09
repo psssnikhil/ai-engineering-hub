@@ -16,6 +16,9 @@ Jump directly to a dedicated resource guide combining **landmark papers, top Git
 | Major Topic | What's Included | Link |
 |-------------|-----------------|------|
 | **🧠 Transformers & LLM Architecture** | Vaswani, BERT, GPT-3, RoPE, FlashAttention, nanoGPT, Karpathy series, Stanford CS224N/CS336 | [Transformers & LLM Resources](topic-transformers-and-llms.md) |
+| **🧩 Reasoning & Test-Time Compute** | DeepSeek-R1, PRMs, Tree of Thoughts, MCTS, Quiet-STaR, Open-R1, GRPO | [Reasoning & Test-Time Compute](topic-reasoning-and-test-time-compute.md) |
+| **👁 Multimodal AI & VLMs** | CLIP, LLaVA, Flamingo, Qwen-VL, Multimodal RAG, Whisper, Voice Agents | [Multimodal AI & VLM Resources](topic-multimodal-and-vlm.md) |
+| **💻 Code Intelligence & SWE Agents** | SWE-bench, HumanEval, Claude Code CLI, OpenHands, Aider, Smolagents | [Code Intelligence & SWE Agents](topic-code-intelligence-and-swe-agents.md) |
 | **📚 RAG & Vector Search** | RAG, DPR, ColBERT, HyDE, LlamaIndex, Qdrant, Chroma, DeepLearning.AI RAG, Vector DB Academy | [RAG & Vector Search Resources](topic-rag-and-vector-search.md) |
 | **🤖 AI Agents & Harness Engineering** | ReAct, Toolformer, Generative Agents, LangGraph, Smolagents, AutoGen, FastMCP, Claude Code | [AI Agents & Harness Resources](topic-agents-and-harnesses.md) |
 | **⚡ LLMOps, Serving, Evals & Safety** | vLLM, PagedAttention, LiteLLM, Ragas, Phoenix, MT-Bench, HELM, Guardrails, Red Teaming | [LLMOps & Serving Resources](topic-llmops-evals-serving.md) |

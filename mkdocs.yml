@@ -141,19 +141,25 @@ nav:
           - Related Papers: ai-engineering-2026/related-papers.md
   - Resources:
       - Overview: resources/index.md
-      - "Transformers & LLMs": resources/topic-transformers-and-llms.md
-      - "RAG & Vector Search": resources/topic-rag-and-vector-search.md
-      - "AI Agents & Harnesses": resources/topic-agents-and-harnesses.md
-      - "LLMOps & Serving": resources/topic-llmops-evals-serving.md
-      - "Fine-Tuning & Alignment": resources/topic-finetuning-and-alignment.md
-      - Essential Papers: resources/essential-papers.md
-      - Essential Videos: resources/essential-videos.md
-      - "Tools & Frameworks": resources/tools-and-libraries.md
-      - "Courses & Communities": resources/courses-and-communities.md
-      - Open Source Hubs: resources/open-source-hubs.md
-      - Complete Papers Catalog: resources/papers.md
-      - Complete Video Catalog: resources/videos.md
-      - "Technical Blogs & Architecture Guides": resources/blogs-and-guides.md
+      - 🎯 Resources by Topic:
+          - "Transformers & LLMs": resources/topic-transformers-and-llms.md
+          - "Reasoning & Test-Time Compute": resources/topic-reasoning-and-test-time-compute.md
+          - "Multimodal AI & VLMs": resources/topic-multimodal-and-vlm.md
+          - "Code Intelligence & SWE Agents": resources/topic-code-intelligence-and-swe-agents.md
+          - "RAG & Vector Search": resources/topic-rag-and-vector-search.md
+          - "AI Agents & Harnesses": resources/topic-agents-and-harnesses.md
+          - "LLMOps & Serving": resources/topic-llmops-evals-serving.md
+          - "Fine-Tuning & Alignment": resources/topic-finetuning-and-alignment.md
+      - 📚 Master Catalogs:
+          - Complete Papers Catalog: resources/papers.md
+          - Complete Video Catalog: resources/videos.md
+          - "Tools & Frameworks Index": resources/tools-and-libraries.md
+          - "Technical Blogs & Architecture Guides": resources/blogs-and-guides.md
+      - 🌟 Curated References:
+          - Essential Papers: resources/essential-papers.md
+          - Essential Videos: resources/essential-videos.md
+          - "Courses & Communities": resources/courses-and-communities.md
+          - Open Source Hubs: resources/open-source-hubs.md
   - Reference:
       - Roadmap: roadmap.md
       - Getting Started: getting-started.md
