@@ -1,7 +1,7 @@
 ---
-title: "AI Engineering Hub — Free Open Source AI Engineering Course & Roadmap"
-description: "Master AI Engineering from ground zero to production: Transformers, RAG, Autonomous AI Agents, LLMOps, Evals, and Fine-Tuning. Free open-source curriculum."
-keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuning, transformers, LLM evaluation, open source AI curriculum"
+title: "AI Engineering Hub — The All-in-One Destination for AI Learning, Labs, Resources & Interview Prep"
+description: "The definitive open-source AI Engineering hub: 16 sequential courses, 30+ executable labs, 10 portfolio projects, system design interview prep, and curated AI research resources."
+keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuning, transformers, LLM evaluation, system design interview prep, open source AI curriculum"
 ---
 
 <script type="application/ld+json">
@@ -27,22 +27,73 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 # AI Engineering Hub
 
 <div class="hero">
-  <div class="hero__badge">✨ Free &amp; Open Source AI Engineering Curriculum</div>
-  <p class="hero__tagline">The path from transformers to production AI</p>
-  <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No paywall. No scattered tutorials. Just start at course 01 and build real systems.</p>
+  <div class="hero__badge">✨ The Go-To Open-Source AI Engineering Hub</div>
+  <p class="hero__tagline">The All-in-One Destination for AI Learning, Labs, Resources &amp; Interview Prep</p>
+  <p class="hero__sub">One unified open-source platform. From PyTorch &amp; Transformer math to Hybrid RAG, Autonomous AI Agents, System Design Interviews, and Production LLMOps. 100% Free. Real production code.</p>
   <div class="hero__actions">
     <a class="hero__btn hero__btn--primary" href="start-here/">⚡ Start Here</a>
     <a class="hero__btn hero__btn--secondary" href="learn/">📚 Browse 16 Courses</a>
     <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-hub">★ Star on GitHub</a>
   </div>
+
+  <div class="tutor-prompt-bar" style="margin-top: 1.8rem; background: rgba(255, 255, 255, 0.4);">
+    <span class="tutor-prompt-bar__label">🤖 IDE AI Tutor Prompts:</span>
+    <span class="tutor-chip">"Where should I start?"</span>
+    <span class="tutor-chip">"Explain scaled dot-product attention"</span>
+    <span class="tutor-chip">"Mock interview: RAG system design"</span>
+    <span class="tutor-chip">"Review my agent loop"</span>
+  </div>
 </div>
 
 <div class="stat-row">
-  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">16</span> Courses</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">16</span> Core Courses</span>
   <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">140+</span> Lessons</span>
   <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">3</span> Specialized Tracks</span>
-  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">30+</span> Hands-on Labs</span>
-  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">MIT</span> License</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">30+</span> Executable Labs</span>
+  <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">100%</span> Open Source</span>
+</div>
+
+---
+
+## 🌟 The 5 Pillars: Everything You Need in One Hub
+
+Why look across dozens of scattered blogs, paid bootcamps, and disconnected repos? This repository unifies the complete AI engineering stack:
+
+<div class="persona-grid">
+  <div class="persona-card">
+    <div class="persona-card__icon">📚</div>
+    <div class="persona-card__title">1. Complete Learning Path</div>
+    <div class="persona-card__desc">16 sequential, deep-dive courses from tokenization math &amp; attention to LoRA fine-tuning, vLLM serving, and enterprise capstones.</div>
+    <a class="persona-card__cta" href="learn/">Explore 16 Courses →</a>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-card__icon">🛠️</div>
+    <div class="persona-card__title">2. Executable Labs &amp; Projects</div>
+    <div class="persona-card__desc">30+ hands-on Python labs and 10 portfolio projects with starter code and verified solutions: Doc Q&amp;A, Tool Agents, Hybrid Vector Search, and Guardrails.</div>
+    <a class="persona-card__cta" href="projects/build-these/">Build Projects →</a>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-card__icon">💼</div>
+    <div class="persona-card__title">3. Interview Prep &amp; System Design</div>
+    <div class="persona-card__desc">Land Senior AI roles with 10 full 45-minute whiteboard case studies (RAG, Agent Platforms, LLM Serving) and 50+ detailed technical question banks.</div>
+    <a class="persona-card__cta" href="interview-prep/">Interview Track →</a>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-card__icon">📖</div>
+    <div class="persona-card__title">4. Curated Papers &amp; Resources</div>
+    <div class="persona-card__desc">Seminal research papers, open-source repositories, free video masterclasses, and topic deep dives organized by domain.</div>
+    <a class="persona-card__cta" href="resources/">Curated Resources →</a>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-card__icon">🤖</div>
+    <div class="persona-card__title">5. Interactive Socratic IDE Tutoring</div>
+    <div class="persona-card__desc">Clone the repo and pair-program in your IDE (Claude Code, Cursor, Antigravity) using built-in AI tutor skills and automated lab verifiers.</div>
+    <a class="persona-card__cta" href="ai-engineering-2026/">Modern AI (2026) →</a>
+  </div>
 </div>
 
 ---
@@ -170,9 +221,13 @@ Specialized tracks: [Agent Engineering](agent-engineering/index.md) · [Intervie
 
 ---
 
-## 🤝 Contribute & Star
+## 👨‍💻 Connect with Author & Community
 
-If this open handbook helps you learn or ship AI systems, **[star the repository on GitHub](https://github.com/psssnikhil/ai-engineering-hub)** to support open AI education.
+This open handbook is maintained by **[Nikhil Pentapalli](https://www.linkedin.com/in/nikhilpentapalli/)** and open-source contributors.
 
-Improve a lesson, fix a link, or submit an exercise: [Contribute Guide](contribute.md) · [Roadmap](roadmap.md)
+- 💼 **Connect on LinkedIn**: Follow or reach out at **[linkedin.com/in/nikhilpentapalli](https://www.linkedin.com/in/nikhilpentapalli/)**.
+- 🎯 **1:1 Mentorship & System Design**: Book a session on **[Topmate](https://topmate.io/nikhil_pentapalli)**.
+- 🏢 **Enterprise AI Consulting**: For enterprise AI systems design, team training, or advisory, email **[psss.nikhil@gmail.com](mailto:psss.nikhil@gmail.com)**.
+- ⭐️ **Support Open Source**: If this repository helps you learn or ship AI systems, **[star the repository on GitHub](https://github.com/psssnikhil/ai-engineering-hub)**!
 
+[Contribute Guide](contribute.md) · [Roadmap](roadmap.md)
