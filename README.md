@@ -15,13 +15,27 @@
 
 ---
 
+## 🤖 Built-in AI Tutor Skills
+
+Use your AI coding assistant (Claude Code, Cursor, Antigravity, Windsurf) as an interactive Socratic tutor while studying this repo:
+
+| What you want to do | What to ask / trigger | Active Tutor Skill |
+|:---|:---|:---|
+| **Get a tailored study roadmap** | *"Where should I start?"* / *"I want to learn RAG"* | `learning-path-advisor` |
+| **Deep-dive concept or quiz** | *"Explain attention"* / *"Quiz me on agents"* | `ai-tutor` |
+| **Coach a daily study session** | *"I have 2 hours — coach my session"* | `study-session-coach` |
+| **Practice System Design interview** | *"Interview me on RAG system design"* | `mock-interviewer` |
+
+👉 **[Learn how to use Tutor Skills →](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)**
+
+---
+
 ## ⚡ Quick Links
 
 - 📖 **[Read the Handbook](https://psssnikhil.github.io/ai-engineering-hub/)** — 140+ lessons & 16 courses
 - 🚀 **[Start Here](https://psssnikhil.github.io/ai-engineering-hub/start-here/)** — Recommended paths based on your experience
 - 🛠️ **[Hands-on Labs](labs/)** — Executable notebooks (RAG, ReAct Agent loop, Evals, Reranking)
 - 🎯 **[Interview Prep](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)** — AI system design case studies & interview questions
-- 🤖 **[Tutor Skills](https://psssnikhil.github.io/ai-engineering-hub/learn/using-tutor-skills/)** — AI Pair Programmer & Socratic Tutor for Claude Code / Cursor
 
 ---
 
