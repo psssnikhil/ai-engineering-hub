@@ -81,6 +81,7 @@ flowchart TB
 | **LLMOps** | [12 LLMOps](production/module-10-llmops-production-systems/index.md) | 16 |
 | **Observability & monitoring** | [12 LLMOps](production/module-10-llmops-production-systems/index.md) | 08, 13, [Agent Engineering · Observability](agent-engineering/06-observability-and-tracing.md) |
 | **Evaluation** | [13 LLM Evaluation](production/module-19-llm-evaluation-quality/index.md) | 06, 14, [Agent Engineering · Evals](agent-engineering/07-agent-evals.md) |
+| **Data flywheels** | [Agent Engineering · Data Flywheels](agent-engineering/08-data-flywheels.md) | 12, 15, [Design an Agent Data Flywheel](interview-prep/design-agent-data-flywheel.md) |
 | **Safety & red teaming** | [14 AI Safety](production/module-16-ai-safety-ethics/index.md) | 11, 13 |
 | **Fine-tuning** | [15 Fine-Tuning](advanced/module-15-fine-tuning-custom-models/index.md) | 05 |
 
@@ -95,6 +96,7 @@ flowchart TB
 | Orchestration | [05 · Orchestration](agent-engineering/05-orchestration.md) | 09 |
 | Observability & tracing | [06 · Observability](agent-engineering/06-observability-and-tracing.md) | 12, 08 |
 | Agent evals | [07 · Evals](agent-engineering/07-agent-evals.md) | 13 |
+| Data flywheels | [08 · Data Flywheels](agent-engineering/08-data-flywheels.md) | 12, 15 |
 
 ## Modern AI (2026)
 

@@ -74,6 +74,7 @@ tracks:
       - { title: Orchestration, file: 05-orchestration.md }
       - { title: Observability & Tracing, file: 06-observability-and-tracing.md }
       - { title: Agent Evals, file: 07-agent-evals.md }
+      - { title: Data Flywheels, file: 08-data-flywheels.md }
       - { title: Related Papers, file: related-papers.md }
 
   - title: Interview Prep & System Design
@@ -88,6 +89,7 @@ tracks:
       - { title: "Case Study: Design an Agent Platform", file: design-agent-platform.md }
       - { title: "Case Study: Design an LLM Serving System", file: design-llm-serving.md }
       - { title: "Case Study: Design an Eval Pipeline", file: design-eval-pipeline.md }
+      - { title: "Case Study: Design an Agent Data Flywheel", file: design-agent-data-flywheel.md }
 
   - title: Modern AI (2026)
     path: ai-engineering-2026

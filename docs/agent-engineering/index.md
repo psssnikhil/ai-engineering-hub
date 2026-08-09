@@ -53,6 +53,7 @@ flowchart TB
 | 5 | **Orchestration** | [Orchestration](05-orchestration.md) | [Course 09](../build/module-12-multi-agent-systems/index.md) |
 | 6 | **Observability & tracing** | [Observability & Tracing](06-observability-and-tracing.md) | [Course 08 L6](../build/module-18-agent-harness-tools-runtime/lessons/06-observability-in-the-harness.md), [Course 12](../production/module-10-llmops-production-systems/index.md) |
 | 7 | **Agent evals** | [Agent Evals](07-agent-evals.md) | [Course 13 L4](../production/module-19-llm-evaluation-quality/lessons/04-agent-trajectory-evals.md) |
+| 8 | **Data flywheels** | [Data Flywheels](08-data-flywheels.md) | [Course 12](../production/module-10-llmops-production-systems/index.md), [Course 15](../advanced/module-15-fine-tuning-custom-models/index.md) |
 
 ## What is harness engineering?
 
@@ -67,6 +68,7 @@ flowchart TB
 | **Termination** | Max steps, success criteria, timeout |
 | **Observability** | Spans per step, token/cost attribution |
 | **Evals** | Trajectory regression, tool-call correctness |
+| **Flywheel** | Trajectory curation, SFT/DPO fine-tuning, prompt auto-patches |
 
 Inspired by [Awesome Harness Engineering](https://github.com/ai-boost/awesome-harness-engineering) and [Agents Towards Production](https://github.com/NirDiamant/agents-towards-production).
 
@@ -81,6 +83,7 @@ Inspired by [Awesome Harness Engineering](https://github.com/ai-boost/awesome-ha
 | Run multiple specialists | [Orchestration](05-orchestration.md) |
 | Debug a failed run | [Observability](06-observability-and-tracing.md) |
 | Gate a release | [Agent Evals](07-agent-evals.md) |
+| Build self-improving agents | [Data Flywheels](08-data-flywheels.md) |
 
 ## Related
 

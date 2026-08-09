@@ -54,6 +54,7 @@ after the question banks — they assume the vocabulary the Q&A pages build.
 | [Design an Agent Platform](design-agent-platform.md) | Multi-tenant platform running autonomous coding/support agents |
 | [Design an LLM Serving System](design-llm-serving.md) | Low-latency, high-throughput model inference at scale |
 | [Design an Eval Pipeline](design-eval-pipeline.md) | Continuous quality measurement for an LLM product in production |
+| [Design an Agent Data Flywheel](design-agent-data-flywheel.md) | Self-improving agent telemetry, execution verification, and SFT/DPO pipeline |
 
 ## How to use this track
 
