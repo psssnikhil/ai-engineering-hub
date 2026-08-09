@@ -34,7 +34,7 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 - 📖 **[Read the Online Handbook](https://psssnikhil.github.io/ai-engineering-hub/)** — 140+ lessons across 16 core courses
 - 🚀 **[Start Here Guide](https://psssnikhil.github.io/ai-engineering-hub/start-here/)** — Tailored learning tracks based on your experience
-- 🛠️ **[Code Labs (`/labs`)](labs/labs/)** — Framework-free, pure Python reference implementations
+- 🛠️ **[Code Projects (`/labs/projects`)](labs/projects/)** — Framework-free, pure Python production projects
 - 🎯 **[Interview & System Design](https://psssnikhil.github.io/ai-engineering-hub/interview-prep/)** — Production architecture case studies & Q&A banks
 
 ---
@@ -59,17 +59,19 @@ Turn your AI coding assistant (**Claude Code, Cursor, Antigravity, Windsurf**) i
 
 ---
 
-## 💻 Code Labs (`/labs/labs`)
+## 🚀 Code Projects (`/labs/projects`)
 
-Pure Python, zero-framework reference implementations designed to reveal the inner mechanics of AI systems:
+Framework-free Python reference projects demonstrating production AI systems from zero dependencies to multi-provider architecture:
 
-| Lab | Topic & Scope | Link |
+| Project | Description & Scope | Link |
 |:---|:---|:---|
-| **Lab 01** | **RAG Pipeline**: Chunking, OpenAI vector embeddings, cosine similarity & grounded generation | [`01_rag_from_scratch.py`](labs/labs/01_rag_from_scratch.py) |
-| **Lab 02** | **ReAct Agent Loop**: Tool parsing, multi-provider LLM gateway, observation loop & fallback recovery | [`02_agent_loop_from_scratch.py`](labs/labs/02_agent_loop_from_scratch.py) |
-| **Lab 03** | **LLM Eval Harness**: LLM-as-a-Judge multi-metric scoring (faithfulness & relevance) for CI/CD gates | [`03_eval_harness_from_scratch.py`](labs/labs/03_eval_harness_from_scratch.py) |
-| **Lab 04** | **Hybrid Search & RRF**: BM25 keyword matching + Dense embeddings fused via Reciprocal Rank Fusion | [`04_hybrid_search_reranking.py`](labs/labs/04_hybrid_search_reranking.py) |
-| **Lab 05** | **Model Context Protocol (MCP)**: In-memory MCP Server, JSON-RPC 2.0 protocol dispatch & agent client | [`05_mcp_agent_integration.py`](labs/labs/05_mcp_agent_integration.py) |
+| **Project 01** | **RAG Pipeline**: Chunking, vector embeddings, cosine similarity & grounded generation | [`01-rag-pipeline`](labs/projects/01-rag-pipeline/) |
+| **Project 02** | **ReAct Agent Loop**: Tool parsing, multi-provider LLM gateway & observation recovery | [`02-agent-loop`](labs/projects/02-agent-loop/) |
+| **Project 03** | **LLM Eval Harness**: LLM-as-a-Judge multi-metric scoring (faithfulness & relevance) for CI gates | [`03-eval-harness`](labs/projects/03-eval-harness/) |
+| **Project 04** | **Hybrid Search**: BM25 keyword matching + Dense embeddings fused via Reciprocal Rank Fusion | [`04-hybrid-search`](labs/projects/04-hybrid-search/) |
+| **Project 05** | **Model Context Protocol (MCP)**: In-memory MCP Server, JSON-RPC 2.0 dispatch & agent client | [`05-mcp-agent`](labs/projects/05-mcp-agent/) |
+| **Project 06** | **Autonomous Agent Platform**: Multi-step ReAct agent platform with tool routing & report synthesis | [`06-autonomous-agent-platform`](labs/projects/06-autonomous-agent-platform/) |
+| **Project 07** | **Enterprise RAG System**: Production RAG assistant with CLI, FastAPI server & automated evals | [`07-enterprise-rag-system`](labs/projects/07-enterprise-rag-system/) |
 
 ---
 

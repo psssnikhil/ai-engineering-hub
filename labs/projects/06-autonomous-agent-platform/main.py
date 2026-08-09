@@ -1,18 +1,27 @@
 """
 Autonomous Agent Platform (Main Entry)
 ======================================
-AI Engineering Hub — Reference Project 2
+AI Engineering Hub — Reference Project 06
 
 Usage:
   python main.py
 """
 
-from .agent import AutonomousAgent
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+try:
+    from agent import AutonomousAgent
+except ImportError:
+    from .agent import AutonomousAgent
 
 
 def main():
     print("=" * 60)
-    print("  Autonomous Agent Platform (Reference Project 2)")
+    print("  Autonomous Agent Platform (Project 06)")
     print("=" * 60 + "\n")
 
     agent = AutonomousAgent()

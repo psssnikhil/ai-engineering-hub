@@ -1,5 +1,5 @@
 """
-Lab 05: Model Context Protocol (MCP) Agent Integration from Scratch
+Project 05: Model Context Protocol (MCP) Agent Integration from Scratch
 ======================================================================
 Course 18 & Track: Agent Engineering — MCP Tools & Runtime
 
@@ -9,9 +9,8 @@ Pure Python reference implementation of Model Context Protocol (MCP) concepts:
 3. MCP Client Handler for tool discovery and execution
 4. Autonomous Agent Loop communicating over MCP standard interface
 
-Requirements:
-  pip install openai anthropic
-  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
+Usage:
+  python main.py
 """
 
 import os
@@ -20,7 +19,7 @@ import json
 import uuid
 from typing import Dict, Any, List, Optional
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 from labs.common.gateway import LLMGateway
 
 
@@ -221,7 +220,7 @@ class MCPAgentClient:
 
 
 if __name__ == "__main__":
-    print("=== Lab 05: Model Context Protocol (MCP) Agent Integration ===")
+    print("=== Project 05: Model Context Protocol (MCP) Agent Integration ===")
     server = MCPServer()
     client = MCPAgentClient(server)
 

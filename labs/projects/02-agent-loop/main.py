@@ -1,14 +1,13 @@
 """
-Lab 02: Agent Loop from Scratch
-================================
+Project 02: ReAct Agent Loop from Scratch
+=========================================
 Course 07 — AI Agents Fundamentals
 
 A pure Python ReAct (Reasoning + Acting) Agent loop supporting multi-provider LLMs.
 Uses `labs.common.gateway` for standardized provider access and tool execution.
 
-Requirements:
-  pip install openai anthropic
-  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
+Usage:
+  python main.py
 """
 
 import os
@@ -16,7 +15,7 @@ import sys
 import json
 from typing import List, Dict, Any, Callable, Optional
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 from labs.common.gateway import LLMGateway
 
 
@@ -88,7 +87,6 @@ class ReActAgent:
             resp = self.gateway.generate(messages=messages, tools=TOOLS, temperature=0.0)
 
             if resp.tool_calls:
-                # Add assistant message with tool calls
                 messages.append({
                     "role": "assistant",
                     "content": resp.content or "",
@@ -117,7 +115,7 @@ class ReActAgent:
 
 
 if __name__ == "__main__":
-    print("--- Lab 02: Running ReAct Agent Loop ---")
+    print("--- Project 02: Running ReAct Agent Loop ---")
     agent = ReActAgent()
     query = "Check the status of vector_db and calculate 150000 * 0.05"
     print(f"Goal: {query}\n")

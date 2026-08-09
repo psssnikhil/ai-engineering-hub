@@ -1,12 +1,12 @@
 """
 Enterprise RAG Assistant (CLI + FastAPI Server)
 ================================================
-AI Engineering Hub — Reference Project 1
+AI Engineering Hub — Reference Project 07
 
 Uses:
-  - `retriever.py`: OpenAI Embeddings & Vector Similarity
+  - `retriever.py`: Embeddings & Vector Similarity (with offline keyless fallback)
   - `evaluator.py`: Automated LLM Judge Quality Evals
-  - `labs.common.gateway`: Multi-Provider Fallback Routing (OpenAI & Anthropic)
+  - `labs.common.gateway`: Multi-Provider Fallback Routing (OpenAI, Anthropic & Mock)
 
 Usage:
   CLI Mode:    python main.py
@@ -14,20 +14,28 @@ Usage:
 """
 
 import sys
+import os
 from typing import Dict, Any
-from labs.common.gateway import LLMGateway, OpenAIProvider, AnthropicProvider
-from .retriever import DenseRetriever
-from .evaluator import QualityEvaluator
-from .config import DEFAULT_TOP_K
+
+sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+from labs.common.gateway import LLMGateway
+
+try:
+    from retriever import DenseRetriever
+    from evaluator import QualityEvaluator
+    from config import DEFAULT_TOP_K
+except ImportError:
+    from .retriever import DenseRetriever
+    from .evaluator import QualityEvaluator
+    from .config import DEFAULT_TOP_K
 
 
 class EnterpriseRAGSystem:
     def __init__(self):
-        # Configure Multi-Provider Gateway (OpenAI primary, Anthropic fallback)
-        self.gateway = LLMGateway(providers=[
-            OpenAIProvider(model="gpt-4o-mini"),
-            AnthropicProvider(model="claude-3-5-haiku-20241022"),
-        ])
+        # Configure Multi-Provider Gateway (OpenAI, Anthropic, and Mock fallback)
+        self.gateway = LLMGateway()
         self.retriever = DenseRetriever()
         self.evaluator = QualityEvaluator(self.gateway)
 
@@ -91,7 +99,7 @@ def main():
             print("Error: FastAPI and Uvicorn required for server mode.")
     else:
         print("=" * 60)
-        print("  Enterprise RAG Assistant (Reference Project 1)")
+        print("  Enterprise RAG Assistant (Project 07)")
         print("=" * 60)
         sample_q = "What is required for production deployments?"
         print(f"\nUser Query: {sample_q}\n")

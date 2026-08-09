@@ -1,10 +1,15 @@
 """Dense Vector & Hybrid Retriever Module."""
 
 import math
+import os
+import hashlib
 from dataclasses import dataclass
 from typing import List, Tuple
-from openai import OpenAI
-from .config import EMBEDDING_MODEL, CHUNK_SIZE_WORDS
+
+try:
+    from config import EMBEDDING_MODEL, CHUNK_SIZE_WORDS
+except ImportError:
+    from .config import EMBEDDING_MODEL, CHUNK_SIZE_WORDS
 
 
 @dataclass
@@ -17,12 +22,24 @@ class DocumentChunk:
 
 class DenseRetriever:
     def __init__(self):
-        self.client = OpenAI()
+        self._client = None
         self.chunks: List[DocumentChunk] = []
 
     def _embed(self, text: str) -> List[float]:
-        res = self.client.embeddings.create(model=EMBEDDING_MODEL, input=text)
-        return res.data[0].embedding
+        if os.getenv("OPENAI_API_KEY"):
+            if self._client is None:
+                from openai import OpenAI
+                self._client = OpenAI()
+            res = self._client.embeddings.create(model=EMBEDDING_MODEL, input=text)
+            return res.data[0].embedding
+        else:
+            # Deterministic pseudo-embedding for offline keyless execution
+            words = text.lower().split()
+            vec = [0.0] * 64
+            for w in words:
+                idx = int(hashlib.md5(w.encode()).hexdigest(), 16) % 64
+                vec[idx] += 1.0
+            return vec
 
     def ingest(self, doc_id: str, content: str) -> None:
         words = content.split()

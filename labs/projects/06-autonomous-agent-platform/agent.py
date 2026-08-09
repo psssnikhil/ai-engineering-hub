@@ -2,16 +2,17 @@
 
 import json
 from typing import Dict, List, Any, Optional
-from labs.common.gateway import LLMGateway, OpenAIProvider, AnthropicProvider
-from .tools import TOOLS_SCHEMAS, TOOL_FUNCTIONS
+from labs.common.gateway import LLMGateway
+
+try:
+    from tools import TOOLS_SCHEMAS, TOOL_FUNCTIONS
+except ImportError:
+    from .tools import TOOLS_SCHEMAS, TOOL_FUNCTIONS
 
 
 class AutonomousAgent:
     def __init__(self, gateway: Optional[LLMGateway] = None, max_steps: int = 6):
-        self.gateway = gateway or LLMGateway(providers=[
-            OpenAIProvider(model="gpt-4o-mini"),
-            AnthropicProvider(model="claude-3-5-haiku-20241022"),
-        ])
+        self.gateway = gateway or LLMGateway()
         self.max_steps = max_steps
 
     def run(self, goal: str) -> Dict[str, Any]:
@@ -45,12 +46,12 @@ class AutonomousAgent:
             messages.append({
                 "role": "assistant",
                 "content": resp.content or "",
-                "tool_calls": resp.raw_response.choices[0].message.tool_calls,
+                "tool_calls": resp.raw_response.choices[0].message.tool_calls if resp.raw_response else None,
             })
 
             for tool_call in resp.tool_calls:
                 fn_name = tool_call["name"]
-                fn_args = json.loads(tool_call["arguments"])
+                fn_args = json.loads(tool_call["arguments"]) if isinstance(tool_call["arguments"], str) else tool_call["arguments"]
 
                 print(f"  Action: {fn_name}({fn_args})")
                 tool_fn = TOOL_FUNCTIONS.get(fn_name)

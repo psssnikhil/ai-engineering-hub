@@ -1,14 +1,13 @@
 """
-Lab 04: Hybrid Search & Reciprocal Rank Fusion (RRF)
-===================================================
+Project 04: Hybrid Search & Reciprocal Rank Fusion (RRF)
+=========================================================
 Course 06 & 10 — Vector Databases & Retrieval
 
 Combines keyword search (BM25 style) with dense vector search (OpenAI Embeddings / Offline Fallback)
 and merges rankings using Reciprocal Rank Fusion (RRF).
 
-Requirements:
-  pip install openai anthropic
-  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
+Usage:
+  python main.py
 """
 
 import math
@@ -100,7 +99,7 @@ class HybridSearchEngine:
 
 
 if __name__ == "__main__":
-    print("--- Lab 04: Running Hybrid Search & RRF ---")
+    print("--- Project 04: Running Hybrid Search & RRF ---")
     engine = HybridSearchEngine()
     engine.index()
 

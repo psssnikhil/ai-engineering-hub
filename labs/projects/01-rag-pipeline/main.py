@@ -1,15 +1,14 @@
 """
-Lab 01: RAG Pipeline from Scratch
-=================================
+Project 01: RAG Pipeline from Scratch
+=====================================
 Course 06 — RAG: Retrieval Augmented Generation
 
-A pure, modular Python implementation of a RAG pipeline without framework bloat.
-Demonstrates document chunking, dense vector retrieval via OpenAI embeddings (with offline fallback),
+A modular Python reference implementation of a RAG pipeline without framework bloat.
+Demonstrates document chunking, dense vector retrieval via OpenAI embeddings (with keyless offline fallback),
 and grounded answer generation via LLMGateway.
 
-Requirements:
-  pip install openai anthropic
-  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
+Usage:
+  python main.py
 """
 
 import math
@@ -20,7 +19,7 @@ from dataclasses import dataclass
 from typing import List, Tuple, Dict, Any, Optional
 
 # Ensure repository root is on sys.path for labs.common imports
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 from labs.common.gateway import LLMGateway
 
 
@@ -106,7 +105,7 @@ class RAGPipeline:
 
 
 if __name__ == "__main__":
-    print("--- Lab 01: Running RAG Pipeline ---")
+    print("--- Project 01: Running RAG Pipeline ---")
     pipeline = RAGPipeline()
     pipeline.index(DOCUMENTS)
 

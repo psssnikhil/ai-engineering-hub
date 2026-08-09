@@ -1,14 +1,13 @@
 """
-Lab 03: LLM Evaluation Harness from Scratch
-============================================
+Project 03: LLM Evaluation Harness from Scratch
+================================================
 Course 13 — LLM Evaluation & Quality
 
 Production-grade LLM-as-a-Judge evaluation harness using `labs.common.gateway`.
 Runs multi-metric rubric scoring against golden datasets for CI/CD gates.
 
-Requirements:
-  pip install openai anthropic
-  export OPENAI_API_KEY="sk-..." (optional; falls back to offline mock mode)
+Usage:
+  python main.py
 """
 
 import os
@@ -17,7 +16,7 @@ import json
 from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 from labs.common.gateway import LLMGateway
 
 
@@ -58,7 +57,7 @@ class LLMJudgeHarness:
 
 
 if __name__ == "__main__":
-    print("--- Lab 03: Running LLM Eval Harness ---")
+    print("--- Project 03: Running LLM Eval Harness ---")
     harness = LLMJudgeHarness()
     tc = TestCase(
         id="test-1",
