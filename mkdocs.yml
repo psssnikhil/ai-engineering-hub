@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   icon:
@@ -47,10 +48,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/psssnikhil/ai-engineering-hub
-      name: GitHub Repository
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/nikhilpentapalli/
-      name: Connect on LinkedIn
   announcement:
     text: "Free open-source curriculum — 16 courses from foundations to production AI."
     link: start-here/
@@ -62,6 +59,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid-init.js
+  - javascripts/ui-enhancements.js
 
 plugins:
   - search

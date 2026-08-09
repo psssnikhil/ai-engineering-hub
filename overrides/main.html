@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{#
+  Minimal, upgrade-safe template override.
+  We only touch the blocks we need — everything else falls through to
+  Material's stock `base.html` via {{ super() }}, so theme upgrades keep
+  working without re-diffing a full partial copy.
+#}
+
+{% block extrahead %}
+  {{ super() }}
+  {# Preconnect to the Google Fonts origins used by extra.css's @import
+     so the Inter / JetBrains Mono request starts before CSS parsing. #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

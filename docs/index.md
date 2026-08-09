@@ -27,12 +27,12 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
 # AI Engineering Hub
 
 <div class="hero">
-  <div class="hero__badge">✨ Free &amp; Open Source AI Engineering Curriculum</div>
+  <div class="hero__badge">Free &amp; Open Source</div>
   <p class="hero__tagline">The path from transformers to production AI</p>
   <p class="hero__sub">One sequential curriculum — transformers, RAG, agents, harnesses, evals, and LLMOps. No paywall. No scattered tutorials. Just start at course 01 and build real systems.</p>
   <div class="hero__actions">
-    <a class="hero__btn hero__btn--primary" href="start-here/">⚡ Start Here</a>
-    <a class="hero__btn hero__btn--secondary" href="learn/">📚 Browse 16 Courses</a>
+    <a class="hero__btn hero__btn--primary" href="start-here/">Start Here</a>
+    <a class="hero__btn hero__btn--secondary" href="learn/">Browse 16 Courses</a>
     <a class="hero__btn hero__btn--github" href="https://github.com/psssnikhil/ai-engineering-hub">★ Star on GitHub</a>
   </div>
 </div>
@@ -43,6 +43,41 @@ keywords: "AI engineering, RAG tutorial, AI agents, LLMOps, AI course, fine-tuni
   <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">3</span> Specialized Tracks</span>
   <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">30+</span> Hands-on Labs</span>
   <span class="stat-pill"><span class="stat-pill__dot"></span><span class="stat-pill__value">MIT</span> License</span>
+</div>
+
+---
+
+## Quick start path
+
+<div class="phase-stepper">
+  <a class="phase-step" href="start-here/">
+    <span class="phase-step__num">1</span>
+    <span class="phase-step__info">
+      <span class="phase-step__title">Start Here</span>
+      <span class="phase-step__sub">Pick a path by background</span>
+    </span>
+  </a>
+  <a class="phase-step" href="learn/">
+    <span class="phase-step__num">2</span>
+    <span class="phase-step__info">
+      <span class="phase-step__title">Browse Courses</span>
+      <span class="phase-step__sub">16 courses, sequential order</span>
+    </span>
+  </a>
+  <a class="phase-step" href="learn/study-plans/">
+    <span class="phase-step__num">3</span>
+    <span class="phase-step__info">
+      <span class="phase-step__title">Study Plans</span>
+      <span class="phase-step__sub">Week-by-week schedule</span>
+    </span>
+  </a>
+  <a class="phase-step" href="projects/build-these/">
+    <span class="phase-step__num">4</span>
+    <span class="phase-step__info">
+      <span class="phase-step__title">Build Projects</span>
+      <span class="phase-step__sub">Ship a portfolio piece</span>
+    </span>
+  </a>
 </div>
 
 ---
@@ -134,26 +169,13 @@ flowchart TD
 
 ---
 
-## 🧭 Navigation & Shortcuts
+## More shortcuts
 
 <div class="quick-nav">
-  <a class="quick-nav__item" href="start-here/">🚀 Start Here</a>
-  <a class="quick-nav__item" href="learn/">📚 Learn Courses</a>
-  <a class="quick-nav__item" href="learn/study-plans/">⏱️ Study Plans</a>
-  <a class="quick-nav__item" href="projects/build-these/">🛠️ Build Projects</a>
-  <a class="quick-nav__item" href="topic-map/">🗺️ Topic Map</a>
-  <a class="quick-nav__item" href="faq/">💡 FAQ</a>
-  <a class="quick-nav__item" href="getting-started/">⚙️ Setup</a>
+  <a class="quick-nav__item" href="topic-map/">Topic Map</a>
+  <a class="quick-nav__item" href="faq/">FAQ</a>
+  <a class="quick-nav__item" href="getting-started/">Setup</a>
 </div>
-
-| Goal | Destination |
-|------|-------------|
-| **Follow the curriculum** | **[Learn](learn/index.md)** — 16 courses in order |
-| **New here** | [Start Here](start-here.md) |
-| **Week-by-week schedule** | [Study Plans](learn/study-plans.md) |
-| **Build a portfolio** | [Build These First](projects/build-these.md) |
-| **Find any topic** | [Topic Map](topic-map.md) |
-| **Questions** | [FAQ](faq.md) |
 
 ---
 
