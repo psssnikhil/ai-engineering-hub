@@ -3,9 +3,43 @@ title: Ultimate AI Engineering Resources
 description: Curated list of top GitHub repositories, videos, blogs, books, and frameworks for AI Engineers
 ---
 
-# AI Engineering Resources
+<div class="top-launcher">
+  <div class="hero__badge">📖 Curated Knowledge Vault</div>
+  <h1 class="top-launcher__title">AI Engineering Resources & Research Catalog</h1>
+  <p class="top-launcher__subtitle">Hand-curated collection of seminal research papers, top GitHub repositories, video series, technical blogs, and frameworks across the entire AI landscape.</p>
 
-A curated collection of the most valuable open-source repositories, video series, technical blogs, papers, free courses, and code references for mastering AI engineering — from foundational deep learning to production agents and LLM serving.
+  <div class="filter-chips">
+    <a class="chip-btn" href="topic-transformers-and-llms/">🧠 Transformers & LLMs</a>
+    <a class="chip-btn" href="topic-reasoning-and-test-time-compute/">🧩 Reasoning & R1</a>
+    <a class="chip-btn" href="topic-multimodal-and-vlm/">👁 Multimodal & VLM</a>
+    <a class="chip-btn" href="topic-code-intelligence-and-swe-agents/">💻 SWE Agents</a>
+    <a class="chip-btn" href="topic-rag-and-vector-search/">📚 RAG & Vector Search</a>
+    <a class="chip-btn" href="topic-agents-and-harnesses/">🤖 AI Agents & MCP</a>
+    <a class="chip-btn" href="topic-llmops-evals-serving/">⚡ LLMOps & Serving</a>
+    <a class="chip-btn" href="topic-finetuning-and-alignment/">🎛 Fine-Tuning</a>
+  </div>
+</div>
+
+<div class="spotlight-grid">
+  <div class="spotlight-card">
+    <span class="spotlight-card__tag">⚡ High-Throughput Serving</span>
+    <h3 class="spotlight-card__title">vLLM Inference Engine</h3>
+    <p class="spotlight-card__desc">Memory-efficient LLM serving with PagedAttention and continuous batching.</p>
+    <a class="persona-card__cta" href="https://github.com/vllm-project/vllm">vLLM Repository →</a>
+  </div>
+  <div class="spotlight-card">
+    <span class="spotlight-card__tag">🎬 Must-Watch Series</span>
+    <h3 class="spotlight-card__title">Karpathy: Zero to Hero</h3>
+    <p class="spotlight-card__desc">Build Micrograd, Makemore, and GPT-2 from scratch in PyTorch.</p>
+    <a class="persona-card__cta" href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUbF9GE">Watch Playlist →</a>
+  </div>
+  <div class="spotlight-card">
+    <span class="spotlight-card__tag">📄 Seminal Paper</span>
+    <h3 class="spotlight-card__title">Attention Is All You Need</h3>
+    <p class="spotlight-card__desc">Vaswani et al. — The foundational transformer paper establishing self-attention.</p>
+    <a class="persona-card__cta" href="papers/#1-attention-is-all-you-need">Read Paper Notes →</a>
+  </div>
+</div>
 
 ---
 
