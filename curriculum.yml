@@ -76,6 +76,19 @@ tracks:
       - { title: Agent Evals, file: 07-agent-evals.md }
       - { title: Related Papers, file: related-papers.md }
 
+  - title: Interview Prep & System Design
+    path: interview-prep
+    pages:
+      - { title: Overview, file: index.md }
+      - { title: LLM & Transformer Fundamentals Q&A, file: questions-llm-fundamentals.md }
+      - { title: RAG Q&A, file: questions-rag.md }
+      - { title: Agents Q&A, file: questions-agents.md }
+      - { title: Evals & Production Q&A, file: questions-evals-production.md }
+      - { title: "Case Study: Design a RAG System", file: design-rag-system.md }
+      - { title: "Case Study: Design an Agent Platform", file: design-agent-platform.md }
+      - { title: "Case Study: Design an LLM Serving System", file: design-llm-serving.md }
+      - { title: "Case Study: Design an Eval Pipeline", file: design-eval-pipeline.md }
+
   - title: Modern AI (2026)
     path: ai-engineering-2026
     pages:
@@ -90,6 +103,7 @@ reference:
   - { title: Roadmap, path: roadmap.md }
   - { title: Getting Started, path: getting-started.md }
   - { title: Study Plans, path: learn/study-plans.md }
+  - { title: Learn with Tutor Skills, path: learn/using-tutor-skills.md }
   - { title: Learning Path, path: learning-path.md }
   - { title: Topic Map, path: topic-map.md }
   - { title: FAQ, path: faq.md }
