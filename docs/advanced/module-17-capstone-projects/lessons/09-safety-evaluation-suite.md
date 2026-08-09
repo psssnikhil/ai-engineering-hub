@@ -12,6 +12,24 @@ module: module-17
 
 ## Project Overview
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Project 8: AI Safety Evaluation Suite Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Build a reusable evaluation framework that tests any LLM application for safety issues before it reaches production. This is not a chatbot — it is a **testing harness** that sends adversarial inputs to your system, judges the responses, and generates actionable safety reports.
 
 Every AI application you build in this course should eventually run through a suite like this. You will implement configurable test categories, automated judge models, severity ratings, and report generation that integrates into CI/CD pipelines.
@@ -589,3 +607,10 @@ evaluator.add_test_suite("company_policy", [
 ## Next Lesson
 
 **Project 10: Real-Time AI Dashboard** — Build a monitoring dashboard that tracks LLM latency, cost, error rates, and safety metrics in production.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

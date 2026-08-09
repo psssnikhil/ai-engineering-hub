@@ -12,6 +12,25 @@ module: module-12
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    CEO["Executive Agent (Level 0)<br/><i>High-level Planning & Strategy</i>"] --> VP1["VP Research (Level 1)"]
+    CEO --> VP2["VP Engineering (Level 1)"]
+    VP1 --> Dev1["Search Worker (Level 2)"]
+    VP1 --> Dev2["Summary Worker (Level 2)"]
+    VP2 --> Dev3["Coder Worker (Level 2)"]
+    VP2 --> Dev4["Tester Worker (Level 2)"]
+
+    style CEO fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style VP1 fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style VP2 fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+```
+
+!!! warning "Hierarchy Latency Tradeoff"
+    Deep hierarchy trees increase response latency linearly with tree depth: \( T \propto D \). Keep hierarchy depth \( \le 3 \) levels for interactive applications.
+
+
 | What You'll Learn | Time | Difficulty |
 |-------------------|------|------------|
 | Understand hierarchical multi-agent architectures | 40 min | Intermediate |

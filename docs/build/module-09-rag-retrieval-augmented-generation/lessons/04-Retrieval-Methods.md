@@ -14,6 +14,24 @@ youtube: 'https://www.youtube.com/watch?v=LxDvRsVp31c'
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Retrieval Methods Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - **Lesson 02 — Vector Databases & Embeddings** — understand cosine similarity and embedding vectors
 - **Lesson 03 — Chunking Strategies** — know how documents become chunks
 - **Python basics** — read and modify the code examples

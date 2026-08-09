@@ -13,6 +13,27 @@ youtube: 'https://www.youtube.com/watch?v=KSjX4PfW2_8'
 
 ## 🎯 Learning Objectives
 
+
+```mermaid
+graph TD
+    User["User Goal / Query"] --> Router["Multi-Agent Router"]
+    Router --> AgentA["Agent A: Research Specialist"]
+    Router --> AgentB["Agent B: Code Generator"]
+    Router --> AgentC["Agent C: Critic & Validator"]
+    AgentA --> Blackboard["Shared Memory / State"]
+    AgentB --> Blackboard
+    AgentC --> Blackboard
+    Blackboard --> Synthesizer["Final Output Synthesizer"]
+
+    style Router fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Blackboard fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Synthesizer fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+!!! note "Single Agent vs Multi-Agent"
+    Single agents struggle when task complexity increases beyond 3–4 distinct steps. Multi-agent architectures decompose responsibility into specialized prompts, tools, and execution contexts.
+
+
 | What You'll Learn | Time | Difficulty |
 |-------------------|------|------------|
 | Understand what multi-agent systems are | 35 min | Intermediate |
@@ -357,3 +378,10 @@ You'll learn:
 ---
 
 *⏱️ Estimated time: 35 minutes | 📊 Difficulty: Intermediate | ✅ Ready to build agent teams!*
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

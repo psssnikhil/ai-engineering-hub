@@ -14,6 +14,24 @@ youtube: 'https://www.youtube.com/watch?v=sVcwVQRHIc8'
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Building a Basic RAG System Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - **Lessons 01–04** — RAG concepts, embeddings, chunking, retrieval methods
 - **Python intermediate** — classes, type hints, list comprehensions
 - **OpenAI API key** set in environment: `export OPENAI_API_KEY=sk-...`

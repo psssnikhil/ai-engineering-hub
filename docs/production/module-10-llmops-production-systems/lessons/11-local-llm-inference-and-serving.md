@@ -125,7 +125,19 @@ for output in outputs:
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - Use **Ollama** for rapid local prototyping with zero cloud cost.
 - Deploy **vLLM** in production GPU clusters when high concurrent throughput and PagedAttention memory optimization are required.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

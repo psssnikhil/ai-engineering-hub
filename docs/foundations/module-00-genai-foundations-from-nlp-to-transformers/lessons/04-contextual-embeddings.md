@@ -45,9 +45,22 @@ sentence_3 = "The blood bank is running critically low"
 # All three occurrences of "bank" get the same embedding.
 # A downstream model cannot distinguish them!
 
-# What we want:
-# context_embedding("bank", sentence_1) ≠ context_embedding("bank", sentence_2)
-# The representation should reflect the meaning in this specific context.
+```mermaid
+flowchart TD
+    classDef static fill:#fee2e2,stroke:#ef4444,stroke-width:2px;
+    classDef dynamic fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+
+    subgraph Static["Static Word Embeddings (Word2Vec / GloVe)"]
+        Word["Word: 'bank'"]:::static --> SingleVec["Fixed Single Vector v('bank')"]:::static
+        SingleVec --> S1["Sentence 1: Money Bank"]:::static
+        SingleVec --> S2["Sentence 2: River Bank"]:::static
+    end
+
+    subgraph Contextual["Contextual Embeddings (BERT / GPT / Transformers)"]
+        WordCtx["Word: 'bank' + Context"]:::dynamic --> TransformerBlock["Attention Layers (Pass 1...L)"]:::dynamic
+        TransformerBlock --> V1["Vector 1: Financial Institution ('cash', 'check')"]:::dynamic
+        TransformerBlock --> V2["Vector 2: Geographical Land ('river', 'fish')"]:::dynamic
+    end
 ```
 
 The challenge: to produce a context-aware embedding for "bank" in sentence 1, the model must process the *surrounding words* ("cash", "check", "went") and incorporate their information. How can a model see all the surrounding words and produce one rich vector per word?
@@ -323,6 +336,11 @@ Understanding sequential model limitations helps you reason about production sys
 - **Context length limits**: Transformer attention is O(n²) in the sequence length n. A 128K-token context window requires 128K × 128K = 16 billion attention score computations per layer. This is why models with very long contexts are more expensive to run.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

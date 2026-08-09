@@ -12,6 +12,24 @@ module: module-18
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Agent Loop and State Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - [Lesson 1 — What Is an Agent Harness?](01-what-is-an-agent-harness.md): loop, state, and termination primitives
 - [M11 Lesson 3 — ReAct Pattern](../../module-11-ai-agents-fundamentals/lessons/03-ReAct-Pattern.md): the reason-act trace structure
 - Comfortable with Python dataclasses, `uuid`, and JSON serialization

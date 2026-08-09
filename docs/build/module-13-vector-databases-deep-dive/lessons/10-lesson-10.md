@@ -12,6 +12,24 @@ module: module-13
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Production Vector Database Patterns Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Before this lesson you should be comfortable with:
 
 - **Module 13, Lessons 01–09** — complete vector database deep dive
@@ -427,6 +445,11 @@ Across 10 lessons, you've built a complete vector database engineering skill set
 You can now design, build, benchmark, and operate vector search systems that power production RAG applications.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

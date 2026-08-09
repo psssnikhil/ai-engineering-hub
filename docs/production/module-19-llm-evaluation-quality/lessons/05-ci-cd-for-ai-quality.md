@@ -12,6 +12,24 @@ module: module-19
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["CI/CD for AI Quality Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - Completed Lessons 1–4 (full evaluation pipeline: evals, golden sets, LLM-as-judge, agent evals)
 - Familiarity with GitHub Actions or similar CI/CD platforms
 - Understanding of canary deployment concepts from Module 10 Lesson 7
@@ -614,6 +632,11 @@ A/B testing deliberately exposes both versions to users to measure a difference.
 No golden set covers everything. Production users ask questions you never anticipated, use phrasing that differs from your test cases, and mix intents in ways your test suite doesn't model. Shadow traffic is specifically valuable because it tests on the real production distribution.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

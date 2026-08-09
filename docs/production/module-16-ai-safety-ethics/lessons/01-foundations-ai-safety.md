@@ -12,6 +12,31 @@ module: module-16
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    UserQuery["User Input Query"] --> InputGuard["Input Guardrail Gateway<br/>- Prompt Injection Check<br/>- PII Masking<br/>- Jailbreak Classifier"]
+    InputGuard -- Blocked --> Reject["HTTP 400 Refusal Response"]
+    InputGuard -- Safe --> LLM["LLM Inference Core"]
+    LLM --> OutputGuard["Output Guardrail Gateway<br/>- Hallucination Filter<br/>- Toxic Content Filter<br/>- Secret Leak Detector"]
+    OutputGuard -- Clean --> UserResponse["Filtered Safe Output"]
+    OutputGuard -- Unsafe --> Redact["Sanitized / Redacted Output"]
+
+    style InputGuard fill:#1e293b,stroke:#ef4444,color:#f8fafc
+    style LLM fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style OutputGuard fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+!!! warning "Defense in Depth"
+    Never rely solely on system prompt instructions (e.g. 'Do not output secrets') for security. System prompts can be bypassed. Implement programmatic input/output guardrail gateways!
+
+## Further Reading & Key Papers
+
+1. [Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations (Meta 2023)](https://arxiv.org/abs/2312.06674)
+2. [Universal and Transferable Adversarial Attacks on Aligned Language Models (Zou et al. 2023)](https://arxiv.org/abs/2307.15043)
+3. [NVIDIA NeMo Guardrails Open-Source Framework](https://github.com/NVIDIA/NeMo-Guardrails)
+
+
 | Objective | Time | Difficulty |
 |-----------|------|------------|
 | Understand the major categories of AI risk | 40 min | Intermediate |

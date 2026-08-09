@@ -12,6 +12,26 @@ module: module-12
 
 ## What You'll Learn
 
+
+```mermaid
+graph LR
+    subgraph Blackboard ["Shared Blackboard Memory"]
+        State["Key-Value State Store<br/>- Task Status<br/>- Findings<br/>- Artifact References"]
+    end
+
+    Agent1["Research Agent"] <-->|Read / Write| State
+    Agent2["Execution Agent"] <-->|Read / Write| State
+    Agent3["Validator Agent"] <-->|Read / Write| State
+
+    style Blackboard fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+!!! check "State Concurrency Checklist"
+    - [ ] Use immutable append-only logs for multi-agent state mutations
+    - [ ] Lock key paths during active worker updates to prevent race conditions
+    - [ ] Cap total blackboard state payload size before passing to LLM context
+
+
 | What You'll Learn | Time | Difficulty |
 |-------------------|------|------------|
 | Understand shared memory and blackboard architectures | 40 min | Intermediate |

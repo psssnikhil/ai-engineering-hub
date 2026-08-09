@@ -43,10 +43,18 @@ The key question is: *what self-supervised objective forces the model to encode 
 
 The answer depends on what you want the model to do:
 
-```text
-If you want generation → Causal LM (predict next token)
-If you want understanding → Masked LM (predict masked tokens)
-If you want seq2seq → Span corruption (reconstruct corrupted spans)
+```mermaid
+flowchart TD
+    classDef raw fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef pre fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef align fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+
+    RawData["Raw Web Corpus (Trillions of Tokens: CommonCrawl, GitHub, Books)"]:::raw --> Pretraining["1. Pre-training Phase (Causal Next-Token Loss)"]:::pre
+    Pretraining --> BaseLM["Base Language Model (Text Completer)"]:::pre
+    BaseLM --> SFT["2. Supervised Fine-Tuning (SFT Instruction Pairs)"]:::align
+    SFT --> InstructLM["Instruction-Tuned Model"]:::align
+    InstructLM --> RLHF["3. Preference Alignment (RLHF / DPO / KTO)"]:::align
+    RLHF --> ProductionAssistant["Production AI Assistant (Helpful, Honest, Harmless)"]:::align
 ```
 
 All three objectives share a common structure: the model must predict hidden text from visible context. To do this reliably, it must internalize the statistical structure of language.

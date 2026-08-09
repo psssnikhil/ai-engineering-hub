@@ -31,6 +31,26 @@ module: module-01
 
 ## Why Prompts Work: The Mechanistic View
 
+```mermaid
+graph TD
+    System["System Prompt<br/><i>Role, Persona & Rules</i>"] --> Assembly
+    User["User Query + Context"] --> Assembly
+    Examples["Few-Shot Examples"] --> Assembly["Prompt Assembler"]
+    Assembly --> LLM["LLM Inference Engine"]
+    LLM --> Evaluation{"Output Validation"}
+    Evaluation -- Valid --> Output["Final Response"]
+    Evaluation -- Invalid --> Retry["Reflection / Retry Loop"]
+    Retry --> Assembly
+
+    style System fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Assembly fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style LLM fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+!!! note "Prompt Engineering Rule #1"
+    Prompt engineering is not about 'magic words' — it is about reducing ambiguity, providing clean context, and structuring constraints for reproducible outputs.
+
+
 To write effective prompts, it helps to understand what is happening mechanistically. A language model is a function that computes:
 
 \[
@@ -53,6 +73,24 @@ P(next token = "London"): 0.03
 Prompt: "In the fictional country of Ruronia, the capital is"
 P(next token = "Paris"): 0.08   ← much lower — fiction context shifts distribution
 P(next token = "Ruronia-City"): 0.15
+```
+
+```mermaid
+flowchart TD
+    classDef sys fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef ex fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef ctx fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+    classDef out fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    subgraph PromptAnatomy["Context Window Anatomy"]
+        Sys["1. System Prompt (Persona, Persona Rules, Constraints)"]:::sys
+        Examples["2. Few-Shot Demonstration Examples (Input/Output Pairs)"]:::ex
+        Context["3. Retrieved Grounding Context (RAG Documents / User Data)"]:::ctx
+        Query["4. Current User Message / Query"]:::sys
+    end
+
+    PromptAnatomy --> LLM["LLM Next-Token Distribution Conditioning P(y|x)"]:::out
+    LLM --> Completion["Structured / Constrained Model Output"]:::out
 ```
 
 This means:

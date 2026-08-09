@@ -61,18 +61,22 @@ Before 2022, building AI systems required training your own models. This meant:
 
 After GPT-3 became widely available via API (2021) and especially after ChatGPT demonstrated the general-public viability of instruction-following models (2022), the economics changed:
 
-```text
-Before 2022 (ML-centric):
-  Problem: "Classify customer support tickets by category"
-  Solution: Collect 50K labeled tickets → fine-tune BERT → deploy model service
-  Timeline: 3-6 months
-  Cost: significant
+```mermaid
+graph TD
+    subgraph Pre2022 ["Traditional ML Engineering (Pre-2022)"]
+        A1["1. Collect & Label 50K+ Tickets"] --> A2["2. Train/Fine-tune BERT Model"]
+        A2 --> A3["3. Deploy Dedicated Model Service"]
+        A3 --> A4["Timeline: 3–6 Months | Cost: $50k+"]
+    end
 
-After 2022 (AI engineering):
-  Problem: "Classify customer support tickets by category"
-  Solution: Write a clear classification prompt → call GPT-4o-mini API → evaluate
-  Timeline: 1-2 days
-  Cost: pennies per thousand tickets at current API pricing
+    subgraph Post2022 ["Modern AI Engineering (Post-2022)"]
+        B1["1. Write Structured Classification Prompt"] --> B2["2. Call LLM API (e.g. GPT-4o-mini)"]
+        B2 --> B3["3. Validate with Automated Eval Suite"]
+        B3 --> B4["Timeline: 1–2 Days | Cost: ~$0.001 per 1k tickets"]
+    end
+
+    style Pre2022 fill:#1e293b,stroke:#ef4444,color:#f8fafc
+    style Post2022 fill:#1e293b,stroke:#10b981,color:#f8fafc
 ```
 
 This shift did not eliminate ML engineering — training custom models still produces better results for specific domains with sufficient data. But it changed *when* AI engineering (via APIs) is the right first approach.

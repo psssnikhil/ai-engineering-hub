@@ -328,6 +328,11 @@ model.set_adapter("code_review")  # Switch to code review adapter
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - LoRA trains only 0.1-0.5% of model parameters by learning low-rank update matrices

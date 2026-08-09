@@ -12,6 +12,24 @@ module: module-14
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Few-Shot and Chain-of-Thought Prompting Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Before this lesson you should be comfortable with:
 
 - **Prompt anatomy** — role, context, task, format, constraints (Lesson 1)
@@ -357,3 +375,10 @@ Short examples work fine for long inputs. What matters is that the **pattern** (
 ## Next Lesson
 
 **[Lesson 3: System Prompts and Role Design](03-lesson-03.md)** — Learn how to design system prompts that control LLM behavior, personality, and output format across an entire conversation.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

@@ -18,6 +18,24 @@ objectives:
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Agent Types & Patterns Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 By the end of this lesson, you'll understand:
 - The spectrum of AI agent architectures
 - Reactive vs. deliberative vs. hybrid agents
@@ -325,6 +343,11 @@ Synthesize a complete answer."
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 1. **Reactive agents** are simplest -- use them when stateless processing is enough
@@ -332,3 +355,10 @@ Synthesize a complete answer."
 3. **RAG agents** ground responses in specific knowledge for accuracy
 4. **Deliberative agents** plan before acting for complex multi-step tasks
 5. **Combine patterns** for powerful agents (e.g., RAG + tool-use + conversation)
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

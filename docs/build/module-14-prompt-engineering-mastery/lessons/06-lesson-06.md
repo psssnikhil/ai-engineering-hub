@@ -12,6 +12,24 @@ module: module-14
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Prompt Chaining and Pipelines Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Before this lesson you should be comfortable with:
 
 - **Prompt anatomy and system prompts** — Lessons 1 and 3
@@ -290,6 +308,11 @@ They save latency, not tokens. Three parallel calls still consume three calls' w
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - Decompose complex tasks into focused single-purpose prompt steps rather than one monolithic prompt.
@@ -306,3 +329,10 @@ They save latency, not tokens. Three parallel calls still consume three calls' w
 ## Next Lesson
 
 **[Lesson 7: Prompt Optimization and Iteration](07-lesson-07.md)** — Learn systematic methods to improve prompt performance through evaluation, A/B testing, and iterative refinement.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

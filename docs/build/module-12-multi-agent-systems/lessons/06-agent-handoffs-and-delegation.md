@@ -12,6 +12,24 @@ module: module-12
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Agent Handoffs and Delegation Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 | What You'll Learn | Time | Difficulty |
 |-------------------|------|------------|
 | Understand agent handoffs vs simple message passing | 45 min | Intermediate |
@@ -43,6 +61,23 @@ pip install langgraph
 Think of a hospital shift change. The outgoing doctor does not just say "patient in room 4." They transfer the chart, highlight open issues, state what has been tried, note allergies and constraints, and explicitly pass responsibility to the incoming doctor. The incoming doctor becomes the **active decision-maker** until the next handoff.
 
 In multi-agent systems, the same discipline applies. Sending a message is like leaving a note — the sender may still be in charge. **Delegation** is asking a colleague to handle a subtask and report back while you supervise. **Handoff** is transferring full control: the receiving agent owns the conversation until it completes or hands off again.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User
+    participant Triage as Triage / Router Agent
+    participant Billing as Billing Specialist Agent
+    participant Tech as Technical Support Agent
+
+    User->>Triage: "My invoice is wrong and API key fails"
+    Triage->>Triage: Classify Intent & Package State Context
+    Triage->>Billing: Handoff Command (User State, History, Intent="Invoice Issue")
+    Billing->>User: "I can assist with your invoice. Verified account..."
+    User->>Billing: "Also, what about my API key error?"
+    Billing->>Tech: Handoff Command (User State, Cleaned History, Intent="API Key Error")
+    Tech->>User: "Let's troubleshoot your API key authorization headers."
+```
 
 Customer support flows demonstrate this clearly. A triage bot classifies intent, packages context, and hands off to billing or technical support. The billing agent does not re-ask questions the user already answered. The handoff package carries forward everything the next agent needs — and nothing they do not.
 
@@ -407,6 +442,11 @@ AutoGen 0.4+ supports agent-to-agent transfer where the active speaker changes a
 **Metrics to track:** Handoffs per conversation, time-to-first-response after handoff, re-handoff rate (indicates misrouting), and constraint-violation rate.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

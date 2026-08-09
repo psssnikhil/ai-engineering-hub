@@ -350,6 +350,11 @@ Result: {r['result'][:300]}"
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - Planning separates "what to do" from "how to do it," improving agent reliability

@@ -12,6 +12,24 @@ module: module-19
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Golden Datasets & Benchmarks Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - Completed Lesson 1 (Why LLM Evals Matter)
 - Understanding of what a RAG pipeline is (retrieval-augmented generation)
 - Basic familiarity with Python dataclasses and JSON
@@ -561,6 +579,11 @@ def compute_benchmark_score(results_by_category: dict, benchmark: dict) -> dict:
 | **Not weighting by category** | Treat safety failures the same as tone failures | Per-category thresholds with zero tolerance on safety |
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

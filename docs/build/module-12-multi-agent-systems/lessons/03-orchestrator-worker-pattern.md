@@ -13,6 +13,29 @@ youtube: 'https://www.youtube.com/watch?v=cJOxQqZQ7AE'
 
 ## Learning Objectives
 
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Orch as Orchestrator Agent
+    participant W1 as Worker 1 (Retriever)
+    participant W2 as Worker 2 (Analyzer)
+    participant W3 as Worker 3 (Writer)
+
+    Orch->>Orch: Decompose User Goal into Plan
+    Orch->>W1: Assign Step 1 (Fetch Docs)
+    W1-->>Orch: Return Structured Context
+    Orch->>W2: Assign Step 2 (Analyze Metrics)
+    W2-->>Orch: Return Analysis Table
+    Orch->>W3: Assign Step 3 (Draft Report)
+    W3-->>Orch: Return Markdown Draft
+    Orch->>Orch: Synthesize & Validate Final Response
+```
+
+!!! tip "Orchestrator Pattern Best Practices"
+    Never allow workers to spawn sub-workers recursively without strict depth caps (max_depth=2). Recursive worker spawning easily leads to runaway API token costs.
+
+
 | What You'll Learn | Time | Difficulty |
 |-------------------|------|------------|
 | Understand orchestrator-worker architecture | 45 min | Intermediate |

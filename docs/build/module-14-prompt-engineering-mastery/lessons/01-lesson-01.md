@@ -12,6 +12,23 @@ module: module-14
 
 ## Prerequisites
 
+
+```mermaid
+flowchart TD
+    classDef zs fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef fs fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef cot fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+    classDef tot fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    PromptTypes{"Select Prompting Paradigm"}
+
+    PromptTypes -- Direct Request --> ZeroShot["Zero-Shot: Direct Query without Examples"]:::zs
+    PromptTypes -- Pattern Matching --> FewShot["Few-Shot: 3-5 Exemplar Input/Output Pairs"]:::fs
+    PromptTypes -- Step-by-Step Reasoning --> CoT["Chain-of-Thought (CoT): 'Let's think step-by-step'"]:::cot
+    PromptTypes -- Branching Exploration --> ToT["Tree-of-Thoughts (ToT): Tree Search & Evaluator Rollouts"]:::tot
+```
+
+
 Before this lesson you should be comfortable with:
 
 - **LLM basics** — what a language model is and how chat APIs work (Modules 01–02)
@@ -346,6 +363,11 @@ Good structure helps, but you still need test cases. A prompt that works on five
 The anatomy stays the same, but optimal phrasing varies by provider. Lesson 9 covers model-specific adaptations.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

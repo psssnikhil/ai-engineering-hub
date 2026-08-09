@@ -31,6 +31,26 @@ module: module-01
 
 ## Why You Need an Abstraction Layer
 
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> SendRequest: Client API Call
+    SendRequest --> Success: HTTP 200 OK
+    SendRequest --> RateLimited: HTTP 429 Rate Limit
+    SendRequest --> ServerError: HTTP 500/503 Error
+    RateLimited --> ExponentialBackoff: Calculate Wait (2^n + jitter)
+    ServerError --> ExponentialBackoff
+    ExponentialBackoff --> SendRequest: Retry Attempt
+    Success --> ProcessOutput: Parse JSON / Stream SSE
+    ProcessOutput --> [*]
+```
+
+!!! check "API Production Checklist"
+    - [ ] Set strict client-side timeouts (e.g. 10s for non-streaming, 30s for streaming)
+    - [ ] Implement exponential backoff with randomized full jitter on 429 / 5xx errors
+    - [ ] Use fallback model routing (e.g., primary: `gpt-4o`, fallback: `claude-3-5-sonnet`)
+
+
 The LLM API landscape changes rapidly. Models are deprecated, pricing changes, providers go down. If your application code calls `openai.chat.completions.create(model="gpt-4-turbo", ...)` in 20 places, every model change requires 20 edits and full regression testing.
 
 A thin abstraction layer insulates your application logic from provider details:

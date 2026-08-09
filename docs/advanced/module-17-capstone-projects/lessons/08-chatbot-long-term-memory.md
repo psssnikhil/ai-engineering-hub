@@ -12,6 +12,24 @@ module: module-17
 
 ## Project Overview
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Project 7: Chatbot with Long-Term Memory Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Build a chatbot that maintains **long-term memory** across conversations. Unlike a stateless chatbot that forgets everything when the session ends, this system remembers user preferences, past interactions, and important facts — retrieving relevant memories at the right moment to personalize responses.
 
 This project applies agent memory patterns, vector databases, and conversation design. You will implement both short-term memory (current conversation context) and long-term memory (persisted facts in a vector store).

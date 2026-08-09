@@ -16,17 +16,17 @@ theme:
     code: JetBrains Mono
   palette:
     - scheme: default
-      primary: custom
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Dark mode
     - scheme: slate
-      primary: custom
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Light mode
   features:
     - navigation.instant
     - navigation.tracking
@@ -34,13 +34,10 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.indexes
-    - navigation.path
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.action.edit
-    - content.code.annotate
-    - toc.follow
 
 extra_css:
   - stylesheets/extra.css
@@ -68,7 +65,7 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
-      generic: true
+      generic: false
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:

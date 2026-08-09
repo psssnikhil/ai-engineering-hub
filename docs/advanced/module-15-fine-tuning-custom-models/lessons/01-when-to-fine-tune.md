@@ -12,6 +12,24 @@ module: module-15
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["When and Why to Fine-Tune LLMs Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 | Objective | Time | Difficulty |
 |-----------|------|------------|
 | Understand what fine-tuning actually does to a model | 35 min | Advanced |
@@ -191,6 +209,11 @@ Total: 2-4 weeks for a well-scoped project
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - Fine-tuning specializes a model's behavior, not its knowledge
@@ -204,3 +227,10 @@ Total: 2-4 weeks for a well-scoped project
 ## Next Lesson
 
 **Lesson 2: Preparing Training Data** - Learn how to collect, format, and validate training data for fine-tuning.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

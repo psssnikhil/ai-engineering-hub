@@ -523,6 +523,11 @@ User feedback is lagging and sparse. Most users don't provide feedback. Automate
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - LLMs are non-deterministic and produce subjective outputs—traditional unit tests are insufficient; rubric-based evaluation is required

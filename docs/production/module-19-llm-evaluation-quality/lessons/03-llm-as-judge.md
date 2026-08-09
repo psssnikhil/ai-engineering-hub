@@ -12,6 +12,24 @@ module: module-19
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["LLM-as-Judge Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - Completed Lessons 1 and 2 (Why LLM Evals Matter and Golden Datasets)
 - Understanding of the RAGAS metrics introduced in Lesson 2
 - Basic Python and familiarity with JSON output from LLM APIs
@@ -37,6 +55,23 @@ Your golden set has 300 test cases. You've just updated the system prompt. You n
 Option A: Have two human reviewers read all 300 responses from both versions. At 5 minutes per response, that's 50 hours of reviewer time per deployment. Deployments take weeks.
 
 Option B: Use an LLM to judge all 600 responses. At $0.005 per judgment (GPT-4.1 at current pricing), that's $3 for the whole evaluation. It takes 10 minutes. You can run this on every PR.
+
+```mermaid
+flowchart TD
+    classDef input fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef judge fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+    classDef gate fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+
+    subgraph EvalPipeline["Automated LLM-as-a-Judge Evaluation Pipeline"]
+        GoldenCase["Golden Dataset Case (Input + Context + Ground Truth)"]:::input --> TargetModel["Candidate Target LLM Model Output"]:::input
+        TargetModel & GoldenCase --> JudgePrompt["Evaluation Rubric & Anchored System Prompt"]:::judge
+        JudgePrompt --> JudgeLLM["LLM Judge Engine (e.g., GPT-4o / Claude 3.5 Sonnet)"]:::judge
+        JudgeLLM --> ScoreJSON["Structured Output: {Score: 1-5, Reasoning: '...', Pass: true}"]:::gate
+        ScoreJSON --> QualityGate{"CI/CD Quality Gate (Score >= 4.0)"}:::gate
+        QualityGate -- Pass --> Deploy["Deploy Release to Production"]:::gate
+        QualityGate -- Fail --> Block["Block PR & Notify Engineers"]:::input
+    end
+```
 
 LLM-as-judge fills the scalability gap between deterministic checks (too narrow) and human review (too slow). It enables evaluation at the speed of code review.
 

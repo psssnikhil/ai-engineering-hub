@@ -12,6 +12,24 @@ youtube: 'https://www.youtube.com/watch?v=klTvEwg3oJ4'
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Vector Databases & Embeddings Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - **Lesson 01 — Introduction to RAG** — you should know why we retrieve before generating
 - **Basic linear algebra** — vectors, dot products (you don't need to derive anything; intuition is enough)
 - **Python + NumPy** — comfortable reading array operations

@@ -48,7 +48,26 @@ Think of it like having `h` expert reviewers each reading the same document for 
 
 ---
 
-## Architecture: Splitting and Concatenating
+```mermaid
+flowchart TD
+    classDef input fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef head fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef out fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    InputX["Input Sequence X (d_model)"]:::input --> ProjQKV["Linear Projections W_Q, W_K, W_V"]:::input
+
+    subgraph ParallelHeads["Parallel Head Attention (h = 8 or 12)"]
+        ProjQKV --> Head1["Head 1: Syntactic Subject-Verb (d_k)"]:::head
+        ProjQKV --> Head2["Head 2: Semantic Coreference (d_k)"]:::head
+        ProjQKV --> HeadH["Head h: Positional Adjacency (d_k)"]:::head
+    end
+
+    Head1 & Head2 & HeadH --> Concat["Concatenate [head_1, ..., head_h] (h * d_v = d_model)"]:::out
+    Concat --> OutputW["Linear Output Projection W_O"]:::out
+    OutputW --> FinalMHA["Multi-Head Output Matrix"]:::out
+```
+
+> *Multi-Head Attention Parallel Execution Architecture — adapted from Vaswani et al. (2017).*
 
 Standard hyperparameters (BERT-Base): `d_model = 768`, `h = 12`, `d_k = d_v = 64`.
 

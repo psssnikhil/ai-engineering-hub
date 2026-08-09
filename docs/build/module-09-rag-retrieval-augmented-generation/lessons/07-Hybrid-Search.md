@@ -12,6 +12,24 @@ youtube: 'https://www.youtube.com/watch?v=OujMiengFaE'
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Hybrid Search Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - [Lesson 04 — Retrieval Methods](04-Retrieval-Methods.md): dense vs sparse retrieval fundamentals
 - [Lesson 02 — Vector Databases](02-vector-databases.md): how embeddings are stored and searched
 - Familiarity with cosine similarity and basic probability concepts
@@ -41,6 +59,28 @@ A **dense embedding model** reads that query and produces a vector representing 
 But it might miss the one document that contains the *exact* string `ECONNREFUSED 5432` in a troubleshooting table, because embedding distance rewards semantic similarity, not lexical overlap.
 
 Now flip it. You type: `"How do I make the application more resilient to database outages?"`. A keyword search on BM25 looks for the literal words "resilient", "database", "outages" — but your best documentation might use "fault tolerance", "retry logic", and "connection pool". BM25 misses it entirely.
+
+```mermaid
+flowchart TD
+    classDef query fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef search fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef fusion fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+    classDef out fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    UserQuery["User Search Query: 'ECONNREFUSED port 5432'"]:::query --> Split["Query Dispatcher"]:::query
+
+    subgraph ParallelRetrieval["Parallel Retrieval Engine"]
+        Split --> Sparse["BM25 Keyword Search (Exact Matches / SKUs / Errors)"]:::search
+        Split --> Dense["Dense Vector Search (HNSW Embeddings / Semantic Meaning)"]:::search
+    end
+
+    Sparse --> RankSparse["Sparse Rank List R_bm25"]:::search
+    Dense --> RankDense["Dense Rank List R_vector"]:::search
+
+    RankSparse & RankDense --> RRF["Reciprocal Rank Fusion RRF Score = 1 / (60 + rank)"]:::fusion
+    RRF --> CrossEncoder["Cross-Encoder Re-Ranker Model (Cohere / BGE-Reranker)"]:::out
+    CrossEncoder --> FinalContext["Final Top-K Grounded Context Chunks"]:::out
+```
 
 **Hybrid search** runs both in parallel and merges the ranked results. It covers:
 

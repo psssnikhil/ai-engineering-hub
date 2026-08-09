@@ -12,6 +12,24 @@ module: module-10
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["API Design for AI Services Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - Completed Lessons 1–7 (LLMOps Introduction through Model Deployment)
 - Familiarity with REST APIs, HTTP status codes, and JSON
 - Basic FastAPI or Flask experience (Python async is helpful but not required)
@@ -604,6 +622,11 @@ When you ship v2 with structured streaming tokens, mobile clients on v1 cannot p
 Without versioning, the same change would break the mobile app at deploy time, requiring an emergency app store update.
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

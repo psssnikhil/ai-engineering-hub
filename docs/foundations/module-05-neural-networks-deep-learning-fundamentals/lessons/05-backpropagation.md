@@ -528,6 +528,11 @@ layer_norm_gradient_demo()
 
 ---
 
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
+
 ## Key Takeaways
 
 - Backpropagation is the chain rule applied to a computational graph, traversed from loss back to parameters

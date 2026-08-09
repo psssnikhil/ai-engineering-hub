@@ -29,6 +29,27 @@ module: module-01
 
 ## What Is a Token? A Precise Definition
 
+```mermaid
+flowchart LR
+    A["Raw Input Text"] --> B["BPE Tokenizer"]
+    B --> C["Token IDs"]
+    C --> D["Embedding Lookup"]
+    D --> E["Cost Calculation Formula"]
+
+    style A fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style B fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style C fill:#1e293b,stroke:#10b981,color:#f8fafc
+    style E fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+```
+
+\[
+\text{Total Cost (\$)} = \frac{N_{\text{prompt}} \times P_{\text{input}} + N_{\text{completion}} \times P_{\text{output}}}{1,000,000}
+\]
+
+!!! warning "Cost Traps: Multi-turn Chat History Expansion"
+    In chat applications, sending the full message history on every turn causes token consumption to grow quadratically: \( \mathcal{O}(N^2) \). Implement sliding-window context or semantic summarization to cap token usage!
+
+
 A **token** is a unit of the model's vocabulary — the atomic element the model processes. As you learned in Module 00, modern LLMs use Byte-Pair Encoding (BPE) to build a vocabulary of ~50,000 subword units.
 
 Critically, tokens are **not** words, characters, or syllables:

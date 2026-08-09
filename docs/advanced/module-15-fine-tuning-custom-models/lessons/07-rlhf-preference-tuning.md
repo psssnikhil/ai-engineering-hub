@@ -18,6 +18,24 @@ objectives:
 
 ## What You'll Learn
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["RLHF and Preference Tuning Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 | Objective | Time | Difficulty |
 |-----------|------|------------|
 | Understand the full RLHF pipeline | 45 min | Advanced |
@@ -253,6 +271,11 @@ The `beta` parameter controls how strongly the model follows preferences:
 - **UltraFeedback Dataset**: Large-scale AI preference dataset on Hugging Face
 
 ---
+
+
+!!! note "Key Intuition & Mental Model"
+    When building production AI systems, isolate model calls behind clean abstraction interfaces. Always design for fallback models, rate limit retries, and strict schema validation.
+
 
 ## Key Takeaways
 

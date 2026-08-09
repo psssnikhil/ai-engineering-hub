@@ -46,11 +46,24 @@ x₂ → NN → y₂
 x₃ → NN → y₃
 ```
 
-But language, audio, and time-series are different: context matters.
+```mermaid
+flowchart LR
+    classDef step fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef gate fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
 
-```text
-"The bank on the river bank" — "bank" has different meanings depending on context
-"Yesterday 10°C, today ___" — prediction requires knowing yesterday's value
+    subgraph UnrolledRNN["Unrolled RNN Sequence Step-by-Step"]
+        X1["x_1"]:::step --> Cell1["RNN Step 1 (h_1)"]:::step
+        Cell1 -- "State h_1" --> Cell2["RNN Step 2 (h_2)"]:::step
+        X2["x_2"]:::step --> Cell2
+        Cell2 -- "State h_2" --> Cell3["RNN Step 3 (h_3)"]:::step
+        X3["x_3"]:::step --> Cell3
+    end
+
+    subgraph LSTMGates["LSTM Cell Gating Mechanics"]
+        CellState["Cell Highway C_{t-1}"]:::gate --> ForgetGate["Forget Gate f_t = σ(W_f · [h_{t-1}, x_t])"]:::gate
+        ForgetGate --> InputGate["Input Gate i_t * C~_t"]:::gate
+        InputGate --> OutputGate["Output Gate o_t * tanh(C_t) -> h_t"]:::gate
+    end
 ```
 
 **Key idea**: a recurrent network maintains a **hidden state** `h_t` that summarizes the entire history seen so far and passes it to the next timestep.

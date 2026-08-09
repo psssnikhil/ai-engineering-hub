@@ -13,6 +13,24 @@ module: module-11
 
 ## Prerequisites
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Agent Architectures Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 - **Lesson 01 — Introduction to Agents** — agent loop, core components, tool calling basics
 - **Python intermediate** — classes, generators, async familiarity helpful
 - **Awareness of LLM cost/latency tradeoffs** — you'll need this when choosing patterns
@@ -39,7 +57,19 @@ When you give a person a complex task, the work structure they use depends on th
 - **Software project**: Break into tasks, assign order, adapt as things fail. You need an explicit plan.
 - **Writing an essay for a deadline**: Write a draft, critique it, revise, critique again. Iterative refinement.
 
-The same logic applies to agent architectures. Simple tasks need simple structures. Complex tasks benefit from explicit planning. Output-quality tasks need self-critique. Using Plan-and-Execute for a simple lookup is wasteful; using Simple Tool Use for a 20-step research project will fail.
+The same logic applies to agent architectures. Simple tasks need simple structures. Complex tasks benefit from explicit planning. Output-quality tasks need self-critique. ```mermaid
+flowchart TD
+    classDef react fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef plan fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef reflect fill:#fff7ed,stroke:#f59e0b,stroke-width:2px;
+
+    Task["Task Complexity Classifier"]:::react --> PatternChoice{"Select Architectural Pattern"}:::react
+
+    PatternChoice -- Simple Interleaved --> ReAct["ReAct Loop (Thought -> Action -> Observation)"]:::react
+    PatternChoice -- Multi-Step Complex --> PlanExec["Plan-and-Execute (Planner LLM -> Executive Workers)"]:::plan
+    PatternChoice -- High Precision Quality --> Reflection["Self-Reflection Loop (Generator LLM -> Evaluator Critique)"]:::reflect
+    PatternChoice -- High Decision Tree Search --> LATS["Language Agent Tree Search (MCTS + LLM Rollouts)"]:::plan
+```
 
 This lesson maps four patterns to their appropriate task types and shows you how to implement each.
 

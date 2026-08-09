@@ -18,6 +18,24 @@ objectives:
 
 ## Project Overview
 
+
+```mermaid
+graph TD
+    subgraph ExecutionFlow ["Project 4: AI-Powered Content Platform Architecture Flow"]
+        Input["User Input / Request Context"] --> Engine["Core Processing Engine"]
+        Engine --> Validation{"Validation & Guardrails"}
+        Validation -- Pass --> Output["Structured Output / Response"]
+        Validation -- Fail --> Retry["Error Handling & Retry Loop"]
+        Retry --> Engine
+    end
+
+    style Input fill:#1e293b,stroke:#3b82f6,color:#f8fafc
+    style Engine fill:#1e293b,stroke:#8b5cf6,color:#f8fafc
+    style Validation fill:#1e293b,stroke:#f59e0b,color:#f8fafc
+    style Output fill:#1e293b,stroke:#10b981,color:#f8fafc
+```
+
+
 Build a content platform that uses AI to help users create, edit, and optimize written content:
 - Generate blog posts, marketing copy, and documentation from outlines
 - Adjust tone and style (professional, casual, technical)

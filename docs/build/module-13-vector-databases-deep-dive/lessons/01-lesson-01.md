@@ -12,6 +12,24 @@ module: module-13
 
 ## Prerequisites
 
+
+```mermaid
+flowchart TD
+    classDef input fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef index fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+    classDef output fill:#f5f3ff,stroke:#8b5cf6,stroke-width:2px;
+
+    subgraph VectorPipeline["Vector Database Indexing & Search Pipeline"]
+        RawDocs["Document Chunks + Metadata Payload"]:::input --> Embedder["Embedding Model (e.g. text-embedding-3)"]:::input
+        Embedder --> Vectors["High-Dimensional Vectors (1536-dim)"]:::input
+        Vectors --> ANNIndex["ANN Indexing (HNSW Skip-Graph / IVF Quantization)"]:::index
+        QueryVec["User Query Vector q"]:::input --> ANNIndex
+        ANNIndex --> TopK["Top-K Approximate Nearest Neighbors (Cosine / Inner Product)"]:::output
+        TopK --> PayloadFilter["Metadata Payload Filtering (Tenant ID / Category)"]:::output
+    end
+```
+
+
 Before this lesson you should be comfortable with:
 
 - **Module 09, Lesson 02 — Vector Databases & Embeddings** — you know what embeddings are, how cosine similarity works, and why RAG needs a retrieval index
@@ -359,3 +377,10 @@ They are a *search index*, not a database of record. Always store original docum
 ## Next Lesson
 
 **[Lesson 2: Embeddings and Vector Representations](02-lesson-02.md)** — Deep dive into embedding models, matryoshka dimensions, normalization, and domain benchmarking beyond the Module 09 overview.
+
+
+## Further Reading & Primary References
+
+1. [Attention Is All You Need (Vaswani et al. 2017)](https://arxiv.org/abs/1706.03762)
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al. 2020)](https://arxiv.org/abs/2005.11401)
+3. [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al. 2022)](https://arxiv.org/abs/2210.03629)

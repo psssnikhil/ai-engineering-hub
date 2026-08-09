@@ -31,6 +31,28 @@ module: module-01
 
 ## Setup
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as User / Client
+    participant App as Application Logic
+    participant API as LLM API Gateway
+    participant LLM as Model Inference Engine
+
+    User->>App: Submits request prompt
+    App->>App: Validate & format system prompt
+    App->>API: HTTP POST /v1/chat/completions
+    API->>LLM: Forward tokenized payload
+    LLM-->>API: Streamed response tokens
+    API-->>App: HTTP 200 OK + JSON payload
+    App->>App: Validate JSON output schema
+    App-->>User: Structured response
+```
+
+!!! tip "Production Pattern: Schema Validation"
+    Always validate structured LLM outputs using **Pydantic** or JSON schema. Never assume raw LLM strings match expected fields without defensive parsing.
+
+
 ### Get an OpenAI API Key
 
 1. Create an account at [platform.openai.com](https://platform.openai.com)
