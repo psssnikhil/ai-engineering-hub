@@ -40,7 +40,7 @@
   --aie-text-lg: 1.1rem;
   --aie-text-xl: 1.3rem;
   --aie-text-2xl: 1.6rem;
-  --aie-text-3xl: clamp(1.9rem, 4vw, 2.6rem);
+  --aie-text-3xl: clamp(1.65rem, 2.6vw, 2.15rem);
 
   /* Radius */
   --aie-radius-sm: 8px;
@@ -135,25 +135,30 @@ body {
 }
 
 .md-tabs {
-  background-color: rgba(67, 56, 202, 0.96);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--aie-primary-hover);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 [data-md-color-scheme="slate"] .md-tabs {
-  background-color: #0f172a;
+  background-color: #0b0f19;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .md-tabs__link {
   font-weight: 600;
   font-size: var(--aie-text-sm);
-  opacity: 0.88;
-  padding: 0.8em 1.1em;
+  opacity: 0.82;
+  padding: 0.75em 1em;
+  transition: opacity 0.15s ease;
 }
 
 .md-tabs__link:hover,
 .md-tabs__link--active {
   opacity: 1;
+}
+
+.md-tabs__link--active {
+  font-weight: 700;
 }
 
 .md-banner {
@@ -229,11 +234,11 @@ body {
 .hero {
   position: relative;
   margin: var(--aie-space-2) 0 var(--aie-space-6);
-  padding: var(--aie-space-7) var(--aie-space-6);
-  border-radius: 20px;
+  padding: var(--aie-space-6);
+  border-radius: 16px;
   border: 1px solid var(--aie-border);
   background: var(--aie-gradient-hero);
-  box-shadow: var(--aie-shadow-md);
+  box-shadow: var(--aie-shadow-sm);
   overflow: hidden;
 }
 
@@ -244,7 +249,7 @@ body {
   right: -80px;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(124, 58, 237, 0) 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -302,34 +307,34 @@ body {
   align-items: center !important;
   justify-content: center !important;
   gap: var(--aie-space-2) !important;
-  min-height: 2.75rem !important;
-  padding: 0.7em 1.4em !important;
-  border-radius: var(--aie-radius-md) !important;
+  min-height: 2.6rem !important;
+  padding: 0.65em 1.25em !important;
+  border-radius: var(--aie-radius-sm) !important;
   font-size: var(--aie-text-sm) !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   line-height: 1.2 !important;
   text-decoration: none !important;
   background-image: none !important;
   white-space: nowrap !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease !important;
 }
 
 .hero__btn--primary {
-  background: var(--aie-gradient-brand) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: var(--aie-primary) !important;
+  border: 1px solid var(--aie-primary) !important;
   color: var(--aie-on-primary) !important;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35) !important;
+  box-shadow: 0 1px 2px rgba(79, 70, 229, 0.25) !important;
 }
 
 .hero__btn--primary:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.45) !important;
+  background: var(--aie-primary-hover) !important;
+  border-color: var(--aie-primary-hover) !important;
   color: var(--aie-on-primary) !important;
 }
 
 .hero__btn--secondary {
   background: var(--aie-surface) !important;
-  border: 1.5px solid var(--aie-border-strong) !important;
+  border: 1px solid var(--aie-border-strong) !important;
   color: var(--aie-primary-hover) !important;
 }
 
@@ -339,7 +344,6 @@ body {
 }
 
 .hero__btn--secondary:hover {
-  transform: translateY(-2px) !important;
   background: var(--aie-primary-soft) !important;
   border-color: var(--aie-primary) !important;
   color: var(--aie-primary) !important;
@@ -351,25 +355,26 @@ body {
 
 .hero__btn--github {
   background: #181717 !important;
-  border: 1px solid #333333 !important;
+  border: 1px solid #181717 !important;
   color: #ffffff !important;
 }
 
 .hero__btn--github:hover {
-  transform: translateY(-2px) !important;
-  background: #24292e !important;
+  background: #2d2d2d !important;
+  border-color: #2d2d2d !important;
   color: #ffffff !important;
 }
 
 [data-md-color-scheme="slate"] .hero__btn--github {
-  background: #f0f6fc !important;
-  border-color: #f0f6fc !important;
-  color: #0d1117 !important;
+  background: transparent !important;
+  border-color: var(--aie-border-strong) !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 [data-md-color-scheme="slate"] .hero__btn--github:hover {
-  background: #ffffff !important;
-  color: #0d1117 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: var(--md-default-fg-color) !important;
 }
 
 /* ── Stat pills ───────────────────────────────────────────── */
