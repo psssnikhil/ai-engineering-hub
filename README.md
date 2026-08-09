@@ -17,7 +17,7 @@
 
 <br/>
 
-**[Browse 16 courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/)** · **[Build portfolio projects](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/ai-engineering-handbook/learn/study-plans/)** · **[Interview prep](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/)** · **[Books](https://psssnikhil.github.io/ai-engineering-handbook/books/)**
+**[Browse 16 courses](https://psssnikhil.github.io/ai-engineering-handbook/learn/)** · **[Tutor Skills](https://psssnikhil.github.io/ai-engineering-handbook/learn/using-tutor-skills/)** · **[Interview Prep](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/)** · **[Build portfolio projects](https://psssnikhil.github.io/ai-engineering-handbook/projects/build-these/)** · **[Study plans](https://psssnikhil.github.io/ai-engineering-handbook/learn/study-plans/)** · **[Books](https://psssnikhil.github.io/ai-engineering-handbook/books/)**
 
 <br/>
 
@@ -53,10 +53,12 @@ AI content today is **everywhere** and **nowhere useful at once**:
   05 LLMs        →    10 Vector DBs
                       11 Prompts
 
-              ┌─────────────────────────────────────┐
-              │  + Agent Engineering track (7)      │
-              │  + Modern AI / IDE agents track     │
-              └─────────────────────────────────────┘
+              ┌──────────────────────────────────────────────┐
+              │  + Agent Engineering track (7)               │
+              │  + Interview Prep & System Design track (8)  │
+              │  + Modern AI / IDE agents track (5)          │
+              │  + 3 Interactive Claude Code / Cursor Skills │
+              └──────────────────────────────────────────────┘
 ```
 
 Open the **[Learn tab](https://psssnikhil.github.io/ai-engineering-handbook/learn/)** — work **01 → 16** in order. Each course page lists its lessons. No module codes. No guesswork.
@@ -77,9 +79,9 @@ Open the **[Learn tab](https://psssnikhil.github.io/ai-engineering-handbook/lear
 → [Course 02 · AI Essentials](https://psssnikhil.github.io/ai-engineering-handbook/foundations/module-01-ai-engineering-essentials/)  
 → [Course 06 · RAG](https://psssnikhil.github.io/ai-engineering-handbook/build/module-09-rag-retrieval-augmented-generation/)
 
-**I'm an ML engineer**  
-→ [Course 05 · LLMs](https://psssnikhil.github.io/ai-engineering-handbook/foundations/module-07-large-language-models-llms/)  
-→ [Course 13 · Evals](https://psssnikhil.github.io/ai-engineering-handbook/production/module-19-llm-evaluation-quality/)
+**I'm preparing for AI Interviews**  
+→ [Interview Prep Track](https://psssnikhil.github.io/ai-engineering-handbook/interview-prep/)  
+→ System Design Case Studies & Q&A Banks
 
 </td>
 <td width="50%">
@@ -93,6 +95,7 @@ Open the **[Learn tab](https://psssnikhil.github.io/ai-engineering-handbook/lear
 → [Course 13 · Evals](https://psssnikhil.github.io/ai-engineering-handbook/production/module-19-llm-evaluation-quality/)
 
 **I use Claude Code / Cursor**  
+→ [Learn with Tutor Skills](https://psssnikhil.github.io/ai-engineering-handbook/learn/using-tutor-skills/)  
 → [Modern AI (2026) track](https://psssnikhil.github.io/ai-engineering-handbook/ai-engineering-2026/)
 
 </td>
