@@ -60,6 +60,32 @@ first move that comes to mind; they simulate several candidate lines, prune the 
 ones, and only then commit. A mathematician drafts a proof, notices the contradiction
 on line 7, crosses it out, and tries a different lemma.
 
+```mermaid
+flowchart TD
+    classDef direct fill:#fee2e2,stroke:#ef4444,stroke-width:2px;
+    classDef think fill:#eef2ff,stroke:#6366f1,stroke-width:2px;
+    classDef prm fill:#f0fdf4,stroke:#10b981,stroke-width:2px;
+
+    Prompt["Complex Math / Logic Prompt"] --> Paradigm{"Execution Paradigm"}
+
+    Paradigm -- Reflex Model --> Direct["Single Forward Pass Output (No Backtracking)"]:::direct
+
+    Paradigm -- Reasoning Model --> ThinkingWindow["Test-Time Compute Thinking Tokens"]:::think
+    
+    subgraph TreeSearch["Process-Reward Guided Search Tree (DeepSeek-R1 / o3)"]
+        ThinkingWindow --> Step1["Step 1: Initial Hypothesis Generation"]:::think
+        Step1 --> PRM1{"PRM Step Evaluator (Score: 0.9)"}:::prm
+        PRM1 -- High Score --> Step2a["Step 2a: Valid Deduction Path"]:::prm
+        PRM1 -- Low Score --> Step2b["Step 2b: Dead End (Backtrack)"]:::direct
+        Step2b --> Step1
+        Step2a --> FinalVerif["Final Verification & Solution Synthesis"]:::prm
+    end
+
+    FinalVerif --> FinalAnswer["Clean Answer to User (Hidden Thinking Tokens Retained)"]:::prm
+```
+
+> *Test-Time Compute Search Tree Rollouts — adapted from DeepSeek-R1 (Guo et al., 2025) and OpenAI o1/o3 technical reports.*
+
 **Test-time compute** is the insight that you can give language models a similar
 budget: instead of one forward pass → answer, let the model generate *thinking
 tokens* — scratch-pad reasoning that is never shown to the user — before it

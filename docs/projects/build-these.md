@@ -18,16 +18,16 @@ Related: [Course 16 · Capstones](../advanced/module-17-capstone-projects/index.
 
 | # | Project | Difficulty | Modules | Est. time |
 |---|---------|------------|---------|-----------|
-| 1 | [Doc Q&A bot (RAG starter)](#1-doc-qa-bot-rag-starter) | Beginner | Course 02, Course 06 | 1 weekend |
-| 2 | [Enterprise RAG with citations](#2-enterprise-rag-with-citations) | Intermediate | Course 06, Course 10, Course 12 | 1–2 weeks |
-| 3 | [Semantic search over code/docs](#3-semantic-search-engine) | Intermediate | Course 06, Course 10 | 1 week |
-| 4 | [Tool-using research agent](#4-tool-using-research-agent) | Intermediate | Course 07, Course 08 | 1–2 weeks |
-| 5 | [Multi-agent research system](#5-multi-agent-research-system) | Advanced | Course 09, Course 06, Course 13 | 2–3 weeks |
-| 6 | [Support bot with routing](#6-support-bot-with-routing) | Intermediate | Course 06, Course 07, Course 09 | 2 weeks |
-| 7 | [LLM data extraction pipeline](#7-llm-data-extraction-pipeline) | Intermediate | Course 11, Course 12 | 1 week |
-| 8 | [Domain style fine-tune](#8-domain-style-fine-tune) | Advanced | Course 15, Course 05 | 2–3 weeks |
-| 9 | [AI quality eval suite](#9-ai-quality-eval-suite) | Intermediate | Course 13, Course 14 | 1 week |
-| 10 | [Deploy your AI app](#10-deploy-your-ai-app) | Advanced | Course 12, Course 16 | 1–2 weeks |
+| 1 | [Doc Q&A bot (RAG starter)](#1-doc-qa-bot-rag-starter) | <span class="badge badge--beginner">🟢 Beginner</span> | Course 02, Course 06 | 1 weekend |
+| 2 | [Enterprise RAG with citations](#2-enterprise-rag-with-citations) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 06, Course 10, Course 12 | 1–2 weeks |
+| 3 | [Semantic search over code/docs](#3-semantic-search-engine) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 06, Course 10 | 1 week |
+| 4 | [Tool-using research agent](#4-tool-using-research-agent) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 07, Course 08 | 1–2 weeks |
+| 5 | [Multi-agent research system](#5-multi-agent-research-system) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 09, Course 06, Course 13 | 2–3 weeks |
+| 6 | [Support bot with routing](#6-support-bot-with-routing) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 06, Course 07, Course 09 | 2 weeks |
+| 7 | [LLM data extraction pipeline](#7-llm-data-extraction-pipeline) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 11, Course 12 | 1 week |
+| 8 | [Domain style fine-tune](#8-domain-style-fine-tune) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 15, Course 05 | 2–3 weeks |
+| 9 | [AI quality eval suite](#9-ai-quality-eval-suite) | <span class="badge badge--intermediate">⚡ Intermediate</span> | Course 13, Course 14 | 1 week |
+| 10 | [Deploy your AI app](#10-deploy-your-ai-app) | <span class="badge badge--advanced">🔥 Advanced</span> | Course 12, Course 16 | 1–2 weeks |
 
 ---
 
