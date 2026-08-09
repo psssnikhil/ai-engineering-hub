@@ -157,6 +157,34 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* Inserted by ui-enhancements.js next to the GitHub source link.
+   Hidden below 60em to match Material's own breakpoint for
+   .md-header__source — otherwise the two icons would appear/disappear
+   at different widths and look inconsistent on tablet/mobile. */
+.md-header__linkedin {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: var(--aie-space-3);
+  color: #ffffff;
+  opacity: 0.85;
+  border-radius: var(--aie-radius-sm);
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+@media screen and (min-width: 60em) {
+  .md-header__linkedin {
+    display: flex;
+  }
+}
+
+.md-header__linkedin:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
 .md-tabs {
   background-color: var(--aie-primary-hover);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -168,20 +196,49 @@ body {
 }
 
 .md-tabs__link {
+  position: relative;
   font-weight: 600;
   font-size: var(--aie-text-sm);
-  opacity: 0.82;
-  padding: 0.75em 1em;
-  transition: opacity 0.15s ease;
+  opacity: 0.78;
+  margin: 0 0.15em;
+  padding: 0.9em 0.75em 0.8em;
+  border-radius: var(--aie-radius-sm) var(--aie-radius-sm) 0 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
 }
 
-.md-tabs__link:hover,
+/* Underline indicator instead of relying on opacity alone to signal
+   hover/active state — gives the tabs an actual affordance instead
+   of just "slightly dimmer text". */
+.md-tabs__link::after {
+  content: "";
+  position: absolute;
+  left: 0.75em;
+  right: 0.75em;
+  bottom: 0.35em;
+  height: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.md-tabs__link:hover::after {
+  transform: scaleX(0.5);
+}
+
 .md-tabs__link--active {
   opacity: 1;
+  font-weight: 700;
 }
 
-.md-tabs__link--active {
-  font-weight: 700;
+.md-tabs__link--active::after {
+  transform: scaleX(1);
 }
 
 .md-banner {
@@ -643,6 +700,21 @@ body {
 }
 
 /* ── Tables ───────────────────────────────────────────────── */
+/* The scroll wrapper ui-enhancements.js injects around every table
+   needs an explicit width: a block box with overflow-x:auto forms a
+   new block-formatting-context root, and BFC roots with width:auto
+   use shrink-to-fit sizing — so without this the wrapper (and the
+   table's own width:100%, which resolves against it) collapses to
+   the table's intrinsic content width instead of filling the column,
+   leaving a dead gap on any table with few/narrow columns. */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.6em 0;
+  border-radius: var(--aie-radius-md);
+}
+
 .md-typeset table:not([class]) {
   display: table;
   width: 100%;
@@ -651,23 +723,26 @@ body {
   border-radius: var(--aie-radius-md);
   border: 1px solid var(--md-default-fg-color--lightest);
   overflow: hidden;
-  margin: 1.6em 0;
+  margin: 0;
   box-shadow: var(--aie-shadow-sm);
 }
 
 .md-typeset table:not([class]) th {
-  background: var(--aie-gradient-brand);
-  color: #ffffff;
+  background: var(--aie-primary-soft);
+  color: var(--aie-primary-hover);
   font-weight: 700;
   font-size: var(--aie-text-sm);
   letter-spacing: 0.02em;
   padding: 0.85em 1.1em;
+  border-bottom: 1px solid var(--aie-border-strong);
 }
 
-/* !important required: Material's link-color rule otherwise overrides
-   header link text to indigo, which is unreadable on the brand-gradient
-   table header background. */
-.md-typeset table:not([class]) th a { color: #ffffff !important; }
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: rgba(129, 140, 248, 0.12);
+  color: #c7d2fe;
+}
+
+.md-typeset table:not([class]) th a { color: inherit !important; }
 
 .md-typeset table:not([class]) td {
   padding: 0.8em 1.1em;
