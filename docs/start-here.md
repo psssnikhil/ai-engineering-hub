@@ -1,6 +1,7 @@
 ---
-title: Start Here
-description: Single entry point — pick your path, prerequisites, and first project
+title: "Start Here — AI Engineering Roadmap & Learning Paths"
+description: "Select your AI Engineering learning path based on your background. Master LLMs, RAG, AI Agents, and production systems with structured prerequisites."
+keywords: "AI engineering roadmap, learn AI engineering, RAG tutorial start, AI agents beginner guide, software engineer to AI engineer"
 ---
 
 # Start Here

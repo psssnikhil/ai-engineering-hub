@@ -1,6 +1,7 @@
 ---
-title: Learn
-description: Sequential curriculum — work through courses in order
+title: "16-Course AI Engineering Curriculum — Ground Zero to Production"
+description: "Explore the full 16-course open-source AI Engineering curriculum covering Transformers, Vector DBs, Prompt Engineering, RAG, AI Agents, Evals, and Fine-Tuning."
+keywords: "AI engineering course, LLM curriculum, RAG course, AI agents tutorial, LLMOps course, transformers step by step"
 ---
 
 # Learn

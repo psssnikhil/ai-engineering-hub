@@ -1,6 +1,7 @@
 ---
-title: Agent Engineering
-description: Dedicated curriculum for building production AI agents
+title: "Agent Engineering Track — Building Autonomous Production AI Agents"
+description: "Master AI Agent architecture: The Agent Loop, Harness Engineering, Tool calling, Model Context Protocol (MCP), Multi-Agent Orchestration, and Agent Evals."
+keywords: "AI agent engineering, autonomous agents, Model Context Protocol, MCP tutorial, agent loop architecture, multi-agent systems"
 ---
 
 # Agent Engineering
