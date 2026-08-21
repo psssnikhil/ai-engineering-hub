@@ -95,6 +95,7 @@ tracks:
       - { title: "Case Study: Design an Eval Pipeline", file: design-eval-pipeline.md }
       - { title: "Case Study: Design a Real-Time Voice AI Agent", file: design-realtime-voice-agent.md }
       - { title: "Case Study: Design an Enterprise Multimodal RAG System", file: design-multimodal-rag-system.md }
+      - { title: "Case Study: Design a Text-to-SQL Data Analyst Agent", file: design-text-to-sql-agent.md }
 
   - title: Modern AI (2026)
     path: ai-engineering-2026
